@@ -1,0 +1,558 @@
+
+[src/guix]
+checkout = git clone 'https://git.savannah.gnu.org/git/guix.git' 'guix'
+
+[src/ArchiveBox]
+checkout = git clone 'https://github.com/ArchiveBox/ArchiveBox.git' 'ArchiveBox'
+
+[src/ml.BuilderIO.builder]
+checkout = git clone 'https://github.com/BuilderIO/builder.git' 'ml.BuilderIO.builder'
+
+[src/AutoGPT]
+checkout = git clone 'https://github.com/Significant-Gravitas/AutoGPT.git' 'AutoGPT'
+
+[src/FreeBSD.doc]
+checkout = git clone 'https://git.FreeBSD.org/doc.git' 'FreeBSD.doc'
+
+[src/FreeBSD.ports]
+checkout = git clone 'https://git.FreeBSD.org/ports.git' 'FreeBSD.ports'
+
+[src/FreeBSD.src]
+checkout = git clone 'https://git.FreeBSD.org/src.git' 'FreeBSD.src'
+
+[src/GNOME.gtk]
+checkout = git clone 'https://gitlab.gnome.org/GNOME/gtk.git' 'GNOME.gtk'
+
+[src/Radicale]
+checkout = git clone 'https://github.com/Kozea/Radicale.git' 'Radicale'
+
+[src/antler5-old-guix-config]
+checkout = git clone 'https://github.com/antler5/old-guix-config.git' 'antler5-old-guix-config'
+
+[src/beancount]
+checkout = git clone 'https://github.com/beancount/beancount.git' 'beancount'
+
+[src/beancount-import]
+checkout = git clone 'https://github.com/jbms/beancount-import.git' 'beancount-import'
+
+[src/beancount.beangrow]
+checkout = git clone 'https://github.com/beancount/beangrow.git' 'beancount.beangrow'
+
+[src/beancount.beangulp]
+checkout = git clone 'https://github.com/beancount/beangulp.git' 'beancount.beangulp'
+
+[src/beancount.beanprice]
+checkout = git clone 'https://github.com/beancount/beanprice.git' 'beancount.beanprice'
+
+[src/beancount.beanquery]
+checkout = git clone 'https://github.com/beancount/beanquery.git' 'beancount.beanquery'
+
+[src/beancount.contrib.reds-plugins]
+checkout = git clone 'https://github.com/redstreet/beancount_reds_plugins.git' 'beancount.contrib.reds-plugins'
+
+[src/beancount.fava]
+checkout = git clone 'https://github.com/beancount/fava.git' 'beancount.fava'
+
+[src/beancount.fava-plugins]
+checkout = git clone 'https://github.com/beancount/fava-plugins.git' 'beancount.fava-plugins'
+
+[src/betrusted-ec]
+checkout = git clone 'https://github.com/betrusted-io/betrusted-ec.git' 'betrusted-ec'
+
+[src/betrusted-hardware]
+checkout = git clone 'https://github.com/betrusted-io/betrusted-hardware.git' 'betrusted-hardware'
+
+[src/betrusted-scripts]
+checkout = git clone 'https://github.com/betrusted-io/betrusted-scripts.git' 'betrusted-scripts'
+
+[src/betrusted-soc]
+checkout = git clone 'https://github.com/betrusted-io/betrusted-soc.git' 'betrusted-soc'
+
+[src/blue-book]
+checkout = git clone 'https://github.com/lyz-code/blue-book.git' 'blue-book'
+
+[src/browserpass-extension]
+checkout = git clone 'https://github.com/browserpass/browserpass-extension.git' 'browserpass-extension'
+
+[src/browserpass-native]
+checkout = git clone 'https://github.com/browserpass/browserpass-native.git' 'browserpass-native'
+
+[src/circt]
+checkout = git clone 'https://github.com/llvm/circt.git' 'circt'
+
+[src/config.emx]
+checkout = git clone 'git@github.com:hatimbt/emx.git' 'config.emx'
+
+[src/config.mynixos]
+checkout = git clone 'https://git.mynixos.com/hatimbt/config.git' 'config.mynixos'
+
+[src/config.x]
+checkout = git clone 'https://github.com/hatimbt/dotfiles' 'config.x'
+
+[src/coreutils]
+checkout = git clone 'git://git.sv.gnu.org/coreutils' 'coreutils'
+
+[src/cortex.cpp]
+checkout = git clone 'https://github.com/janhq/cortex.cpp.git' 'cortex.cpp'
+
+[src/cortex.llamacpp]
+checkout = git clone 'https://github.com/janhq/cortex.llamacpp.git' 'cortex.llamacpp'
+
+[src/cpython]
+checkout = git clone 'https://github.com/python/cpython.git' 'cpython'
+
+[src/cyrus-sasl-xoauth2]
+checkout = git clone 'https://github.com/moriyoshi/cyrus-sasl-xoauth2.git' 'cyrus-sasl-xoauth2'
+
+[src/db.chroma]
+checkout = git clone 'https://github.com/chroma-core/chroma.git' 'db.chroma'
+
+[src/db.milvus]
+checkout = git clone 'https://github.com/milvus-io/milvus.git' 'db.milvus'
+
+[src/db.neon]
+checkout = git clone 'https://github.com/neondatabase/neon.git' 'db.neon'
+
+[src/db.qdrant]
+checkout = git clone 'https://github.com/qdrant/qdrant.git' 'db.qdrant'
+
+[src/db.weaviate]
+checkout = git clone 'https://github.com/weaviate/weaviate.git' 'db.weaviate'
+
+[src/db.weaviate.recipes]
+checkout = git clone 'https://github.com/weaviate/recipes.git' 'db.weaviate.recipes'
+
+[src/divyaranjan.dotfiles]
+checkout = git clone 'https://codeberg.org/divyaranjan/dotfiles.git' 'divyaranjan.dotfiles'
+
+[src/dovecot.core]
+checkout = git clone 'https://github.com/dovecot/core.git' 'dovecot.core'
+
+[src/el.beancount-mode]
+checkout = git clone 'https://github.com/beancount/beancount-mode.git' 'el.beancount-mode'
+
+[src/el.borg]
+checkout = git clone 'https://github.com/emacscollective/borg.git' 'el.borg'
+
+[src/el.cask]
+checkout = git clone 'https://github.com/cask/cask.git' 'el.cask'
+
+[src/el.codeium]
+checkout = git clone 'https://github.com/Exafunction/codeium.el.git' 'el.codeium'
+
+[src/el.consult-dir]
+checkout = git clone 'https://github.com/karthink/consult-dir' 'el.consult-dir'
+
+[src/el.el-get]
+checkout = git clone 'https://github.com/dimitri/el-get.git' 'el.el-get'
+
+[src/el.elisp-repo-kit]
+checkout = git clone 'https://github.com/positron-solutions/elisp-repo-kit.git' 'el.elisp-repo-kit'
+
+[src/el.ellama]
+checkout = git clone 'https://github.com/s-kostyaev/ellama.git' 'el.ellama'
+
+[src/el.emacs-arei]
+checkout = git clone 'https://git.sr.ht/~abcdw/emacs-arei' 'el.emacs-arei'
+
+[src/el.emacs-guix]
+checkout = git clone 'https://git.savannah.gnu.org/git/guix/emacs-guix.git' 'el.emacs-guix'
+
+[src/el.geiser]
+checkout = git clone 'https://gitlab.com/emacs-geiser/geiser.git' 'el.geiser'
+
+[src/el.geiser.chez]
+checkout = git clone 'https://gitlab.com/emacs-geiser/chez.git' 'el.geiser.chez'
+
+[src/el.geiser.chicken]
+checkout = git clone 'https://gitlab.com/emacs-geiser/chicken.git' 'el.geiser.chicken'
+
+[src/el.geiser.guile]
+checkout = git clone 'https://gitlab.com/emacs-geiser/guile.git' 'el.geiser.guile'
+
+[src/el.geiser.mit]
+checkout = git clone 'https://gitlab.com/emacs-geiser/mit.git' 'el.geiser.mit'
+
+[src/el.geiser.racket]
+checkout = git clone 'https://gitlab.com/emacs-geiser/racket.git' 'el.geiser.racket'
+
+[src/el.gptel]
+checkout = git clone 'https://github.com/karthink/gptel.git' 'el.gptel'
+
+[src/el.popper]
+checkout = git clone 'https://github.com/karthink/popper.git' 'el.popper'
+
+[src/el.quelpa]
+checkout = git clone 'https://github.com/quelpa/quelpa.git' 'el.quelpa'
+
+[src/el.wombag]
+checkout = git clone 'https://github.com/karthink/wombag.git' 'el.wombag'
+
+[src/emacs]
+checkout = git clone 'git://git.sv.gnu.org/emacs.git' 'emacs'
+
+[src/emacs.antler5]
+checkout = git clone 'https://github.com/antler5/.emacs.d.git' 'emacs.antler5'
+
+[src/emacs.dots.crafted-emacs]
+checkout = git clone 'https://github.com/SystemCrafters/crafted-emacs.git' 'emacs.dots.crafted-emacs'
+
+[src/emacs.dots.emacs-kick]
+checkout = git clone 'https://github.com/LionyxML/emacs-kick.git' 'emacs.dots.emacs-kick'
+
+[src/emacs.dots.lambda-emacs]
+checkout = git clone 'https://github.com/Lambda-Emacs/lambda-emacs.git' 'emacs.dots.lambda-emacs'
+
+[src/emacs.dots.minimal-emacs.d]
+checkout = git clone 'https://github.com/jamescherti/minimal-emacs.d.git' 'emacs.dots.minimal-emacs.d'
+
+[src/emacs.dots.prelude]
+checkout = git clone 'https://github.com/bbatsov/prelude.git' 'emacs.dots.prelude'
+
+[src/emacs.g]
+checkout = git clone 'https://github.com/emacscollective/emacs.g.git' 'emacs.g'
+
+[src/emacs.purcell]
+checkout = git clone 'https://github.com/purcell/emacs.d.git' 'emacs.purcell'
+
+[src/emacs.siren]
+checkout = git clone 'https://github.com/jimeh/.emacs.d.git' 'emacs.siren'
+
+[src/falstad.circuitjs1]
+checkout = git clone 'https://github.com/pfalstad/circuitjs1.git' 'falstad.circuitjs1'
+
+[src/falstad.dfilter]
+checkout = git clone 'https://github.com/pfalstad/dfilter.git' 'falstad.dfilter'
+
+[src/falstad.emstatic]
+checkout = git clone 'https://github.com/pfalstad/emstatic.git' 'falstad.emstatic'
+
+[src/falstad.fourier]
+checkout = git clone 'https://github.com/pfalstad/fourier.git' 'falstad.fourier'
+
+[src/gcc]
+checkout = git clone 'git://gcc.gnu.org/git/gcc.git' 'gcc'
+
+[src/gentoo.proj.sci]
+checkout = git clone 'https://anongit.gentoo.org/git/proj/sci.git' 'gentoo.proj.sci'
+
+[src/git]
+checkout = git clone 'git://git.kernel.org/pub/scm/git/git.git' 'git'
+
+[src/gitbutler]
+checkout = git clone 'https://github.com/gitbutlerapp/gitbutler.git' 'gitbutler'
+
+[src/gpt4all]
+checkout = git clone 'https://github.com/nomic-ai/gpt4all.git' 'gpt4all'
+
+[src/guile]
+checkout = git clone 'https://git.savannah.gnu.org/git/guile.git' 'guile'
+
+[src/guile-ares-rs]
+checkout = git clone 'https://git.sr.ht/~abcdw/guile-ares-rs' 'guile-ares-rs'
+
+[src/guix-cuirass]
+checkout = git clone 'https://git.sv.gnu.org/git/guix/guix-cuirass.git' 'guix-cuirass'
+
+[src/guix-emacs]
+checkout = git clone 'https://github.com/garrgravarr/guix-emacs.git' 'guix-emacs'
+
+[src/guix-jupyter]
+checkout = git clone 'https://codeberg.org/guix-science/guix-jupyter.git' 'guix-jupyter'
+
+[src/guix-past]
+checkout = git clone 'https://codeberg.org/guix-science/guix-past.git' 'guix-past'
+
+[src/guix-rustup]
+checkout = git clone 'git@github.com:hatimbt/guix-rustup.git' 'guix-rustup'
+
+[src/guix-science]
+checkout = git clone 'https://codeberg.org/guix-science/guix-science' 'guix-science'
+
+[src/guix-science-nonfree]
+checkout = git clone 'https://codeberg.org/guix-science/guix-science-nonfree.git' 'guix-science-nonfree'
+
+[src/guix.abcdw.cons.town]
+checkout = git clone 'https://git.sr.ht/~abcdw/cons.town' 'guix.abcdw.cons.town'
+
+[src/guix.abcdw.rde]
+checkout = git clone 'https://git.sr.ht/~abcdw/rde' 'guix.abcdw.rde'
+
+[src/guix.channel.anemofilia.radix]
+checkout = git clone 'https://codeberg.org/anemofilia/radix.git' 'guix.channel.anemofilia.radix'
+
+[src/guix.channel.look.saayix]
+checkout = git clone 'https://codeberg.org/look/saayix.git' 'guix.channel.look.saayix'
+
+[src/guix.data-service]
+checkout = git clone 'https://git.savannah.gnu.org/git/guix/data-service.git' 'guix.data-service'
+
+[src/guix.dots.anemofilia.zero]
+checkout = git clone 'https://codeberg.org/anemofilia/zero.git' 'guix.dots.anemofilia.zero'
+
+[src/guix.dots.look.misako]
+checkout = git clone 'https://codeberg.org/look/misako.git' 'guix.dots.look.misako'
+
+[src/guix.guix-consensus-documents]
+checkout = git clone 'https://git.savannah.gnu.org/git/guix/guix-consensus-documents.git' 'guix.guix-consensus-documents'
+
+[src/gwern.net]
+checkout = git clone 'https://github.com/gwern/gwern.net.git' 'gwern.net'
+
+[src/harfbuzz]
+checkout = git clone 'https://github.com/harfbuzz/harfbuzz.git' 'harfbuzz'
+
+[src/hledger]
+checkout = git clone 'https://github.com/simonmichael/hledger.git' 'hledger'
+
+[src/kicad]
+checkout = git clone 'git@gitlab.com:hatim/kicad.git' 'kicad'
+
+[src/lazy-beancount]
+checkout = git clone 'https://github.com/Evernight/lazy-beancount' 'lazy-beancount'
+
+[src/lazy-beancount.beancount-importers]
+checkout = git clone 'https://github.com/Evernight/beancount-importers.git' 'lazy-beancount.beancount-importers'
+
+[src/linkding]
+checkout = git clone 'https://github.com/sissbruecker/linkding.git' 'linkding'
+
+[src/linux]
+checkout = git clone 'git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git' 'linux'
+
+[src/llvm-project]
+checkout = git clone 'https://github.com/llvm/llvm-project.git' 'llvm-project'
+
+[src/lsp-bridge]
+checkout = git clone 'https://github.com/manateelazycat/lsp-bridge.git' 'lsp-bridge'
+
+[src/ml.BuilderIO.mitosis]
+checkout = git clone 'https://github.com/BuilderIO/mitosis.git' 'ml.BuilderIO.mitosis'
+
+[src/ml.ai-shell]
+checkout = git clone 'https://github.com/BuilderIO/ai-shell.git' 'ml.ai-shell'
+
+[src/ml.chat-langchain]
+checkout = git clone 'https://github.com/langchain-ai/chat-langchain.git' 'ml.chat-langchain'
+
+[src/ml.chat-langchainjs]
+checkout = git clone 'https://github.com/langchain-ai/chat-langchainjs.git' 'ml.chat-langchainjs'
+
+[src/ml.cline]
+checkout = git clone 'https://github.com/cline/cline.git' 'ml.cline'
+
+[src/ml.ggml]
+checkout = git clone 'https://github.com/ggml-org/ggml' 'ml.ggml'
+
+[src/ml.langchain]
+checkout = git clone 'https://github.com/langchain-ai/langchain.git' 'ml.langchain'
+
+[src/ml.langchainjs]
+checkout = git clone 'https://github.com/langchain-ai/langchainjs.git' 'ml.langchainjs'
+
+[src/ml.langgraph]
+checkout = git clone 'https://github.com/langchain-ai/langgraph.git' 'ml.langgraph'
+
+[src/ml.langgraphjs]
+checkout = git clone 'https://github.com/langchain-ai/langgraphjs.git' 'ml.langgraphjs'
+
+[src/ml.llama.cpp]
+checkout = git clone 'https://github.com/ggml-org/llama.cpp.git' 'ml.llama.cpp'
+
+[src/ml.lms]
+checkout = git clone 'https://github.com/lmstudio-ai/lms.git' 'ml.lms'
+
+[src/ml.lmstudio.js]
+checkout = git clone 'https://github.com/lmstudio-ai/lmstudio.js.git' 'ml.lmstudio.js'
+
+[src/ml.micro-agent]
+checkout = git clone 'https://github.com/BuilderIO/micro-agent.git' 'ml.micro-agent'
+
+[src/ml.mini-agi]
+checkout = git clone 'https://github.com/muellerberndt/mini-agi.git' 'ml.mini-agi'
+
+[src/ml.ollama]
+checkout = git clone 'https://github.com/ollama/ollama.git' 'ml.ollama'
+
+[src/ml.open-canvas]
+checkout = git clone 'https://github.com/langchain-ai/open-canvas.git' 'ml.open-canvas'
+
+[src/ml.opengpts]
+checkout = git clone 'https://github.com/langchain-ai/opengpts.git' 'ml.opengpts'
+
+[src/ml.openspg]
+checkout = git clone 'https://github.com/OpenSPG/openspg.git' 'ml.openspg'
+
+[src/ml.private-gpt]
+checkout = git clone 'https://github.com/zylon-ai/private-gpt.git' 'ml.private-gpt'
+
+[src/ml.run-llama.llama_index]
+checkout = git clone 'https://github.com/run-llama/llama_index.git' 'ml.run-llama.llama_index'
+
+[src/ml.tensorflow]
+checkout = git clone 'https://github.com/tensorflow/tensorflow.git' 'ml.tensorflow'
+
+[src/ml.vllm]
+checkout = git clone 'https://github.com/vllm-project/vllm.git' 'ml.vllm'
+
+[src/mrustc]
+checkout = git clone 'https://github.com/thepowersgang/mrustc.git' 'mrustc'
+
+[src/neovim]
+checkout = git clone 'https://github.com/neovim/neovim.git' 'neovim'
+
+[src/ngraves.dotfiles]
+checkout = git clone 'https://git.sr.ht/~ngraves/dotfiles' 'ngraves.dotfiles'
+
+[src/nix]
+checkout = git clone 'https://github.com/NixOS/nix.git' 'nix'
+
+[src/nix.emacs-overlay]
+checkout = git clone 'https://github.com/nix-community/emacs-overlay.git' 'nix.emacs-overlay'
+
+[src/nix.nixpkgs]
+checkout = git clone 'https://github.com/NixOS/nixpkgs.git' 'nix.nixpkgs'
+
+[src/notmuch]
+checkout = git clone 'https://git.notmuchmail.org/git/notmuch' 'notmuch'
+
+[src/nushell]
+checkout = git clone 'https://github.com/nushell/nushell.git' 'nushell'
+
+[src/panther]
+checkout = git clone 'https://git.pantherx.org/development/panther.git' 'panther'
+
+[src/panther-examples]
+checkout = git clone 'https://git.pantherx.org/development/panther-examples.git' 'panther-examples'
+
+[src/pass-extension-tail]
+checkout = git clone 'https://github.com/palortoff/pass-extension-tail.git' 'pass-extension-tail'
+
+[src/pass-import]
+checkout = git clone 'https://github.com/roddhjav/pass-import.git' 'pass-import'
+
+[src/pass-otp]
+checkout = git clone 'https://github.com/tadfisher/pass-otp.git' 'pass-otp'
+
+[src/pass-update]
+checkout = git clone 'https://github.com/roddhjav/pass-update.git' 'pass-update'
+
+[src/passff]
+checkout = git clone 'https://codeberg.org/PassFF/passff.git' 'passff'
+
+[src/passforios]
+checkout = git clone 'https://github.com/mssun/passforios.git' 'passforios'
+
+[src/password-store]
+checkout = git clone 'https://git.zx2c4.com/password-store' 'password-store'
+
+[src/positron-solutions.youtube]
+checkout = git clone 'git@github.com:positron-solutions/youtube.git' 'positron-solutions.youtube'
+
+[src/projects.clodoc.chat]
+checkout = git clone 'git@github.com:clodoc/chat.git' 'projects.clodoc.chat'
+
+[src/prot.dotfiles]
+checkout = git clone 'https://github.com/protesilaos/dotfiles.git' 'prot.dotfiles'
+
+[src/pyo3]
+checkout = git clone 'https://github.com/PyO3/pyo3.git' 'pyo3'
+
+[src/pyo3.maturin]
+checkout = git clone 'https://github.com/PyO3/maturin.git' 'pyo3.maturin'
+
+[src/pyo3.rust-numpy]
+checkout = git clone 'https://github.com/PyO3/rust-numpy.git' 'pyo3.rust-numpy'
+
+[src/pyo3.setuptools-rust]
+checkout = git clone 'https://github.com/PyO3/setuptools-rust.git' 'pyo3.setuptools-rust'
+
+[src/rspamd]
+checkout = git clone 'https://github.com/rspamd/rspamd.git' 'rspamd'
+
+[src/rust]
+checkout = git clone 'https://github.com/rust-lang/rust.git' 'rust'
+
+[src/rust.cargo]
+checkout = git clone 'https://github.com/rust-lang/cargo.git' 'rust.cargo'
+
+[src/rust.rfcs]
+checkout = git clone 'https://github.com/rust-lang/rfcs.git' 'rust.rfcs'
+
+[src/rust.smoltcp]
+checkout = git clone 'https://github.com/smoltcp-rs/smoltcp.git' 'rust.smoltcp'
+
+[src/rust.tokio]
+checkout = git clone 'https://github.com/tokio-rs/tokio.git' 'rust.tokio'
+
+[src/signal.android]
+checkout = git clone 'https://github.com/signalapp/Signal-Android.git' 'signal.android'
+
+[src/signal.desktop]
+checkout = git clone 'https://github.com/signalapp/Signal-Desktop.git' 'signal.desktop'
+
+[src/signal.ios]
+checkout = git clone 'https://github.com/signalapp/Signal-iOS.git' 'signal.ios'
+
+[src/signal.lib]
+checkout = git clone 'https://github.com/signalapp/libsignal.git' 'signal.lib'
+
+[src/signal.server]
+checkout = git clone 'https://github.com/signalapp/Signal-Server.git' 'signal.server'
+
+[src/tree-sitter]
+checkout = git clone 'https://github.com/tree-sitter/tree-sitter.git' 'tree-sitter'
+
+[src/uv]
+checkout = git clone 'https://github.com/astral-sh/uv.git' 'uv'
+
+[src/vercel.ai]
+checkout = git clone 'https://github.com/vercel/ai.git' 'vercel.ai'
+
+[src/vercel.template.next.js]
+checkout = git clone 'https://github.com/vercel/next.js.git' 'vercel.template.next.js'
+
+[src/vercel.templates.ai-sdk-preview-attachments]
+checkout = git clone 'https://github.com/vercel-labs/ai-sdk-preview-attachments.git' 'vercel.templates.ai-sdk-preview-attachments'
+
+[src/vercel.templates.ai-sdk-preview-internal-knowledge-base]
+checkout = git clone 'https://github.com/vercel-labs/ai-sdk-preview-internal-knowledge-base.git' 'vercel.templates.ai-sdk-preview-internal-knowledge-base'
+
+[src/vercel.templates.ai-sdk-preview-multi-steps]
+checkout = git clone 'https://github.com/vercel-labs/ai-sdk-preview-multi-steps.git' 'vercel.templates.ai-sdk-preview-multi-steps'
+
+[src/vercel.templates.mcp-on-vercel]
+checkout = git clone 'https://github.com/vercel-labs/mcp-on-vercel.git' 'vercel.templates.mcp-on-vercel'
+
+[src/vercel.templates.nextjs-ai-lite]
+checkout = git clone 'https://github.com/mattjared/nextjs-ai-lite.git' 'vercel.templates.nextjs-ai-lite'
+
+[src/wallabag]
+checkout = git clone 'https://github.com/wallabag/wallabag.git' 'wallabag'
+
+[src/wayland]
+checkout = git clone 'https://gitlab.freedesktop.org/wayland/wayland.git' 'wayland'
+
+[src/wayland.wayland-protocols]
+checkout = git clone 'https://gitlab.freedesktop.org/wayland/wayland-protocols.git' 'wayland.wayland-protocols'
+
+[src/wayland.weston]
+checkout = git clone 'https://gitlab.freedesktop.org/wayland/weston.git' 'wayland.weston'
+
+[src/xorg.xserver]
+checkout = git clone 'https://gitlab.freedesktop.org/xorg/xserver.git' 'xorg.xserver'
+
+[src/xous-book]
+checkout = git clone 'https://github.com/betrusted-io/xous-book.git' 'xous-book'
+
+[src/xous-core]
+checkout = git clone 'https://github.com/betrusted-io/xous-core.git' 'xous-core'
+
+[src/xous.sigchat]
+checkout = git clone 'https://github.com/betrusted-io/sigchat.git' 'xous.sigchat'
+
+[src/xous.yove]
+checkout = git clone 'https://github.com/betrusted-io/yove.git' 'xous.yove'
+
+[src/yazi]
+checkout = git clone 'https://github.com/sxyazi/yazi.git' 'yazi'
