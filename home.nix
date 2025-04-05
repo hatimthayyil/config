@@ -97,7 +97,6 @@
           vscode.enable = true;
 
           # Dev
-          mr.enable = true;
           direnv.enable = true;
           jq.enable = true;     # JSON processor
 
@@ -121,6 +120,7 @@
           tree                  # recursive listing of dirs
           restic                # backup
           shellcheck
+          mr
 
           # Dev
           hyperfine             # benchamarking tool
