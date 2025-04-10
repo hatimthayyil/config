@@ -71,6 +71,14 @@
     ...
   }@inputs:
     let
+      #
+      # ========== Architectures
+      #
+      forAllSystems = nixpkgs.lib.genAttrs [
+        "x86_64-linux"
+        #"aarch64-darwin"
+      ];
+
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
