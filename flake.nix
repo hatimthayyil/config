@@ -62,14 +62,15 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nur,
-    emacs-overlay,
-    ...
-  }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      nur,
+      emacs-overlay,
+      ...
+    }@inputs:
     let
       #
       # ========== Architectures
@@ -82,13 +83,22 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-        config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
-          "windsurf"
-          "cursor"
-          "vscode"
-        ];
+        config.allowUnfreePredicate =
+          pkg:
+          builtins.elem (pkgs.lib.getName pkg) [
+            "windsurf"
+            "cursor"
+            "vscode"
+          ];
       };
-    in {
+    in
+    {
+
+      #
+      # ========== Formatting
+      #
+      # Nix formatter available through 'nix fmt' https://github.com/NixOS/nixfmt
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
 
       nixosConfigurations.eagle = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
