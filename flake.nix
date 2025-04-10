@@ -1,8 +1,8 @@
 {
-  description = "Home Manager configuration of hatim"; 
+  description = "Nix configuration flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,7 +17,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, nur, emacs-overlay, ... }:
+  outputs = { self, nixpkgs, home-manager, nur, emacs-overlay, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -29,6 +29,14 @@
         ];
       };
     in {
+
+      nixosConfigurations.eagle = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+        ];
+      };
+
       homeConfigurations."hatim" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
@@ -38,6 +46,11 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+      };
+
+      apps."x86_64-linux".vm = {
+        type = "app";
+        program = "${self.nixosConfigurations.owl.config.system.build.vm}/bin/run-nixos-vm";
       };
     };
 }
