@@ -46,7 +46,7 @@
     # Nix based neovim
     nixvim = {
       url = "github:nix-community/nixvim/nixos-24.11";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
       #url = "github:nix-community/nixvim";
       #inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
@@ -59,6 +59,13 @@
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # Zen browser
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      # IMPORTANT: we're using "libgbm" and is only available in unstable so
+      # ensure to have it up to date or simply don't specify the nixpkgs input
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
@@ -116,6 +123,10 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+
+        extraSpecialArgs = {
+          inherit inputs;
+        };
       };
 
       apps."x86_64-linux".vm = {

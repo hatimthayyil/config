@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   home.username = "hatim";
@@ -115,49 +115,50 @@
   };
 
   # Home Packages
-  home.packages = with pkgs; [
+  home.packages = [
     # Terminals
-    st
+    pkgs.st
 
     # Utils
-    tree # recursive listing of dirs
-    restic # backup
-    shellcheck
-    mr
+    pkgs.tree # recursive listing of dirs
+    pkgs.restic # backup
+    pkgs.shellcheck
+    pkgs.mr
 
     # Dev
-    hyperfine # benchamarking tool
-    cloc # lines of code
-    gnumake
-    curl
-    curlie # frontend for curl
-    tig # TUI for git
-    mercurial
-    cvs
+    pkgs.hyperfine # benchamarking tool
+    pkgs.cloc # lines of code
+    pkgs.gnumake
+    pkgs.just
+    pkgs.curl
+    pkgs.curlie # frontend for curl
+    pkgs.tig # TUI for git
+    pkgs.mercurial
+    pkgs.cvs
 
     # Editors
-    windsurf
-    code-cursor
-    vscodium-fhs
+    pkgs.windsurf
+    pkgs.code-cursor
+    pkgs.vscodium-fhs
 
     # Messaging
-    telegram-desktop
-    signal-desktop
-    senpai # IRC
+    pkgs.telegram-desktop
+    pkgs.signal-desktop
+    pkgs.senpai # IRC
 
     # LSP
-    nixd
+    pkgs.nixd
 
     # Tools
-    monolith # archive web-page
-    xdot # graph viewer
-    imagemagick
-    poppler
-    mediainfo
+    pkgs.monolith # archive web-page
+    pkgs.xdot # graph viewer
+    pkgs.imagemagick
+    pkgs.poppler
+    pkgs.mediainfo
 
     # Browsers
-    librewolf
-    nyxt
+    pkgs.librewolf
+    pkgs.nyxt
+    inputs.zen-browser.packages."x86_64-linux".default
   ];
-
 }
