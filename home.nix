@@ -78,6 +78,11 @@
     enableSshSupport = true;
   };
 
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
+
   programs = {
     # Shell
     nushell.enable = true;
@@ -161,5 +166,10 @@
     pkgs.nyxt
     inputs.zen-browser.packages."x86_64-linux".default
     pkgs.tangram
+
+    # ML
+    pkgs.lmstudio
+    pkgs.llama-cpp
+    pkgs.jan
   ];
 }

@@ -93,9 +93,17 @@
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (pkgs.lib.getName pkg) [
+            # Microsoft
+            "vscode"
+
+            # ML/GPU
             "windsurf"
             "cursor"
-            "vscode"
+            "lmstudio"
+            "cuda_cudart"       # ollama
+            "libcublas"         # ollama
+            "cuda_cccl"         # ollama
+            "cuda_nvcc"         # ollama
           ];
       };
     in
