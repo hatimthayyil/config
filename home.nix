@@ -25,7 +25,7 @@
     ];
   };
 
-  #fonts.fontconfig.enable = true;
+  fonts.fontconfig.enable = true;
 
   targets.genericLinux.enable = true;
 
