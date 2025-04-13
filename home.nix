@@ -129,6 +129,7 @@
     pkgs.restic # backup
     pkgs.shellcheck
     pkgs.mr
+    pkgs.btop
 
     # Dev
     pkgs.hyperfine # benchamarking tool
