@@ -27,79 +27,57 @@
 
   fonts.fontconfig.enable = true;
 
-  targets.genericLinux.enable = true;
-
-  # TODO Enable after switching to NixOS
-  #programs.bash.enable = true;
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-
-    shellAliases = {
-      ll = "ls -l";
-    };
-    history.size = 10000;
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git" ];
-      theme = "robbyrussell";
-    };
-  };
-
-  programs.starship = {
-    enable = true;
-    settings = {
-      add_newline = true;
-      character = {
-        success_symbol = "[➜](bold green)";
-        error_symbol = "[➜](bold red)";
-      };
-    };
-  };
-
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/hatim/src/config.x/nx";
-  };
-
-  programs.git = {
-    enable = true;
-    userEmail = "hatim@thayyil.net";
-    userName = "Hatim Thayyil";
-  };
-
-  programs.gpg.enable = true;
   services.gpg-agent = {
     enable = true;
     enableSshSupport = true;
   };
 
-  services.ollama = {
-    enable = true;
-    acceleration = "cuda";
-
-    # preload models, see https://ollama.com/library
-    #loadModels = [ "llama3.2:3b" "deepseek-r1:1.5b"];
-  };
-
   programs = {
-    # Shell
-    nushell.enable = true;
-    tmux.enable = true;
-    alacritty.enable = true;
 
-    # Shell Utils
+    git = {
+      enable = true;
+      userEmail = "hatim@thayyil.net";
+      userName = "Hatim Thayyil";
+    };
+
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+      flake = "/home/hatim/src/config.x/nx";
+    };
+
+    # Shell
+    bash.enable = true;
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      syntaxHighlighting.enable = true;
+      history.size = 10000;
+    };
+    nushell.enable = true;
+    starship = {
+      enable = true;
+      settings = {
+        add_newline = true;
+        character = {
+          success_symbol = "[➜](bold green)";
+          error_symbol = "[➜](bold red)";
+        };
+      };
+    };
+    alacritty.enable = true;
     kitty.enable = true;
+    tmux.enable = true;
+
+    # Utils
     yazi.enable = true;
     fd.enable = true;
     fzf.enable = true;
     bat.enable = true;
     zoxide.enable = true;
     fastfetch.enable = true;
+    gpg.enable = true;
 
     # Editors
     neovim.enable = true;
