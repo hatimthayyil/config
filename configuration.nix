@@ -176,4 +176,39 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 
+  networking.extraHosts = ''
+    127.0.0.1 chat.local
+    127.0.0.1 ollama.local
+    127.0.0.1 cloud.local
+  '';
+
+  services.nginx = {
+    enable = true;
+
+    virtualHosts."chat.local" = {
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:11500";
+        proxyWebsockets = true;
+      };
+    };
+
+    virtualHosts."ollama.local" = {
+      locations."/" = {
+        proxyPass = "http://127.0.0.1:11434";
+      };
+    };
+  };
+
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+
+    # preload models, see https://ollama.com/library
+    #loadModels = [ "llama3.2:3b" "deepseek-r1:1.5b"];
+  };
+
+  services.open-webui = {
+    enable = true;
+    port = 11500;
+  };
 }
