@@ -115,7 +115,7 @@
   services.libinput = {
     enable = true;
     touchpad = {
-      naturalScrolling = true;
+      naturalScrolling = true; # KDE resets this
     };
   };
 
