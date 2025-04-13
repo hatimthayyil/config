@@ -160,5 +160,10 @@
     pkgs.lmstudio
     pkgs.llama-cpp
     pkgs.jan
+
+    # Astronomy
+    pkgs.stellarium
+    pkgs.celestia
+    pkgs.gpredict
   ];
 }
