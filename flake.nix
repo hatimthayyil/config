@@ -104,6 +104,7 @@
             "libcublas"         # ollama
             "cuda_cccl"         # ollama
             "cuda_nvcc"         # ollama
+            "cuda_merged"       # dep of nvtop
           ];
       };
     in

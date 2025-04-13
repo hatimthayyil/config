@@ -46,6 +46,35 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
+  # Enable OpenGL
+  hardware.graphics = {
+    enable = true;
+  };
+
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = ["nvidia"];
+
+  # Setup NVIDIA GPU
+  hardware.nvidia = {
+    # Modesetting is required.
+    modesetting.enable = true;
+
+    # Turn off experimental power management
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+
+    # Disable the open NVIDIA drivers,
+    # see https://github.com/NVIDIA/open-gpu-kernel-modules
+    open = false;
+
+    # Enable the Nvidia settings menu,
+    # accessible via `nvidia-settings`.
+    nvidiaSettings = true;
+
+    # Selects the NVIDIA driver package
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
@@ -116,6 +145,8 @@
     vim
     wget
     git
+    nvtopPackages.nvidia
+    nvtopPackages.intel
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
