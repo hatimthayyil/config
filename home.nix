@@ -160,5 +160,8 @@
     pkgs.stellarium
     pkgs.celestia
     pkgs.gpredict
+
+    # Secret
+    pkgs.pass
   ];
 }
