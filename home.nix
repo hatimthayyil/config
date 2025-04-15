@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   home.username = "hatim";
@@ -145,11 +150,11 @@
     pkgs.tangram
 
     # GPU
-    pkgs.glxinfo        # glxinfo, OpenGL (MESA)
-    pkgs.vulkan-tools    # vulkaninfo : OpenGL alt (MESA)
-    pkgs.libva-utils    # vainfo : Video Acceleration
-    pkgs.clinfo         # clinfo : OpenCL (CUDA alt)
-    pkgs.lact           # GPU config tool
+    pkgs.glxinfo # glxinfo, OpenGL (MESA)
+    pkgs.vulkan-tools # vulkaninfo : OpenGL alt (MESA)
+    pkgs.libva-utils # vainfo : Video Acceleration
+    pkgs.clinfo # clinfo : OpenCL (CUDA alt)
+    pkgs.lact # GPU config tool
 
     # ML
     pkgs.lmstudio

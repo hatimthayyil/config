@@ -100,11 +100,11 @@
             "windsurf"
             "cursor"
             "lmstudio"
-            "cuda_cudart"       # ollama
-            "libcublas"         # ollama
-            "cuda_cccl"         # ollama
-            "cuda_nvcc"         # ollama
-            "cuda_merged"       # dep of nvtop
+            "cuda_cudart" # ollama
+            "libcublas" # ollama
+            "cuda_cccl" # ollama
+            "cuda_nvcc" # ollama
+            "cuda_merged" # dep of nvtop
           ];
       };
     in
