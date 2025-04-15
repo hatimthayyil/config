@@ -116,25 +116,31 @@
       # Nix formatter available through 'nix fmt' https://github.com/NixOS/nixfmt
       formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
 
+      #
+      # ========== Host configurations
+      #
       nixosConfigurations.eagle = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./hosts/eagle
         ];
       };
 
-      homeConfigurations."hatim" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      #
+      # ========== User home configuration
+      #
+      homeConfigurations = {
+        "hatim@eagle" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./home.nix ];
+          modules = [
+            ./home/hatim/eagle.nix
+          ];
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
-
-        extraSpecialArgs = {
-          inherit inputs;
+          # Pass through arguments to home.nix
+          extraSpecialArgs = {
+            inherit inputs;
+          };
         };
       };
 
