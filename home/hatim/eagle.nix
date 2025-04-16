@@ -70,6 +70,13 @@
 
     # Utils
     yazi.enable = true;
+    broot = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      enableFishIntegration = true;
+      enableNushellIntegration = true;
+    };
     fd.enable = true;
     fzf.enable = true;
     bat.enable = true;
