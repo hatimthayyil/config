@@ -56,15 +56,13 @@
       history.size = 10000;
     };
     nushell.enable = true;
-    starship = {
+    oh-my-posh = {
       enable = true;
-      settings = {
-        add_newline = true;
-        character = {
-          success_symbol = "[➜](bold green)";
-          error_symbol = "[➜](bold red)";
-        };
-      };
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      enableFishIntegration = true;
+      enableNushellIntegration = true;
+      useTheme = "star";
     };
     alacritty.enable = true;
     kitty.enable = true;
