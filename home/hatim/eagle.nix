@@ -1,11 +1,16 @@
 {
-  config,
   pkgs,
-  inputs,
   ...
 }:
 
 {
+  imports = [
+    ./version-control.nix
+    ./cli-utils.nix
+    ./dekstop-wayland.nix
+    ./gui-apps.nix
+  ];
+
   home.username = "hatim";
   home.homeDirectory = "/home/hatim";
 
@@ -34,12 +39,6 @@
 
   programs = {
 
-    git = {
-      enable = true;
-      userEmail = "hatim@thayyil.net";
-      userName = "Hatim Thayyil";
-    };
-
     nh = {
       enable = true;
       clean.enable = true;
@@ -66,77 +65,31 @@
     };
     alacritty.enable = true;
     kitty.enable = true;
-    tmux.enable = true;
 
     # Utils
-    yazi.enable = true;
-    broot = {
-      enable = true;
-      enableBashIntegration = true;
-      enableZshIntegration = true;
-      enableFishIntegration = true;
-      enableNushellIntegration = true;
-    };
-    fd.enable = true;
-    fzf.enable = true;
-    bat.enable = true;
-    zoxide.enable = true;
-    fastfetch.enable = true;
     gpg.enable = true;
-
-    # Editors
-    neovim.enable = true;
-    helix.enable = true;
-    kakoune.enable = true;
-    vscode.enable = true;
 
     # Dev
     direnv.enable = true;
     jq.enable = true; # JSON processor
-
-    # Browsers
-    firefox.enable = true;
-    chromium.enable = true; # TODO make sure it uses ungoogled
-
-    # Multimedia
-    cmus.enable = true;
-    mpv.enable = true;
-    imv.enable = true;
-    sioyek.enable = true;
   };
 
   # Home Packages
   home.packages = [
     # Terminals
     pkgs.st
+    pkgs.wl-clipboard
 
     # Utils
     pkgs.tree # recursive listing of dirs
     pkgs.restic # backup
     pkgs.shellcheck
-    pkgs.mr
-    pkgs.btop
 
     # Dev
-    pkgs.hyperfine # benchamarking tool
-    pkgs.cloc # lines of code
     pkgs.gnumake
     pkgs.just
     pkgs.curl
     pkgs.curlie # frontend for curl
-    pkgs.tig # TUI for git
-    pkgs.mercurial
-    pkgs.cvs
-
-    # Editors
-    pkgs.windsurf
-    pkgs.code-cursor
-    pkgs.vscodium-fhs
-
-    # Messaging
-    pkgs.telegram-desktop
-    pkgs.signal-desktop
-    pkgs.senpai # IRC
 
     # LSP
     pkgs.nixd
@@ -147,12 +100,6 @@
     pkgs.imagemagick
     pkgs.poppler
     pkgs.mediainfo
-
-    # Browsers
-    pkgs.librewolf
-    pkgs.nyxt
-    inputs.zen-browser.packages."x86_64-linux".default
-    pkgs.tangram
 
     # GPU
     pkgs.glxinfo # glxinfo, OpenGL (MESA)

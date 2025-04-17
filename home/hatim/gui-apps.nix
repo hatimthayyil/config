@@ -1,0 +1,42 @@
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  programs = {
+    # Editors
+    neovim.enable = true;
+    helix.enable = true;
+    kakoune.enable = true;
+    vscode.enable = true;
+
+    # Browsers
+    firefox.enable = true;
+    chromium.enable = true; # TODO make sure it uses ungoogled
+
+    # Multimedia
+    cmus.enable = true;
+    mpv.enable = true;
+    imv.enable = true;
+
+    sioyek.enable = true;
+  };
+
+  home.packages = [
+    # Browsers
+    pkgs.librewolf
+    pkgs.nyxt
+    inputs.zen-browser.packages."x86_64-linux".default
+    pkgs.tangram
+
+    # Messaging
+    pkgs.telegram-desktop
+    pkgs.signal-desktop
+    pkgs.senpai # IRC
+
+    # Editors
+    pkgs.windsurf
+    pkgs.code-cursor
+    pkgs.vscodium-fhs
+  ];
+}
