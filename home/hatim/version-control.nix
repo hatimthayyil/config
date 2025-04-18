@@ -30,6 +30,7 @@
 
     aliases = {
       st = "status";
+      ld = "log --patch --ext-diff";
       co = "checkout";
       ad = "add";
       ap = "add -p";
