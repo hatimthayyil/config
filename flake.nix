@@ -89,27 +89,6 @@
         "x86_64-linux"
         #"aarch64-darwin"
       ];
-
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfreePredicate =
-          pkg:
-          builtins.elem (pkgs.lib.getName pkg) [
-            # Microsoft
-            "vscode"
-
-            # ML/GPU
-            "windsurf"
-            "cursor"
-            "lmstudio"
-            "cuda_cudart" # ollama
-            "libcublas" # ollama
-            "cuda_cccl" # ollama
-            "cuda_nvcc" # ollama
-            "cuda_merged" # dep of nvtop
-          ];
-      };
     in
     {
 
@@ -140,16 +119,18 @@
       #
       homeConfigurations = {
         "hatim@eagle" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+            overlays = [ outputs.overlays.default ];
+          };
 
           modules = [
             ./home/hatim/eagle.nix
           ];
 
           # Pass through arguments to home.nix
-          extraSpecialArgs = {
-            inherit inputs;
-          };
+          extraSpecialArgs = { inherit inputs outputs; };
         };
       };
 

@@ -1,4 +1,5 @@
 {
+  outputs,
   pkgs,
   ...
 }:
@@ -34,4 +35,16 @@
   home.sessionVariables = { };
 
   fonts.fontconfig.enable = true;
+
+  #
+  # ========== Nixpkgs with overlays
+  #
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.default
+    ];
+    config = {
+      allowUnfree = true;
+    };
+  };
 }
