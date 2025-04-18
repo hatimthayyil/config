@@ -11,7 +11,7 @@ let
     stable = import inputs.nixpkgs-stable {
       inherit (final) system;
       config.allowUnfree = true;
-      overalys = [];
+      overlays = [];
     };
   };
 
@@ -19,7 +19,7 @@ let
     unstable = import inputs.nixpkgs-unstable {
       inherit (final) system;
       config.allowUnfree = true;
-      overalys = [];
+      overlays = [];
     };
   };
 
@@ -27,7 +27,7 @@ let
     master = import inputs.nixpkgs-master {
       inherit (final) system;
       config.allowUnfree = true;
-      overalys = [];
+      overlays = [];
     };
   };
 in
