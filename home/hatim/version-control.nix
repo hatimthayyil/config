@@ -33,6 +33,8 @@
       co = "checkout";
       ad = "add";
       ap = "add -p";
+      dt = "diff";
+      di = "diff --cached";
       ci = "commit";
       rt = "restore";
       ri = "restore --staged";
