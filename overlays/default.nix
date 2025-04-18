@@ -22,9 +22,18 @@ let
       overalys = [];
     };
   };
+
+  master-packages = final: _prev: {
+    master = import inputs.nixpkgs-master {
+      inherit (final) system;
+      config.allowUnfree = true;
+      overalys = [];
+    };
+  };
 in
   {
     default = final: prev:
       (stable-packages final prev)
-      // (unstable-packages final prev);
+      // (unstable-packages final prev)
+      // (master-packages final prev);
   }
