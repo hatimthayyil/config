@@ -2,17 +2,65 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, options, ... }:
-
+{
+  outputs,
+  inputs,
+  config,
+  pkgs,
+  options,
+  lib,
+  ...
+}:
 {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  #
+  # ========== Nix
+  #
+  nix = {
+    # This will add each flake input as a registry
+    # To make nix3 commands consistent with your flake
+    registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
+
+    # This will add your inputs to the system's legacy channels
+    # Making legacy nix commands consistent as well, awesome!
+    nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
+
+    settings = {
+      # See https://jackson.dev/post/nix-reasonable-defaults/
+      connect-timeout = 5;
+      log-lines = 25;
+      min-free = 128000000; # 128MB
+      max-free = 1000000000; # 1GB
+
+      trusted-users = [ "@wheel" ];
+      # Deduplicate and optimize nix store
+      auto-optimise-store = true;
+      warn-dirty = false;
+
+      allow-import-from-derivation = true;
+
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+    };
+  };
+
+  #
+  # ========== Nixpkgs with overlays
+  #
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.default
+    ];
+    config = {
+      allowUnfree = true;
+    };
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -135,9 +183,6 @@
 
   # Install firefox.
   programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

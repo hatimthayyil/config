@@ -80,6 +80,8 @@
       ...
     }@inputs:
     let
+      inherit (self) outputs;
+
       #
       # ========== Architectures
       #
@@ -130,6 +132,7 @@
         modules = [
           ./hosts/eagle
         ];
+        specialArgs = { inherit inputs outputs; };
       };
 
       #
