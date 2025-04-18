@@ -111,6 +111,11 @@
     {
 
       #
+      # ========== Overlays
+      #
+      overlays = import ./overlays { inherit inputs; };
+
+      #
       # ========== Formatting
       #
       # Nix formatter available through 'nix fmt' https://github.com/NixOS/nixfmt
