@@ -29,5 +29,8 @@
     # Remote repo management
     pkgs.ghorg # clone entire org/user repos
     pkgs.github-backup # backup github
+
+    # Reverse engineering
+    pkgs.ghidra
   ];
 }
