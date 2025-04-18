@@ -20,6 +20,7 @@
     ./multimedia.nix
     ./research-tools.nix
     ./backups.nix
+    ./design-electronics.nix
   ];
 
   home.username = "hatim";
