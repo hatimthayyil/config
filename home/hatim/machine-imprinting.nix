@@ -14,7 +14,7 @@
     pkgs.lmstudio
     pkgs.llama-cpp
     pkgs.jan
-    pkgs.claude-code
+    pkgs.master.claude-code
     pkgs.master.codex
   ];
 }
