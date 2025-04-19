@@ -40,5 +40,6 @@
     pkgs.hyperfine # benchamarking tool
     pkgs.cloc # lines of code
     pkgs.tree # recursive listing of dirs
+    pkgs.dust # better du (file sizes)
   ];
 }
