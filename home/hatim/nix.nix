@@ -24,5 +24,8 @@
   home.packages = [
     # LSP
     pkgs.nixd
+
+    pkgs.nix-output-monitor
+    pkgs.nix-forecast
   ];
 }
