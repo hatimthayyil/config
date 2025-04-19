@@ -30,10 +30,15 @@ let
       overlays = [];
     };
   };
+
+  emacs-overlay-packages = final: prev: {
+    emacs-overlay = (inputs.emacs-overlay.overlay final prev);
+  };
 in
   {
     default = final: prev:
       (stable-packages final prev)
       // (unstable-packages final prev)
-      // (master-packages final prev);
+      // (master-packages final prev)
+      // (emacs-overlay-packages final prev);
   }
