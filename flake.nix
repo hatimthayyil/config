@@ -76,7 +76,6 @@
       nixpkgs,
       home-manager,
       nur,
-      emacs-overlay,
       ...
     }@inputs:
     let
