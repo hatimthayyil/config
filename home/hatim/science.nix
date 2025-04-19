@@ -4,7 +4,7 @@
 }: {
   home.packages = [
     # Astronomy
-    pkgs.stellarium
+    pkgs.stable.stellarium
     pkgs.celestia
     pkgs.gpredict
   ];
