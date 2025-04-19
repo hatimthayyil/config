@@ -11,6 +11,7 @@
     ./terminals.nix
     ./secrets.nix
     ./software-development.nix
+    ./emacs.nix
     ./version-control.nix
     ./cli-utils.nix
     ./dekstop-wayland.nix
