@@ -12,3 +12,9 @@ os:
 
 home:
     nh home switch .
+
+update:
+    nix flake update
+
+upgrade:
+    just update && just build && just switch
