@@ -19,6 +19,7 @@
       # To be kept up to date with nixpkgs
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     # Hardware
     hardware.url = "github:nixos/nixos-hardware/master";
     # Nix User Repository
@@ -61,6 +62,8 @@
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Local modules
+    emx-local.url = "path:///home/hatim/src/emx";
     # Zen browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -126,6 +129,7 @@
 
           modules = [
             ./home/hatim/eagle.nix
+            inputs.emx-local.homeManagerModules.default
           ];
 
           # Pass through arguments to home.nix
