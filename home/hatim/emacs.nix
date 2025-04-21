@@ -1,4 +1,5 @@
 {
+  config,
   pkgs,
   ...
 }: {
@@ -16,6 +17,6 @@
     treesitGrammars = [
       "all"
     ];
-    localPath = /home/hatim/src/emx;
+    localPath = "${config.home.homeDirectory}/src/emx";
   };
 }
