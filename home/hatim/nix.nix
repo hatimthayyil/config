@@ -34,8 +34,9 @@
     pkgs.cachix
     pkgs.attic-client
 
-    # LSP
+    # Dev
     pkgs.nixd
+    pkgs.nix-direnv
 
     pkgs.nix-output-monitor
     pkgs.nix-forecast
