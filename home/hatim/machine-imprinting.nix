@@ -14,6 +14,8 @@
     pkgs.lmstudio
     pkgs.llama-cpp
     pkgs.jan
+    pkgs.aider-chat
+    #pkgs.aider-chat-full # broken on unstable
     pkgs.master.claude-code
     pkgs.master.codex
   ];
