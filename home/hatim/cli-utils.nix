@@ -20,6 +20,7 @@
     };
     sesh.enable = true;
     fzf.tmux.enableShellIntegration = true; # needed for sesh
+    ripgrep.enable = true;
 
     lsd = {
       enable = true;
