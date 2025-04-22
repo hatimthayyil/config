@@ -62,8 +62,14 @@
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Local modules
-    emx-local.url = "path:///home/hatim/src/emx";
+
+    # Emx
+    emx = {
+      url = "github:hatimbt/emx";
+      #url = "path:///home/hatim/src/emx";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Zen browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -129,7 +135,7 @@
 
           modules = [
             ./home/hatim/eagle.nix
-            inputs.emx-local.homeManagerModules.default
+            inputs.emx.homeManagerModules.default
           ];
 
           # Pass through arguments to home.nix

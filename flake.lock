@@ -62,19 +62,24 @@
         "type": "github"
       }
     },
-    "emx-local": {
+    "emx": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1745287259,
-        "narHash": "sha256-Q3/0yrnoKe5DRAOPmNpM1MinZIIFy+uaABLpbyO2arI=",
-        "path": "/home/hatim/src/emx",
-        "type": "path"
+        "lastModified": 1745286848,
+        "narHash": "sha256-qrkdvegj2P2ShH3SQNyTKatVLei9aGLGiZc2FvwWwKw=",
+        "owner": "hatimbt",
+        "repo": "emx",
+        "rev": "69613ab7e3ce0e010b22763c66045501e47fe07f",
+        "type": "github"
       },
       "original": {
-        "path": "/home/hatim/src/emx",
-        "type": "path"
+        "owner": "hatimbt",
+        "repo": "emx",
+        "type": "github"
       }
     },
     "flake-compat": {
@@ -385,13 +390,13 @@
       "locked": {
         "lastModified": 1744932701,
         "narHash": "sha256-fusHbZCyv126cyArUwwKrLdCkgVAIaa/fQJYFlCEqiU=",
-        "owner": "NixOS",
+        "owner": "nixos",
         "repo": "nixpkgs",
         "rev": "b024ced1aac25639f8ca8fdfc2f8c4fbd66c48ef",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
+        "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
@@ -456,22 +461,6 @@
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1744932701,
-        "narHash": "sha256-fusHbZCyv126cyArUwwKrLdCkgVAIaa/fQJYFlCEqiU=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "b024ced1aac25639f8ca8fdfc2f8c4fbd66c48ef",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
@@ -577,11 +566,11 @@
       "inputs": {
         "disko": "disko",
         "emacs-overlay": "emacs-overlay",
-        "emx-local": "emx-local",
+        "emx": "emx",
         "hardware": "hardware",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs",
         "nixpkgs-master": "nixpkgs-master",
         "nixpkgs-stable": "nixpkgs-stable_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
