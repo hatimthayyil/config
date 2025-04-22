@@ -20,4 +20,4 @@ upgrade:
     just update && just build && just switch
 
 emx:
-    nix flake update emx-local && just home && emacs
+    nix flake update emx-local && just home && emx
