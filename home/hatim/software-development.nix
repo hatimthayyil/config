@@ -3,7 +3,19 @@
   ...
 }: {
   programs = {
-    direnv.enable = true;
+    # Direnv
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      enableNushellIntegration = true;
+
+      config = {
+        warn_timeout = "10m";
+      };
+    };
+
     jq.enable = true; # JSON processor
 
     gh = {
@@ -18,6 +30,7 @@
     # GitHub dashboard (can be customised)
     gh-dash.enable = true;
   };
+
   home.packages = [
     # Dev
     pkgs.gnumake

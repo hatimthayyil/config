@@ -42,7 +42,6 @@
 
     # Dev
     pkgs.nixd
-    pkgs.nix-direnv
     pkgs.nvd
     pkgs.manix
 
