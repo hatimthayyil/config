@@ -16,7 +16,7 @@
     ./cli-utils.nix
     ./dekstop-wayland.nix
     ./gui-apps.nix
-    ./machine-imprinting.nix
+    ./language-machine.nix
     ./science.nix
     ./multimedia.nix
     ./research-tools.nix
