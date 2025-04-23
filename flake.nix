@@ -45,6 +45,15 @@
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Nix-index
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    #
+    # ========== Applications
+    #
     # Nix based neovim
     nixvim = {
       url = "github:nix-community/nixvim/nixos-24.11";
@@ -62,14 +71,12 @@
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Emx
+    # EmX Emacs distribution
     emx = {
       url = "github:hatimbt/emx";
       #url = "path:///home/hatim/src/emx";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     # Zen browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -135,6 +142,7 @@
 
           modules = [
             ./home/hatim/eagle.nix
+            inputs.nix-index-database.hmModules.nix-index
             inputs.emx.homeManagerModules.default
           ];
 
