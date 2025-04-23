@@ -18,5 +18,6 @@
     #pkgs.aider-chat-full # broken on unstable
     pkgs.master.claude-code
     pkgs.master.codex
+    pkgs.llm # LLM cli from Simon Willison
   ];
 }
