@@ -4,12 +4,6 @@
   ...
 }: {
   programs = {
-    # Editors
-    neovim.enable = true;
-    helix.enable = true;
-    kakoune.enable = true;
-    vscode.enable = true;
-
     # Browsers
     firefox.enable = true;
     chromium.enable = true; # TODO make sure it uses ungoogled
