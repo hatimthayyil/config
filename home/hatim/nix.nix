@@ -43,6 +43,8 @@
     # Dev
     pkgs.nixd
     pkgs.nix-direnv
+    pkgs.nvd
+    pkgs.manix
 
     pkgs.nix-output-monitor
     pkgs.nix-forecast
