@@ -14,6 +14,14 @@
     imv.enable = true;
 
     sioyek.enable = true;
+
+    # Mail
+    thunderbird = {
+      enable = true;
+      profiles."default" = {
+        isDefault = true;
+      };
+    };
   };
 
   home.packages = [
