@@ -35,6 +35,9 @@
     pkgs.telegram-desktop
     pkgs.signal-desktop
     pkgs.senpai # IRC
+    pkgs.discord
+    pkgs.element-desktop
+    pkgs.zoom-us
 
     # Editors
     pkgs.windsurf
