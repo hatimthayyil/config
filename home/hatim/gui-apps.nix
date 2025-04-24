@@ -40,5 +40,8 @@
     pkgs.windsurf
     pkgs.code-cursor
     pkgs.vscodium-fhs
+
+    # Design
+    pkgs.drawio
   ];
 }
