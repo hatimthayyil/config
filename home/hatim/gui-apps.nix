@@ -30,6 +30,8 @@
     pkgs.nyxt
     inputs.zen-browser.packages."x86_64-linux".default
     pkgs.tangram
+    # Mail
+    pkgs.mailspring
 
     # Messaging
     pkgs.telegram-desktop
