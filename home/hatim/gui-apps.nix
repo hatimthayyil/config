@@ -8,6 +8,8 @@
     mpv.enable = true;
     imv.enable = true;
 
+    # Documents, PDFs, books, etc
+    zathura.enable = true;
     sioyek.enable = true;
 
     # Mail
