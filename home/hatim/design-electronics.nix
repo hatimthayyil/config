@@ -3,6 +3,6 @@
   ...
 }: {
   home.packages = [
-    pkgs.master.kicad # unstable is broken
+    pkgs.unstable.kicad # unstable is broken
   ];
 }
