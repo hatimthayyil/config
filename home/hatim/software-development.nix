@@ -49,5 +49,8 @@
     # Programming languages
     pkgs.stable.bend # Parallel computing
     pkgs.stable.hvm # Runtime for bend
+
+    # Misc
+    pkgs.exercism # CLI for exercism.org
   ];
 }
