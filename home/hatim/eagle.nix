@@ -24,6 +24,7 @@
     ./web-browsers.nix
     ./mod.study.mathematics.nix
     ./mod.study.linguistics.nix
+    ./mod.dsdv.web.nix
   ];
 
   home.username = "hatim";
