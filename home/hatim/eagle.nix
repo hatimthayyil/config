@@ -22,6 +22,7 @@
     ./backups.nix
     ./design-electronics.nix
     ./web-browsers.nix
+    ./mod.study.mathematics.nix
     ./mod.study.linguistics.nix
   ];
 
