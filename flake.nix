@@ -141,7 +141,7 @@
           };
 
           modules = [
-            ./home/hatim/eagle.nix
+            ./home/hatim/host.eagle.hatim.nix
             inputs.nix-index-database.hmModules.nix-index
             inputs.emx.homeManagerModules.default
           ];
