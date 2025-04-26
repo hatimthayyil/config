@@ -73,7 +73,7 @@
     };
     # EmX Emacs distribution
     emx = {
-      url = "github:hatimbt/emx";
+      url = "github:hatimthayyil/emx";
       #url = "path:///home/hatim/src/emx";
       inputs.nixpkgs.follows = "nixpkgs";
     };
