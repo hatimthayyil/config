@@ -17,6 +17,7 @@
     ./hardware-configuration.nix
     ../mod.hw.laptop.nix
     ../mod.hw.lenovo-thinkpad-p52.nix
+    ../mod.apps.web-browsers.nix
   ];
 
   #
@@ -182,9 +183,6 @@
       #  thunderbird
     ];
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
