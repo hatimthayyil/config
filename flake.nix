@@ -124,6 +124,7 @@
       nixosConfigurations.eagle = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          inputs.hardware.nixosModules.lenovo-thinkpad-p52
           ./hosts/eagle
         ];
         specialArgs = { inherit inputs outputs; };
