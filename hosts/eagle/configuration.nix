@@ -62,6 +62,9 @@
     ];
     config = {
       allowUnfree = true;
+      # Enable CUDA support for NixOS nixpkgs, I might need to enable
+      # this for the other nixpkgs variants to get CUDA.
+      #cudaSupport = true; # openwebui currently breaks with this
     };
   };
 
