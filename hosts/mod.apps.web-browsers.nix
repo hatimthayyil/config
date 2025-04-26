@@ -5,6 +5,7 @@
   # Google chromium.
   # This option does not install a browser. It sets up policies
   # for chromium based browsers (Chromium, Brave, Google Chrome).
+  # see https://github.com/wimpysworld/nix-config/blob/main/nixos/_mixins/desktop/apps/web-browsers/martin.nix
   programs.chromium = {
     enable = true;
     defaultSearchProviderEnabled = true;
