@@ -1,4 +1,6 @@
 { ... }: {
+  # TODO Move default search engine to Kagi
+
   # Firefox.
   programs.firefox.enable = true;
 
