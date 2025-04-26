@@ -16,6 +16,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../mod.hw.laptop.nix
+    ../mod.hw.lenovo-thinkpad-p52.nix
   ];
 
   #
