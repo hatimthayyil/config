@@ -19,5 +19,17 @@
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
       "ikdjjgioalkbdihbhcfffjnanhnilipa" # English syntax highlighter
     ];
+    #
+    extraOpts = {
+      BrowserSignin = 0;
+      SyncDisabled = true;
+      PasswordManagerEnabled = false;
+      SpellcheckEnabled = true;
+      SpellcheckLanguage = [
+        "en-GB"
+      ];
+      CloudReportingEnabled = false;
+      CloudProfileReportingEnabled = false;
+    };
   };
 }
