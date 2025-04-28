@@ -23,6 +23,14 @@ let
     };
   };
 
+  unstable-small-packages = final: _prev: {
+    unstable-small = import inputs.nixpkgs-unstable-small {
+      inherit (final) system;
+      config.allowUnfree = true;
+      overlays = [];
+    };
+  };
+
   master-packages = final: _prev: {
     master = import inputs.nixpkgs-master {
       inherit (final) system;
@@ -39,6 +47,7 @@ in
     default = final: prev:
       (stable-packages final prev)
       // (unstable-packages final prev)
+      // (unstable-small-packages final prev)
       // (master-packages final prev)
       // (emacs-overlay-packages final prev);
   }

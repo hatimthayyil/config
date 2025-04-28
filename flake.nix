@@ -3,12 +3,20 @@
 
   inputs = {
     #
-    # ========== Official NixOS
+    # ========== Primary NixOS pkgs
     #
-    nixpkgs.url = "github:nixos/nixpkgs/master";
-    # Pinned versions for critical applications
+    #nixpkgs.url = "github:nixos/nixpkgs/master";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+
+    #
+    # ========== Pinned versions available as pkgs.stable etc
+    #
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
 
     # Home manager
