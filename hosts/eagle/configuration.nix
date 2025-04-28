@@ -18,6 +18,7 @@
     ../mod.hw.laptop.nix
     ../mod.hw.lenovo-thinkpad-p52.nix
     ../mod.apps.web-browsers.nix
+    ../mod.os.networking.nix
   ];
 
   #
