@@ -8,23 +8,23 @@
     ./nix.nix
     ./shells.nix
     ./terminals.nix
-    ./secrets.nix
-    ./software-development.nix
-    ./editors.nix
-    ./version-control.nix
+    ./mod.editors.nix
+    ./mod.version-control.nix
     ./cli-utils.nix
     ./dekstop-wayland.nix
-    ./gui-apps.nix
     ./language-machine.nix
-    ./science.nix
     ./multimedia.nix
-    ./research-tools.nix
-    ./backups.nix
-    ./design-electronics.nix
-    ./web-browsers.nix
+    ./mod.tools.backups.nix
+    ./mod.tools.secrets.nix
+    ./mod.apps.web-browsers.nix
+    ./mod.apps.gui.nix
+    ./mod.apps.science.nix
+    ./mod.tools.research.nix
     ./mod.study.mathematics.nix
     ./mod.study.linguistics.nix
+    ./mod.dsdv.software.nix
     ./mod.dsdv.web.nix
+    ./mod.dsdv.electronics.nix
     ./mod.networking.nix
   ];
 
