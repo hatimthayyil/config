@@ -20,7 +20,7 @@ upgrade:
     just update && just build && just switch
 
 emx:
-    nix flake update emx-local && just home && emx
+    nix flake update emx && just home && emx
 
 # Show packages that would be rebuilt for system configuration (with nix-community cache)
 forecast-os:
