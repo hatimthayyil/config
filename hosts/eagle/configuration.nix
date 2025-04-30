@@ -13,12 +13,16 @@
 }:
 {
   imports = [
+    # NixOS modules
+    ../../modules/os.onlyoffice.nix
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    # NixOS configuration modules
     ../mod.hw.laptop.nix
     ../mod.hw.lenovo-thinkpad-p52.nix
-    ../mod.apps.web-browsers.nix
     ../mod.os.networking.nix
+    ../mod.apps.web-browsers.nix
+    ../mod.apps.productivity.nix
   ];
 
   #
