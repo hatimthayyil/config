@@ -6,4 +6,12 @@
   #  enable = true;
   #};
   #services.borgmatic.enable = true;
+
+  services.syncthing = {
+    enable = true;
+  };
+  # Nextcloud desktop client
+  services.nextcloud-client = {
+    enable = true;
+  };
 }
