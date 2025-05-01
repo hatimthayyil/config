@@ -178,6 +178,14 @@
     };
   };
 
+  # Use Zsh as default shell
+  environment.shells = [ pkgs.zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.hatim = {
     isNormalUser = true;
