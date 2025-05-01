@@ -34,9 +34,6 @@
   # Check the Home Manager release notes before updating
   home.stateVersion = "24.11";
 
-  # Dotfiles
-  home.file = { };
-
   # Environment variables
   home.sessionVariables = { };
 
