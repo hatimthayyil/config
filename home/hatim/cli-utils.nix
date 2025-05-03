@@ -31,7 +31,11 @@
       enableBashIntegration = true;
       enableZshIntegration = true;
     };
-    yazi.enable = true;
+    yazi = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+    };
     broot = {
       enable = true;
       enableBashIntegration = true;
