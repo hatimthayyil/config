@@ -16,6 +16,17 @@
       enableZshIntegration = true;
       tmux.enableShellIntegration = true; # needed for sesh
     };
+    ripgrep = {
+      enable = true;
+      arguments = [
+        "--max-columns-preview"
+        "--colors=line:style:bold"
+        "--smart-case"
+      ];
+    };
+    ripgrep-all = {
+      enable = true;
+    };
 
     # Session management
     tmux.enable = true;
@@ -27,7 +38,6 @@
       options = [ "--cmd cd" ];
     };
     sesh.enable = true;
-    ripgrep.enable = true;
 
     # File/Directory navigation
     lsd = {
