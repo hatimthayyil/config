@@ -26,6 +26,7 @@
     ./mod.dsdv.web.nix
     ./mod.dsdv.electronics.nix
     ./mod.networking.nix
+    ./mod.containers.nix
   ];
 
   home.username = "hatim";
