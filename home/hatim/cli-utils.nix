@@ -5,12 +5,17 @@
   programs = {
     # Utils
     btop.enable = true;
-    fzf.enable = true;
     bat.enable = true;
     fastfetch.enable = true;
 
     # Search/finding
     fd.enable = true;
+    fzf = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      tmux.enableShellIntegration = true; # needed for sesh
+    };
 
     # Session management
     tmux.enable = true;
@@ -22,7 +27,6 @@
       options = [ "--cmd cd" ];
     };
     sesh.enable = true;
-    fzf.tmux.enableShellIntegration = true; # needed for sesh
     ripgrep.enable = true;
 
     # File/Directory navigation
