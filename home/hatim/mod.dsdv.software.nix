@@ -18,6 +18,7 @@
 
     jq.enable = true; # JSON processor
 
+    # Github
     gh = {
       enable = true;
       extensions = [
