@@ -5,15 +5,13 @@
 
 {
   imports = [
-    ./nix.nix
-    ./shells.nix
-    ./terminals.nix
+    ./mod.nix.nix
+    ./mod.shells.nix
+    ./mod.terminals.nix
     ./mod.editors.nix
     ./mod.version-control.nix
-    ./cli-utils.nix
-    ./dekstop-wayland.nix
-    ./language-machine.nix
-    ./multimedia.nix
+    ./mod.cli-utils.nix
+    ./mod.desktop-wayland.nix
     ./mod.tools.backups.nix
     ./mod.tools.secrets.nix
     ./mod.apps.web-browsers.nix
@@ -25,8 +23,10 @@
     ./mod.dsdv.software.nix
     ./mod.dsdv.web.nix
     ./mod.dsdv.electronics.nix
+    ./mod.language-machine.nix
     ./mod.networking.nix
     ./mod.containers.nix
+    ./mod.multimedia.nix
   ];
 
   home.username = "hatim";
