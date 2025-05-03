@@ -3,10 +3,13 @@
   ...
 }: {
   programs = {
+    # Utils
     btop.enable = true;
     fzf.enable = true;
     bat.enable = true;
     fastfetch.enable = true;
+
+    # Search/finding
     fd.enable = true;
 
     # Session management
@@ -22,13 +25,12 @@
     fzf.tmux.enableShellIntegration = true; # needed for sesh
     ripgrep.enable = true;
 
+    # File/Directory navigation
     lsd = {
       enable = true;
       enableBashIntegration = true;
       enableZshIntegration = true;
     };
-
-    # File/Directory navigation
     yazi.enable = true;
     broot = {
       enable = true;
