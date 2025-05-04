@@ -13,6 +13,8 @@
     # ML
     pkgs.lmstudio
     pkgs.llama-cpp
+    pkgs.master.gpt4all
+    #pkgs.master.gpt4all-cuda # build is broken
     pkgs.jan
     pkgs.aider-chat
     #pkgs.aider-chat-full # broken on unstable
