@@ -27,6 +27,7 @@
     ./mod.networking.nix
     ./mod.containers.nix
     ./mod.multimedia.nix
+    ./mod.fonts.nix
   ];
 
   home.username = "hatim";
@@ -37,8 +38,6 @@
 
   # Environment variables
   home.sessionVariables = { };
-
-  fonts.fontconfig.enable = true;
 
   #
   # ========== Nixpkgs with overlays
