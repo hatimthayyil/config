@@ -10,7 +10,7 @@
     pkgs.clinfo # clinfo : OpenCL (CUDA alt)
     pkgs.lact # GPU config tool
 
-    # ML
+    # Language Machine
     pkgs.lmstudio
     pkgs.llama-cpp
     pkgs.master.gpt4all
