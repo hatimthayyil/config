@@ -5,6 +5,9 @@
 
 {
   imports = [
+    # Home-manager modules
+    ../../modules/home/enchant.nix
+    # Configuration modules
     ./mod.nix.nix
     ./mod.shells.nix
     ./mod.terminals.nix
@@ -28,6 +31,7 @@
     ./mod.containers.nix
     ./mod.multimedia.nix
     ./mod.fonts.nix
+    ./mod.writing.nix
   ];
 
   home.username = "hatim";
