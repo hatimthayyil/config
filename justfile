@@ -20,7 +20,7 @@ upgrade:
     just update && just build && just switch
 
 emx:
-    nix flake update emx && just home && emx
+    nh home switch . -- --override-input emx path:$HOME/src/emx && emx
 
 # Show packages that would be rebuilt for system configuration (with nix-community cache)
 forecast-os:
