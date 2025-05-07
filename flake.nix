@@ -84,6 +84,10 @@
       url = "github:hatimthayyil/emx";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Zen browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -152,6 +156,7 @@
             ./home/hatim/host.eagle.hatim.nix
             inputs.nix-index-database.hmModules.nix-index
             inputs.emx.homeManagerModules.default
+            inputs.nvf.homeManagerModules.default
           ];
 
           # Pass through arguments to home.nix

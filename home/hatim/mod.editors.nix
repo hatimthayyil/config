@@ -20,6 +20,17 @@
     localPath = "${config.home.homeDirectory}/src/emx";
   };
 
+  programs.nvf = {
+    enable = true;
+    settings = {
+      vim.viAlias = false;
+      vim.vimAlias = true;
+      vim.lsp = {
+        enable = true;
+      };
+    };
+  };
+
   programs.vscode = {
     enable = true;
     package = pkgs.vscode-fhs;
@@ -69,7 +80,7 @@
   };
 
   # Extra Editors
-  programs.neovim.enable = true;
+  programs.neovim.enable = false;
   programs.helix.enable = true;
   programs.kakoune.enable = true;
 
