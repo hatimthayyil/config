@@ -72,4 +72,8 @@
   programs.neovim.enable = true;
   programs.helix.enable = true;
   programs.kakoune.enable = true;
+
+  home.packages = [
+    pkgs.leo-editor
+  ];
 }
