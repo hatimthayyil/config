@@ -39,6 +39,8 @@
     pkgs.curl
     pkgs.curlie # frontend for curl
     pkgs.shellcheck
+    pkgs.distrobox
+    pkgs.devenv
 
     # Remote repo management
     pkgs.ghorg # clone entire org/user repos
