@@ -88,6 +88,11 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Zed Editor (upstream broken)
+    zed-editor = {
+      url = "github:HPsaucii/zed-editor-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Zen browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";

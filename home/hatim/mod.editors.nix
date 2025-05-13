@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   programs.emacs = {
@@ -79,6 +80,23 @@
     };
   };
 
+  # Zed
+  # TODO Broken for now, come back to this later
+  # programs.zed-editor = {
+  #   enable = true;
+  #   package = inputs.zed-editor.packages.${pkgs.system}.zed-editor;
+  #   extensions = [
+  #     "beancount"
+  #     "nix"
+  #     "make"
+  #     "just"
+  #     "sql"
+  #     "dockerfile"
+  #     "docker-compose"
+  #     "helm"
+  #   ];
+  # };
+
   # Extra Editors
   programs.neovim.enable = false;
   programs.helix.enable = true;
@@ -86,5 +104,6 @@
 
   home.packages = [
     pkgs.leo-editor
+    inputs.zed-editor.packages.${pkgs.system}.zed-editor-bin-fhs
   ];
 }
