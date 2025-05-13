@@ -41,6 +41,7 @@
     pkgs.shellcheck
     pkgs.distrobox
     pkgs.devenv
+    pkgs.copier
 
     # Remote repo management
     pkgs.ghorg # clone entire org/user repos
