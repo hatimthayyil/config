@@ -10,6 +10,8 @@
     userEmail = "hatim@thayyil.net";
     userName = "Hatim Thayyil";
 
+    lfs.enable = true;
+
     ignores = [
       # nix
       "*.drv"
@@ -71,5 +73,6 @@
     pkgs.tig                    # TUI for git
     pkgs.cvs
     pkgs.mr                     # myrepos
+    pkgs.git-machete
   ];
 }
