@@ -26,6 +26,7 @@
     ./mod.dsdv.software.nix
     ./mod.dsdv.web.nix
     ./mod.dsdv.electronics.nix
+    ./mod.dsdv.mechanical.nix
     ./mod.language-machine.nix
     ./mod.networking.nix
     ./mod.containers.nix
