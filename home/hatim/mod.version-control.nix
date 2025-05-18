@@ -73,6 +73,10 @@
     pkgs.tig                    # TUI for git
     pkgs.cvs
     pkgs.mr                     # myrepos
+
+    # Git extensions
     pkgs.git-machete
+    pkgs.git-imerge
+    pkgs.git-annex
   ];
 }
