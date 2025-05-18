@@ -69,11 +69,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1747525378,
-        "narHash": "sha256-lsQDnmXMIWsNna+UfHP9zpZSeF8buzdhSDx57u9EYyg=",
+        "lastModified": 1747583487,
+        "narHash": "sha256-iLqeT8lCHVfnMgyU1b4Xp2p3dEjHw7ML7dkTpTEBpn8=",
         "owner": "hatimthayyil",
         "repo": "emx",
-        "rev": "93e9522fd2daac03fc26315622e78f16d4fa4e59",
+        "rev": "546b5286e9e5807b4394ecf7bef52adbf8f3d7dd",
         "type": "github"
       },
       "original": {
