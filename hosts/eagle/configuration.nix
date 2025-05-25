@@ -24,6 +24,7 @@
     ../mod.containers.nix
     ../mod.apps.web-browsers.nix
     ../mod.apps.productivity.nix
+    ../mod.guest-systems.nix
   ];
 
   #

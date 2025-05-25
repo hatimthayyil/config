@@ -102,6 +102,7 @@
       # ensure to have it up to date or simply don't specify the nixpkgs input
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
   };
 
   outputs =
@@ -144,6 +145,7 @@
         modules = [
           inputs.hardware.nixosModules.lenovo-thinkpad-p52
           ./hosts/eagle
+          inputs.nixtheplanet.nixosModules.macos-ventura
         ];
         specialArgs = { inherit inputs outputs; };
       };
