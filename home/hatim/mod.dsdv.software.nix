@@ -54,8 +54,10 @@
     # Programming languages
     pkgs.stable.bend # Parallel computing
     pkgs.stable.hvm # Runtime for bend
+    pkgs.rustycli # Rust playground in CLI
 
     # Misc
     pkgs.exercism # CLI for exercism.org
+    pkgs.rusty-man # Rust docs in CLI
   ];
 }
