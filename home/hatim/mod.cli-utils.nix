@@ -43,6 +43,13 @@
       options = [ "--cmd cd" ];
     };
     sesh.enable = true;
+    zellij = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = {
+        copy_command = "wl-copy";
+      };
+    };
 
     # File/Directory navigation
     lsd = {
