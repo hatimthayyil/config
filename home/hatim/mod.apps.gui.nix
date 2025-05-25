@@ -1,7 +1,8 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
   programs = {
     # Multimedia
     cmus.enable = true;

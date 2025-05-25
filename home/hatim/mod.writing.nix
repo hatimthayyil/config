@@ -1,12 +1,17 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
   programs.enchant = {
     enable = true;
 
     ordering = {
-      "*" = [ "aspell" "hunspell" "nuspell" ];
+      "*" = [
+        "aspell"
+        "hunspell"
+        "nuspell"
+      ];
       "en" = [ "aspell" ];
     };
   };
@@ -15,11 +20,13 @@
     languagetool
 
     # Aspell
-    (pkgs.aspellWithDicts (dicts: with dicts; [
-      en
-      en-computers
-      en-science
-    ]))
+    (pkgs.aspellWithDicts (
+      dicts: with dicts; [
+        en
+        en-computers
+        en-science
+      ]
+    ))
     # Hunspell
     (pkgs.hunspellWithDicts [
       pkgs.hunspellDicts.en_GB-large
@@ -56,8 +63,11 @@
     "enchant/hunspell/en_US.dic".source = "${pkgs.hunspellDicts.en_US-large}/share/hunspell/en_US.dic";
     "enchant/hunspell/en_GB.aff".source = "${pkgs.hunspellDicts.en_GB-large}/share/hunspell/en_GB.aff";
     "enchant/hunspell/en_GB.dic".source = "${pkgs.hunspellDicts.en_GB-large}/share/hunspell/en_GB.dic";
-    "enchant/aspell/en-computers.rws".source = "${pkgs.aspellDicts.en-computers}/lib/aspell/en-computers.rws";
-    "enchant/aspell/en_US-science.rws".source = "${pkgs.aspellDicts.en-science}/lib/aspell/en_US-science.rws";
-    "enchant/aspell/en_GB-science.rws".source = "${pkgs.aspellDicts.en-science}/lib/aspell/en_GB-science.rws";
+    "enchant/aspell/en-computers.rws".source =
+      "${pkgs.aspellDicts.en-computers}/lib/aspell/en-computers.rws";
+    "enchant/aspell/en_US-science.rws".source =
+      "${pkgs.aspellDicts.en-science}/lib/aspell/en_US-science.rws";
+    "enchant/aspell/en_GB-science.rws".source =
+      "${pkgs.aspellDicts.en-science}/lib/aspell/en_GB-science.rws";
   };
 }

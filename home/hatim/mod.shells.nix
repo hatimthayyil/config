@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   # Bash
   programs.bash.enable = true;
 
@@ -21,7 +22,10 @@
         }
         {
           name = "romkatv/powerlevel10k";
-          tags = [ "as:theme" "depth:1" ];
+          tags = [
+            "as:theme"
+            "depth:1"
+          ];
         }
       ];
     };

@@ -1,3 +1,4 @@
-{ ... }: {
+{ ... }:
+{
   programs.onlyoffice.enable = true;
 }

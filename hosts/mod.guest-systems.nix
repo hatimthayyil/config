@@ -1,6 +1,8 @@
-{ pkgs,
+{
+  pkgs,
   ...
-}: {
+}:
+{
   services.macos-ventura = {
     enable = true;
     openFirewall = true;

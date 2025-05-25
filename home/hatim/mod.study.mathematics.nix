@@ -1,7 +1,8 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
   home.packages = [
     pkgs.maxima # symbolic
     pkgs.octave

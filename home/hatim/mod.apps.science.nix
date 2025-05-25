@@ -1,7 +1,8 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
   home.packages = [
     # Astronomy
     pkgs.stable.stellarium

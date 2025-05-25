@@ -1,7 +1,8 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
   home.packages = [
     pkgs.zotero # reference management
     pkgs.monolith # archive web-page

@@ -1,7 +1,12 @@
 # Copied from https://github.com/emmanuelrosa/erosanix/blob/7a912180b3b8061421ec191075117385f090a0a9/modules/onlyoffice.nix
 # TODO Verify that systems fonts is being used by onlyoffice.
 
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 with lib;
 
@@ -21,25 +26,29 @@ let
     cat $(find ${pkgs.xorg.fontalias}/ -name fonts.alias) >fonts.alias
   '';
 
-  mkFHSEnv = onlyofficeUnwrapped: pkgs.buildFHSEnvBubblewrap {
-    name = "onlyoffice";
-    runScript = "DesktopEditors";
-    extraBwrapArgs = [ "--tmpfs /usr/share"
-                       "--symlink ${x11Fonts} /usr/share/fonts"
-                     ];
+  mkFHSEnv =
+    onlyofficeUnwrapped:
+    pkgs.buildFHSEnvBubblewrap {
+      name = "onlyoffice";
+      runScript = "DesktopEditors";
+      extraBwrapArgs = [
+        "--tmpfs /usr/share"
+        "--symlink ${x11Fonts} /usr/share/fonts"
+      ];
 
-    targetPkgs = pkgs: with pkgs; [
-      onlyofficeUnwrapped
-    ];
+      targetPkgs =
+        pkgs: with pkgs; [
+          onlyofficeUnwrapped
+        ];
 
-    extraInstallCommands = ''
-      mkdir -p $out/share/applications
-      test -d ${onlyofficeUnwrapped}/share/icons && ln -s ${onlyofficeUnwrapped}/share/icons $out/share
-      cp ${onlyofficeUnwrapped}/share/applications/onlyoffice-desktopeditors.desktop $out/share/applications
-      substituteInPlace $out/share/applications/onlyoffice-desktopeditors.desktop \
-        --replace "${onlyofficeUnwrapped}/bin/DesktopEditors" "$out/bin/onlyoffice"
-    '';
-  };
+      extraInstallCommands = ''
+        mkdir -p $out/share/applications
+        test -d ${onlyofficeUnwrapped}/share/icons && ln -s ${onlyofficeUnwrapped}/share/icons $out/share
+        cp ${onlyofficeUnwrapped}/share/applications/onlyoffice-desktopeditors.desktop $out/share/applications
+        substituteInPlace $out/share/applications/onlyoffice-desktopeditors.desktop \
+          --replace "${onlyofficeUnwrapped}/bin/DesktopEditors" "$out/bin/onlyoffice"
+      '';
+    };
 in
 
 {

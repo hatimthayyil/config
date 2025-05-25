@@ -2,7 +2,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
@@ -44,7 +45,7 @@
       pl = "pull";
       br = "branch";
       sw = "!git branch | fzf | xargs git switch";
-      cp =  "cherry-pick";
+      cp = "cherry-pick";
       pick = "!git log --online | fzf | cut -d' ' -f1 | xargs git cherry-pick";
     };
   };
@@ -58,7 +59,12 @@
       };
       ui = {
         show-cryptographic-signatures = true;
-        diff.tool = [ "difft" "--color=always" "$left" "$right"];
+        diff.tool = [
+          "difft"
+          "--color=always"
+          "$left"
+          "$right"
+        ];
       };
     };
   };
@@ -73,9 +79,9 @@
   programs.gitui.enable = true;
 
   home.packages = [
-    pkgs.tig                    # TUI for git
+    pkgs.tig # TUI for git
     pkgs.cvs
-    pkgs.mr                     # myrepos
+    pkgs.mr # myrepos
 
     # Git extensions
     pkgs.git-machete

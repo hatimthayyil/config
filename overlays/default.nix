@@ -11,7 +11,7 @@ let
     stable = import inputs.nixpkgs-stable {
       inherit (final) system;
       config.allowUnfree = true;
-      overlays = [];
+      overlays = [ ];
     };
   };
 
@@ -19,7 +19,7 @@ let
     unstable = import inputs.nixpkgs-unstable {
       inherit (final) system;
       config.allowUnfree = true;
-      overlays = [];
+      overlays = [ ];
     };
   };
 
@@ -27,7 +27,7 @@ let
     unstable-small = import inputs.nixpkgs-unstable-small {
       inherit (final) system;
       config.allowUnfree = true;
-      overlays = [];
+      overlays = [ ];
     };
   };
 
@@ -35,7 +35,7 @@ let
     master = import inputs.nixpkgs-master {
       inherit (final) system;
       config.allowUnfree = true;
-      overlays = [];
+      overlays = [ ];
     };
   };
 
@@ -43,11 +43,12 @@ let
     emacs-overlay = (inputs.emacs-overlay.overlay final prev);
   };
 in
-  {
-    default = final: prev:
-      (stable-packages final prev)
-      // (unstable-packages final prev)
-      // (unstable-small-packages final prev)
-      // (master-packages final prev)
-      // (emacs-overlay-packages final prev);
-  }
+{
+  default =
+    final: prev:
+    (stable-packages final prev)
+    // (unstable-packages final prev)
+    // (unstable-small-packages final prev)
+    // (master-packages final prev)
+    // (emacs-overlay-packages final prev);
+}

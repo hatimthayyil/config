@@ -1,7 +1,8 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
   # Manage nix binary
   nix = {
     package = pkgs.nix;

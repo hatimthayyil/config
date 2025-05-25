@@ -3,7 +3,8 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
   home.packages = [
     # Http
     pkgs.httpie

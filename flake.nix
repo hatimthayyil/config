@@ -30,17 +30,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Hardware
-    hardware.url = "github:nixos/nixos-hardware/master";
-    # Nix User Repository
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     #
     # ========== Utilities
     #
+    # Hardware
+    hardware.url = "github:nixos/nixos-hardware/master";
     # Declarative partitioning and formatting
     disko = {
       url = "github:nix-community/disko";
@@ -60,20 +54,23 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    #
-    # ========== Applications
-    #
-    # Nix based neovim
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.11";
-      inputs.nixpkgs.follows = "nixpkgs-stable";
-      #url = "github:nix-community/nixvim";
-      #inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # Flake based configuration of Treefmt
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     # Pre-commit
     pre-commit-hooks = {
       url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
+    #
+    # ========== Applications
+    #
+    # Nix User Repository
+    nur = {
+      url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Emacs
@@ -86,9 +83,17 @@
       url = "github:hatimthayyil/emx";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Nix based Neovim
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # Nix based neovim
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.11";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
+      #url = "github:nix-community/nixvim";
+      #inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     # Zed Editor (upstream broken)
     zed-editor = {
@@ -102,6 +107,7 @@
       # ensure to have it up to date or simply don't specify the nixpkgs input
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    # MacOS Ventura, and other Guest OSes
     nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
   };
 
@@ -116,13 +122,12 @@
     let
       inherit (self) outputs;
 
+      systems = [ "x86_64-linux" ];
+
       #
       # ========== Architectures
       #
-      forAllSystems = nixpkgs.lib.genAttrs [
-        "x86_64-linux"
-        #"aarch64-darwin"
-      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
 

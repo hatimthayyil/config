@@ -1,7 +1,8 @@
 {
   pkgs,
   ...
-}: {
+}:
+{
   home.packages = [
     # GPU
     pkgs.glxinfo # glxinfo, OpenGL (MESA)
