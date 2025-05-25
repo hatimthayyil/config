@@ -27,6 +27,11 @@
     ripgrep-all = {
       enable = true;
     };
+    skim = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+    };
 
     # Session management
     tmux.enable = true;
