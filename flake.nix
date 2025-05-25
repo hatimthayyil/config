@@ -33,6 +33,8 @@
     #
     # ========== Utilities
     #
+    # Flake-parts
+    flake-parts.url = "github:hercules-ci/flake-parts";
     # Hardware
     hardware.url = "github:nixos/nixos-hardware/master";
     # Declarative partitioning and formatting
@@ -112,75 +114,71 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      nur,
-      ...
-    }@inputs:
-    let
-      inherit (self) outputs;
-
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [ "x86_64-linux" ];
 
-      #
-      # ========== Architectures
-      #
-      forAllSystems = nixpkgs.lib.genAttrs systems;
-    in
-    {
+      perSystem =
+        { system, pkgs, ... }:
+        {
+          # Nix formatter available through 'nix fmt'
+          formatter = pkgs.nixfmt-tree;
 
-      #
-      # ========== Overlays
-      #
-      overlays = import ./overlays { inherit inputs; };
-
-      #
-      # ========== Formatting
-      #
-      # Nix formatter available through 'nix fmt' https://github.com/NixOS/nixfmt
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
-
-      #
-      # ========== Host configurations
-      #
-      nixosConfigurations.eagle = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          inputs.hardware.nixosModules.lenovo-thinkpad-p52
-          ./hosts/eagle
-          inputs.nixtheplanet.nixosModules.macos-ventura
-        ];
-        specialArgs = { inherit inputs outputs; };
-      };
-
-      #
-      # ========== User home configuration
-      #
-      homeConfigurations = {
-        "hatim@eagle" = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs {
-            system = "x86_64-linux";
-            config.allowUnfree = true;
-            overlays = [ outputs.overlays.default ];
+          # VM application
+          apps.vm = {
+            type = "app";
+            program = "${inputs.self.nixosConfigurations.owl.config.system.build.vm}/bin/run-nixos-vm";
           };
-
-          modules = [
-            ./home/hatim/host.eagle.hatim.nix
-            inputs.nix-index-database.hmModules.nix-index
-            inputs.emx.homeManagerModules.default
-            inputs.nvf.homeManagerModules.default
-          ];
-
-          # Pass through arguments to home.nix
-          extraSpecialArgs = { inherit inputs outputs; };
         };
-      };
 
-      apps."x86_64-linux".vm = {
-        type = "app";
-        program = "${self.nixosConfigurations.owl.config.system.build.vm}/bin/run-nixos-vm";
+      imports = [
+        ./overlays
+      ];
+
+      flake = {
+        #
+        # ========== Host configurations
+        #
+        nixosConfigurations = {
+          eagle = inputs.nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            modules = [
+              inputs.hardware.nixosModules.lenovo-thinkpad-p52
+              ./hosts/eagle
+              inputs.nixtheplanet.nixosModules.macos-ventura
+            ];
+            specialArgs = {
+              inherit inputs;
+              outputs = inputs.self;
+            };
+          };
+        };
+
+        #
+        # ========== User home configuration
+        #
+        homeConfigurations = {
+          "hatim@eagle" = inputs.home-manager.lib.homeManagerConfiguration {
+            pkgs = import inputs.nixpkgs {
+              system = "x86_64-linux";
+              config.allowUnfree = true;
+              overlays = [ inputs.self.overlays.default ];
+            };
+
+            modules = [
+              ./home/hatim/host.eagle.hatim.nix
+              inputs.nix-index-database.hmModules.nix-index
+              inputs.emx.homeManagerModules.default
+              inputs.nvf.homeManagerModules.default
+            ];
+
+            # Pass through arguments to home.nix
+            extraSpecialArgs = {
+              inherit inputs;
+              outputs = inputs.self;
+            };
+          };
+        };
       };
     };
 }

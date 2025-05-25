@@ -42,8 +42,8 @@ let
   emacs-overlay-packages = final: prev: {
     emacs-overlay = (inputs.emacs-overlay.overlay final prev);
   };
-in
-{
+
+  # The final combined overlay.
   default =
     final: prev:
     (stable-packages final prev)
@@ -51,4 +51,10 @@ in
     // (unstable-small-packages final prev)
     // (master-packages final prev)
     // (emacs-overlay-packages final prev);
+in
+{
+  # Flake-parts expects overlays.default as an option
+  flake.overlays = {
+    inherit default;
+  };
 }
