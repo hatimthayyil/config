@@ -19,7 +19,9 @@
     nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
 
-    # Home manager
+    #
+    # ========== Home manager
+    #
     home-manager = {
       url = "github:nix-community/home-manager/master";
       #url = "github:nix-community/home-manager/release-24.11";
