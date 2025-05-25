@@ -42,6 +42,7 @@
     pkgs.distrobox
     pkgs.devenv
     pkgs.copier
+    pkgs.mprocs # TUI for running long processes
 
     # Remote repo management
     pkgs.ghorg # clone entire org/user repos

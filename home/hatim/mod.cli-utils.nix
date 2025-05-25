@@ -73,7 +73,9 @@
   home.packages = [
     pkgs.hyperfine # benchamarking tool
     pkgs.cloc # lines of code
+    pkgs.tokei # lines of code
     pkgs.tree # recursive listing of dirs
     pkgs.dust # better du (file sizes)
+    pkgs.fselect # Find files with SQL-like prompt.
   ];
 }
