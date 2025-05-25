@@ -32,6 +32,11 @@
     executable = true;
   };
 
+  programs.fish = {
+    enable = true;
+    # TODO Add plugins, see https://github.com/jorgebucaran/awsm.fish
+  };
+
   # Nu
   programs.nushell.enable = true;
 }
