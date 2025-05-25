@@ -69,6 +69,9 @@
     userEmail = config.programs.git.userEmail;
   };
 
+  programs.lazygit.enable = true;
+  programs.gitui.enable = true;
+
   home.packages = [
     pkgs.tig                    # TUI for git
     pkgs.cvs
