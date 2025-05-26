@@ -26,6 +26,7 @@
     ../mod.apps.productivity.nix
     ../mod.guest-systems.nix
     ../mod.input-devices.nix
+    ../mod.package-management.nix
   ];
 
   #
@@ -280,27 +281,5 @@
     # FIXME broken
     enable = false;
     port = 11500;
-  };
-
-  services.guix = {
-    enable = true;
-    gc.enable = true;
-    gc.extraArgs = [
-      "--delete-generations=1m"
-      "--free-space=25G"
-      "--optimize"
-    ];
-    gc.dates = "03:15";
-    substituters.urls = [
-      "https://ci.guix.gnu.org"
-      "https://bordeaux.guix.gnu.org"
-      "https://berlin.guix.gnu.org"
-      "https://substitutes.nonguix.org"
-      "https://guix.bordeaux.inria.fr"
-    ];
-    substituters.authorizedKeys = options.services.guix.substituters.authorizedKeys.default ++ [
-      ./guix-substitutes-signing-key-nonguix.pub
-      ./guix-substitutes-signing-key-inria.pub
-    ];
   };
 }
