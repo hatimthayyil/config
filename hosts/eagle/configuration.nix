@@ -277,7 +277,8 @@
   };
 
   services.open-webui = {
-    enable = true;
+    # FIXME broken
+    enable = false;
     port = 11500;
   };
 
