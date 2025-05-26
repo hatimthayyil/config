@@ -70,6 +70,7 @@ in
   ];
 
   services.flatpak.packages = [
+    "com.microsoft.Edge"
     "engineer.atlas.Nyxt-Electron"
   ];
 }
