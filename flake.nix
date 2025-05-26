@@ -75,6 +75,8 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Flatpak
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     # Emacs
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
@@ -144,6 +146,7 @@
             system = "x86_64-linux";
             modules = [
               inputs.hardware.nixosModules.lenovo-thinkpad-p52
+              inputs.nix-flatpak.nixosModules.nix-flatpak
               ./hosts/eagle
               inputs.nixtheplanet.nixosModules.macos-ventura
             ];
@@ -170,6 +173,7 @@
               inputs.nix-index-database.hmModules.nix-index
               inputs.emx.homeManagerModules.default
               inputs.nvf.homeManagerModules.default
+              inputs.nix-flatpak.homeManagerModules.nix-flatpak
             ];
 
             # Pass through arguments to home.nix
