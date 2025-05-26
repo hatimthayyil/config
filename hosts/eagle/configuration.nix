@@ -25,6 +25,7 @@
     ../mod.apps.web-browsers.nix
     ../mod.apps.productivity.nix
     ../mod.guest-systems.nix
+    ../mod.input-devices.nix
   ];
 
   #
