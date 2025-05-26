@@ -33,4 +33,8 @@
       CloudProfileReportingEnabled = false;
     };
   };
+
+  services.flatpak.packages = [
+    "com.microsoft.Edge"
+  ];
 }

@@ -68,9 +68,4 @@ in
     pkgs.tangram
     vivaldi
   ];
-
-  services.flatpak.packages = [
-    "com.microsoft.Edge"
-    "engineer.atlas.Nyxt-Electron"
-  ];
 }

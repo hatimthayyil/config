@@ -178,7 +178,6 @@
               inputs.nix-index-database.hmModules.nix-index
               inputs.emx.homeManagerModules.default
               inputs.nvf.homeManagerModules.default
-              inputs.nix-flatpak.homeManagerModules.nix-flatpak
             ];
 
             # Pass through arguments to home.nix
