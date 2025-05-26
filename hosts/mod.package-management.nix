@@ -1,4 +1,5 @@
 {
+  pkgs,
   options,
   ...
 }:
@@ -22,6 +23,14 @@
     substituters.authorizedKeys = options.services.guix.substituters.authorizedKeys.default ++ [
       ./files/guix-substitutes-signing-key-nonguix.pub
       ./files/guix-substitutes-signing-key-inria.pub
+    ];
+  };
+
+  xdg.portal = {
+    enable = true;
+
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
     ];
   };
 

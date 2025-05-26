@@ -68,4 +68,8 @@ in
     pkgs.tangram
     vivaldi
   ];
+
+  services.flatpak.packages = [
+    "engineer.atlas.Nyxt-Electron"
+  ];
 }
