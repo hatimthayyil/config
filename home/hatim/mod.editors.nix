@@ -17,7 +17,8 @@
 
   programs.emacs-emx = {
     enable = true;
-    package = pkgs.emacs-overlay.emacs-git-pgtk;
+    package = pkgs.emacs;
+    #package = pkgs.emacs-overlay.emacs-git-pgtk;
     defaultEditor = true;
     treesitGrammars = [
       "all"
