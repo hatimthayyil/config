@@ -9,7 +9,6 @@
     ../../modules/home/enchant.nix
     # Configuration modules
     ./mod.nix.nix
-    ./mod.package-management.nix
     ./mod.shells.nix
     ./mod.terminals.nix
     ./mod.editors.nix
