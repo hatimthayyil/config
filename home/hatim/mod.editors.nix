@@ -5,6 +5,8 @@
   ...
 }:
 {
+  # Merge system-wide and home Info manuals top level directory.
+  programs.info.enable = true;
   programs.emacs = {
     enable = false;
     package = pkgs.emacs-overlay.emacs-git-pgtk;
