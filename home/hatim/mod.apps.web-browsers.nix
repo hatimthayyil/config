@@ -5,24 +5,24 @@
   inputs,
   ...
 }:
-let
+#let
   # see https://github.com/NixOS/nixpkgs/pull/292148
-  vivaldi =
-    (pkgs.vivaldi.overrideAttrs (oldAttrs: {
-      buildPhase =
-        builtins.replaceStrings
-          [ "for f in libGLESv2.so libqt5_shim.so ; do" ]
-          [ "for f in libGLESv2.so libqt5_shim.so libqt6_shim.so ; do" ]
-          oldAttrs.buildPhase;
-    })).override
-      {
-        qt5 = pkgs.qt6;
-        commandLineArgs = [ "--ozone-platform=wayland" ];
-        # FIXME The following are non-free, remove if not needed
-        proprietaryCodecs = true;
-        enableWidevine = true;
-      };
-in
+  # vivaldi =
+  #   (pkgs.vivaldi.overrideAttrs (oldAttrs: {
+  #     buildPhase =
+  #       builtins.replaceStrings
+  #         [ "for f in libGLESv2.so libqt5_shim.so ; do" ]
+  #         [ "for f in libGLESv2.so libqt5_shim.so libqt6_shim.so ; do" ]
+  #         oldAttrs.buildPhase;
+  #   })).override
+  #     {
+  #       qt5 = pkgs.qt6;
+  #       commandLineArgs = [ "--ozone-platform=wayland" ];
+  #       # FIXME The following are non-free, remove if not needed
+  #       proprietaryCodecs = true;
+  #       enableWidevine = true;
+  #     };
+#in
 {
   programs = {
     firefox.enable = true;
@@ -66,6 +66,6 @@ in
     pkgs.nyxt
     inputs.zen-browser.packages."x86_64-linux".default
     pkgs.tangram
-    vivaldi
+    #vivaldi
   ];
 }
