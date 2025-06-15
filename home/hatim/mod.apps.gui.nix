@@ -34,11 +34,6 @@
     pkgs.element-desktop
     pkgs.zoom-us
 
-    # Editors
-    pkgs.windsurf
-    pkgs.code-cursor
-    pkgs.vscodium-fhs
-
     # Design
     pkgs.drawio
   ];

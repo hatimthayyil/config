@@ -112,5 +112,9 @@
   home.packages = [
     pkgs.leo-editor
     inputs.zed-editor.packages.${pkgs.system}.zed-editor-bin-fhs
+
+    pkgs.windsurf #broken
+    pkgs.code-cursor
+    pkgs.vscodium-fhs
   ];
 }
