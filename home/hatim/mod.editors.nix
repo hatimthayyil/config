@@ -111,10 +111,15 @@
 
   home.packages = [
     pkgs.leo-editor
-    inputs.zed-editor.packages.${pkgs.system}.zed-editor-bin-fhs
 
+    inputs.zed-editor.packages.${pkgs.system}.zed-editor-bin-fhs
     pkgs.windsurf #broken
     pkgs.code-cursor
     pkgs.vscodium-fhs
+
+    # JetBrains IDEs
+    pkgs.jetbrains.rust-rover
+    pkgs.jetbrains.pycharm-community-bin
+    pkgs.jetbrains.webstorm
   ];
 }
