@@ -110,6 +110,8 @@
   programs.kakoune.enable = true;
 
   home.packages = [
+    pkgs.texmacs
+    pkgs.lyx
     pkgs.leo-editor
 
     inputs.zed-editor.packages.${pkgs.system}.zed-editor-bin-fhs
