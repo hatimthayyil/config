@@ -28,6 +28,18 @@
     pkgs.nixd
     pkgs.nvd
     pkgs.manix
+    pkgs.nix-health
+    pkgs.deadnix
+    pkgs.statix
+    pkgs.nix-update
+    pkgs.nix-diff
+    pkgs.nix-du
+    pkgs.nix-init
+    pkgs.nix-melt
+    pkgs.nix-tree
+    pkgs.nvd
+
+    pkgs.lorri
 
     pkgs.nix-output-monitor
     pkgs.nix-forecast
