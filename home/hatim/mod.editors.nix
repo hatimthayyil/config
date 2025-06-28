@@ -113,6 +113,7 @@
     pkgs.texmacs
     pkgs.lyx
     pkgs.leo-editor
+    pkgs.kibi # very lightweight editor
 
     inputs.zed-editor.packages.${pkgs.system}.zed-editor-bin-fhs
     pkgs.windsurf #broken
