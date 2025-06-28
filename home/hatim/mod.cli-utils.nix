@@ -78,5 +78,7 @@
     pkgs.tree # recursive listing of dirs
     pkgs.dust # better du (file sizes)
     pkgs.fselect # Find files with SQL-like prompt.
+    pkgs.sd # sed alternative
+    pkgs.scooter # find and replace tool
   ];
 }
