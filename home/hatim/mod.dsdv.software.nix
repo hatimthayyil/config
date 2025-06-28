@@ -61,5 +61,8 @@
     # Misc
     pkgs.exercism # CLI for exercism.org
     pkgs.rusty-man # Rust docs in CLI
+
+    # Docker
+    pkgs.oxker # Docker CLI tool for managing containers
   ];
 }
