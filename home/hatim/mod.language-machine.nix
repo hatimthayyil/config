@@ -20,8 +20,8 @@
     pkgs.jan
     pkgs.aider-chat
     #pkgs.aider-chat-full # broken on unstable
-    pkgs.master.claude-code # Coder agent from Anthropic
-    pkgs.master.codex # Coder agent from OpenAI
+    pkgs.stable.claude-code # Coder agent from Anthropic
+    pkgs.stable.codex # Coder agent from OpenAI
     pkgs.llm # LLM cli from Simon Willison
   ];
 }
