@@ -43,6 +43,8 @@ let
     emacs-overlay = (inputs.emacs-overlay.overlay final prev);
   };
 
+  nix4vscode-overlay = inputs.nix4vscode.overlays.forVscode;
+
   # The final combined overlay.
   default =
     final: prev:
@@ -50,7 +52,8 @@ let
     // (unstable-packages final prev)
     // (unstable-small-packages final prev)
     // (master-packages final prev)
-    // (emacs-overlay-packages final prev);
+    // (emacs-overlay-packages final prev)
+    // (nix4vscode-overlay final prev);
 in
 {
   # Flake-parts expects overlays.default as an option

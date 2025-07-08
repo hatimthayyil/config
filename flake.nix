@@ -109,6 +109,10 @@
       url = "github:HPsaucii/zed-editor-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix4vscode = {
+      url = "github:nix-community/nix4vscode";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Zen browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
