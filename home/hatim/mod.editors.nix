@@ -76,6 +76,7 @@
         "ms-azuretools.vscode-docker" # Docker support
         "hashicorp.terraform" # Terraform support
         "redhat.ansible" # Ansible support
+        "redhat.vscode-yaml" # YAML support
 
         # Productivity
         "fill-labs.dependi" # Dependency
