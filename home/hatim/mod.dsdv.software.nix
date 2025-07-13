@@ -57,6 +57,7 @@
     pkgs.stable.hvm # Runtime for bend
     pkgs.rustycli # Rust playground in CLI
     pkgs.rustup # FIXME Need cc
+    pkgs.jupyter-all # NixOS has a jupyter service
 
     # Misc
     pkgs.exercism # CLI for exercism.org
