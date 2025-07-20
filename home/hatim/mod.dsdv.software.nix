@@ -56,7 +56,8 @@
     pkgs.stable.bend # Parallel computing
     pkgs.stable.hvm # Runtime for bend
     pkgs.rustycli # Rust playground in CLI
-    pkgs.rustup # FIXME Need cc
+    pkgs.rustup # Needs a C cimpiler
+    pkgs.clang
     pkgs.jupyter-all # NixOS has a jupyter service
 
     # Misc
