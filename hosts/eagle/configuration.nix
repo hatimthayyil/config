@@ -225,8 +225,8 @@
     vim
     wget
     git
-    nvtopPackages.nvidia
-    nvtopPackages.intel
+    stable.nvtopPackages.nvidia
+    stable.nvtopPackages.intel
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

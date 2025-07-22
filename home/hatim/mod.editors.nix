@@ -126,8 +126,8 @@
     pkgs.vscodium-fhs
 
     # JetBrains IDEs
-    pkgs.jetbrains.rust-rover
-    pkgs.jetbrains.pycharm-community-bin
-    pkgs.jetbrains.webstorm
+    pkgs.stable.jetbrains.rust-rover
+    pkgs.stable.jetbrains.pycharm-community-bin
+    pkgs.stable.jetbrains.webstorm
   ];
 }
