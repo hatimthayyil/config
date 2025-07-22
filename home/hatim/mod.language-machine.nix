@@ -15,11 +15,11 @@
     pkgs.lmstudio
     pkgs.llama-cpp
     pkgs.master.gpt4all
-    #pkgs.master.gpt4all-cuda # build is broken
+    #pkgs.master.gpt4all-cuda # FIXME build is broken
     pkgs.local-ai
     pkgs.jan
     pkgs.aider-chat
-    #pkgs.aider-chat-full # broken on unstable
+    #pkgs.aider-chat-full # FIXME broken on unstable
     pkgs.stable.claude-code # Coder agent from Anthropic
     pkgs.stable.codex # Coder agent from OpenAI
     pkgs.llm # LLM cli from Simon Willison
