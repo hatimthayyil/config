@@ -94,20 +94,20 @@
 
   # Zed
   # TODO Broken for now, come back to this later
-  # programs.zed-editor = {
-  #   enable = true;
-  #   package = inputs.zed-editor.packages.${pkgs.system}.zed-editor;
-  #   extensions = [
-  #     "beancount"
-  #     "nix"
-  #     "make"
-  #     "just"
-  #     "sql"
-  #     "dockerfile"
-  #     "docker-compose"
-  #     "helm"
-  #   ];
-  # };
+  programs.zed-editor = {
+    enable = false;
+    package = inputs.zed-editor.packages.${pkgs.system}.zed-editor;
+    extensions = [
+      "beancount"
+      "nix"
+      "make"
+      "just"
+      "sql"
+      "dockerfile"
+      "docker-compose"
+      "helm"
+    ];
+  };
 
   # Extra Editors
   programs.neovim.enable = false;

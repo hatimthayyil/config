@@ -7,7 +7,7 @@
     pkgs.imagemagick
     pkgs.poppler
     pkgs.mediainfo
-    pkgs.calibre
-    pkgs.calibre-web
+    pkgs.stable.calibre
+    pkgs.stable.calibre-web
   ];
 }
