@@ -286,6 +286,7 @@
 
   services.ollama = {
     enable = true;
+    package = pkgs.master.ollama;
     acceleration = "cuda";
 
     # preload models, see https://ollama.com/library
