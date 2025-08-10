@@ -115,6 +115,7 @@
   programs.kakoune.enable = true;
 
   home.packages = [
+    pkgs.texliveFull
     pkgs.texmacs
     pkgs.lyx
     pkgs.leo-editor
