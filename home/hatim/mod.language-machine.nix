@@ -16,7 +16,7 @@
     pkgs.llama-cpp
     pkgs.master.gpt4all
     #pkgs.master.gpt4all-cuda # FIXME build is broken
-    pkgs.local-ai
+    pkgs.stable.local-ai
     pkgs.jan
     pkgs.aider-chat
     #pkgs.aider-chat-full # FIXME broken on unstable
