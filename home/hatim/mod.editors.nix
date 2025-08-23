@@ -89,6 +89,7 @@
         "yzhang.markdown-all-in-one" # Markdown support
         "editorconfig.editorconfig" # EditorConfig support
         "gruntfuggly.todo-tree" # Highlight TODO comments
+        "mechatroner.rainbow-csv" # Colored CSV files
       ];
     };
   };
