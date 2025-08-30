@@ -68,6 +68,7 @@
         "dart-code.dart-code" # Dart/Flutter support
         "svelte.svelte-vscode" # Svelte support
         "lencerf.beancount" # Beancount support
+        "WolframResearch.wolfram"
 
         # Web Development
         "dbaeumer.vscode-eslint" # Linting for JavaScript/TypeScript
