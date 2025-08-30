@@ -55,6 +55,7 @@
 
         # Envrionment
         "mkhl.direnv"
+        "ms-vscode-remote.remote-containers"
 
         # Programming Languages
         "jnoortheen.nix-ide" # Nix
