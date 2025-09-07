@@ -8,5 +8,6 @@
     pkgs.octave
     pkgs.coq # theorem prover
     pkgs.lean4 # theorem prover
+    pkgs.stable.sage # computer algebra system
   ];
 }
