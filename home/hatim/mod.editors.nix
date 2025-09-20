@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   inputs,
   ...
 }:
@@ -39,19 +40,21 @@
     };
   };
 
-  # VScode using Nix4Vscode, to change the nixpkgs distribution, use with pkgs.vscode-extensions;  instead 
+  home.file.".config/Code/User/settings.json".source = lib.mkForce (
+    config.lib.file.mkOutOfStoreSymlink "/home/hatim/src/home/hatim/file.vscode-settings.json"
+  );
+
+  # VScode using Nix4Vscode, to change the nixpkgs distribution, use with pkgs.vscode-extensions;  instead
   # of pkgs.nix4vscode.forVscode
   programs.vscode = {
     enable = true;
     profiles.default = {
-      enableUpdateCheck = false;
-      enableExtensionUpdateCheck = false;
       extensions = pkgs.nix4vscode.forVscode [
         "github.copilot"
 
         # Version-control
         "mhutchie.git-graph"
-        "eamodio.gitlens" # Git enhancements
+        #FIXME broken "eamodio.gitlens" # Git enhancements
 
         # Envrionment
         "mkhl.direnv"
