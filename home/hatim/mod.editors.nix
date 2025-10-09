@@ -140,5 +140,8 @@
     pkgs.stable.jetbrains.rust-rover
     pkgs.stable.jetbrains.pycharm-community-bin
     pkgs.stable.jetbrains.webstorm
+
+    # Android
+    pkgs.android-studio
   ];
 }
