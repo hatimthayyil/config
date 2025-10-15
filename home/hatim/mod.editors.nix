@@ -80,6 +80,8 @@
         "dbaeumer.vscode-eslint" # Linting for JavaScript/TypeScript
         "ritwickdey.liveserver" # Live server for web development
         "bradlc.vscode-tailwindcss" # Tailwind CSS support
+        "Selemondev.vscode-shadcn-svelte" # Shadcn Svelte
+        "inlang.vs-code-extension" # inspector for i18n, translations, localization
 
         # DevOps and Cloud
         "ms-azuretools.vscode-docker" # Docker support
