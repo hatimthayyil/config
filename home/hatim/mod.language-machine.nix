@@ -12,9 +12,9 @@
     pkgs.lact # GPU config tool
 
     # Language Machine
-    pkgs.lmstudio
-    pkgs.llama-cpp
-    pkgs.master.gpt4all
+    pkgs.stable.lmstudio
+    pkgs.stable.llama-cpp
+    pkgs.stable.gpt4all
     #pkgs.master.gpt4all-cuda # FIXME build is broken
     pkgs.stable.local-ai
     pkgs.jan
