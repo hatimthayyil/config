@@ -90,7 +90,7 @@
     # EmX Emacs distribution
     emx = {
       url = "github:hatimthayyil/emx";
-      inputs.nixpkgs.follows = "nixpkgs";
+      #inputs.nixpkgs.follows = "nixpkgs";
     };
     # Nix based Neovim
     nvf = {
