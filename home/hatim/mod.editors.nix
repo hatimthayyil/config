@@ -52,7 +52,7 @@
   programs.vscode = {
     enable = true;
     profiles.default = {
-      extensions = pkgs.nix4vscode.forVscode [
+      extensions = pkgs.nix4vscode.forVscodeVersion "1.103.2" [
         "github.copilot"
 
         # Version-control
