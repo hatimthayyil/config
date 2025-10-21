@@ -51,8 +51,9 @@
   # of pkgs.nix4vscode.forVscode
   programs.vscode = {
     enable = true;
+    package = pkgs.unstable.vscode;
     profiles.default = {
-      extensions = pkgs.nix4vscode.forVscodeVersion "1.103.2" [
+      extensions = pkgs.nix4vscode.forVscodeVersion "1.105.1" [
         "github.copilot"
 
         # Version-control
