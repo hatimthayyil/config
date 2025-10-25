@@ -56,9 +56,11 @@
       extensions = pkgs.nix4vscode.forVscodeVersion "1.105.1" [
         "github.copilot"
 
-        # Version-control
+        # Development Tools
         "mhutchie.git-graph"
         #FIXME broken "eamodio.gitlens" # Git enhancements
+        "vadimcn.vscode-lldb" # CodeLLDB
+        "llvm-vs-code-extensions.lldb-dap" # DAP implementation from LLVM
 
         # Envrionment
         "mkhl.direnv"
