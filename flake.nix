@@ -179,7 +179,7 @@
 
             modules = [
               ./home/hatim/host.eagle.hatim.nix
-              inputs.nix-index-database.hmModules.nix-index
+              inputs.nix-index-database.homeModules.nix-index
               inputs.emx.homeManagerModules.default
               inputs.nvf.homeManagerModules.default
             ];

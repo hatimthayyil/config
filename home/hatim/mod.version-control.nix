@@ -8,8 +8,10 @@
     enable = true;
     package = pkgs.gitFull;
 
-    userEmail = "hatim@thayyil.net";
-    userName = "Hatim Thayyil";
+    settings.user = {
+      email = "hatim@thayyil.net";
+      name = "Hatim Thayyil";
+    };
 
     lfs.enable = true;
 
@@ -21,17 +23,13 @@
       ".direnv"
     ];
 
-    difftastic = {
-      enable = true;
-    };
-
-    extraConfig = {
+    settings = {
       log.showSignature = true;
       init.defaultBranch = "main";
       pull.rebase = true;
     };
 
-    aliases = {
+    settings.alias = {
       st = "status";
       ld = "log --patch --ext-diff";
       co = "checkout";
@@ -50,12 +48,17 @@
     };
   };
 
+  programs.difftastic = {
+    enable = true;
+    git.enable = true;
+  };
+
   programs.jujutsu = {
     enable = true;
     settings = {
       user = {
-        name = config.programs.git.userName;
-        email = config.programs.git.userEmail;
+        name = config.programs.git.settings.user.name;
+        email = config.programs.git.settings.user.email;
       };
       ui = {
         show-cryptographic-signatures = true;
@@ -71,8 +74,8 @@
 
   programs.mercurial = {
     enable = true;
-    userName = config.programs.git.userName;
-    userEmail = config.programs.git.userEmail;
+    userName = config.programs.git.settings.user.name;
+    userEmail = config.programs.git.settings.user.email;
   };
 
   programs.lazygit.enable = true;

@@ -28,15 +28,19 @@
       ]
     ))
     # Hunspell
-    (pkgs.hunspellWithDicts [
-      pkgs.hunspellDicts.en_GB-large
-      pkgs.hunspellDicts.en_US-large
-    ])
+    (pkgs.hunspell.withDicts (
+      d: [
+        d.en_GB-large
+        d.en_US-large
+      ]
+    ))
     # Nuspell
-    (pkgs.nuspellWithDicts [
-      pkgs.hunspellDicts.en_GB-large
-      pkgs.hunspellDicts.en_US-large
-    ])
+    (pkgs.nuspell.withDicts (
+      d: [
+        d.en_GB-large
+        d.en_US-large
+      ]
+    ))
   ];
 
   # see https://github.com/minad/jinx/discussions/173

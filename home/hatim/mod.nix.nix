@@ -9,7 +9,7 @@
       enable = true;
       clean.enable = true;
       clean.extraArgs = "--keep-since 4d --keep 3";
-      flake = "/home/hatim/src/config.x/nx";
+      flake = "/home/hatim/src/config";
     };
     nix-index = {
       enable = true;
