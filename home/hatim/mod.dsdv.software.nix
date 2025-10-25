@@ -59,7 +59,8 @@
     pkgs.rustycli # Rust playground in CLI
     pkgs.rustup # Needs a C cimpiler
     pkgs.steel # Lisp with Rust integration
-    pkgs.clang
+    pkgs.clang # C/C++ compiler
+    pkgs.lldb # LLVM debugger
     pkgs.jupyter-all # NixOS has a jupyter service
 
     # Misc

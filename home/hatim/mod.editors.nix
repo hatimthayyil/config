@@ -130,6 +130,9 @@
   programs.kakoune.enable = true;
 
   home.packages = [
+    # Tools
+    pkgs.lldb # LLVM debugger, needed for CodeLLDB extension in VSCode and LLDB DAP
+
     pkgs.texliveFull
     pkgs.texmacs
     pkgs.lyx
