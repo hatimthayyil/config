@@ -58,6 +58,7 @@
     pkgs.stable.hvm # Runtime for bend
     pkgs.rustycli # Rust playground in CLI
     pkgs.rustup # Needs a C cimpiler
+    pkgs.steel # Lisp with Rust integration
     pkgs.clang
     pkgs.jupyter-all # NixOS has a jupyter service
 
