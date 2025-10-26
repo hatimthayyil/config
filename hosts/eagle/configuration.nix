@@ -27,6 +27,7 @@
     ../mod.guest-systems.nix
     ../mod.input-devices.nix
     ../mod.package-management.nix
+    ../mod.dsdv.software.nix
   ];
 
   #
