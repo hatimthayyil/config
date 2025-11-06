@@ -151,5 +151,10 @@
 
     # Android
     pkgs.android-studio
+
+    # Smalltalk
+    # pkgs.pharo
+    # pkgs.squeak
+    pkgs.glamoroustoolkit
   ];
 }
