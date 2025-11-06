@@ -77,8 +77,10 @@
     pkgs.tokei # lines of code
     pkgs.tree # recursive listing of dirs
     pkgs.dust # better du (file sizes)
+    pkgs.ncdu # ncurses disk usage analyzer
     pkgs.fselect # Find files with SQL-like prompt.
     pkgs.sd # sed alternative
     pkgs.scooter # find and replace tool
+    pkgs.kondo # clean up build artifacts
   ];
 }
