@@ -76,10 +76,10 @@
     # ========== Applications
     #
     # Nix User Repository
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nur = {
+    #   url = "github:nix-community/NUR";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # Flatpak
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     # Emacs
@@ -120,6 +120,8 @@
       # ensure to have it up to date or simply don't specify the nixpkgs input
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    # Firefox Add-ons
+    nix-firefox-addons.url = "github:osipog/nix-firefox-addons";
     # MacOS Ventura, and other Guest OSes
     nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
   };
@@ -174,7 +176,10 @@
             pkgs = import inputs.nixpkgs {
               system = "x86_64-linux";
               config.allowUnfree = true;
-              overlays = [ inputs.self.overlays.default ];
+              overlays = [
+                inputs.self.overlays.default
+                inputs.nix-firefox-addons.overlays.default
+              ];
             };
 
             modules = [
