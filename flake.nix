@@ -122,6 +122,11 @@
     };
     # Firefox Add-ons
     nix-firefox-addons.url = "github:osipog/nix-firefox-addons";
+    # Firefox CSS hacks (non-flake)
+    firefox-csshacks = {
+      url = "github:MrOtherGuy/firefox-csshacks";
+      flake = false;
+    };
     # MacOS Ventura, and other Guest OSes
     nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
   };
@@ -179,6 +184,7 @@
               overlays = [
                 inputs.self.overlays.default
                 inputs.nix-firefox-addons.overlays.default
+                (import pkgs/overlay.nix { inherit inputs; })
               ];
             };
 

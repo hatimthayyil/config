@@ -80,6 +80,22 @@
         "type": "github"
       }
     },
+    "firefox-csshacks": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1762104922,
+        "narHash": "sha256-ktPOQ5z+8oy4JtOUxDx+ynsNHjxnisrNAiV6UW1bGqE=",
+        "owner": "MrOtherGuy",
+        "repo": "firefox-csshacks",
+        "rev": "a7a29f9ac9b8dc5715df18251999d9a5f4db881b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MrOtherGuy",
+        "repo": "firefox-csshacks",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "locked": {
         "lastModified": 1733328505,
@@ -1034,6 +1050,7 @@
         "disko": "disko",
         "emacs-overlay": "emacs-overlay",
         "emx": "emx",
+        "firefox-csshacks": "firefox-csshacks",
         "flake-parts": "flake-parts",
         "hardware": "hardware",
         "home-manager": "home-manager",

@@ -25,7 +25,122 @@
 #in
 {
   programs = {
-    firefox.enable = true;
+    firefox = {
+      enable = true;
+
+      # Policy settings
+      # policies = {
+      #   # Basic settings
+      #   HardwareAcceleration = true;
+      #   #DefaultDownloadDirectory = "\${home}/Downloads";
+
+      #   # Disable annoying stuff
+      #   AppAutoUpdate = false;
+      #   DisableFirefoxStudies = true;
+      #   DisablePocket = true;
+      #   DisableTelemetry = true;
+      #   DisplayBookmarksToolbar = "always";
+      #   OfferToSaveLogins = false;
+
+      #   # Hard-disable Firefox's DoH
+      #   DNSOverHTTPS = {
+      #     Enabled = false;
+      #     Locked = true;
+      #   };
+
+      #   # Search configuration
+      #   SearchSuggestEnabled = true;
+      #   FirefoxSuggest = {
+      #     SponsoredSuggestions = false;
+      #     ImproveSuggest = false;
+      #   };
+      # };
+
+      profiles.default = {
+        isDefault = true;
+
+        extensions = {
+          force = true;
+          packages = with pkgs.firefoxAddons; [
+            ublock-origin
+            clearurls
+            sponsorblock
+            bitwarden-password-manager
+            darkreader
+            decentraleyes
+            sidebery
+            unpaywall
+            #zotero-connector # not available on Addons - TODO should package it myself
+          ];
+          settings."uBlock0@raymondhill.net".settings = {
+            selectedFilterLists = [
+              "ublock-filters"
+              "ublock-badware"
+              "ublock-privacy"
+              "ublock-unbreak"
+              "ublock-quick-fixes"
+            ];
+          };
+        };
+
+        search = {
+          default = "Kagi";
+          privateDefault = "ddg";
+          force = true;
+
+          engines = {
+            "Kagi" = {
+              urls = [{
+                template = "https://kagi.com/search";
+                params = [ { name = "q"; value = "{searchTerms}"; } ];
+              }];
+              icon = "https://assets.kagi.com/v1/kagi_assets/logos/yellow_3.svg";
+              updateInterval = 24 * 60 * 60 * 1000; # Daily
+              definedAliases = [ "@kagi" ];
+            };
+
+            # # Nix package search
+            # "Nix Packages" = {
+            #   urls = [{
+            #       template = "https://search.nixos.org/packages";
+            #       params = [
+            #         { name = "type"; value = "packages"; }
+            #         { name = "query"; value = "{searchTerms}"; }
+            #       ];
+            #   }];
+            #   icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            #   definedAliases = ["@np"];
+            # };
+
+            # # Nix wiki search
+            # "NixOS Wiki" = {
+            #   urls = [{ template = "https://wiki.nixos.org/w/index.php?search={searchTerms}"; }];
+            #   icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            #   definedAliases = ["@nw"];
+            # };
+          };
+        };
+
+        # settings = {
+        #   "browser.startup.homepage" = "https://kagi.com";
+        #   # without this the addons need to be enabled manually after first install
+        #   "extensions.autoDisableScopes" = 0;
+        #   "gfx.webrender.all" = true;
+        #   "privacy.donottrackheader.enabled" = true;
+        #   "privacy.donottrackheader.value" = 1;
+        #   "privacy.trackingprotection.enabled" = true;
+        #   "privacy.trackingprotection.socialtracking.enabled" = true;
+        #   # selected from https://github.com/arkenfox/user.js
+        # };
+
+        # https://mrotherguy.github.io/firefox-csshacks/
+        userChrome = ''
+          @import url(${pkgs.firefox-csshacks}/chrome/urlbar_centered_text.css);
+          @import url(${pkgs.firefox-csshacks}/chrome/hide_tabs_toolbar_v2.css);
+        '';
+      };
+    };
+
     floorp = {
       enable = true;
 
@@ -41,6 +156,7 @@
           force = true;
           packages = with pkgs.firefoxAddons; [
             ublock-origin
+            clearurls
             sponsorblock
             bitwarden-password-manager
             darkreader
@@ -66,13 +182,13 @@
                 template = "https://kagi.com/search";
                 params = [ { name = "q"; value = "{searchTerms}"; } ];
               }];
-              iconUpdateURL = "https://assets.kagi.com/v1/kagi_assets/logos/yellow_3.svg";
+              icon = "https://assets.kagi.com/v1/kagi_assets/logos/yellow_3.svg";
               updateInterval = 24 * 60 * 60 * 1000; # Daily
               definedAliases = [ "@kagi" ];
             };
           };
           default = "Kagi";
-          privateDefault = "DuckDuckGo";
+          privateDefault = "ddg";
           force = true;
         };
       };
