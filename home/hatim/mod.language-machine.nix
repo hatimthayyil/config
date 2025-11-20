@@ -5,7 +5,7 @@
 {
   home.packages = [
     # GPU
-    pkgs.glxinfo # glxinfo, OpenGL (MESA)
+    pkgs.mesa-demos # glxinfo, OpenGL (MESA)
     pkgs.vulkan-tools # vulkaninfo : OpenGL alt (MESA)
     pkgs.libva-utils # vainfo : Video Acceleration
     pkgs.clinfo # clinfo : OpenCL (CUDA alt)

@@ -12,6 +12,7 @@
     # Documents, PDFs, books, etc
     zathura.enable = true;
     sioyek.enable = true;
+    onlyoffice.enable = true;
 
     # Mail
     thunderbird = {

@@ -14,7 +14,7 @@
 {
   imports = [
     # NixOS modules
-    ../../modules/os.onlyoffice.nix
+    # ../../modules/os.onlyoffice.nix
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     # NixOS configuration modules
@@ -23,7 +23,7 @@
     ../mod.os.networking.nix
     ../mod.containers.nix
     ../mod.apps.web-browsers.nix
-    ../mod.apps.productivity.nix
+    # ../mod.apps.productivity.nix
     ../mod.guest-systems.nix
     ../mod.input-devices.nix
     ../mod.package-management.nix

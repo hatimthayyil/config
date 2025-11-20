@@ -78,6 +78,9 @@
         "svelte.svelte-vscode" # Svelte support
         "lencerf.beancount" # Beancount support
         "WolframResearch.wolfram"
+        "mattn.lisp"
+        "qingpeng.common-lisp" # Common Lisp support
+        "betterthantomorrow.calva" # Clojure support
 
         # Web Development
         "dbaeumer.vscode-eslint" # Linting for JavaScript/TypeScript
