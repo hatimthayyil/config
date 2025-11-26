@@ -37,5 +37,6 @@
 
     # Design
     pkgs.drawio
+    pkgs.stable.blender
   ];
 }
