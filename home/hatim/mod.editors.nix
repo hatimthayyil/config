@@ -53,7 +53,7 @@
     enable = true;
     package = pkgs.unstable.vscode;
     profiles.default = {
-      extensions = pkgs.nix4vscode.forVscodeVersion "1.105.1" [
+      extensions = pkgs.nix4vscode.forVscodeVersion "1.106.0" [
         "github.copilot"
 
         # Development Tools
@@ -81,6 +81,7 @@
         "mattn.lisp"
         "qingpeng.common-lisp" # Common Lisp support
         "betterthantomorrow.calva" # Clojure support
+        "dioxuslabs.dioxus" # Dioxus Extension
 
         # Web Development
         "dbaeumer.vscode-eslint" # Linting for JavaScript/TypeScript
