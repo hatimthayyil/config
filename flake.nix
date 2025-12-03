@@ -5,11 +5,11 @@
     #
     # ========== Primary NixOS pkgs
     #
-    #nixpkgs.url = "github:nixos/nixpkgs/master";
-    #nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    #nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    #nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/master";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     #
     # ========== Pinned versions available as pkgs.stable etc
@@ -24,7 +24,7 @@
     #
     home-manager = {
       url = "github:nix-community/home-manager/master";
-      #url = "github:nix-community/home-manager/release-24.11";
+      # url = "github:nix-community/home-manager/release-25.11";
 
       # To be kept up to date with nixpkgs
       inputs.nixpkgs.follows = "nixpkgs";
@@ -154,6 +154,8 @@
       ];
 
       flake = {
+        # templates = import ./templates/default.nix { inherit inputs lib; };
+        templates = import ./templates;
         #
         # ========== Host configurations
         #
