@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   # Enable nix ld
   programs.nix-ld.enable = true;
 

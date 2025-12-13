@@ -2,7 +2,13 @@
 #
 # See full reference at https://devenv.sh/reference/options/
 
-{ pkgs, lib, config, inputs, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}:
 
 {
   packages = with pkgs; [

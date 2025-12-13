@@ -1,7 +1,7 @@
 {
   stdenvNoCC,
   lib,
-  inputs
+  inputs,
 }:
 
 stdenvNoCC.mkDerivation {
@@ -9,7 +9,11 @@ stdenvNoCC.mkDerivation {
   version = builtins.substring 0 7 inputs.firefox-csshacks.rev;
 
   src = inputs.firefox-csshacks;
-  phases = [ "unpackPhase" "installPhase" "fixupPhase" ];
+  phases = [
+    "unpackPhase"
+    "installPhase"
+    "fixupPhase"
+  ];
 
   installPhase = ''
     mkdir -p $out

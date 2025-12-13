@@ -1,7 +1,13 @@
 # Minimal template for a Dioxus Web project
 # See full reference at https://devenv.sh/reference/options/
 
-{ pkgs, lib, config, inputs, ... }:
+{
+  pkgs,
+  lib,
+  config,
+  inputs,
+  ...
+}:
 let
   # NOTE Remove once wasm-bindgen-cli 0.2.106 is available in nixpkgs
   toolchain = pkgs.rust-bin.stable.latest.default.override {

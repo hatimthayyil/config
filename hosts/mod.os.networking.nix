@@ -14,7 +14,7 @@
         action = "allow";
         duration = "always";
         operator = {
-          type ="simple";
+          type = "simple";
           sensitive = false;
           operand = "process.path";
           data = "${lib.getBin pkgs.systemd}/lib/systemd/systemd-timesyncd";
@@ -26,7 +26,7 @@
         action = "allow";
         duration = "always";
         operator = {
-          type ="simple";
+          type = "simple";
           sensitive = false;
           operand = "process.path";
           data = "${lib.getBin pkgs.nsncd}/bin/nsncd";
@@ -38,7 +38,7 @@
         action = "allow";
         duration = "always";
         operator = {
-          type ="simple";
+          type = "simple";
           sensitive = false;
           operand = "process.path";
           data = "${lib.getBin pkgs.zellij}/bin/zellij";
@@ -50,7 +50,7 @@
         action = "allow";
         duration = "always";
         operator = {
-          type ="simple";
+          type = "simple";
           sensitive = false;
           operand = "process.path";
           data = "${lib.getBin pkgs.zotero}/bin/zotero";
@@ -64,7 +64,7 @@
         action = "allow";
         duration = "always";
         operator = {
-          type ="regexp";
+          type = "regexp";
           operand = "dest.host";
           data = "^(|.*\\.)crates\\.io$";
         };
