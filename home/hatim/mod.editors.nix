@@ -81,7 +81,7 @@
         "mattn.lisp"
         "qingpeng.common-lisp" # Common Lisp support
         "betterthantomorrow.calva" # Clojure support
-        "dioxuslabs.dioxus" # Dioxus Extension
+        "DioxusLabs.dioxus" # Dioxus Extension
 
         # Web Development
         "dbaeumer.vscode-eslint" # Linting for JavaScript/TypeScript
@@ -144,7 +144,7 @@
     pkgs.kibi # very lightweight editor
 
     inputs.zed-editor.packages.${pkgs.system}.zed-editor-bin-fhs
-    pkgs.windsurf #broken
+    pkgs.windsurf # broken
     pkgs.code-cursor
     pkgs.vscodium-fhs
 
