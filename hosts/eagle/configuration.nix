@@ -287,8 +287,8 @@
   };
 
   services.ollama = {
-    enable = true;
-    package = pkgs.ollama-cuda;
+    enable = false;
+    package = pkgs.stable.ollama-cuda;
     acceleration = "cuda";
 
     # preload models, see https://ollama.com/library
