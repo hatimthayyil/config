@@ -1,4 +1,9 @@
 {
+  python = {
+    path = ./python;
+    description = "Template for Python projects, with venv support";
+  };
+
   python-uv = {
     path = ./python-uv;
     description = "Template for Python uv projects";
