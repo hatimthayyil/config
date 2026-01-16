@@ -5,26 +5,25 @@
     #
     # ========== Primary NixOS pkgs
     #
-    nixpkgs.url = "github:nixos/nixpkgs/master";
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    # Do not use nixpkgs-unstable as that is meant for Nix as a package manager
+    # as it will have much more broken packages.
+    # nixpkgs.url = "github:nixos/nixpkgs/master";
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     #
     # ========== Pinned versions available as pkgs.stable etc
     #
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
 
     #
     # ========== Home manager
     #
     home-manager = {
-      url = "github:nix-community/home-manager/master";
-      # url = "github:nix-community/home-manager/release-25.11";
+      # url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-25.11";
 
       # To be kept up to date with nixpkgs
       inputs.nixpkgs.follows = "nixpkgs";

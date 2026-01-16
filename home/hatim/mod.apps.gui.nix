@@ -38,5 +38,8 @@
     # Design
     pkgs.drawio
     pkgs.blender
+
+    # FTP
+    pkgs.filezilla
   ];
 }

@@ -11,6 +11,6 @@
     pkgs.httplab
 
     # UI/UX
-    pkgs.figma-linux
+    #LEAN pkgs.figma-linux
   ];
 }

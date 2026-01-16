@@ -71,7 +71,7 @@
         "ms-python.python" # Python support
         "ms-toolsai.jupyter" # Jupyter Notebook support
         "ms-vscode.cpptools" # C/C++ support
-        "rust-lang.rust-analyzer" # Rust support
+        #"rust-lang.rust-analyzer" # Rust support
         "golang.go" # Go support
         "redhat.java" # Java support
         "dart-code.dart-code" # Dart/Flutter support
@@ -102,7 +102,7 @@
         "johnpapa.vscode-peacock" # Change VSCode theme
         "shardulm94.trailing-spaces" # Highlight trailing spaces
         "tamasfe.even-better-toml" # TOML support
-        "alefragnani.bookmarks" # Code bookmarks
+        # "alefragnani.bookmarks" # Code bookmarks
         "yzhang.markdown-all-in-one" # Markdown support
         "editorconfig.editorconfig" # EditorConfig support
         "gruntfuggly.todo-tree" # Highlight TODO comments
@@ -131,7 +131,7 @@
   # Extra Editors
   programs.neovim.enable = false;
   programs.helix.enable = true;
-  programs.kakoune.enable = true;
+  #LEAN programs.kakoune.enable = true;
 
   home.packages = [
     # Tools
@@ -144,21 +144,21 @@
     pkgs.kibi # very lightweight editor
 
     inputs.zed-editor.packages.${pkgs.system}.zed-editor-bin-fhs
-    pkgs.windsurf # broken
-    pkgs.code-cursor
-    pkgs.vscodium-fhs
+    #LEAN pkgs.windsurf # broken
+    #LEAN pkgs.code-cursor
+    #LEAN pkgs.vscodium-fhs
 
     # JetBrains IDEs
-    pkgs.stable.jetbrains.rust-rover
-    pkgs.stable.jetbrains.pycharm-community-bin
-    pkgs.stable.jetbrains.webstorm
+    #LEAN pkgs.stable.jetbrains.rust-rover
+    #LEAN pkgs.stable.jetbrains.pycharm-community-bin
+    #LEAN pkgs.stable.jetbrains.webstorm
 
     # Android
-    pkgs.android-studio
+    #LEAN pkgs.android-studio
 
     # Smalltalk
     # pkgs.pharo
     # pkgs.squeak
-    pkgs.glamoroustoolkit
+    #LEAN pkgs.glamoroustoolkit
   ];
 }

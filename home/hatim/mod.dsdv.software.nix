@@ -51,11 +51,11 @@
     pkgs.github-backup # backup github
 
     # Reverse engineering
-    pkgs.ghidra
+    #LEAN pkgs.ghidra
 
     # Programming languages
-    pkgs.stable.bend # Parallel computing
-    pkgs.stable.hvm # Runtime for bend
+    #BROKEN pkgs.stable.bend # Parallel computing
+    #BROKEN pkgs.stable.hvm # Runtime for bend
     pkgs.rustycli # Rust playground in CLI
     pkgs.rustup # Needs a C cimpiler
     pkgs.steel # Lisp with Rust integration

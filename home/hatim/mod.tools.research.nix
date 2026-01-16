@@ -12,6 +12,7 @@
     pkgs.gephi # Visualise and manipulate large graphs
     pkgs.cytoscape # network analysis
     pkgs.neo4j # native graph db
+    pkgs.surrealist # multi-modal DB
     pkgs.openrefine # data cleanup
     pkgs.datasette
     pkgs.wiki-tui # Wikipedia in CLI
