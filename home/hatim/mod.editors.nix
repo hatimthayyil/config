@@ -82,6 +82,7 @@
         "qingpeng.common-lisp" # Common Lisp support
         "betterthantomorrow.calva" # Clojure support
         "DioxusLabs.dioxus" # Dioxus Extension
+        "myriad-dreamin.tinymist" # Typst
 
         # Web Development
         "dbaeumer.vscode-eslint" # Linting for JavaScript/TypeScript
