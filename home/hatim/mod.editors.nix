@@ -53,7 +53,7 @@
     enable = true;
     package = pkgs.unstable.vscode;
     profiles.default = {
-      extensions = pkgs.nix4vscode.forVscodeVersion "1.106.3" [
+      extensions = pkgs.nix4vscode.forVscodeVersion "1.107.1" [
         "github.copilot"
 
         # Development Tools
