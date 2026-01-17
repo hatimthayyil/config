@@ -34,6 +34,11 @@
   # ========== Nix
   #
   nix = {
+    # Use the Lix implementation of Nix
+    # TODO Need to implement the Advanced usage with the overlays
+    # FIXME Lix broke home-manager
+    #package = pkgs.lixPackageSets.stable.lix;
+
     # This will add each flake input as a registry
     # To make nix3 commands consistent with your flake
     registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
