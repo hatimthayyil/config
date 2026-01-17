@@ -49,6 +49,7 @@
 
   # VScode using Nix4Vscode, to change the nixpkgs distribution, use with pkgs.vscode-extensions;  instead
   # of pkgs.nix4vscode.forVscode
+# TODO Split this off into an install in the profile and decouple it from Home
   programs.vscode = {
     enable = true;
     package = pkgs.unstable.vscode;
