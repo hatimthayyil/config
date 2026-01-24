@@ -28,6 +28,7 @@
     ../mod.input-devices.nix
     ../mod.package-management.nix
     ../mod.dsdv.software.nix
+    ../mod.language-models.nix
   ];
 
   #
@@ -266,42 +267,5 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-  };
-
-  networking.extraHosts = ''
-    127.0.0.1 chat.local
-    127.0.0.1 ollama.local
-    127.0.0.1 cloud.local
-  '';
-
-  services.nginx = {
-    enable = true;
-
-    virtualHosts."chat.local" = {
-      locations."/" = {
-        proxyPass = "http://127.0.0.1:11500";
-        proxyWebsockets = true;
-      };
-    };
-
-    virtualHosts."ollama.local" = {
-      locations."/" = {
-        proxyPass = "http://127.0.0.1:11434";
-      };
-    };
-  };
-
-  services.ollama = {
-    enable = false;
-    package = pkgs.stable.ollama-cuda;
-
-    # preload models, see https://ollama.com/library
-    #loadModels = [ "llama3.2:3b" "deepseek-r1:1.5b"];
-  };
-
-  services.open-webui = {
-    # FIXME broken
-    enable = false;
-    port = 11500;
   };
 }
