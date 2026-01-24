@@ -22,6 +22,7 @@
     #pkgs.aider-chat-full # FIXME broken on unstable
     pkgs.stable.claude-code # Coder agent from Anthropic
     pkgs.stable.codex # Coder agent from OpenAI
+    pkgs.opencode # AI coding agent
     pkgs.llm # LLM cli from Simon Willison
   ];
 }
