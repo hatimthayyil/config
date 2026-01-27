@@ -244,7 +244,7 @@
 
   home.packages = [
     # Browsers
-    pkgs.librewolf
+    #pkgs.librewolf
     pkgs.nyxt
     inputs.zen-browser.packages."x86_64-linux".default
     pkgs.tangram
