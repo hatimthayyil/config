@@ -15,11 +15,11 @@
   };
 
   services.n8n = {
-    enable = true;
+    enable = false;
   };
 
   services.qdrant = {
-    enable = true;
+    enable = false;
     package = pkgs.stable.qdrant;
   };
 }
