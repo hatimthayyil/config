@@ -103,11 +103,6 @@
       #url = "github:nix-community/nixvim";
       #inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    # Zed Editor (upstream broken)
-    zed-editor = {
-      url = "github:HPsaucii/zed-editor-flake";
-      #inputs.nixpkgs.follows = "nixpkgs-stable";
-    };
     nix4vscode = {
       url = "github:nix-community/nix4vscode";
       inputs.nixpkgs.follows = "nixpkgs";

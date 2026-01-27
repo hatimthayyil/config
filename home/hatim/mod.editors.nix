@@ -118,19 +118,20 @@
   };
 
   # Zed
-  # TODO Broken for now, come back to this later
   programs.zed-editor = {
-    enable = false;
-    package = inputs.zed-editor.packages.${pkgs.system}.zed-editor;
+    enable = true;
+    package = pkgs.unstable.zed-editor;
     extensions = [
       "beancount"
-      "nix"
-      "make"
-      "just"
-      "sql"
       "dockerfile"
       "docker-compose"
       "helm"
+      "just"
+      "make"
+      "nix"
+      "opencode"
+      "sql"
+      "vscode-monokai-charcoal"
     ];
   };
 
@@ -149,7 +150,6 @@
     pkgs.leo-editor
     pkgs.kibi # very lightweight editor
 
-    inputs.zed-editor.packages.${pkgs.system}.zed-editor-bin-fhs
     #LEAN pkgs.windsurf # broken
     #LEAN pkgs.code-cursor
     #LEAN pkgs.vscodium-fhs
