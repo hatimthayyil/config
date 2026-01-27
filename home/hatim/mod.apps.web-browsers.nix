@@ -128,17 +128,19 @@
           };
         };
 
-        # settings = {
-        #   "browser.startup.homepage" = "https://kagi.com";
-        #   # without this the addons need to be enabled manually after first install
-        #   "extensions.autoDisableScopes" = 0;
-        #   "gfx.webrender.all" = true;
-        #   "privacy.donottrackheader.enabled" = true;
-        #   "privacy.donottrackheader.value" = 1;
-        #   "privacy.trackingprotection.enabled" = true;
-        #   "privacy.trackingprotection.socialtracking.enabled" = true;
-        #   # selected from https://github.com/arkenfox/user.js
-        # };
+        settings = {
+          "browser.startup.homepage" = "https://kagi.com";
+          # without this the addons need to be enabled manually after first install
+          "extensions.autoDisableScopes" = 0;
+          "gfx.webrender.all" = true;
+          "privacy.donottrackheader.enabled" = true;
+          "privacy.donottrackheader.value" = 1;
+          "privacy.trackingprotection.enabled" = true;
+          "privacy.trackingprotection.socialtracking.enabled" = true;
+          # disable libadwaita theming for Firefox
+          "widget.gtk.libadwaita-colors.enabled" = false;
+          # selected from https://github.com/arkenfox/user.js
+        };
 
         # https://mrotherguy.github.io/firefox-csshacks/
         userChrome = ''
