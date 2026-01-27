@@ -67,6 +67,9 @@
         "mkhl.direnv"
         "ms-vscode-remote.remote-containers"
 
+        # Themes
+        "74th.monokai-charcoal-high-contrast"
+
         # Programming Languages
         "jnoortheen.nix-ide" # Nix
         "ms-python.python" # Python support
