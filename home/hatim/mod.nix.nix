@@ -26,6 +26,7 @@
 
     # Dev
     pkgs.nixd
+    pkgs.nil
     pkgs.nvd
     pkgs.manix
     pkgs.nix-health
