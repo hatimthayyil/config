@@ -54,8 +54,12 @@
     enable = true;
     package = pkgs.unstable.vscode;
     profiles.default = {
-      extensions = pkgs.nix4vscode.forVscodeVersion "1.107.1" [
+      extensions = pkgs.nix4vscode.forVscodeVersion "1.108.1" [
         "github.copilot"
+        "github.copilot-chat"
+        "sst-dev.opencode-v2"
+        "anthropic.claude-code"
+        "openai.chatgpt"
 
         # Development Tools
         "mhutchie.git-graph"
