@@ -126,15 +126,35 @@
     enable = true;
     package = pkgs.unstable.zed-editor;
     extensions = [
+      "codebook"
+
+      # Language Servers
+      "make"
+      "just"
+      "helm"
       "beancount"
       "dockerfile"
       "docker-compose"
-      "helm"
-      "just"
-      "make"
       "nix"
-      "opencode"
       "sql"
+      "toml"
+      "typst"
+      "html"
+      "svelte"
+      "latex"
+      "racket"
+
+      # Agent Servers
+      "opencode"
+
+      # Themes
+      "catppuccin"
+      "vercel-theme"
+      "v0-theme"
+      "dogi"
+      "the-dark-side"
+      "modus-themes"
+      "monokai-pro-ce"
       "vscode-monokai-charcoal"
     ];
   };
