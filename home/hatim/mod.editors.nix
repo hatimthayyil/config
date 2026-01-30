@@ -73,6 +73,7 @@
 
         # Themes
         "74th.monokai-charcoal-high-contrast"
+        "gantoreno.vscode-vercel-theme"
 
         # Programming Languages
         "jnoortheen.nix-ide" # Nix
