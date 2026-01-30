@@ -7,7 +7,7 @@
   '';
 
   services.nginx = {
-    enable = true;
+    enable = false;
 
     virtualHosts."chat.local" = {
       locations."/" = {
