@@ -148,6 +148,21 @@
       # Agent Servers
       "opencode"
 
+      # MCPs
+      "mcp-server-context7"
+      "mcp-server-puppeteer"
+      "mcp-server-github"
+      "mcp-server-gitlab"
+      "mcp-server-sequential-thinking"
+      "serena-context-server"
+      "postgres-context-server"
+      "chrome-devtools-mcp"
+      "svelte-mcp"
+      "mcp-server-figma"
+      "shadcn-mcp"
+      "arch-mcp"
+      "mcp-server-repomix"
+
       # Themes
       "catppuccin"
       "vercel-theme"
@@ -158,6 +173,23 @@
       "monokai-pro-ce"
       "vscode-monokai-charcoal"
     ];
+    extraPackages = [
+      pkgs.repomix
+      pkgs.nil
+      pkgs.mcp-nixos
+    ];
+    userSettings = {
+      context_servers = {
+        nixos = {
+          command = "nix";
+          args = [
+            "run"
+            "github:utensils/mcp-nixos"
+            "--"
+          ];
+        };
+      };
+    };
   };
 
   # Extra Editors
