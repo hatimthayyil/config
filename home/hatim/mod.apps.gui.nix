@@ -24,6 +24,9 @@
   };
 
   home.packages = [
+    # Utils
+    pkgs.kdePackages.filelight
+
     # Mail
     pkgs.mailspring
 
