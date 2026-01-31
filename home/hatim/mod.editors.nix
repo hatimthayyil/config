@@ -145,6 +145,9 @@
       "latex"
       "racket"
 
+      # Snippets
+      "html-snippets"
+
       # Agent Servers
       "opencode"
 
