@@ -46,7 +46,7 @@
     sesh.enable = true;
     zellij = {
       enable = true;
-      enableZshIntegration = true;
+      enableZshIntegration = false;
       settings = {
         copy_command = "wl-copy";
       };
