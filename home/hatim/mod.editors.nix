@@ -60,6 +60,7 @@
         "sst-dev.opencode-v2"
         "anthropic.claude-code"
         "openai.chatgpt"
+        "google.colab"
 
         # Development Tools
         "mhutchie.git-graph"
