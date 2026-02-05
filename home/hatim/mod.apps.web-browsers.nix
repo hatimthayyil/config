@@ -140,6 +140,11 @@
           # disable libadwaita theming for Firefox
           "widget.gtk.libadwaita-colors.enabled" = false;
           # selected from https://github.com/arkenfox/user.js
+          "browser.low_commit_space_threshold_mb" = 16384; # 16GB
+          "browser.tabs.unloadOnLowMemory" = true;
+          "browser.tabs.discarding.enabled" = true;
+          "browser.tabs.discarding.priority" = 2;
+          "browser.tabs.min_inactive_duration_before_unload" = 600000;
         };
 
         # https://mrotherguy.github.io/firefox-csshacks/
