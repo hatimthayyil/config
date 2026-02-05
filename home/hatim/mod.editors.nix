@@ -80,6 +80,7 @@
         "jnoortheen.nix-ide" # Nix
         "ms-python.python" # Python support
         "ms-toolsai.jupyter" # Jupyter Notebook support
+        "marimo-team.vscode-marimo" # Jupyter alteranative
         "ms-vscode.cpptools" # C/C++ support
         #"rust-lang.rust-analyzer" # Rust support
         "golang.go" # Go support
