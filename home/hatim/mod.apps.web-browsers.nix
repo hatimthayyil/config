@@ -84,7 +84,7 @@
         };
 
         search = {
-          default = "Kagi";
+          default = "ddg";
           privateDefault = "ddg";
           force = true;
 
