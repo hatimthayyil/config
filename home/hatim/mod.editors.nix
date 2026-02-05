@@ -67,6 +67,7 @@
         #FIXME broken "eamodio.gitlens" # Git enhancements
         "vadimcn.vscode-lldb" # CodeLLDB
         "llvm-vs-code-extensions.lldb-dap" # DAP implementation from LLVM
+        "vivaxy.vscode-conventional-commits" # Conventional Commits support
 
         # Envrionment
         "mkhl.direnv"
