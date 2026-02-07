@@ -18,6 +18,14 @@
     nix-index-database.comma.enable = true;
   };
 
+  services.home-manager = {
+    autoUpgrade = {
+      flakeDir = "/home/hatim/code/config";
+      frequency = "3:15"; #The format is described in {manpage}systemd.time(7).
+      useFlake = true;
+    };
+  };
+
   home.packages = [
     # Cache
     pkgs.cachix

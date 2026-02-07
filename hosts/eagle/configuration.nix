@@ -78,6 +78,22 @@
         "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs="
       ];
     };
+
+    gc = {
+      automatic = true;
+      dates = [ "3:15" ];
+      options = "--delete-older-than 3d";
+    };
+  };
+
+  system.autoUpgrade = {
+    enable = true;
+    flake = "/home/hatim/code/config";
+    flags = [
+      "-L" # print build logs
+    ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
   };
 
   #
