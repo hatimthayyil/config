@@ -23,5 +23,19 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.colorTheme": "Default Light Modern"
+  "tinymist.fontPaths": [
+    
+  ],
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.renderWhitespace": "none",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "dotenv": false
+  },
+  "chat.viewSessions.orientation": "stacked",
+  "marimo.disableUvIntegration": true,
+  "claudeCode.preferredLocation": "panel"
 }
