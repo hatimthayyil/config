@@ -44,7 +44,7 @@
     # TODO The current solution allows for the settings file to be writable and still be captured
     # in the repo tree. But the path is hardcoded. Implement a way to automatically get the path
     # of the file.
-    config.lib.file.mkOutOfStoreSymlink "/home/hatim/src/config/home/hatim/file.vscode-settings.json"
+    config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.vscode-settings.json"
   );
 
   # VScode using Nix4Vscode, to change the nixpkgs distribution, use with pkgs.vscode-extensions;  instead
