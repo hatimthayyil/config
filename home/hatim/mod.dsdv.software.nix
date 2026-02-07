@@ -31,6 +31,8 @@
     };
     # GitHub dashboard (can be customised)
     gh-dash.enable = true;
+
+    uv.enable = true;
   };
 
   home.packages = [
