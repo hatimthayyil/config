@@ -129,7 +129,7 @@
         };
 
         settings = {
-          "browser.startup.homepage" = "https://kagi.com";
+          # "browser.startup.homepage" = "https://kagi.com";
           # without this the addons need to be enabled manually after first install
           "extensions.autoDisableScopes" = 0;
           "gfx.webrender.all" = true;
