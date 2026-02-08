@@ -37,5 +37,6 @@
   },
   "chat.viewSessions.orientation": "stacked",
   "marimo.disableUvIntegration": true,
-  "claudeCode.preferredLocation": "panel"
+  "claudeCode.preferredLocation": "panel",
+  "chat.mcp.gallery.enabled": true
 }
