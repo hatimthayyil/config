@@ -11,8 +11,8 @@
     enable = false;
     package = pkgs.emacs-overlay.emacs-git-pgtk;
     extraPackages = epkgs: [
-        epkgs.treesit-grammars.with-all-grammars
-      ];
+      epkgs.treesit-grammars.with-all-grammars
+    ];
   };
 
   programs.emacs-emx = {

@@ -1,4 +1,3 @@
-_:
-{
+_: {
   services.thinkfan.enable = true;
 }
