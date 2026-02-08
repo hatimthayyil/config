@@ -1,4 +1,4 @@
-{ ... }:
+_:
 {
   # Bash
   programs.bash.enable = true;

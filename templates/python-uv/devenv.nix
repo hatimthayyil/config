@@ -4,9 +4,6 @@
 
 {
   pkgs,
-  lib,
-  config,
-  inputs,
   ...
 }:
 

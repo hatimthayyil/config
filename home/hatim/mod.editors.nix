@@ -2,7 +2,6 @@
   config,
   pkgs,
   lib,
-  inputs,
   ...
 }:
 {
@@ -11,11 +10,9 @@
   programs.emacs = {
     enable = false;
     package = pkgs.emacs-overlay.emacs-git-pgtk;
-    extraPackages = (
-      epkgs: [
+    extraPackages = epkgs: [
         epkgs.treesit-grammars.with-all-grammars
-      ]
-    );
+      ];
   };
 
   programs.emacs-emx = {

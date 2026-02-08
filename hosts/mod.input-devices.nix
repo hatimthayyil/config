@@ -1,4 +1,4 @@
-{ ... }:
+_:
 {
   # Copied from
   # https://github.com/dguibert/nix-config/blob/master/modules/nixos/conf-kanata.nix

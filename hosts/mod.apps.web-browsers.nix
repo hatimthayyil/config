@@ -1,4 +1,4 @@
-{ ... }:
+_:
 {
   # TODO Move default search engine to Kagi
 

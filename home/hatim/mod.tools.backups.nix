@@ -1,6 +1,4 @@
-{
-  ...
-}:
+_:
 {
   # TODO Setup a backup routine. NixOS has services for the restic backup tool.
   #programs.borgmatic = {

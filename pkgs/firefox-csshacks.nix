@@ -1,6 +1,5 @@
 {
   stdenvNoCC,
-  lib,
   inputs,
 }:
 

@@ -32,7 +32,7 @@ let
   };
 
   emacs-overlay-packages = final: prev: {
-    emacs-overlay = (inputs.emacs-overlay.overlay final prev);
+    emacs-overlay = inputs.emacs-overlay.overlay final prev;
   };
 
   nix4vscode-overlay = inputs.nix4vscode.overlays.forVscode;

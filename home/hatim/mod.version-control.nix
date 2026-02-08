@@ -57,8 +57,8 @@
     enable = true;
     settings = {
       user = {
-        name = config.programs.git.settings.user.name;
-        email = config.programs.git.settings.user.email;
+        inherit (config.programs.git.settings.user) name;
+        inherit (config.programs.git.settings.user) email;
       };
       ui = {
         show-cryptographic-signatures = true;

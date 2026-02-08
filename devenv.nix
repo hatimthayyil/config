@@ -1,8 +1,5 @@
 {
   pkgs,
-  lib,
-  config,
-  inputs,
   ...
 }:
 
@@ -20,5 +17,7 @@
 
   git-hooks.hooks = {
     shellcheck.enable = true;
+    deadnix.enable = true;
+    statix.enable = true;
   };
 }

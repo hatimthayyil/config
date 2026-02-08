@@ -131,7 +131,7 @@
       systems = [ "x86_64-linux" ];
 
       perSystem =
-        { system, pkgs, ... }:
+        { pkgs, ... }:
         {
           # Nix formatter available through 'nix fmt'
           formatter = pkgs.nixfmt-tree;

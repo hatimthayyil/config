@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+_:
 {
   # TODO Wine-compatible Microcap is provided by
   # https://github.com/emmanuelrosa/erosanix
