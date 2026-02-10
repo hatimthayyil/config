@@ -38,5 +38,12 @@
   "chat.viewSessions.orientation": "stacked",
   "marimo.disableUvIntegration": true,
   "claudeCode.preferredLocation": "panel",
-  "chat.mcp.gallery.enabled": true
+  "chat.mcp.gallery.enabled": true,
+  "chat.mcp.serverSampling": {
+    "Global in Code: io.github.upstash/context7": {
+      "allowedModels": [
+        "copilot/auto"
+      ]
+    }
+  }
 }
