@@ -122,7 +122,7 @@
       flake = false;
     };
     # MacOS Ventura, and other Guest OSes
-    nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
+    # nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
   };
 
   outputs =
@@ -160,7 +160,7 @@
               inputs.hardware.nixosModules.lenovo-thinkpad-p52
               inputs.nix-flatpak.nixosModules.nix-flatpak
               ./hosts/eagle
-              inputs.nixtheplanet.nixosModules.macos-ventura
+              # inputs.nixtheplanet.nixosModules.macos-ventura
             ];
             specialArgs = {
               inherit inputs;
