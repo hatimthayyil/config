@@ -25,7 +25,8 @@
 
   home.packages = [
     # Utils
-    pkgs.kdePackages.filelight
+    # pkgs.kdePackages.filelight
+    pkgs.qdirstat
 
     # Mail
     pkgs.mailspring
