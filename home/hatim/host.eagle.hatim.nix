@@ -41,6 +41,10 @@
   # Check the Home Manager release notes before updating
   home.stateVersion = "24.11";
 
+  # FIXME This is a temporary settings to remove the version mismatch warning
+  # between Home Manager version 26.05 and Nixpkgs version 25.11.
+  home.enableNixpkgsReleaseCheck = false;
+
   # Environment variables
   home.sessionVariables = { };
 

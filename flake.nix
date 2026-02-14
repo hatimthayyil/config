@@ -21,12 +21,15 @@
     #
     # ========== Home manager
     #
+    # The nixpkgs version here is just for the Homemanager flake,
+    # and does not affect the pkgs instance used in the config.
     home-manager = {
-      # url = "github:nix-community/home-manager/master";
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/master";
+      # url = "github:nix-community/home-manager/release-25.11";
 
       # To be kept up to date with nixpkgs
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     #
