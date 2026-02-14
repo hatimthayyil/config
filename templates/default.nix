@@ -18,4 +18,9 @@
     path = ./dioxus-minimal;
     description = "Template for a Bare-Bones Dioxus projects";
   };
+
+  js-npm = {
+    path = ./js-npm;
+    description = "Template for a NPM Javascript project";
+  };
 }
