@@ -20,8 +20,8 @@
     #LEAN pkgs.jan
     pkgs.aider-chat
     #pkgs.aider-chat-full # FIXME broken on unstable
-    pkgs.stable.claude-code # Coder agent from Anthropic
-    pkgs.stable.codex # Coder agent from OpenAI
+    pkgs.unstable.claude-code # Coder agent from Anthropic
+    pkgs.unstable.codex # Coder agent from OpenAI
     pkgs.unstable.opencode # AI coding agent
     pkgs.unstable.opencode-desktop # GUI for opencode
     pkgs.llm # LLM cli from Simon Willison
