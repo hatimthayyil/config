@@ -58,6 +58,7 @@
         "anthropic.claude-code"
         "openai.chatgpt"
         "google.colab"
+        "planet57.vscode-beads" # Issue manager for agents
 
         # Development Tools
         "mhutchie.git-graph"
