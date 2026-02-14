@@ -32,7 +32,12 @@
     # GitHub dashboard (can be customised)
     gh-dash.enable = true;
 
+    # Python
     uv.enable = true;
+
+    # Javascript
+    npm.enable = true;
+    bun.enable = true;
   };
 
   home.packages = [
