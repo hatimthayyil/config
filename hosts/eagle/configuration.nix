@@ -220,7 +220,10 @@
   };
 
   # Use Zsh as default shell
-  environment.shells = [ pkgs.zsh ];
+  environment = {
+    shells = [ pkgs.zsh ];
+    localBinInPath = true;
+  };
   users.defaultUserShell = pkgs.zsh;
   programs.zsh = {
     enable = true;
