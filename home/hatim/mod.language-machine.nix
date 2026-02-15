@@ -24,6 +24,7 @@
     pkgs.unstable.codex # Coder agent from OpenAI
     pkgs.unstable.opencode # AI coding agent
     pkgs.unstable.opencode-desktop # GUI for opencode
+    pkgs.unstable.gemini-cli # Gemini CLI from Google
     pkgs.llm # LLM cli from Simon Willison
   ];
 }
