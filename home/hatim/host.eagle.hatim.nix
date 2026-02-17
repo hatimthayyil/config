@@ -48,6 +48,12 @@
   # Environment variables
   home.sessionVariables = { };
 
+  # Add paths to PATH
+  home.sessionPath = [
+    "$HOME/.local/bin"
+    "$HOME/.npm/bin"
+  ];
+
   #
   # ========== Nixpkgs with overlays
   #
