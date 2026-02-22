@@ -71,6 +71,7 @@
     pkgs.jupyter-all # NixOS has a jupyter service
     pkgs.conda # provides FHS environment under conda-shell
     pkgs.unstable.python313Packages.conda # Python 3.13 Conda
+    pkgs.cmake
 
     # Misc
     pkgs.exercism # CLI for exercism.org
@@ -78,5 +79,27 @@
 
     # Docker
     pkgs.oxker # Docker CLI tool for managing containers
+
+    # Desktop App Dev
+    pkgs.pkg-config
+    pkgs.fontconfig
+    pkgs.gobject-introspection
+    pkgs.libxcb
+    pkgs.libxkbcommon
+    pkgs.at-spi2-atk
+    pkgs.atkmm
+    pkgs.cairo
+    # pkgs.gdk-pixbuf
+    pkgs.glib
+    pkgs.gtk3
+    pkgs.harfbuzz
+    pkgs.librsvg
+    pkgs.libsoup_3
+    pkgs.pango
+    pkgs.webkitgtk_4_1
+    pkgs.openssl
+    pkgs.dbus
+    pkgs.zlib
+    pkgs.zstd
   ];
 }
