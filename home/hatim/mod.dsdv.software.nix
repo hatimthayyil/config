@@ -111,5 +111,8 @@
     pkgs.dbus
     pkgs.zlib
     pkgs.zstd
+
+    # Cloud tools
+    pkgs.unstable.wrangler
   ];
 }
