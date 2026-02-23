@@ -32,6 +32,13 @@
     # GitHub dashboard (can be customised)
     gh-dash.enable = true;
 
+    # Tools and Programming Runtimes
+    mise = {
+      enable = true;
+      package = pkgs.unstable.mise;
+    };
+
+
     # Python
     uv.enable = true;
 
