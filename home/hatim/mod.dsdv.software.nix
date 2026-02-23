@@ -45,6 +45,9 @@
     # Javascript
     npm.enable = true;
     bun.enable = true;
+
+    # Cloud
+    awscli.enable = true;
   };
 
   home.packages = [
