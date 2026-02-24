@@ -119,6 +119,10 @@
     };
     # Firefox Add-ons
     nix-firefox-addons.url = "github:osipog/nix-firefox-addons";
+    betterfox = {
+      url = "github:HeitorAugustoLN/betterfox-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Firefox CSS hacks (non-flake)
     firefox-csshacks = {
       url = "github:MrOtherGuy/firefox-csshacks";
@@ -192,6 +196,7 @@
               inputs.nix-index-database.homeModules.nix-index
               inputs.emx.homeManagerModules.default
               inputs.nvf.homeManagerModules.default
+              inputs.betterfox.modules.homeManager.betterfox
             ];
 
             # Pass through arguments to home.nix

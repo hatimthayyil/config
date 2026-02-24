@@ -145,6 +145,20 @@
           "browser.tabs.discarding.enabled" = true;
           "browser.tabs.discarding.priority" = 2;
           "browser.tabs.min_inactive_duration_before_unload" = 600000;
+
+          fastfox.enable = true;
+          smoothfox.enable = true;
+          # To enable/disable specific subsections
+          peskyfox = {
+            enable = true;
+            mozilla-ui.enable = false;
+          };
+
+          # To enable/disable specific options
+          securefox = {
+            enable = true;
+            tracking-protection."browser.download.start_downloads_in_tmp_dir".value = false;
+          };
         };
 
         # https://mrotherguy.github.io/firefox-csshacks/
