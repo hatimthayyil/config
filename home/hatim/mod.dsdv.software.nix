@@ -113,6 +113,6 @@
     pkgs.zstd
 
     # Cloud tools
-    pkgs.unstable.wrangler
+    # pkgs.wrangler
   ];
 }
