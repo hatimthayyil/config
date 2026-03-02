@@ -85,10 +85,13 @@
     pkgs.tig # TUI for git
     pkgs.cvs
     pkgs.mr # myrepos
+    pkgs.commitlint
+    pkgs.commitizen
 
     # Git extensions
     pkgs.git-machete
     pkgs.git-imerge
     pkgs.git-annex
+    pkgs.git-absorb # absorb changest and allocate to appropriate commits
   ];
 }
