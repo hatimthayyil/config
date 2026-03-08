@@ -9,11 +9,17 @@
       shellIntegration.enableBashIntegration = true;
       shellIntegration.enableZshIntegration = true;
     };
-    foot.enable = true;
-    alacritty.enable = true;
+    ghostty = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+      enableFishIntegration = true;
+    };
+    # foot.enable = true;
+    # alacritty.enable = true;
   };
 
   home.packages = [
-    pkgs.st
+    # pkgs.st
   ];
 }
