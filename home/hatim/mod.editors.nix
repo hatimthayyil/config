@@ -19,7 +19,7 @@
     enable = true;
     package = pkgs.emacs;
     #package = pkgs.emacs-overlay.emacs-git-pgtk;
-    defaultEditor = true;
+    defaultEditor = false;
     treesitGrammars = [
       "all"
     ];
@@ -198,7 +198,10 @@
 
   # Extra Editors
   programs.neovim.enable = false;
-  programs.helix.enable = true;
+  programs.helix = {
+    enable = true;
+    defaultEditor = true;
+  };
   #LEAN programs.kakoune.enable = true;
 
   home.packages = [
