@@ -51,6 +51,7 @@
   # Add paths to PATH
   home.sessionPath = [
     "$HOME/.local/bin"
+    "$HOME/.cargo/bin"
     "$HOME/.npm/bin"
   ];
 
