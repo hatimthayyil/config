@@ -38,6 +38,7 @@
       package = pkgs.unstable.mise;
     };
 
+    go.enable = true;
 
     # Python
     uv.enable = true;
