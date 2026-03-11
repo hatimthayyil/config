@@ -64,7 +64,7 @@
       enableZshIntegration = true;
     };
     broot = {
-      enable = true;
+      enable = false;
       enableBashIntegration = true;
       enableZshIntegration = true;
       enableNushellIntegration = true;
