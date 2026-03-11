@@ -54,6 +54,7 @@
     "$HOME/.go/bin"
     "$HOME/.cargo/bin"
     "$HOME/.npm/bin"
+    "$HOME/.opencode/bin"
   ];
 
   #
