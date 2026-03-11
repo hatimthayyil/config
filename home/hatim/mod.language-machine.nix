@@ -18,13 +18,13 @@
     #pkgs.master.gpt4all-cuda # FIXME build is broken
     # pkgs.stable.local-ai
     #LEAN pkgs.jan
-    pkgs.aider-chat
+    # pkgs.aider-chat
     #pkgs.aider-chat-full # FIXME broken on unstable
     # pkgs.unstable.claude-code # Coder agent from Anthropic # install from npm for now
-    pkgs.unstable.codex # Coder agent from OpenAI
-    pkgs.unstable.opencode # AI coding agent
-    pkgs.unstable.opencode-desktop # GUI for opencode
-    pkgs.unstable.gemini-cli # Gemini CLI from Google
-    pkgs.llm # LLM cli from Simon Willison
+    # pkgs.unstable.codex # Coder agent from OpenAI
+    # pkgs.unstable.opencode # AI coding agent # use directly installed
+    # pkgs.unstable.opencode-desktop # GUI for opencode
+    # pkgs.unstable.gemini-cli # Gemini CLI from Google
+    # pkgs.llm # LLM cli from Simon Willison
   ];
 }
