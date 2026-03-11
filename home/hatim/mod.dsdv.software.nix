@@ -63,6 +63,7 @@
     pkgs.copier
     pkgs.mprocs # TUI for running long processes
     pkgs.nix-playground # Nix playground
+    pkgs.dolt # git for data
 
     # Remote repo management
     pkgs.ghorg # clone entire org/user repos
