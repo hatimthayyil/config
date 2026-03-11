@@ -45,5 +45,6 @@
         "copilot/auto"
       ]
     }
-  }
+  },
+  "workbench.colorTheme": "Vercel (Light)"
 }
