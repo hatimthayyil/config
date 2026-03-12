@@ -60,6 +60,7 @@
     pkgs.shellcheck
     pkgs.distrobox
     pkgs.devenv
+    pkgs.devbox
     pkgs.copier
     pkgs.mprocs # TUI for running long processes
     pkgs.nix-playground # Nix playground
