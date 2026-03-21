@@ -59,7 +59,8 @@
     pkgs.curlie # frontend for curl
     pkgs.shellcheck
     pkgs.distrobox
-    pkgs.devenv
+    pkgs.unstable.devenv
+    pkgs.unstable.secretspec
     pkgs.devbox
     pkgs.copier
     pkgs.mprocs # TUI for running long processes
