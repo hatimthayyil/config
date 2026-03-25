@@ -2,7 +2,6 @@
   config,
   pkgs,
   lib,
-  inputs,
   ...
 }:
 #let
@@ -170,7 +169,7 @@
     };
 
     floorp = {
-      enable = true;
+      enable = false;
 
       profiles.default = {
         # optional: without this the addons need to be enabled manually after first install
@@ -264,9 +263,9 @@
   home.packages = [
     # Browsers
     #pkgs.librewolf
-    pkgs.nyxt
-    inputs.zen-browser.packages."x86_64-linux".default
-    pkgs.tangram
+    # pkgs.nyxt
+    # inputs.zen-browser.packages."x86_64-linux".default
+    # pkgs.tangram
     #vivaldi
   ];
 }
