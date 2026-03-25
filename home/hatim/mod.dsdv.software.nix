@@ -82,10 +82,10 @@
     pkgs.steel # Lisp with Rust integration
     pkgs.clang # C/C++ compiler
     pkgs.lldb # LLVM debugger
-    pkgs.jupyter-all # NixOS has a jupyter service
+    # pkgs.jupyter-all # NixOS has a jupyter service
     pkgs.conda # provides FHS environment under conda-shell
-    pkgs.unstable.python313Packages.conda # Python 3.13 Conda
-    pkgs.cmake
+    # pkgs.unstable.python313Packages.conda # Python 3.13 Conda
+    # pkgs.cmake
 
     # Misc
     pkgs.exercism # CLI for exercism.org
