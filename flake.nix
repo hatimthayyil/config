@@ -58,6 +58,11 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Automatic upgradge of Nix
+    nix-flake-upgrade = {
+      url = "github:fabian-thomas/nix-flake-upgrade";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Flake based configuration of Treefmt
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
@@ -165,6 +170,7 @@
             system = "x86_64-linux";
             modules = [
               inputs.hardware.nixosModules.lenovo-thinkpad-p52
+              inputs.nix-flake-upgrade.nixosModule."x86_64-linux"
               inputs.nix-flatpak.nixosModules.nix-flatpak
               ./hosts/eagle
               # inputs.nixtheplanet.nixosModules.macos-ventura

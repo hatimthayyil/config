@@ -86,13 +86,27 @@
   };
 
   system.autoUpgrade = {
-    enable = true;
+    enable = false;
     flake = "/home/hatim/code/config";
     flags = [
       "-L" # print build logs
     ];
     dates = "02:00";
     randomizedDelaySec = "45min";
+  };
+
+  system.autoUpgradeFlake = {
+    enable = true;
+    dates = "02:00";
+    allowReboot = true;
+    flake-dir = "${config.users.users."hatim".home}/code/config";
+    user = "your-user";
+    nix-flake-upgrade-flags = [
+      "--update-lock-file"
+      "--push"
+      "--os"
+      "--os-only-when-changed"
+    ];
   };
 
   #
