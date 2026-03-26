@@ -4,7 +4,10 @@
 }:
 
 {
-  packages = [ pkgs.git ];
+  packages = [
+    pkgs.git
+    pkgs.just
+  ];
 
   # languages.nix.enable = true;
 
