@@ -1,6 +1,9 @@
 _: {
   # Bash
-  programs.bash.enable = true;
+  programs.bash = {
+    enable = true;
+    shellAliases.s = "sesh connect $(sesh list --icons | fzf --ansi)"; # fuzzy-pick and connect to a tmux session; defined per-shell because sesh's builtin alias uses $(…) which breaks nushell
+  };
 
   # Zsh
   programs.zsh = {
@@ -8,31 +11,14 @@ _: {
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     history.size = 10000;
-
-    initContent = ''
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    '';
+    shellAliases.s = "sesh connect $(sesh list --icons | fzf --ansi)"; # fuzzy-pick and connect to a tmux session; defined per-shell because sesh's builtin alias uses $(…) which breaks nushell
 
     zplug = {
       enable = true;
       plugins = [
-        {
-          name = "zsh-users/zsh-autosuggestions";
-        }
-        {
-          name = "romkatv/powerlevel10k";
-          tags = [
-            "as:theme"
-            "depth:1"
-          ];
-        }
+        { name = "zsh-users/zsh-autosuggestions"; } # suggest commands from history as you type
       ];
     };
-  };
-
-  home.file.".p10k.zsh" = {
-    source = ./file.zsh.p10k.zsh;
-    executable = true;
   };
 
   programs.fish = {
@@ -40,6 +26,47 @@ _: {
     # TODO Add plugins, see https://github.com/jorgebucaran/awsm.fish
   };
 
-  # Nu
-  programs.nushell.enable = true;
+  # Nu — sesh alias uses def instead of shellAliases because nushell can't parse $(…) subshells
+  programs.nushell = {
+    enable = true;
+    extraConfig = ''
+      def s [] { sesh connect (sesh list --icons | fzf --ansi) }
+    '';
+  };
+
+  # Prompt — cross-shell, replaces powerlevel10k (unmaintained, zsh-only)
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = true;
+    enableNushellIntegration = true;
+    enableFishIntegration = true;
+    settings = {
+      palette = "tokyo-night"; # match tmux theme
+
+      palettes.tokyo-night = {
+        blue = "#7aa2f7";
+        cyan = "#7dcfff";
+        green = "#9ece6a";
+        magenta = "#bb9af7";
+        red = "#f7768e";
+        yellow = "#e0af68";
+        orange = "#ff9e64";
+      };
+
+      character = {
+        success_symbol = "[❯](bold magenta)";
+        error_symbol = "[❯](bold red)"; # red on non-zero exit
+      };
+
+      directory.style = "bold blue";
+      git_branch.style = "bold magenta";
+      git_status.style = "bold red";
+
+      cmd_duration = {
+        min_time = 2000; # only show for commands > 2s
+        style = "bold yellow";
+      };
+    };
+  };
 }

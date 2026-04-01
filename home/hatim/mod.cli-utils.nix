@@ -142,7 +142,10 @@
       enableZshIntegration = true;
       enableNushellIntegration = true;
     };
-    sesh.enable = true;
+    sesh = {
+      enable = true;
+      enableAlias = false; # default alias uses $(…) which is invalid nushell syntax
+    };
     zellij = {
       enable = true;
       enableZshIntegration = false;
