@@ -21,5 +21,6 @@
 
   home.packages = [
     # pkgs.st
+    pkgs.unstable.warp-terminal
   ];
 }
