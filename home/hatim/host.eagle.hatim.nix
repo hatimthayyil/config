@@ -6,7 +6,7 @@
 {
   imports = [
     # Home-manager modules
-    ../../modules/home/enchant.nix
+    ./mod.enchant.nix
     # Configuration modules
     ./mod.nix.nix
     ./mod.shells.nix
