@@ -18,6 +18,13 @@ _: {
       "ikclbgejgcbdlhjmckecmdljlpbhmbmf" # https everywhere
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
       "ikdjjgioalkbdihbhcfffjnanhnilipa" # English syntax highlighter
+      "cceholfnmlnolphmanhbnmnjikblgnnm" # Treedent
+      "nngceckbapebfimnlniiiahkandclblb" # Bitwarden
+      "ekhagklcjbdpajgpjgmbionohlpdbjgc" # Zotero
+      "mnjggcdmjocbbbhaepdhchncahnbgone" # SponsorBlock
+      "iplffkdpngmdjhlpjmppncnlhomiipha" # Unpaywall
+      "ldpochfccmkkmhdbclfhpagapcfdljkj" # Decentraleyes
+      "dffbjiomnajbmlhjelpipfldgkijdemn" # URL Cleaner
     ];
     #
     extraOpts = {

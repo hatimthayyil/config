@@ -256,6 +256,13 @@
           { id = "ikclbgejgcbdlhjmckecmdljlpbhmbmf"; } # https everywhere
           { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # ublock origin
           { id = "ikdjjgioalkbdihbhcfffjnanhnilipa"; } # English syntax highlighter
+          { id = "cceholfnmlnolphmanhbnmnjikblgnnm"; } # Treedent
+          { id = "nngceckbapebfimnlniiiahkandclblb"; } # Bitwarden
+          { id = "ekhagklcjbdpajgpjgmbionohlpdbjgc"; } # Zotero
+          { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } # SponsorBlock
+          { id = "iplffkdpngmdjhlpjmppncnlhomiipha"; } # Unpaywall
+          { id = "ldpochfccmkkmhdbclfhpagapcfdljkj"; } # Decentraleyes
+          { id = "dffbjiomnajbmlhjelpipfldgkijdemn"; } # URL Cleaner
         ];
       };
   };
