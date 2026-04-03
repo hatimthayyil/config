@@ -37,6 +37,8 @@
     #
     # Flake-parts
     flake-parts.url = "github:hercules-ci/flake-parts";
+    # Auto-import modules
+    import-tree.url = "github:vic/import-tree";
     # Hardware
     hardware.url = "github:nixos/nixos-hardware/master";
     # Declarative partitioning and formatting
@@ -140,78 +142,8 @@
   outputs =
     inputs:
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "x86_64-linux" ];
+      imports = [ (inputs.import-tree ./modules) ];
 
-      perSystem =
-        { pkgs, ... }:
-        {
-          # Nix formatter available through 'nix fmt'
-          formatter = pkgs.nixfmt-tree;
-
-          # VM application
-          apps.vm = {
-            type = "app";
-            program = "${inputs.self.nixosConfigurations.owl.config.system.build.vm}/bin/run-nixos-vm";
-          };
-        };
-
-      imports = [
-        ./overlays
-      ];
-
-      flake = {
-        # templates = import ./templates/default.nix { inherit inputs lib; };
-        templates = import ./templates;
-        #
-        # ========== Host configurations
-        #
-        nixosConfigurations = {
-          eagle = inputs.nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
-            modules = [
-              inputs.hardware.nixosModules.lenovo-thinkpad-p52
-              inputs.nix-flake-upgrade.nixosModule."x86_64-linux"
-              inputs.nix-flatpak.nixosModules.nix-flatpak
-              ./hosts/eagle
-              # inputs.nixtheplanet.nixosModules.macos-ventura
-            ];
-            specialArgs = {
-              inherit inputs;
-              outputs = inputs.self;
-            };
-          };
-        };
-
-        #
-        # ========== User home configuration
-        #
-        homeConfigurations = {
-          "hatim@eagle" = inputs.home-manager.lib.homeManagerConfiguration {
-            pkgs = import inputs.nixpkgs {
-              system = "x86_64-linux";
-              config.allowUnfree = true;
-              overlays = [
-                inputs.self.overlays.default
-                inputs.nix-firefox-addons.overlays.default
-                (import pkgs/overlay.nix { inherit inputs; })
-              ];
-            };
-
-            modules = [
-              ./home/hatim/host.eagle.hatim.nix
-              inputs.nix-index-database.homeModules.nix-index
-              inputs.emx.homeManagerModules.default
-              inputs.nvf.homeManagerModules.default
-              inputs.betterfox.modules.homeManager.betterfox
-            ];
-
-            # Pass through arguments to home.nix
-            extraSpecialArgs = {
-              inherit inputs;
-              outputs = inputs.self;
-            };
-          };
-        };
-      };
+      flake.templates = import ./templates;
     };
 }
