@@ -49,7 +49,6 @@ in
           pkgs.nix-init
           pkgs.nix-melt
           pkgs.nix-tree
-          pkgs.nvd
           pkgs.nixfmt
 
           pkgs.lorri

@@ -170,7 +170,6 @@ in
             ];
             extraPackages = [
               pkgs.repomix
-              pkgs.nil
               pkgs.mcp-nixos
             ];
             userSettings = {

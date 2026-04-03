@@ -60,7 +60,6 @@ in
           pkgs.curl
           pkgs.curlie
           pkgs.shellcheck
-          pkgs.distrobox
           pkgs.unstable.devenv
           pkgs.unstable.secretspec
           pkgs.devbox
@@ -78,7 +77,6 @@ in
           pkgs.rustup
           pkgs.steel
           pkgs.clang
-          pkgs.lldb
           pkgs.conda
 
           # Misc
