@@ -42,6 +42,7 @@ _: {
     enableNushellIntegration = true;
     enableFishIntegration = true;
     settings = {
+      add_newline = false; # no blank line before prompt
       palette = "tokyo-night"; # match tmux theme
 
       palettes.tokyo-night = {

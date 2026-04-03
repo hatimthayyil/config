@@ -76,7 +76,7 @@
           plugin = tokyo-night-tmux;
           extraConfig = ''
             set -g @tokyo-night-tmux_theme 'night' # darkest variant
-            set -g @tokyo-night-tmux_transparent 1 # inherit terminal background
+            set -g @tokyo-night-tmux_transparent 0 # use theme's own background colors
             set -g @tokyo-night-tmux_window_id_style 'digital' # 7-segment display digits
             set -g @tokyo-night-tmux_pane_id_style 'hsquare' # hollow square numbers
             set -g @tokyo-night-tmux_zoom_id_style 'dsquare' # double-square when zoomed
