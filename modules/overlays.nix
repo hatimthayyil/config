@@ -2,21 +2,21 @@
 let
   stable-packages = final: _prev: {
     stable = import inputs.nixpkgs-stable {
-      inherit (final) system;
+      inherit (final.stdenv.hostPlatform) system;
       config.allowUnfree = true;
     };
   };
 
   unstable-packages = final: _prev: {
     unstable = import inputs.nixpkgs-unstable {
-      inherit (final) system;
+      inherit (final.stdenv.hostPlatform) system;
       config.allowUnfree = true;
     };
   };
 
   master-packages = final: _prev: {
     master = import inputs.nixpkgs-master {
-      inherit (final) system;
+      inherit (final.stdenv.hostPlatform) system;
       config.allowUnfree = true;
     };
   };
