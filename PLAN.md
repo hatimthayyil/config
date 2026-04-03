@@ -241,15 +241,26 @@ Work through all modules systematically. Each migration:
 Order: cross-cutting features first (browsers, networking, shells, desktop, dev-software, language-machine), then HM-only features (editors, cli-utils, etc.), then tiny modules last.
 
 ### Phase 3: Clean up
+
+#### Deduplicate packages
+Pre-existing duplications carried over from the flat config:
+1. Remove `pkgs.distrobox` from `dev-software.nix` — `programs.distrobox.enable` in `containers.nix` is the idiomatic HM approach
+2. Remove `pkgs.lldb` from `dev-software.nix` — keep in `editors.nix` where the need is documented (CodeLLDB/LLDB DAP)
+3. Remove duplicate `pkgs.nvd` in `nix.nix` (listed twice, copy-paste error)
+4. Remove `pkgs.nil` from `editors.nix` Zed `extraPackages` — `nix.nix` already provides it system-wide
+
+#### Delete old files
 1. Delete all `home/hatim/mod.*.nix` files
 2. Delete all `hosts/mod.*.nix` files
 3. Delete `home/hatim/host.eagle.hatim.nix`
 4. Delete old `modules/home/` and `modules/os/` directories (the hatim.modules.* approach)
 5. Delete `overlays/default.nix` (moved to modules/overlays.nix)
-6. Update `justfile` (remove `home:` target, simplify `switch:`)
-7. Delete `BEFORE_AND_AFTER.md`
-8. Update `CLAUDE.md` with dendritic conventions
-9. Run `nix fmt`
+
+#### Finalise
+1. Update `justfile` (remove `home:` target, simplify `switch:`)
+2. Delete `BEFORE_AND_AFTER.md`
+3. Update `CLAUDE.md` with dendritic conventions
+4. Run `nix fmt`
 
 ---
 
