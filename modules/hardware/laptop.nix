@@ -28,8 +28,10 @@ _: {
         freeSwapThreshold = 2;
         extraArgs = [
           "-g"
-          "--avoid '^(X|plasma.*|kitty|kwin)$'"
-          "--prefer '^(firefox|electron|libreoffice|gimp)$'"
+          "--avoid"
+          "^(X|plasma.*|kitty|kwin)$"
+          "--prefer"
+          "^(firefox|electron|libreoffice|gimp)$"
         ];
       };
     };
