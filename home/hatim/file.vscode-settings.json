@@ -46,5 +46,5 @@
       ]
     }
   },
-  "workbench.colorTheme": "Vercel (Light)"
+  "diffEditor.renderSideBySide": false
 }
