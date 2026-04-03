@@ -8,7 +8,7 @@
     imports =
       (with config.flake.modules.nixos; [
         base
-        # Feature groups will be added here as modules are migrated
+        containers
       ])
       ++ [
         inputs.hardware.nixosModules.lenovo-thinkpad-p52
