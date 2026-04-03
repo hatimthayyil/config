@@ -27,13 +27,16 @@ let
 
   nix4vscode-overlay = inputs.nix4vscode.overlays.forVscode;
 
+  firefox-addons-overlay = inputs.nix-firefox-addons.overlays.default;
+
   default =
     final: prev:
     (stable-packages final prev)
     // (unstable-packages final prev)
     // (master-packages final prev)
     // (emacs-overlay-packages final prev)
-    // (nix4vscode-overlay final prev);
+    // (nix4vscode-overlay final prev)
+    // (firefox-addons-overlay final prev);
 in
 {
   flake.overlays = {

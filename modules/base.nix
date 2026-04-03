@@ -94,12 +94,23 @@ in
         ];
       };
 
+      system.autoUpgradeFlake = {
+        enable = true;
+        dates = "02:00";
+        allowReboot = true;
+        flake-dir = "${config.users.users.${owner.username}.home}/code/config";
+        user = owner.username;
+        nix-flake-upgrade-flags = [
+          "--update-lock-file"
+          "--push"
+          "--os"
+          "--os-only-when-changed"
+        ];
+      };
+
       programs.gnupg.agent = {
         enable = true;
         enableSSHSupport = true;
       };
-
-      # HM uses NixOS system nixpkgs (useGlobalPkgs = true in home-manager.nix)
-      # so overlays and allowUnfree are inherited from the NixOS nixpkgs config above
     };
 }

@@ -7,8 +7,53 @@
   configurations.nixos.eagle.module = {
     imports =
       (with config.flake.modules.nixos; [
+        # Core
         base
         containers
+        package-management
+        guest-systems
+
+        # Hardware
+        hardware-laptop
+        hardware-lenovo-thinkpad-p52
+
+        # Desktop environment
+        desktop
+        fonts
+
+        # Shell and terminal
+        shells
+        terminals
+        cli-utils
+
+        # Development
+        dev-software
+        dev-web
+        dev-electronics
+        dev-mechanical
+        editors
+        version-control
+
+        # Applications
+        browsers
+        gui-apps
+        multimedia
+        language-machine
+
+        # Networking and security
+        networking
+
+        # Tools
+        tools-backups
+        tools-secrets
+        tools-research
+        nix
+        writing
+
+        # Study
+        study-math
+        study-linguistics
+        science
       ])
       ++ [
         inputs.hardware.nixosModules.lenovo-thinkpad-p52
