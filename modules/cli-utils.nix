@@ -112,10 +112,6 @@ in
               bind -n M-8 select-window -t 8
               bind -n M-9 select-window -t 9
 
-              bind -n M-h select-pane -L
-              bind -n M-j select-pane -D
-              bind -n M-k select-pane -U
-              bind -n M-l select-pane -R
               bind -n M-Left select-pane -L
               bind -n M-Down select-pane -D
               bind -n M-Up select-pane -U
@@ -128,6 +124,7 @@ in
 
               bind -n M-z resize-pane -Z
               bind Space last-window
+              bind BSpace switch-client -l
               bind S set-window-option synchronize-panes
 
               set -g detach-on-destroy off
