@@ -24,7 +24,7 @@ which-key uses the "helix" preset — press `Space` and wait to see all availabl
 
 | Key | Action |
 |-----|--------|
-| `C-h/j/k/l` | Navigate panes (vim-tmux-navigator, works across tmux) |
+| `M-h/j/k/l` | Navigate panes (vim-tmux-navigator, works across tmux) |
 | `C-t` | Toggle terminal |
 | `Space gg` | Open lazygit |
 

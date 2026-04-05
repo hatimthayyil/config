@@ -141,6 +141,8 @@ in
                 package = pkgs.vimPlugins.vim-tmux-navigator;
               };
 
+              globals.tmux_navigator_no_mappings = 1;
+
               options = {
                 signcolumn = "yes";
                 cursorline = true;
@@ -152,8 +154,33 @@ in
                 tabstop = 2;
               };
 
+              # Pane navigation (M-hjkl, seamless with tmux)
               # Helix-style space menu
               keymaps = [
+                {
+                  mode = "n";
+                  key = "<M-h>";
+                  action = "<cmd>TmuxNavigateLeft<CR>";
+                  desc = "Navigate left";
+                }
+                {
+                  mode = "n";
+                  key = "<M-j>";
+                  action = "<cmd>TmuxNavigateDown<CR>";
+                  desc = "Navigate down";
+                }
+                {
+                  mode = "n";
+                  key = "<M-k>";
+                  action = "<cmd>TmuxNavigateUp<CR>";
+                  desc = "Navigate up";
+                }
+                {
+                  mode = "n";
+                  key = "<M-l>";
+                  action = "<cmd>TmuxNavigateRight<CR>";
+                  desc = "Navigate right";
+                }
                 {
                   mode = "n";
                   key = "<leader>f";
