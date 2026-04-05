@@ -25,14 +25,15 @@ Sessions auto-save every 1 minute and auto-restore on tmux start via continuum.
 
 ## Panes
 
-### Navigation (no prefix)
+### Navigation (no prefix, seamless with neovim via vim-tmux-navigator)
 
 | Key | Description |
 |-----|-------------|
-| `Alt+h` / `Alt+Left` | Select pane left |
-| `Alt+j` / `Alt+Down` | Select pane down |
-| `Alt+k` / `Alt+Up` | Select pane up |
-| `Alt+l` / `Alt+Right` | Select pane right |
+| `Alt+h` | Navigate left (neovim-aware) |
+| `Alt+j` | Navigate down (neovim-aware) |
+| `Alt+k` | Navigate up (neovim-aware) |
+| `Alt+l` | Navigate right (neovim-aware) |
+| `Alt+Left/Down/Up/Right` | Select pane (tmux-only, not neovim-aware) |
 
 ### Splitting
 
