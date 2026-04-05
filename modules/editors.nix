@@ -376,6 +376,31 @@ in
           programs.helix = {
             enable = true;
             defaultEditor = true;
+            settings = {
+              theme = "tokyonight";
+              editor = {
+                line-number = "relative";
+                cursorline = true;
+                scrolloff = 8;
+                color-modes = true;
+                auto-format = true;
+                popup-border = "all";
+                bufferline = "multiple";
+                end-of-line-diagnostics = "hint";
+                cursor-shape = {
+                  normal = "block";
+                  insert = "bar";
+                  select = "underline";
+                };
+                lsp.display-inlay-hints = true;
+                auto-save.focus-lost = true;
+                soft-wrap.enable = true;
+                inline-diagnostics = {
+                  cursor-line = "warning";
+                  other-lines = "disable";
+                };
+              };
+            };
           };
 
           home.packages = [
