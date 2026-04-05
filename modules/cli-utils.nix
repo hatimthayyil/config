@@ -44,7 +44,7 @@ in
             keyMode = "vi";
             customPaneNavigationAndResize = false;
             baseIndex = 1;
-            escapeTime = 0;
+            escapeTime = 10;
             historyLimit = 50000;
             terminal = "tmux-256color";
             disableConfirmationPrompt = true;

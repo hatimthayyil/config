@@ -63,11 +63,11 @@ in
           extraDefCfg = "process-unmapped-keys yes";
           config = ''
             (defvar
-              tap-time 150
+              tap-time 300
               hold-time 200
             )
             (defalias
-              caps (tap-hold 200 200 esc lctl)
+              caps (tap-hold $tap-time $hold-time esc lctl)
             )
             (defsrc
               caps
