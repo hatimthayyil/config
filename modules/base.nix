@@ -79,6 +79,7 @@ in
       programs.zsh = {
         enable = true;
         enableCompletion = true;
+        enableGlobalCompInit = false; # home-manager handles compinit with caching
       };
 
       users.users.${owner.username} = {

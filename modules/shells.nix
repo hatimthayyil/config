@@ -18,16 +18,20 @@ in
       programs.zsh = {
         enable = true;
         enableCompletion = true;
+        autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
         history.size = 10000;
         shellAliases.s = "sesh connect $(sesh list --icons | fzf --ansi)"; # fuzzy-pick and connect to a tmux session; defined per-shell because sesh's builtin alias uses $(…) which breaks nushell
 
-        zplug = {
-          enable = true;
-          plugins = [
-            { name = "zsh-users/zsh-autosuggestions"; } # suggest commands from history as you type
-          ];
-        };
+        # Cache compinit — only regenerate dump once per day
+        completionInit = ''
+          autoload -Uz compinit
+          if [[ -n ''${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
+            compinit
+          else
+            compinit -C
+          fi
+        '';
       };
 
       programs.fish = {
