@@ -32,7 +32,7 @@ in
             settings = {
               log.showSignature = true;
               init.defaultBranch = "main";
-              pull.rebase = true;
+              pull.rebase = false;
             };
 
             settings.alias = {
