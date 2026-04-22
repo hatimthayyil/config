@@ -20,7 +20,7 @@ in
           pkgs.cytoscape
           pkgs.neo4j
           pkgs.surrealist
-          pkgs.openrefine
+          # pkgs.openrefine
           pkgs.datasette
           pkgs.wiki-tui
         ];
