@@ -77,13 +77,6 @@ in
                 '';
               }
               {
-                plugin = continuum;
-                extraConfig = ''
-                  set -g @continuum-restore 'on'
-                  set -g @continuum-save-interval '1'
-                '';
-              }
-              {
                 plugin = tokyo-night-tmux;
                 extraConfig = ''
                   set -g @tokyo-night-tmux_theme 'night'
@@ -99,9 +92,20 @@ in
                   set -g @tokyo-night-tmux_show_git 1
                 '';
               }
+              # continuum must be last: it appends to status-right; any plugin
+              # loaded after it that overwrites status-right (e.g. themes) will
+              # silently disable autosave.
+              {
+                plugin = continuum;
+                extraConfig = ''
+                  set -g @continuum-restore 'on'
+                  set -g @continuum-save-interval '1'
+                '';
+              }
             ];
             extraConfig = ''
               set -ag terminal-overrides ",xterm-256color:RGB"
+              set -g extended-keys on
 
               bind v split-window -h -c "#{pane_current_path}"
               bind h split-window -v -c "#{pane_current_path}"
