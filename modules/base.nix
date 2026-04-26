@@ -97,17 +97,20 @@ in
 
       system.autoUpgradeFlake = {
         enable = true;
-        dates = "02:00";
+        dates = "03:15";
         allowReboot = true;
         flake-dir = "${config.users.users.${owner.username}.home}/code/config";
         user = owner.username;
         nix-flake-upgrade-flags = [
           "--update-lock-file"
-          "--push"
+          # "--push"
           "--os"
           "--os-only-when-changed"
         ];
       };
+
+      # git (called by nix flake update) needs bash in PATH for hooks/subcommands
+      systemd.services.flake-upgrade.path = [ pkgs.bash ];
 
       programs.gnupg.agent = {
         enable = true;
