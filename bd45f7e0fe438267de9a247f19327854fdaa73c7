@@ -1,0 +1,11 @@
+# System closure diff
+<<< /nix/store/bdip6pi88yn4xgd4jsm4yw8kgpw7i710-nixos-system-eagle-25.11.20260425.a4bf066
+>>> /nix/store/v6f9zskss8g2xppmbsz4axlz75jczxd2-nixos-system-eagle-25.11.20260425.a4bf066
+Version changes:
+[U.]  #1  mise                                       2026.4.6, 2026.4.6-fish-completions -> 2026.4.20, 2026.4.20-fish-completions
+[U.]  #2  vscode-extension-betterthantomorrow-calva  2.0.576 -> 2.0.578
+[U.]  #3  vscode-extension-redhat-ansible            26.4.4 -> 26.4.5
+[U.]  #4  warp-terminal                              0.2026.04.08.08.36.stable_05, 0.2026.04.08.08.36.stable_05-fish-completions -> 0.2026.04.15.08.45.stable_04, 0.2026.04.15.08.45.stable_04-fish-completions
+[U.]  #5  zed-editor                                 0.232.3 -> 0.233.10
+[U.]  #6  zed-editor-wrapped                         0.232.3, 0.232.3-fish-completions -> 0.233.10, 0.233.10-fish-completions
+Closure size: 9666 -> 9666 (45 paths added, 45 paths removed, delta +0, disk usage -3.4MiB).
