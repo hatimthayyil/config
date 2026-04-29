@@ -437,6 +437,43 @@ in
             pkgs.lyx
             pkgs.leo-editor
             pkgs.kibi
+
+            # FHS wrapper for the manually-installed Zed preview tarball at
+            # ~/.local/zed-preview.app — lets the prebuilt binary find ALSA,
+            # Vulkan, Wayland, etc. that aren't in the bundled lib/ dir.
+            (pkgs.buildFHSEnv {
+              name = "zd";
+              targetPkgs =
+                p: with p; [
+                  stdenv.cc.cc
+                  alsa-lib
+                  fontconfig
+                  freetype
+                  libgit2
+                  openssl
+                  sqlite
+                  zstd
+                  zlib
+                  curl
+                  dbus
+                  wayland
+                  libglvnd
+                  libxkbcommon
+                  vulkan-loader
+                  xorg.libxcb
+                  xorg.libX11
+                  xorg.libXext
+                  xorg.libXau
+                  xorg.libXdmcp
+                  libbsd
+                  # xkb keymap data files at /usr/share/X11/xkb — without this,
+                  # libxkbcommon segfaults when Wayland sends the keymap.
+                  xkeyboard-config
+                ];
+              runScript = pkgs.writeShellScript "zd-launcher" ''
+                exec "$HOME/.local/zed-preview.app/bin/zed" "$@"
+              '';
+            })
           ];
         };
     };
