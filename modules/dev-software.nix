@@ -78,6 +78,8 @@ in
           pkgs.steel
           pkgs.clang
           pkgs.conda
+          pkgs.unstable.cargo-nextest
+          pkgs.unstable.cargo-workspaces
 
           # Misc
           pkgs.exercism
