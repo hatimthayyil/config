@@ -103,7 +103,7 @@ in
         user = owner.username;
         nix-flake-upgrade-flags = [
           "--update-lock-file"
-          # "--push"
+          "--push"
           "--os"
           "--os-only-when-changed"
         ];
