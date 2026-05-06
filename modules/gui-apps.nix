@@ -36,6 +36,8 @@ in
           pkgs.drawio
           pkgs.blender
           pkgs.filezilla
+          # FHS variant — needed for MCP server support
+          pkgs.claude-desktop-fhs
         ];
       };
     };
