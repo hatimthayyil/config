@@ -29,6 +29,8 @@ let
 
   firefox-addons-overlay = inputs.nix-firefox-addons.overlays.default;
 
+  claude-desktop-overlay = inputs.claude-desktop.overlays.default;
+
   default =
     final: prev:
     (stable-packages final prev)
@@ -36,7 +38,8 @@ let
     // (master-packages final prev)
     // (emacs-overlay-packages final prev)
     // (nix4vscode-overlay final prev)
-    // (firefox-addons-overlay final prev);
+    // (firefox-addons-overlay final prev)
+    // (claude-desktop-overlay final prev);
 in
 {
   flake.overlays = {
