@@ -117,6 +117,11 @@
       url = "github:nix-community/nix4vscode";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Claude Desktop (Linux port with FHS variant for MCP server support)
+    claude-desktop = {
+      url = "github:aaddrick/claude-desktop-debian";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Zen browser
     # zen-browser = {
     #   url = "github:0xc000022070/zen-browser-flake";
