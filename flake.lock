@@ -697,15 +697,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1757691795,
-        "narHash": "sha256-1KzxCxVoIl4y9ESZCwbZeYHiO5aOxilAwdhr36k9lAc=",
-        "owner": "fabian-thomas",
+        "lastModified": 1779708633,
+        "narHash": "sha256-nghkli+I5RfNnQrrKLYB8bu9cLzWrVD9M5mAHU0SOCo=",
+        "owner": "hatimthayyil",
         "repo": "nix-flake-upgrade",
-        "rev": "b40da132bba3ec023116407de35cbb64360fe1d6",
+        "rev": "e3857fe7e47d3910566bdfb0ae4267d565d1c71c",
         "type": "github"
       },
       "original": {
-        "owner": "fabian-thomas",
+        "owner": "hatimthayyil",
         "repo": "nix-flake-upgrade",
         "type": "github"
       }
