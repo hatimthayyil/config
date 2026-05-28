@@ -26,13 +26,13 @@ in
 
         home.packages = [
           pkgs.qdirstat
-          pkgs.mailspring
+          # pkgs.mailspring
           pkgs.telegram-desktop
           pkgs.signal-desktop
           pkgs.senpai
           pkgs.discord
           pkgs.element-desktop
-          pkgs.zoom-us
+          # pkgs.zoom-us
           pkgs.drawio
           pkgs.blender
           pkgs.filezilla

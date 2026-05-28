@@ -7,11 +7,10 @@ let
 in
 {
   flake.modules.nixos.dev-mechanical =
-    { pkgs, ... }:
-    {
+    _: {
       home-manager.users.${owner.username} = {
         home.packages = [
-          pkgs.freecad
+          # pkgs.freecad
         ];
       };
     };

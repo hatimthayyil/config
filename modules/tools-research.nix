@@ -18,7 +18,7 @@ in
           pkgs.xdot
           pkgs.gephi
           pkgs.cytoscape
-          pkgs.neo4j
+          # pkgs.neo4j
           pkgs.surrealist
           # pkgs.openrefine
           pkgs.datasette

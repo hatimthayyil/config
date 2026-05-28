@@ -91,7 +91,7 @@ in
             pkgs.tig
             pkgs.cvs
             pkgs.mr
-            pkgs.commitlint
+            # pkgs.commitlint
             pkgs.commitizen
             pkgs.git-machete
             pkgs.git-imerge

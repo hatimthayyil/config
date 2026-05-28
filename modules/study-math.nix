@@ -13,8 +13,8 @@ in
         home.packages = [
           pkgs.maxima
           pkgs.octave
-          pkgs.coq
-          pkgs.lean4
+          # pkgs.coq
+          # pkgs.lean4
           pkgs.stable.sage
         ];
       };

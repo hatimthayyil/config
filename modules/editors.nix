@@ -264,7 +264,7 @@ in
                 "github.copilot-chat"
                 "sst-dev.opencode-v2"
                 # "anthropic.claude-code"
-                "openai.chatgpt"
+                # "openai.chatgpt"
                 "google.colab"
                 "planet57.vscode-beads"
 
