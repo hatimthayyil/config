@@ -460,11 +460,11 @@ in
                   libglvnd
                   libxkbcommon
                   vulkan-loader
-                  xorg.libxcb
-                  xorg.libX11
-                  xorg.libXext
-                  xorg.libXau
-                  xorg.libXdmcp
+                  libxcb
+                  libx11
+                  libxext
+                  libxau
+                  libxdmcp
                   libbsd
                   # xkb keymap data files at /usr/share/X11/xkb — without this,
                   # libxkbcommon segfaults when Wayland sends the keymap.
