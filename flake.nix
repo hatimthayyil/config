@@ -5,11 +5,10 @@
     #
     # ========== Primary NixOS pkgs
     #
-    # Do not use nixpkgs-unstable as that is meant for Nix as a package manager
-    # as it will have much more broken packages.
+    # Avoid master (rolling, unfiltered).
     # nixpkgs.url = "github:nixos/nixpkgs/master";
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     #
     # ========== Pinned versions available as pkgs.stable etc
