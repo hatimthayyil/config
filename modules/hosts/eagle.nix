@@ -42,6 +42,7 @@
 
         # Networking and security
         networking
+        opensnitch
         ssh
 
         # Tools
