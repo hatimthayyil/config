@@ -61,8 +61,13 @@
         ../../hosts/eagle/hardware-configuration.nix
       ];
 
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader = {
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 7;
+      };
+      efi.canTouchEfiVariables = true;
+    };
 
     networking.hostName = "eagle";
     networking.networkmanager.enable = true;

@@ -15,7 +15,7 @@
     #
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
+    # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
 
     #
     # ========== Home manager
@@ -41,19 +41,19 @@
     # Hardware
     hardware.url = "github:nixos/nixos-hardware/master";
     # Declarative partitioning and formatting
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # disko = {
+    #   url = "github:nix-community/disko";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # Impermanance
-    impermanence = {
-      url = "github:nix-community/impermanence";
-    };
+    # impermanence = {
+    #   url = "github:nix-community/impermanence";
+    # };
     # Secrets management.
-    sops-nix = {
-      url = "github:mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # sops-nix = {
+    #   url = "github:mic92/sops-nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # Nix-index
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
@@ -75,10 +75,10 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     # Nixpak - sandbox any app
-    nixpak = {
-      url = "github:nixpak/nixpak";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixpak = {
+    #   url = "github:nixpak/nixpak";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     #
     # ========== Applications
@@ -98,7 +98,7 @@
     # EmX Emacs distribution
     emx = {
       url = "github:hatimthayyil/emx";
-      #inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     # Nix based Neovim
     nvf = {
@@ -106,12 +106,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Nix based neovim
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.11";
-      inputs.nixpkgs.follows = "nixpkgs-stable";
-      #url = "github:nix-community/nixvim";
-      #inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim/nixos-24.11";
+    #   inputs.nixpkgs.follows = "nixpkgs-stable";
+    #   #url = "github:nix-community/nixvim";
+    #   #inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # };
     nix4vscode = {
       url = "github:nix-community/nix4vscode";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -129,7 +129,10 @@
     #   inputs.nixpkgs.follows = "nixpkgs-unstable";
     # };
     # Firefox Add-ons
-    nix-firefox-addons.url = "github:osipog/nix-firefox-addons";
+    nix-firefox-addons = {
+      url = "github:osipog/nix-firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     betterfox = {
       url = "github:HeitorAugustoLN/betterfox-nix";
       inputs.nixpkgs.follows = "nixpkgs";

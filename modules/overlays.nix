@@ -14,12 +14,12 @@ let
     };
   };
 
-  master-packages = final: _prev: {
-    master = import inputs.nixpkgs-master {
-      inherit (final.stdenv.hostPlatform) system;
-      config.allowUnfree = true;
-    };
-  };
+  # master-packages = final: _prev: {
+  #   master = import inputs.nixpkgs-master {
+  #     inherit (final.stdenv.hostPlatform) system;
+  #     config.allowUnfree = true;
+  #   };
+  # };
 
   emacs-overlay-packages = final: prev: {
     emacs-overlay = inputs.emacs-overlay.overlay final prev;
@@ -35,7 +35,7 @@ let
     final: prev:
     (stable-packages final prev)
     // (unstable-packages final prev)
-    // (master-packages final prev)
+    # // (master-packages final prev)
     // (emacs-overlay-packages final prev)
     // (nix4vscode-overlay final prev)
     // (firefox-addons-overlay final prev)
