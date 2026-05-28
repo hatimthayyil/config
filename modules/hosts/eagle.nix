@@ -42,6 +42,7 @@
 
         # Networking and security
         networking
+        ssh
 
         # Tools
         tools-backups
