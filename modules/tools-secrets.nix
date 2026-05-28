@@ -10,7 +10,10 @@ in
     home-manager.users.${owner.username} = {
       programs = {
         gpg.enable = true;
-        password-store.enable = true;
+        password-store = {
+          enable = true;
+          settings = { };
+        };
       };
     };
   };
