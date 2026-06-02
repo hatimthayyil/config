@@ -17,6 +17,9 @@
         hardware-laptop
         hardware-lenovo-thinkpad-p52
 
+        # Storage
+        disko
+
         # Desktop environment
         desktop
         fonts
