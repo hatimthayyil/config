@@ -37,7 +37,10 @@ in
           pkgs.blender
           pkgs.filezilla
           # FHS variant — needed for MCP server support
-          pkgs.claude-desktop-fhs
+          # TODO: temporarily disabled — claude-desktop-fhs fails to build
+          # ("Failed to inject .asar trusted folder guard"). Re-enable once the
+          # overlay/package is fixed upstream.
+          # pkgs.claude-desktop-fhs
         ];
       };
     };
