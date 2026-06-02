@@ -41,10 +41,10 @@
     # Hardware
     hardware.url = "github:nixos/nixos-hardware/master";
     # Declarative partitioning and formatting
-    # disko = {
-    #   url = "github:nix-community/disko";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Impermanance
     # impermanence = {
     #   url = "github:nix-community/impermanence";
