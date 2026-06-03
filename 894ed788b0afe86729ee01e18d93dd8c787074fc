@@ -1,0 +1,10 @@
+# System closure diff
+<<< /nix/store/fi6kx4njpvcsf2yvbkk46jqavx4zd221-nixos-system-eagle-26.11.20260531.331800d
+>>> /nix/store/frw3crl7avyq7kxc6zq7435c93bkrvr5-nixos-system-eagle-26.11.20260531.331800d
+Version changes:
+[U.]  #1  vscode-extension-dart-code-dart-code   3.134.0 -> 3.136.0
+[U.]  #2  vscode-extension-redhat-ansible        26.5.0 -> 26.6.0
+[U.]  #3  vscode-extension-svelte-svelte-vscode  110.0.0 -> 110.1.0
+Added packages:
+[A.]  #1  hm_..zprofile  <none>
+Closure size: 10048 -> 10049 (32 paths added, 31 paths removed, delta +1, disk usage +876.3KiB).
