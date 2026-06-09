@@ -47,6 +47,7 @@
         networking
         opensnitch
         ssh
+        security-keys
 
         # Tools
         tools-backups
