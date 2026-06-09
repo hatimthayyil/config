@@ -112,6 +112,13 @@ in
       # git (called by nix flake update) needs bash in PATH for hooks/subcommands
       systemd.services.flake-upgrade.path = [ pkgs.bash ];
 
+      # Headless bot commits must not sign (service can't sign interactively).
+      systemd.services.flake-upgrade.environment = {
+        GIT_CONFIG_COUNT = "1";
+        GIT_CONFIG_KEY_0 = "commit.gpgsign";
+        GIT_CONFIG_VALUE_0 = "false";
+      };
+
       # gpg-agent kept for pass (GPG) only; SSH uses a dedicated ssh-agent.
       # Removed at GPG retirement.
       programs.gnupg.agent = {

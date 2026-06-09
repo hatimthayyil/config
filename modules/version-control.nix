@@ -19,6 +19,7 @@ in
             settings.user = {
               email = "hatim@thayyil.net";
               name = "Hatim Thayyil";
+              signingKey = "~/.ssh/id_ed25519_sk_sign.pub";
             };
 
             lfs.enable = true;
@@ -33,6 +34,12 @@ in
               log.showSignature = true;
               init.defaultBranch = "main";
               pull.rebase = false;
+
+              # SSH commit signing (touch-to-sign).
+              gpg.format = "ssh";
+              gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
+              commit.gpgSign = true;
+              tag.gpgSign = true;
             };
 
             settings.alias = {
@@ -86,6 +93,11 @@ in
 
           programs.lazygit.enable = true;
           programs.gitui.enable = true;
+
+          # allowed-signers: committer email -> signing key, for local verify.
+          # One line per signing key.
+          home.file.".ssh/allowed_signers".text =
+            "hatim@thayyil.net sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIKs8D0fSrd6GkEHtQI0UOiP2QtdNNmzJ732UrS4XEM33AAAADnNzaDplYWdsZS1zaWdu\n";
 
           home.packages = [
             pkgs.tig
