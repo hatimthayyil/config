@@ -112,9 +112,10 @@ in
       # git (called by nix flake update) needs bash in PATH for hooks/subcommands
       systemd.services.flake-upgrade.path = [ pkgs.bash ];
 
+      # gpg-agent kept for pass (GPG) only; SSH uses a dedicated ssh-agent.
+      # Removed at GPG retirement.
       programs.gnupg.agent = {
         enable = true;
-        enableSSHSupport = true;
       };
     };
 }

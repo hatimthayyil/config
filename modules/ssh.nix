@@ -14,7 +14,8 @@ in
         settings = {
           "*" = {
             ForwardAgent = false;
-            AddKeysToAgent = "no";
+            AddKeysToAgent = "yes";
+            IdentityFile = "~/.ssh/id_ed25519_sk";
             Compression = false;
             ServerAliveInterval = 0;
             ServerAliveCountMax = 3;
@@ -34,6 +35,9 @@ in
           };
         };
       };
+
+      # Dedicated ssh-agent (replaces gpg-agent's SSH role).
+      services.ssh-agent.enable = true;
     };
   };
 }
