@@ -103,6 +103,7 @@ in
             pkgs.tig
             pkgs.cvs
             pkgs.mr
+            pkgs.hut
             # pkgs.commitlint
             pkgs.commitizen
             pkgs.git-machete
