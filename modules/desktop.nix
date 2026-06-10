@@ -13,13 +13,17 @@ in
       hardware.graphics.enable = true;
       services.xserver.videoDrivers = [ "nvidia" ];
 
+      # Pin the kernel to the stable channel so the out-of-tree nvidia
+      # module is rebuilt only on stable bumps, not on every rebuild.
+      boot.kernelPackages = pkgs.stable.linuxPackages;
+
       hardware.nvidia = {
         modesetting.enable = true;
         powerManagement.enable = false;
         powerManagement.finegrained = false;
         open = false;
         nvidiaSettings = true;
-        package = config.boot.kernelPackages.nvidiaPackages.stable;
+        package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
       };
 
       # Display and desktop environment
