@@ -70,8 +70,7 @@ in
           vim
           wget
           git
-          stable.nvtopPackages.nvidia
-          stable.nvtopPackages.intel
+          stable.nvtopPackages.full
         ];
       };
 
