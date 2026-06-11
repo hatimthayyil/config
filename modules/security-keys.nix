@@ -1,6 +1,5 @@
 # modules/security-keys.nix — smartcard/FIDO plumbing + key tooling.
-_:
-{
+_: {
   flake.modules.nixos.security-keys =
     { pkgs, ... }:
     {
