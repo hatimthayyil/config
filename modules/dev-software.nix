@@ -14,6 +14,9 @@ in
       programs.nix-ld.libraries = with pkgs; [
         stdenv.cc.cc
         zlib
+        libxcb
+        libGL
+        glib
       ];
 
       # HM: development tools and runtimes
