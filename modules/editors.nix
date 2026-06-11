@@ -26,7 +26,7 @@ in
             package = pkgs.emacs;
             defaultEditor = false;
             treesitGrammars = [ "all" ];
-            localPath = "${config.home.homeDirectory}/src/emx";
+            localPath = "${config.home.homeDirectory}/code/emx";
           };
 
           programs.nvf = {

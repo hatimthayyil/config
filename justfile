@@ -27,7 +27,7 @@ generations:
     sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
 
 emx:
-    nh os switch . -- --override-input emx path:$HOME/src/emx && emx
+    nh os switch . -- --override-input emx path:$HOME/code/emx && emx
 
 # Show packages that would be rebuilt for system configuration (with nix-community cache)
 forecast:
