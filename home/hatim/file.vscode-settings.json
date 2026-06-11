@@ -46,5 +46,6 @@
       ]
     }
   },
-  "diffEditor.renderSideBySide": false
+  "diffEditor.renderSideBySide": false,
+  "workbench.colorTheme": "Light 2026"
 }
