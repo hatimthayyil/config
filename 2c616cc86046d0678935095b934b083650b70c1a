@@ -1,0 +1,36 @@
+# System closure diff
+<<< /nix/store/5y1s7pqyx2zp1yjh6zbdzzk6k6mjh6f3-nixos-system-eagle-26.11.20260606.a799d3e
+>>> /nix/store/xgjr9ql8r8agfaxa38hha93jnv40jvwx-nixos-system-eagle-26.11.20260606.a799d3e
+Version changes:
+[C.]  #1  gcc          15.2.0, 15.2.0-lib x2, 15.2.0-libgcc x2, 15.2.0-man -> 13.4.0, 13.4.0-lib, 13.4.0-libgcc, 15.2.0, 15.2.0-lib x2, 15.2.0-libgcc x2, 15.2.0-man
+[C.]  #2  gcc-wrapper  15.2.0, 15.2.0-man -> 13.4.0, 15.2.0, 15.2.0-man
+[C.]  #3  isl          0.20 -> 0.20 x2
+Added packages:
+[A.]  #01  auto-fix-elf-files           <none>
+[A.]  #02  cuda-merged                  12.6, 12.6-fish-completions
+[A.]  #03  cuda12.6-cuda_cccl           12.6.77
+[A.]  #04  cuda12.6-cuda_cudart         12.6.77
+[A.]  #05  cuda12.6-cuda_cuobjdump      12.6.77
+[A.]  #06  cuda12.6-cuda_cupti          12.6.80, 12.6.80-include, 12.6.80-lib, 12.6.80-samples
+[A.]  #07  cuda12.6-cuda_cuxxfilt       12.6.77-bin, 12.6.77-include
+[A.]  #08  cuda12.6-cuda_gdb            12.6.77, 12.6.77-bin
+[A.]  #09  cuda12.6-cuda_nvcc           12.6.85
+[A.]  #10  cuda12.6-cuda_nvdisasm       12.6.77
+[A.]  #11  cuda12.6-cuda_nvml_dev       12.6.77, 12.6.77-dev, 12.6.77-include, 12.6.77-stubs
+[A.]  #12  cuda12.6-cuda_nvprune        12.6.77
+[A.]  #13  cuda12.6-cuda_nvrtc          12.6.85-dev, 12.6.85-include, 12.6.85-lib, 12.6.85-stubs
+[A.]  #14  cuda12.6-cuda_nvtx           12.6.77-dev, 12.6.77-include, 12.6.77-lib
+[A.]  #15  cuda12.6-cuda_profiler_api   12.6.77-include
+[A.]  #16  cuda12.6-cuda_sanitizer_api  12.6.77
+[A.]  #17  cuda12.6-libcublas           12.6.4.1, 12.6.4.1-dev, 12.6.4.1-include, 12.6.4.1-lib, 12.6.4.1-stubs
+[A.]  #18  cuda12.6-libcufft            11.3.0.4-dev, 11.3.0.4-include, 11.3.0.4-lib, 11.3.0.4-stubs
+[A.]  #19  cuda12.6-libcurand           10.3.7.77-dev, 10.3.7.77-include, 10.3.7.77-lib, 10.3.7.77-stubs
+[A.]  #20  cuda12.6-libcusolver         11.7.1.2-dev, 11.7.1.2-include, 11.7.1.2-lib, 11.7.1.2-stubs
+[A.]  #21  cuda12.6-libcusparse         12.5.4.2, 12.5.4.2-dev, 12.5.4.2-include, 12.5.4.2-lib, 12.5.4.2-stubs
+[A.]  #22  cuda12.6-libnpp              12.3.1.54-dev, 12.3.1.54-include, 12.3.1.54-lib, 12.3.1.54-stubs
+[A.]  #23  cuda12.6-libnvjitlink        12.6.85-lib
+[A.]  #24  getRunpathEntries            <none>
+[A.]  #25  isDeclaredArray              <none>
+[A.]  #26  removeStubsFromRunpathHook   <none>
+[A.]  #27  setup-cuda-hook              <none>
+Closure size: 9386 -> 9452 (102 paths added, 36 paths removed, delta +66, disk usage +2.4GiB).
