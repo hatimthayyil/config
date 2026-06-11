@@ -31,6 +31,7 @@
 
         # Development
         dev-software
+        cuda
         dev-web
         dev-electronics
         dev-mechanical
