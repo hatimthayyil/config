@@ -1,0 +1,61 @@
+# System closure diff
+<<< /nix/store/pa3l7znd9i8ic3xr8csb8qxxvcjg6bxy-nixos-system-eagle-26.11.20260606.a799d3e
+>>> /nix/store/kg43852kwsklnsz3f3rzr4vx3ar8z3xw-nixos-system-eagle-26.11.20260610.9ae611a
+Version changes:
+[U.]  #01  bitwarden-password-manager            2026.5.0 -> 2026.5.1
+[C.]  #02  clang                                 19.1.7-lib, 21.1.8, 21.1.8-lib, 21.1.8-python -> 21.1.8, 21.1.8-lib, 21.1.8-python
+[U.]  #03  darkreader                            4.9.126 -> 4.9.127
+[U.]  #04  deno                                  2.8.0 -> 2.8.2
+[U.]  #05  discord                               1.0.138, 1.0.138-fish-completions -> 1.0.141, 1.0.141-fish-completions
+[U*]  #06  docker                                29.5.2 -> 29.5.3
+[U.]  #07  docker-containerd                     29.5.2 -> 29.5.3
+[U.]  #08  docker-runc                           29.5.2 -> 29.5.3
+[U.]  #09  docker-tini                           29.5.2 -> 29.5.3
+[U.]  #10  dolt                                  1.86.6, 1.86.6-fish-completions -> 2.1.4, 2.1.4-fish-completions
+[U.]  #11  drawio                                29.7.9, 29.7.9-fish-completions -> 30.0.4, 30.0.4-fish-completions
+[U.]  #12  fastfetch                             2.63.1, 2.63.1-fish-completions, 2.63.1-man -> 2.64.2, 2.64.2-fish-completions, 2.64.2-man
+[U*]  #13  firefox                               151.0.3 x2, 151.0.3-fish-completions -> 151.0.4 x2, 151.0.4-fish-completions
+[U.]  #14  firefox-unwrapped                     151.0.3 -> 151.0.4
+[U.]  #15  fuse-overlayfs                        1.16 -> 1.17
+[U.]  #16  glm                                   1.0.2 -> 1.0.3
+[C*]  #17  gnupg                                 2.4.9, 2.4.9-doc, 2.4.9-fish-completions, 2.4.9-info, 2.4.9-man -> 2.4.9 x2, 2.4.9-doc, 2.4.9-fish-completions, 2.4.9-info, 2.4.9-man
+[U.]  #18  initrd-linux                          6.18.34 -> 6.18.35
+[U.]  #19  intel-vaapi-driver                    2.4.1-unstable-2024-10-29 x2 -> 2.4.5 x2
+[U.]  #20  kitty                                 0.47.1, 0.47.1-fish-completions, 0.47.1-terminfo -> 0.47.2, 0.47.2-fish-completions, 0.47.2-terminfo
+[U.]  #21  libslirp                              4.9.1 -> 4.9.3
+[U.]  #22  linux                                 6.18.34, 6.18.34-modules x2 -> 6.18.35, 6.18.35-modules x2
+[C.]  #23  llvm                                  19.1.7-lib, 21.1.8-lib x2 -> 21.1.8-lib x2
+[U.]  #24  manix                                 0.8.0, 0.8.0-fish-completions -> 0.9.0, 0.9.0-fish-completions
+[U.]  #25  mise                                  2026.5.15, 2026.5.15-fish-completions -> 2026.6.0, 2026.6.0-fish-completions
+[U.]  #26  moby                                  29.5.2 -> 29.5.3
+[U.]  #27  mprocs                                0.9.2, 0.9.2-fish-completions -> 0.9.6, 0.9.6-fish-completions
+[U.]  #28  nixos-system-eagle                    26.11.20260606.a799d3e -> 26.11.20260610.9ae611a
+[U.]  #29  nvidia-kernel-modules                 580.142-6.18.34 -> 580.142-6.18.35
+[C.]  #30  octave                                11.2.0, 11.2.0-fish-completions, 76790-tex -> 11.3.0, 11.3.0-fish-completions, 76790-tex
+[U.]  #31  opensnitch_ebpf                       1.8.0-6.18.34 -> 1.8.0-6.18.35
+[U.]  #32  perl5.42.0-DBI                        1.644 -> 1.648
+[U.]  #33  python3.13-cyclopts                   4.16.1 -> 4.17.0
+[U.]  #34  ruff                                  0.15.15, 0.15.15-fish-completions -> 0.15.16, 0.15.16-fish-completions
+[U.]  #35  secretspec                            0.10.1, 0.10.1-fish-completions -> 0.12.0, 0.12.0-fish-completions
+[U.]  #36  senpai                                0.4.1, 0.4.1-fish-completions -> 0.5.0, 0.5.0-fish-completions
+[U.]  #37  sioyek                                2.0.0-unstable-2026-04-08, 2.0.0-unstable-2026-04-08-fish-completions -> 2.0.0-unstable-2026-06-06, 2.0.0-unstable-2026-06-06-fish-completions
+[U.]  #38  sqlfluff                              4.2.1 -> 4.2.2
+[U.]  #39  strongswan                            6.0.6 -> 6.0.7
+[U.]  #40  tombi                                 0.11.6 -> 1.1.2
+[U.]  #41  tree-sitter-ghostty                   1.3.0-unstable-2026-04-24 -> 1.3.1-unstable-2026-06-03
+[U.]  #42  tree-sitter-sshclientconfig           2026.4.23 -> 2026.5.28
+[U.]  #43  tree-sitter-vhdl                      1.4.0-unstable-2026-03-29 -> 1.5.0-unstable-2026-06-06
+[U.]  #44  tree-sitter-zig                       0-unstable-2024-10-13 -> 1.1.2-unstable-2025-09-10
+[U.]  #45  uv                                    0.11.17, 0.11.17-fish-completions -> 0.11.19, 0.11.19-fish-completions
+[U.]  #46  vscode                                1.122.1, 1.122.1-fish-completions -> 1.123.0, 1.123.0-fish-completions
+[U.]  #47  vscode-extension-dart-code-dart-code  3.136.0 -> 3.136.1
+[U.]  #48  vscode-extension-golang-go            0.52.2 -> 0.54.0
+[U.]  #49  vscode-extension-hashicorp-terraform  2.39.2 -> 2.39.3
+[U.]  #50  warp-terminal                         0.2026.04.15.08.45.stable_04, 0.2026.04.15.08.45.stable_04-fish-completions -> 0.2026.06.03.09.49.stable_01, 0.2026.06.03.09.49.stable_01-fish-completions
+[U.]  #51  zed-editor                            1.4.4 -> 1.5.4
+[U.]  #52  zed-editor-wrapped                    1.4.4, 1.4.4-fish-completions -> 1.5.4, 1.5.4-fish-completions
+Selection state changes:
+[C+]  #1  qtvirtualkeyboard  6.11.0
+Added packages:
+[A+]  #1  plasma-keyboard  6.6.5
+Closure size: 9452 -> 9452 (302 paths added, 302 paths removed, delta +0, disk usage -1.2GiB).
