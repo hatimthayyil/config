@@ -38,7 +38,7 @@ in
       # Keyboard layout
       services.xserver.xkb = {
         layout = "gb,ara,in";
-        variant = ",mac,mal_poorna";
+        variant = ",,mal_poorna";
       };
 
       # Printing
