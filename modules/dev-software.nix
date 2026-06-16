@@ -17,6 +17,7 @@ in
         libxcb
         libGL
         glib
+        dbus
       ];
 
       # HM: development tools and runtimes
