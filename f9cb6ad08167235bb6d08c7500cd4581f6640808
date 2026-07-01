@@ -1,0 +1,448 @@
+# System closure diff
+<<< /nix/store/b355j5h0pfvw4zkvx60c3i2mlgwa0mph-nixos-system-eagle-26.11.20260610.9ae611a
+>>> /nix/store/xh1iq21bizlln9hwlvfxi5g6vldwfb4n-nixos-system-eagle-26.11.20260629.b5aa0fb
+Version changes:
+[U.]  #001  aardvark-dns                                 1.17.1 -> 2.0.0
+[C.]  #002  alembic                                      1.8.8-lib -> 1.8.8-dev, 1.8.8-lib
+[C.]  #003  alsa-lib                                     1.2.15.3 x2, 1.2.15.3-dev -> 1.2.15.3 x2
+[U.]  #004  assimp                                       6.0.4-lib -> 6.0.5-lib
+[U*]  #005  at-spi2-core                                 2.60.1, 2.60.1-dev, 2.60.1-fish-completions -> 2.60.4, 2.60.4-dev, 2.60.4-fish-completions
+[U.]  #006  atkmm                                        2.28.4, 2.28.4-fish-completions -> 2.28.5, 2.28.5-fish-completions
+[U.]  #007  attic                                        0-unstable-2025-09-24, 0-unstable-2025-09-24-fish-completions -> 0-unstable-2026-06-26, 0-unstable-2026-06-26-fish-completions
+[C.]  #008  attica                                       5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #009  audit                                        4.1.2-unstable-2025-09-06-lib x2 -> 4.1.4-lib x2
+[U*]  #010  aurorae                                      6.6.5 -> 6.7.1
+[U*]  #011  baloo                                        6.26.0 -> 6.27.0
+[U.]  #012  basedpyright                                 1.39.3, 1.39.3-fish-completions, 1.39.3-npm-deps -> 1.39.8, 1.39.8-fish-completions
+[U*]  #013  bind                                         9.20.23-host, 9.20.23-lib, 9.20.23-man -> 9.20.24-host, 9.20.24-lib, 9.20.24-man
+[U.]  #014  blender                                      5.1.1, 5.1.1-fish-completions -> 5.1.2, 5.1.2-fish-completions
+[U*]  #015  bluedevil                                    6.6.5 -> 6.7.1
+[U*]  #016  bluez-qt                                     6.26.0 -> 6.27.0
+[U*]  #017  breeze                                       6.6.5, 6.6.5-qt5 -> 6.7.1, 6.7.1-qt5
+[U*]  #018  breeze-gtk                                   6.6.5 -> 6.7.1
+[C*]  #019  breeze-icons                                 5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #020  cargo-nextest                                0.9.137, 0.9.137-fish-completions -> 0.9.138, 0.9.138-fish-completions
+[U.]  #021  cni-plugins                                  1.9.0 -> 1.9.1
+[U.]  #022  copier                                       9.15.1-fish-completions -> 9.16.0-fish-completions
+[U.]  #023  darkreader                                   4.9.127 -> 4.9.128
+[U.]  #024  deno                                         2.8.2 -> 2.8.3
+[U.]  #025  devbox                                       0.17.2, 0.17.2-fish-completions -> 0.17.5, 0.17.5-fish-completions
+[U.]  #026  discord                                      1.0.141, 1.0.141-fish-completions -> 1.0.143, 1.0.143-fish-completions
+[U.]  #027  discount                                     3.0.1.2 -> 3.0.1.3
+[U*]  #028  discover                                     6.6.5 -> 6.7.1
+[U.]  #029  dnsmasq                                      2.92rel2 -> 2.93
+[U*]  #030  docker                                       29.5.3 -> 29.6.0
+[U*]  #031  docker-compose                               5.1.4 -> 5.2.0
+[U.]  #032  docker-containerd                            29.5.3 -> 29.6.0
+[U.]  #033  docker-runc                                  29.5.3 -> 29.6.0
+[U.]  #034  docker-tini                                  29.5.3 -> 29.6.0
+[U.]  #035  dolt                                         2.1.4, 2.1.4-fish-completions -> 2.1.9, 2.1.9-fish-completions
+[U.]  #036  dotnet-runtime                               9.0.16 -> 9.0.17
+[U.]  #037  dotnet-runtime-wrapped                       9.0.16 -> 9.0.17
+[U.]  #038  drawio                                       30.0.4, 30.0.4-fish-completions -> 30.2.4, 30.2.4-fish-completions
+[U*]  #039  drkonqi                                      6.6.5 -> 6.7.1
+[U*]  #040  e2fsprogs                                    1.47.3, 1.47.3-bin, 1.47.3-info, 1.47.3-man -> 1.47.4, 1.47.4-bin, 1.47.4-info, 1.47.4-man
+[C.]  #041  electron                                     41.7.1 -> 40.10.3, 41.7.2, 42.4.0
+[C.]  #042  electron-unwrapped                           41.7.1 -> 40.10.3, 41.7.2, 42.4.0
+[U.]  #043  element-desktop                              1.12.18, 1.12.18-fish-completions -> 1.12.22, 1.12.22-fish-completions
+[U.]  #044  element-web                                  1.12.18 -> 1.12.22
+[U.]  #045  emacs-compat                                 30.1.0.1 -> 31.0.0.1
+[U.]  #046  emacs-markdown-mode                          20260423.1508 -> 20260425.954
+[U.]  #047  emacs-tablist                                20231019.1126 -> 20260623.1855
+[U.]  #048  emacs-vterm                                  20260406.134 -> 20260528.1919
+[U.]  #049  emacs-yeetube                                20260302.1931 -> 20260609.525
+[U.]  #050  expat                                        2.8.0 x2, 2.8.0-dev -> 2.8.1 x2, 2.8.1-dev
+[U.]  #051  fastfetch                                    2.64.2, 2.64.2-fish-completions, 2.64.2-man -> 2.65.1, 2.65.1-fish-completions, 2.65.1-man
+[C.]  #052  fc                                           00-nixos-cache.conf, 1.4-tex, 10-nixos-rendering.conf, 52-nixos-default-fonts.conf, 53-nixos-reject-type1.conf, 53-no-bitmaps.conf -> 00-nixos-cache.conf, 1.4-tex, 10-nixos-rendering.conf, 52-nixos-default-fonts.conf, 53-nixos-reject-type1.conf, 53-no-bitmaps.conf, 53-user-aliases.conf
+[C.]  #053  ffmpeg                                       6.1.5-data, 6.1.5-lib, 7.1.4-data, 7.1.4-lib, 8.1-bin, 8.1-data, 8.1-fish-completions, 8.1-lib, 8.1-man -> 6.1.6-data, 6.1.6-lib, 7.1.5-data, 7.1.5-lib, 8.1.1-bin, 8.1.1-data, 8.1.1-fish-completions, 8.1.1-lib, 8.1.1-man
+[U.]  #054  ffmpeg-headless                              8.1-bin, 8.1-data x2, 8.1-lib x2 -> 8.1.1-bin, 8.1.1-data x2, 8.1.1-lib x2
+[U.]  #055  fftw-double                                  3.3.10 x2, 3.3.10-dev -> 3.3.11 x2, 3.3.11-dev
+[U.]  #056  fftw-single                                  3.3.10 x2, 3.3.10-dev -> 3.3.11 x2, 3.3.11-dev
+[U*]  #057  firefox                                      151.0.4 x2, 151.0.4-fish-completions -> 152.0.3 x2, 152.0.3-fish-completions
+[U.]  #058  firefox-unwrapped                            151.0.4 -> 152.0.3
+[U.]  #059  fish                                         4.7.1, 4.7.1-doc, 4.7.1-fish-completions -> 4.8.0, 4.8.0-doc, 4.8.0-fish-completions
+[U*]  #060  flatpak                                      1.16.6, 1.16.6-doc, 1.16.6-man -> 1.18.0, 1.18.0-doc, 1.18.0-man
+[U*]  #061  flatpak-kcm                                  6.6.5 -> 6.7.1
+[C*]  #062  frameworkintegration                         5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[U.]  #063  freerdp                                      3.26.0 -> 3.27.1
+[U.]  #064  freetype                                     2.14.2 x2, 2.14.2-dev -> 2.14.3 x2, 2.14.3-dev
+[U.]  #065  fselect                                      0.10.1, 0.10.1-fish-completions -> 0.10.2, 0.10.2-fish-completions
+[U*]  #066  fwupd                                        2.1.4, 2.1.4-lib, 2.1.4-man -> 2.1.5, 2.1.5-lib, 2.1.5-man
+[U.]  #067  getconf-glibc                                2.42-61 -> 2.42-67
+[U*]  #068  getent-glibc                                 2.42-61 -> 2.42-67
+[U.]  #069  gh                                           2.93.0, 2.93.0-fish-completions -> 2.95.0, 2.95.0-fish-completions
+[U.]  #070  ghostscript                                  10.07.0, 10.07.0-fonts -> 10.07.1, 10.07.1-fonts
+[U.]  #071  ghostscript-with-X                           10.07.0, 10.07.0-fonts -> 10.07.1, 10.07.1-fonts
+[U.]  #072  github-backup                                0.62.1, 0.62.1-fish-completions -> 0.63.0, 0.63.0-fish-completions
+[U*]  #073  glibc                                        2.42-61 x2, 2.42-61-bin, 2.42-61-dev, 2.42-61-getent -> 2.42-67 x2, 2.42-67-bin, 2.42-67-dev, 2.42-67-getent
+[U*]  #074  glibc-locales                                2.42-61 x3 -> 2.42-67 x3
+[C.]  #075  go                                           1.26.3, 1.26.3-fish-completions, 78116-tex -> 1.26.4, 1.26.4-fish-completions, 78116-tex
+[C.]  #076  hwloc                                        2.13.0-lib -> 2.13.0, 2.13.0-dev, 2.13.0-lib
+[C.]  #077  icu4c                                        76.1 x2, 76.1-dev -> 76.1 x2, 76.1-dev, 78.3, 78.3-dev
+[U.]  #078  ijs                                          10.07.0 -> 10.07.1
+[U.]  #079  imagemagick                                  7.1.2-23, 7.1.2-23-fish-completions -> 7.1.2-24, 7.1.2-24-fish-completions
+[U.]  #080  initrd-linux                                 6.18.35 -> 6.18.37
+[U.]  #081  intel-compute-runtime                        26.18.38308.1 -> 26.22.38646.4
+[U.]  #082  intel-graphics-compiler                      2.34.4 -> 2.36.3
+[U.]  #083  just                                         1.51.0, 1.51.0-fish-completions, 1.51.0-man -> 1.54.0, 1.54.0-fish-completions, 1.54.0-man
+[U*]  #084  kactivitymanagerd                            6.6.5 -> 6.7.1
+[C.]  #085  karchive                                     5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[C*]  #086  kauth                                        5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[C.]  #087  kbookmarks                                   5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #088  kcalendarcore                                6.26.0 -> 6.27.0
+[U*]  #089  kcmutils                                     6.26.0 -> 6.27.0
+[C.]  #090  kcodecs                                      5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #091  kcolorscheme                                 6.26.0 -> 6.27.0
+[C.]  #092  kcompletion                                  5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[C*]  #093  kconfig                                      5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[C.]  #094  kconfigwidgets                               5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #095  kcontacts                                    6.26.0 -> 6.27.0
+[C*]  #096  kcoreaddons                                  5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[C.]  #097  kcrash                                       5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #098  kdav                                         6.26.0 -> 6.27.0
+[C.]  #099  kdbusaddons                                  5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U*]  #100  kde-cli-tools                                6.6.5 -> 6.7.1
+[U*]  #101  kde-gtk-config                               6.6.5 -> 6.7.1
+[U.]  #102  kdeclarative                                 6.26.0 -> 6.27.0
+[U.]  #103  kdecoration                                  6.6.5 -> 6.7.1
+[U*]  #104  kded                                         6.26.0 -> 6.27.0
+[U*]  #105  kdeplasma-addons                             6.6.5 -> 6.7.1
+[U.]  #106  kdesu                                        6.26.0 -> 6.27.0
+[C.]  #107  kdnssd                                       5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[C.]  #108  kdoctools                                    5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U*]  #109  kfilemetadata                                6.26.0 -> 6.27.0
+[C.]  #110  kglobalaccel                                 5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U*]  #111  kglobalacceld                                6.6.5 -> 6.7.1
+[C*]  #112  kguiaddons                                   5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #113  kholidays                                    6.26.0 -> 6.27.0
+[C.]  #114  ki18n                                        5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[C*]  #115  kiconthemes                                  5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[U.]  #116  kidletime                                    6.26.0 -> 6.27.0
+[U*]  #117  kimageformats                                6.26.0 -> 6.27.0
+[U*]  #118  kinfocenter                                  6.6.5 -> 6.7.1
+[C*]  #119  kio                                          5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #120  kirigami                                     6.26.0 -> 6.27.0
+[U.]  #121  kitemmodels                                  6.26.0 -> 6.27.0
+[C.]  #122  kitemviews                                   5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #123  kitty                                        0.47.2, 0.47.2-fish-completions, 0.47.2-terminfo -> 0.47.4, 0.47.4-fish-completions, 0.47.4-terminfo
+[C.]  #124  kjobwidgets                                  5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U*]  #125  kmenuedit                                    6.6.5 -> 6.7.1
+[C.]  #126  knewstuff                                    5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[U*]  #127  knighttime                                   6.6.5 -> 6.7.1
+[C.]  #128  knotifications                               5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[U.]  #129  knotifyconfig                                6.26.0 -> 6.27.0
+[C*]  #130  kpackage                                     5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #131  kparts                                       6.26.0 -> 6.27.0
+[U.]  #132  kpipewire                                    6.6.5 -> 6.7.1
+[U.]  #133  kpty                                         6.26.0 -> 6.27.0
+[U.]  #134  kquickcharts                                 6.26.0 -> 6.27.0
+[U.]  #135  krb5                                         1.22.1, 1.22.1-dev, 1.22.1-lib x2 -> 1.22.2, 1.22.2-dev, 1.22.2-lib x2
+[U*]  #136  krdp                                         6.6.5 -> 6.7.1
+[U.]  #137  krunner                                      6.26.0 -> 6.27.0
+[U*]  #138  kscreen                                      6.6.5 -> 6.7.1
+[U*]  #139  kscreenlocker                                6.6.5 -> 6.7.1
+[C*]  #140  kservice                                     5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[U.]  #141  ksshaskpass                                  6.6.5 -> 6.7.1
+[U.]  #142  kstatusnotifieritem                          6.26.0 -> 6.27.0
+[U.]  #143  ksvg                                         6.26.0 -> 6.27.0
+[U*]  #144  ksystemstats                                 6.6.5 -> 6.7.1
+[U.]  #145  ktextaddons                                  2.0.2 -> 2.1.0
+[U*]  #146  ktexteditor                                  6.26.0 -> 6.27.0
+[U.]  #147  ktexttemplate                                6.26.0 -> 6.27.0
+[C.]  #148  ktextwidgets                                 5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[U.]  #149  kunitconversion                              6.26.0 -> 6.27.0
+[U.]  #150  kuserfeedback                                6.26.0 -> 6.27.0
+[C*]  #151  kwallet                                      5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U*]  #152  kwallet-pam                                  6.6.5 -> 6.7.1
+[C.]  #153  kwayland                                     5.116.0, 6.6.5 -> 5.116.0, 6.7.1
+[U*]  #154  kwayland-integration                         6.6.5 -> 6.7.1
+[C.]  #155  kwidgetsaddons                               5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U*]  #156  kwin                                         6.6.5 -> 6.7.1
+[U*]  #157  kwin-x11                                     6.6.5 -> 6.7.1
+[C.]  #158  kwindowsystem                                5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U*]  #159  kwrited                                      6.6.5 -> 6.7.1
+[C.]  #160  kxmlgui                                      5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[U.]  #161  layer-shell-qt                               6.6.5 -> 6.7.1
+[C.]  #162  lcms2                                        2.18 x2, 2.18-bin, 2.18-dev -> 2.18 x2
+[C.]  #163  libaccounts-glib                             1.27, 1.27-dev -> 1.27
+[U.]  #164  libadwaita                                   1.9.0 -> 1.9.1
+[U.]  #165  libaec                                       1.1.6 -> 1.1.7
+[U.]  #166  libde265                                     1.0.18 -> 1.1.1
+[U.]  #167  libgcrypt                                    1.11.2, 1.11.2-bin, 1.11.2-dev, 1.11.2-lib x2 -> 1.12.2, 1.12.2-bin, 1.12.2-dev, 1.12.2-lib x2
+[U.]  #168  libheif                                      1.21.2-lib -> 1.23.0-lib
+[C.]  #169  libinput                                     1.31.3, 1.31.3-bin, 1.31.3-dev -> 1.31.3
+[C.]  #170  libjpeg-turbo                                3.1.4 x2, 3.1.4-bin, 3.1.4-dev, 3.1.4-man -> 3.1.4 x3, 3.1.4-bin, 3.1.4-dev, 3.1.4-man
+[U.]  #171  libkrun                                      1.17.4 -> 1.19.0
+[U.]  #172  libkrunfw                                    5.3.0 -> 5.5.0
+[U*]  #173  libkscreen                                   6.6.5 -> 6.7.1
+[U*]  #174  libksysguard                                 6.6.5 -> 6.7.1
+[U*]  #175  libplasma                                    6.6.5 -> 6.7.1
+[U.]  #176  libpng-apng                                  1.6.56 x2, 1.6.56-dev -> 1.6.58 x2, 1.6.58-dev
+[C.]  #177  libraw                                       0.22.1, 0.22.1-dev, 0.22.1-lib -> 0.22.1-lib
+[C.]  #178  libsecret                                    0.21.7, 0.21.7-dev -> 0.21.7
+[U.]  #179  libxml2                                      2.15.2 x2, 2.15.2-bin, 2.15.2-dev -> 2.15.3 x2, 2.15.3-bin, 2.15.3-dev
+[U.]  #180  libxxf86dga                                  1.1.6 -> 1.1.7
+[U.]  #181  linux                                        6.18.35, 6.18.35-modules x2 -> 6.18.37, 6.18.37-modules x2
+[U.]  #182  linux-firmware                               20260519-zstd -> 20260622-zstd
+[U.]  #183  lsof                                         4.99.6 -> 4.99.7
+[U.]  #184  lua-language-server                          3.18.1 -> 3.18.2
+[U.]  #185  manifold                                     3.5.1 -> 3.5.2
+[U.]  #186  mariadb-server                               11.4.9 -> 11.4.12
+[C.]  #187  maxima                                       5.47.0 x2, 5.47.0-fish-completions -> 5.47.0, 5.49.0, 5.49.0-fish-completions
+[U.]  #188  mdadm                                        4.4 -> 4.6
+[U.]  #189  mesa                                         26.1.2 x2 -> 26.1.3 x2
+[U*]  #190  milou                                        6.6.5 -> 6.7.1
+[U.]  #191  mise                                         2026.6.0, 2026.6.0-fish-completions -> 2026.6.11, 2026.6.11-fish-completions
+[U.]  #192  mnw                                          0.12.2 -> 0.12.3
+[U.]  #193  moby                                         29.5.3 -> 29.6.0
+[U.]  #194  modemmanager-qt                              6.26.0 -> 6.27.0
+[U*]  #195  nano                                         9.0, 9.0-doc, 9.0-info, 9.0-man -> 9.1, 9.1-doc, 9.1-info, 9.1-man
+[U.]  #196  neovim-unwrapped                             0.12.2 -> 0.12.3
+[U.]  #197  netavark                                     1.17.2 -> 2.0.0
+[U.]  #198  networkmanager-qt                            6.26.0 -> 6.27.0
+[U.]  #199  nextcloud-client                             33.0.5 -> 33.0.6
+[C*]  #200  nix                                          2.28.7, 2.28.7-man, 2.34.7 x2, 2.34.7-doc, 2.34.7-man -> 2.34.7 x2, 2.34.7-doc, 2.34.7-man
+[U.]  #201  nix-eval-jobs                                2.34.1 -> 2.34.3
+[U.]  #202  nix-update                                   1.15.1, 1.15.1-fish-completions -> 1.16.0, 1.16.0-fish-completions
+[U*]  #203  nixos-firewall-tool                          <none> -> 26.11
+[U.]  #204  nixos-system-eagle                           26.11.20260610.9ae611a -> 26.11.20260629.b5aa0fb
+[U.]  #205  nixpkgs-review                               3.8.0 -> 3.9.0
+[U.]  #206  nodejs                                       24.15.0, 24.15.0-fish-completions, 24.15.0-source -> 24.16.0, 24.16.0-fish-completions
+[U.]  #207  nodejs-slim                                  24.15.0, 24.15.0-corepack, 24.15.0-npm -> 24.16.0, 24.16.0-corepack, 24.16.0-npm
+[C.]  #208  nspr                                         4.39, 4.39-dev -> 4.39
+[C.]  #209  nss                                          3.112.5, 3.112.5-dev, 3.112.5-man, 3.124 -> 3.112.5, 3.112.5-man, 3.125
+[U.]  #210  nvidia-kernel-modules                        580.142-6.18.35 -> 580.173.02-6.18.37
+[U*]  #211  nvidia-settings                              580.142 -> 580.173.02
+[U*]  #212  nvidia-x11                                   580.142, 580.142-bin, 580.142-firmware, 580.142-lib32 -> 580.173.02, 580.173.02-bin, 580.173.02-firmware, 580.173.02-lib32
+[U*]  #213  ocean-sound-theme                            6.6.5 -> 6.7.1
+[C.]  #214  onetbb                                       2022.3.0 -> 2022.3.0, 2022.3.0-dev
+[U.]  #215  openapv                                      0.2.1.2 x2 -> 0.2.1.3 x2
+[U.]  #216  openblas                                     0.3.32 -> 0.3.33
+[U.]  #217  opencolorio                                  2.5.1 -> 2.5.2
+[U.]  #218  openexr                                      3.4.10 -> 3.4.11
+[U.]  #219  openimageio                                  3.1.14.0, 3.1.14.0-bin, 3.1.14.0-dev -> 3.1.14.1, 3.1.14.1-bin, 3.1.14.1-dev
+[C.]  #220  openjpeg                                     2.5.4 x2, 2.5.4-dev -> 2.5.4 x2
+[U.]  #221  opensnitch_ebpf                              1.8.0-6.18.35 -> 1.8.0-6.18.37
+[U*]  #222  orca                                         50.1.2 -> 50.2
+[U.]  #223  oxygen-icons                                 6.2.0 -> 6.27.0
+[U.]  #224  perl5.42.0-Compress-Raw-Bzip2                2.206 -> 2.218
+[U.]  #225  perl5.42.0-Compress-Raw-Zlib                 2.206 -> 2.222
+[U.]  #226  perl5.42.0-HTTP-Daemon                       6.16 -> 6.17
+[U.]  #227  perl5.42.0-IO-Compress                       2.206 -> 2.220
+[U*]  #228  plasma-activities                            6.6.5 -> 6.7.1
+[U.]  #229  plasma-activities-stats                      6.6.5 -> 6.7.1
+[U*]  #230  plasma-browser-integration                   6.6.5 -> 6.7.1
+[U*]  #231  plasma-desktop                               6.6.5 -> 6.7.1
+[U*]  #232  plasma-integration                           6.6.5, 6.6.5-qt5 -> 6.7.1, 6.7.1-qt5
+[U*]  #233  plasma-keyboard                              6.6.5 -> 6.7.1
+[U.]  #234  plasma-nano                                  6.6.5 -> 6.7.1
+[U*]  #235  plasma-nm                                    6.6.5 -> 6.7.1
+[U*]  #236  plasma-pa                                    6.6.5 -> 6.7.1
+[U.]  #237  plasma-sdk                                   6.6.5 -> 6.7.1
+[U*]  #238  plasma-systemmonitor                         6.6.5 -> 6.7.1
+[U*]  #239  plasma-workspace                             6.6.5, 6.6.5-sessions -> 6.7.1, 6.7.1-sessions
+[U*]  #240  plasma-workspace-wallpapers                  6.6.5 -> 6.7.1
+[U.]  #241  plasma5support                               6.6.5 -> 6.7.1
+[U*]  #242  podman                                       5.8.2, 5.8.2-man -> 5.8.4, 5.8.4-man
+[U*]  #243  podman-compose                               1.5.0 -> 1.6.0
+[U*]  #244  podman-tui                                   1.11.1 -> 1.11.2
+[U*]  #245  polkit-kde-agent                             1-6.6.5 -> 1-6.7.1
+[C.]  #246  poppler-glib                                 25.10.0, 25.10.0-dev, 25.10.0-fish-completions -> 25.10.0, 25.10.0-fish-completions
+[U*]  #247  powerdevil                                   6.6.5 -> 6.7.1
+[U*]  #248  print-manager                                6.6.5 -> 6.7.1
+[U.]  #249  prison                                       6.26.0 -> 6.27.0
+[U.]  #250  publicsuffix-list                            0-unstable-2026-03-26 x2 -> 0-unstable-2026-05-13 x2
+[U.]  #251  purpose                                      6.26.0 -> 6.27.0
+[U.]  #252  pv                                           1.10.5 -> 1.11.0
+[C.]  #253  python3                                      3.13.13 x2, 3.13.13-env x10 -> 3.13.13 x2, 3.13.13-env x9
+[U.]  #254  python3.13-awscrt                            0.31.3 -> 0.33.0
+[U.]  #255  python3.13-copier                            9.15.1 -> 9.16.0
+[U.]  #256  python3.13-curl-cffi                         0.14.0 -> 0.15.0
+[U.]  #257  python3.13-cyclopts                          4.17.0 -> 4.19.0
+[U.]  #258  python3.13-fastmcp                           3.2.3 -> 3.2.4
+[U.]  #259  python3.13-jc                                1.25.6 -> 1.25.7
+[U.]  #260  python3.13-mcp                               1.26.0 -> 1.27.0
+[U.]  #261  python3.13-mistune                           3.2.0 -> 3.2.1
+[U.]  #262  python3.13-openusd                           25.05.01 -> 26.03
+[U.]  #263  python3.13-pygit2                            1.19.1 -> 1.19.3
+[U.]  #264  python3.13-pyjwt                             2.12.1 -> 2.13.0
+[U.]  #265  python3.13-pymdown-extensions                10.21.2 -> 10.21.3
+[U.]  #266  python3.13-python-multipart                  0.0.22 -> 0.0.29
+[U.]  #267  python3.13-rich-rst                          1.3.2 -> 2.0.1
+[U.]  #268  python3.13-sentry-sdk                        2.61.1 -> 2.63.0
+[U.]  #269  python3.13-starlette                         0.52.1 -> 1.1.0
+[U.]  #270  python3.13-xmltodict                         1.0.2 -> 1.0.4
+[U*]  #271  qqc2-breeze-style                            6.6.5 -> 6.7.1
+[U*]  #272  qqc2-desktop-style                           6.26.0 -> 6.27.0
+[U.]  #273  qt3d                                         6.11.0 -> 6.11.1
+[U.]  #274  qt5compat                                    6.11.0 -> 6.11.1
+[C*]  #275  qtbase                                       5.15.18, 5.15.18-bin, 5.15.18-dev, 6.11.0, 6.11.0-only-plugins-qml -> 5.15.19, 5.15.19-bin, 5.15.19-dev, 6.11.1, 6.11.1-only-plugins-qml
+[U.]  #276  qtcharts                                     6.11.0 -> 6.11.1
+[C.]  #277  qtdeclarative                                5.15.18, 5.15.18-bin, 5.15.18-dev, 6.11.0 -> 5.15.19, 5.15.19-bin, 5.15.19-dev, 6.11.1
+[U.]  #278  qtgraphicaleffects                           5.15.18 -> 5.15.19
+[U*]  #279  qtimageformats                               6.11.0 -> 6.11.1
+[U.]  #280  qtlocation                                   6.11.0 -> 6.11.1
+[U.]  #281  qtmultimedia                                 6.11.0 -> 6.11.1
+[U.]  #282  qtnetworkauth                                6.11.0 -> 6.11.1
+[U.]  #283  qtpositioning                                6.11.0 -> 6.11.1
+[U.]  #284  qtquick3d                                    6.11.0 -> 6.11.1
+[U.]  #285  qtquickcontrols                              5.15.18, 5.15.18-dev -> 5.15.19, 5.15.19-dev
+[U.]  #286  qtquickcontrols2                             5.15.18, 5.15.18-bin -> 5.15.19, 5.15.19-bin
+[U.]  #287  qtsensors                                    6.11.0 -> 6.11.1
+[U.]  #288  qtserialport                                 6.11.0 -> 6.11.1
+[U.]  #289  qtshadertools                                6.11.0 -> 6.11.1
+[U.]  #290  qtspeech                                     6.11.0 -> 6.11.1
+[C*]  #291  qtsvg                                        5.15.18, 5.15.18-bin, 5.15.18-dev, 6.11.0 -> 5.15.19, 5.15.19-bin, 5.15.19-dev, 6.11.1
+[C*]  #292  qttools                                      5.15.18, 5.15.18-bin, 6.11.0 -> 5.15.19, 5.15.19-bin, 6.11.1
+[C.]  #293  qttranslations                               5.15.18, 6.11.0 -> 5.15.19, 6.11.1
+[U*]  #294  qtvirtualkeyboard                            6.11.0 -> 6.11.1
+[C*]  #295  qtwayland                                    5.15.18, 5.15.18-bin, 5.15.18-dev, 6.11.0 -> 5.15.19, 5.15.19-bin, 5.15.19-dev, 6.11.1
+[C.]  #296  qtwebchannel                                 5.15.18, 6.11.0 -> 5.15.19, 6.11.1
+[U.]  #297  qtwebengine                                  6.11.0 -> 6.11.1
+[U.]  #298  qtwebsockets                                 6.11.0 -> 6.11.1
+[U.]  #299  qtwebview                                    6.11.0 -> 6.11.1
+[U.]  #300  qtx11extras                                  5.15.18 -> 5.15.19
+[U.]  #301  repomix                                      1.14.0 -> 1.15.0
+[U*]  #302  rsync                                        3.4.1 -> 3.4.4
+[U.]  #303  ruff                                         0.15.16, 0.15.16-fish-completions -> 0.15.20, 0.15.20-fish-completions
+[U.]  #304  runc                                         1.4.2 -> 1.4.3
+[U.]  #305  sd-switch                                    0.6.3 -> 0.6.4
+[C.]  #306  sdl2-compat                                  2.32.68, 2.32.68-dev -> 2.32.68
+[U.]  #307  sdl3                                         3.4.8-lib x2 -> 3.4.10-lib x2
+[U.]  #308  signal-desktop                               8.13.0, 8.13.0-fish-completions -> 8.15.0, 8.15.0-fish-completions
+[U.]  #309  simdjson                                     4.6.0 -> 4.6.4
+[U.]  #310  sioyek                                       2.0.0-unstable-2026-06-06, 2.0.0-unstable-2026-06-06-fish-completions -> 2.0.0-unstable-2026-06-13, 2.0.0-unstable-2026-06-13-fish-completions
+[U.]  #311  skim                                         4.0.0, 4.0.0-fish-completions, 4.0.0-man -> 4.8.0, 4.8.0-fish-completions, 4.8.0-man
+[C*]  #312  solid                                        5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[C.]  #313  sonnet                                       5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[U*]  #314  spectacle                                    6.6.5 -> 6.7.1
+[U.]  #315  sqlcipher                                    4.14.0 -> 4.16.0
+[U.]  #316  statix                                       0-unstable-2026-05-14, 0-unstable-2026-05-14-fish-completions -> 0.5.8-unstable-2026-06-28, 0.5.8-unstable-2026-06-28-fish-completions
+[U*]  #317  strace                                       7.0, 7.0-man -> 7.1, 7.1-man
+[U.]  #318  syncthing                                    2.0.15, 2.0.15-fish-completions -> 2.1.0, 2.1.0-fish-completions
+[C.]  #319  syndication                                  5.116.0, 6.26.0 -> 5.116.0, 6.27.0
+[C.]  #320  syntax-highlighting                          5.116.0, 5.116.0-bin, 6.26.0 -> 5.116.0, 5.116.0-bin, 6.27.0
+[C*]  #321  systemd                                      <none>, 260.1 x2, 260.1-man -> <none>, 260.2 x2, 260.2-man
+[U.]  #322  systemd-minimal                              260.1 x2 -> 260.2 x2
+[U.]  #323  systemd-minimal-libs                         260.1 x2, 260.1-dev -> 260.2 x2, 260.2-dev
+[U*]  #324  systemsettings                               6.6.5 -> 6.7.1
+[U.]  #325  tailwindcss-language-server                  0.14.28 -> 0.14.29
+[U.]  #326  telegram-desktop                             6.8.1, 6.8.1-fish-completions -> 6.9.3, 6.9.3-fish-completions
+[U.]  #327  threadweaver                                 6.26.0 -> 6.27.0
+[U.]  #328  thunderbird                                  151.0.1, 151.0.1-fish-completions -> 152.0, 152.0-fish-completions
+[U.]  #329  thunderbird-unwrapped                        151.0.1 -> 152.0
+[U.]  #330  tig                                          2.6.0, 2.6.0-fish-completions, 2.6.0-man -> 2.6.1, 2.6.1-fish-completions, 2.6.1-man
+[U.]  #331  tinymist                                     0.14.21 -> 0.15.2
+[U.]  #332  tombi                                        1.1.2 -> 1.1.6
+[U.]  #333  tree-sitter-c-neovim                         0.12.2 -> 0.12.3
+[U.]  #334  tree-sitter-cairo                            0-unstable-2025-09-14 -> 0-unstable-2026-06-14
+[U.]  #335  tree-sitter-dtd                              0-unstable-2023-04-07 -> 0-unstable-2026-01-21
+[U.]  #336  tree-sitter-fennel                           1.1.0-unstable-2025-09-07 -> 1.1.0-unstable-2026-01-21
+[U.]  #337  tree-sitter-gitattributes                    0-unstable-2022-05-06 -> 0-unstable-2025-08-17
+[C.]  #338  tree-sitter-gotmpl                           0-unstable-2022-07-19, 0.0.0+rev=aa71f63 -> 0-unstable-2026-03-21, 0.0.0+rev=aa71f63
+[U.]  #339  tree-sitter-hare                             0-unstable-2024-07-30 -> 0-unstable-2025-10-07
+[U.]  #340  tree-sitter-janet-simple                     0.0.7-unstable-2025-05-19 -> 0.0.7-unstable-2026-02-10
+[U.]  #341  tree-sitter-jjdescription                    0-unstable-2025-02-20 -> 1.0.3
+[C.]  #342  tree-sitter-lua                              0.0.0+rev=10fe005, 0.0.19-unstable-2025-05-16 -> 0.0.0+rev=10fe005, 0.0.19-unstable-2026-02-26
+[U.]  #343  tree-sitter-lua-neovim                       0.12.2 -> 0.12.3
+[U.]  #344  tree-sitter-make                             0-unstable-2021-12-16 -> 0-unstable-2026-02-26
+[U.]  #345  tree-sitter-markdown-neovim                  0.12.2 -> 0.12.3
+[U.]  #346  tree-sitter-markdown_inline-neovim           0.12.2 -> 0.12.3
+[U.]  #347  tree-sitter-meson                            0-unstable-2022-11-02 -> 0-unstable-2026-01-22
+[U.]  #348  tree-sitter-nginx                            0-unstable-2024-10-15 -> 0-unstable-2026-01-02
+[U.]  #349  tree-sitter-pem                              0-unstable-2023-02-05 -> 0-unstable-2025-08-17
+[U.]  #350  tree-sitter-pkl                              0.20.0-unstable-2026-02-24 -> 0.20.0-unstable-2026-03-27
+[U.]  #351  tree-sitter-proto                            0-unstable-2021-06-12 -> 0-unstable-2026-03-15
+[U.]  #352  tree-sitter-query-neovim                     0.12.2 -> 0.12.3
+[U.]  #353  tree-sitter-scheme                           0.24.7-1-unstable-2025-12-13 -> 0.24.7-1-unstable-2026-03-17
+[U.]  #354  tree-sitter-sshclientconfig                  2026.5.28 -> 2026.6.4
+[U.]  #355  tree-sitter-t32                              9.0.0 -> 9.0.1
+[U.]  #356  tree-sitter-templ                            1.0.0-unstable-2025-12-03 -> 1.0.0-unstable-2025-12-31
+[C.]  #357  tree-sitter-toml                             0.0.0+rev=64b5683, 0.5.1-unstable-2022-04-21 -> 0.0.0+rev=64b5683, 0.5.1-unstable-2024-12-03
+[U.]  #358  tree-sitter-uxntal                           0-unstable-2024-03-23 -> 0-unstable-2024-05-05
+[C.]  #359  tree-sitter-vim                              0.0.0+rev=3092fcd, 0.2.0-unstable-2023-05-05 -> 0.0.0+rev=3092fcd, 0.2.0-unstable-2026-02-26
+[U.]  #360  tree-sitter-vim-neovim                       0.12.2 -> 0.12.3
+[U.]  #361  tree-sitter-vimdoc-neovim                    0.12.2 -> 0.12.3
+[U.]  #362  tree-sitter-wit                              0-unstable-2022-10-31 -> 1.3.0
+[U.]  #363  tree-sitter-xml                              0-unstable-2023-01-17 -> 0-unstable-2026-01-21
+[U.]  #364  tree-sitter-yuck                             0.0.2-unstable-2024-05-05 -> 0.0.2-unstable-2026-04-03
+[U.]  #365  typstyle                                     0.14.4 -> 0.15.0
+[U.]  #366  unbound                                      1.25.0-lib x2 -> 1.25.1-lib x2
+[U.]  #367  ungoogled-chromium                           149.0.7827.53, 149.0.7827.53-fish-completions, 149.0.7827.53-sandbox -> 149.0.7827.200, 149.0.7827.200-fish-completions, 149.0.7827.200-sandbox
+[U.]  #368  ungoogled-chromium-unwrapped                 149.0.7827.53, 149.0.7827.53-sandbox -> 149.0.7827.200, 149.0.7827.200-sandbox
+[U.]  #369  usage                                        3.2.1 -> 3.5.0, 3.5.0-fish-completions
+[C*]  #370  util-linux                                   2.42, 2.42-bin, 2.42-dev, 2.42-lastlog, 2.42-lib, 2.42-login, 2.42-man, 2.42-mount, 2.42-swap -> 2.42-bin, 2.42-lastlog, 2.42-lib, 2.42-login, 2.42-man, 2.42-mount, 2.42-swap
+[U.]  #371  uv                                           0.11.19, 0.11.19-fish-completions -> 0.11.25, 0.11.25-fish-completions
+[U.]  #372  vale                                         3.14.2, 3.14.2-fish-completions -> 3.15.1, 3.15.1-fish-completions
+[U.]  #373  vscode                                       1.123.0, 1.123.0-fish-completions -> 1.125.0, 1.125.0-fish-completions
+[U.]  #374  vscode-extension-betterthantomorrow-calva    2.0.591 -> 2.0.593
+[U.]  #375  vscode-extension-fill-labs-dependi           0.7.22 -> 0.7.25
+[U.]  #376  vscode-extension-inlang-vs-code-extension    2.2.0 -> 2.3.2
+[U.]  #377  vscode-extension-myriad-dreamin-tinymist     0.14.18 -> 0.15.2
+[U.]  #378  vscode-extension-redhat-java                 1.54.0 -> 1.55.0
+[U.]  #379  vscode-extension-shardulm94-trailing-spaces  0.4.1 -> 0.4.4
+[U.]  #380  vscode-extension-svelte-svelte-vscode        110.2.0 -> 110.2.1
+[D.]  #381  vscode-langservers-extracted                 4.10.0 -> 1.121.03429
+[U.]  #382  warp-terminal                                0.2026.06.03.09.49.stable_01, 0.2026.06.03.09.49.stable_01-fish-completions -> 0.2026.06.17.09.49.stable_02, 0.2026.06.17.09.49.stable_02-fish-completions
+[U*]  #383  wireplumber                                  0.5.14, 0.5.14-doc -> 0.5.15, 0.5.15-doc
+[U*]  #384  xdg-desktop-portal-kde                       6.6.5 -> 6.7.1
+[U.]  #385  xdotool                                      3.20211022.1 -> 4.20260303.1
+[U.]  #386  xfsprogs                                     6.19.0, 6.19.0-bin -> 7.0.1, 7.0.1-bin
+[U.]  #387  yt-dlp                                       2026.03.17, 2026.03.17-fish-completions -> 2026.06.09, 2026.06.09-fish-completions, 2026.06.09-man
+[U.]  #388  zed-editor                                   1.5.4 -> 1.8.2
+[U.]  #389  zed-editor-wrapped                           1.5.4, 1.5.4-fish-completions -> 1.8.2, 1.8.2-fish-completions
+[U.]  #390  zotero                                       9.0.4, 9.0.4-fish-completions -> 9.0.5, 9.0.5-fish-completions
+Added packages:
+[A.]  #01  cxx-rust-cssparser               1.0.0
+[A.]  #02  emacs-keymap-popup               0.3.1
+[A.]  #03  fastfetch-unwrapped              2.65.1, 2.65.1-man
+[A.]  #04  hm_hmfontconfigdefaultfonts.xml  <none>
+[A.]  #05  hm_hmfontconfigfonts.xml         <none>
+[A.]  #06  minizip-ng-compat                4.2.1
+[A.]  #07  mise-bash-completion.bash        <none>
+[A.]  #08  networkmanager.conf              <none>
+[A.]  #09  nushell-fzf-integration.nu       <none>
+[A.]  #10  obsidian                         1.12.7, 1.12.7-fish-completions
+[A.]  #11  obsidian.json                    <none>
+[A.]  #12  polkitd.conf                     <none>
+[A.]  #13  python3.13-griffelib             2.1.0
+[A.]  #14  python3.13-invoke                2.2.1
+[A.]  #15  tree-sitter-dune                 0-unstable-2026-05-21
+[A.]  #16  tree-sitter-objc                 3.0.2
+[A+]  #17  union                            6.7.1
+Removed packages:
+[R.]  #01  bootspec                                           2.0.0
+[R.]  #02  bullet                                             3.25
+[R.]  #03  datasette                                          0.65.2-fish-completions
+[R.]  #04  doxygen                                            1.16.1
+[R.]  #05  efl                                                1.28.1
+[R.]  #06  emacs-seq                                          2.24
+[R.]  #07  gnome-icon-theme                                   3.12.0
+[R.]  #08  gtk-engine-murrine                                 0.98.2
+[R.]  #09  hm_fontconfigconf.d10hmfonts.conf                  <none>
+[R.]  #10  hm_fontconfigconf.d52hmdefaultfonts.conf           <none>
+[R.]  #11  humanity-icon-theme                                0.6.16
+[R.]  #12  libsysprof-capture                                 50.0
+[R.]  #13  mint-x-icons                                       1.7.6
+[R.]  #14  opencl-headers                                     2025.07.22
+[R.]  #15  python3.13-aiofiles                                25.1.0
+[R.]  #16  python3.13-asgi-csrf                               0.11
+[R.]  #17  python3.13-autocommand                             2.2.2
+[R.]  #18  python3.13-click-default-group                     1.2.4
+[R.]  #19  python3.13-datasette                               0.65.2
+[R.]  #20  python3.13-distutils                               80.10.1
+[R.]  #21  python3.13-flexcache                               0.3
+[R.]  #22  python3.13-flexparser                              0.4
+[R.]  #23  python3.13-hupper                                  1.12.1
+[R.]  #24  python3.13-itsdangerous                            2.2.0
+[R.]  #25  python3.13-janus                                   2.0.0
+[R.]  #26  python3.13-jaraco-collections                      5.2.1
+[R.]  #27  python3.13-jaraco-text                             4.0.0
+[R.]  #28  python3.13-libevdev                                0.13.1
+[R.]  #29  python3.13-pyudev                                  0.24.4
+[R.]  #30  rapidcheck                                         0-unstable-2023-12-14
+[R.]  #31  security-wrapper-pkexec-x86_64-unknown-linux-musl  <none>
+[R.]  #32  spdlog                                             1.17.0
+[R.]  #33  ubuntu-themes                                      24.04
+[R.]  #34  yyjson                                             0.12.0
+Closure size: 9452 -> 9430 (4724 paths added, 4746 paths removed, delta -22, disk usage +323.6MiB).
