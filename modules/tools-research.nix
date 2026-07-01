@@ -21,7 +21,7 @@ in
           # pkgs.neo4j
           pkgs.surrealist
           # pkgs.openrefine
-          pkgs.datasette
+          # pkgs.datasette  # dropped: asgi-csrf dep is broken upstream (simonw/asgi-csrf#38)
           pkgs.wiki-tui
         ];
       };
