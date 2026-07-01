@@ -29,6 +29,10 @@ in
             localPath = "${config.home.homeDirectory}/code/emx";
           };
 
+          programs.obsidian = {
+            enable = true;
+          };
+
           programs.nvf = {
             enable = true;
             settings.vim = {
