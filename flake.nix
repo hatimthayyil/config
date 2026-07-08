@@ -15,6 +15,7 @@
     #
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
 
     #
