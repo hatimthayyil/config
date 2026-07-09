@@ -177,6 +177,18 @@ in
             enableBashIntegration = true;
             enableNushellIntegration = true;
           };
+
+          television = {
+            enable = true;
+            enableBashIntegration = true;
+            enableNushellIntegration = true;
+            enableFishIntegration = true;
+          };
+
+          nix-search-tv = {
+            enable = true;
+            settings.indexes = [ "nixpkgs" "home-manager" "nixos" ];
+          };
         };
 
         home.packages = [
