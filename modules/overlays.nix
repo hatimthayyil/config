@@ -38,6 +38,11 @@ let
 
   claude-desktop-overlay = inputs.claude-desktop.overlays.default;
 
+  # FIXME: remove after throttled service unit fix lands in unstable
+  throttled-fix-overlay = final: _prev: {
+    inherit (inputs.nixpkgs-unstable-small.legacyPackages.${final.stdenv.hostPlatform.system}) throttled;
+  };
+
   default =
     final: prev:
     (stable-packages final prev)
@@ -47,7 +52,8 @@ let
     // (emacs-overlay-packages final prev)
     // (nix4vscode-overlay final prev)
     // (firefox-addons-overlay final prev)
-    // (claude-desktop-overlay final prev);
+    // (claude-desktop-overlay final prev)
+    // (throttled-fix-overlay final prev);
 in
 {
   flake.overlays = {
