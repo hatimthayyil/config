@@ -91,7 +91,11 @@ in
             userEmail = config.programs.git.settings.user.email;
           };
 
-          programs.lazygit.enable = true;
+          programs.lazygit = {
+            enable = true;
+            enableBashIntegration = true;
+            enableNushellIntegration = true;
+          };
           programs.gitui.enable = true;
 
           # allowed-signers: committer email -> signing key, for local verify.

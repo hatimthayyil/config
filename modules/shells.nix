@@ -14,26 +14,6 @@ in
         shellAliases.s = "sesh connect $(sesh list --icons | fzf --ansi)"; # fuzzy-pick and connect to a tmux session; defined per-shell because sesh's builtin alias uses $(…) which breaks nushell
       };
 
-      # Zsh
-      programs.zsh = {
-        enable = true;
-        enableCompletion = true;
-        autosuggestion.enable = true;
-        syntaxHighlighting.enable = true;
-        history.size = 10000;
-        shellAliases.s = "sesh connect $(sesh list --icons | fzf --ansi)"; # fuzzy-pick and connect to a tmux session; defined per-shell because sesh's builtin alias uses $(…) which breaks nushell
-
-        # Cache compinit — only regenerate dump once per day
-        completionInit = ''
-          autoload -Uz compinit
-          if [[ -n ''${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
-            compinit
-          else
-            compinit -C
-          fi
-        '';
-      };
-
       programs.fish = {
         enable = true;
         # TODO Add plugins, see https://github.com/jorgebucaran/awsm.fish
@@ -47,10 +27,9 @@ in
         '';
       };
 
-      # Prompt — cross-shell, replaces powerlevel10k (unmaintained, zsh-only)
+      # Prompt — cross-shell
       programs.starship = {
         enable = true;
-        enableZshIntegration = true;
         enableBashIntegration = true;
         enableNushellIntegration = true;
         enableFishIntegration = true;

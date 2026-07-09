@@ -27,7 +27,6 @@ in
             enable = true;
             nix-direnv.enable = true;
             enableBashIntegration = true;
-            enableZshIntegration = true;
             enableNushellIntegration = true;
             config.warn_timeout = "10m";
           };
@@ -50,6 +49,13 @@ in
             package = pkgs.unstable.mise;
           };
 
+          devenv = {
+            enable = true;
+            package = pkgs.unstable.devenv;
+            enableBashIntegration = true;
+            enableNushellIntegration = true;
+          };
+
           go.enable = true;
           uv.enable = true;
           npm.enable = true;
@@ -64,7 +70,6 @@ in
           pkgs.curl
           pkgs.curlie
           pkgs.shellcheck
-          pkgs.unstable.devenv
           pkgs.unstable.secretspec
           pkgs.devbox
           pkgs.copier

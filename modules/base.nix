@@ -64,7 +64,10 @@ in
       system.stateVersion = "24.11";
 
       environment = {
-        shells = [ pkgs.zsh ];
+        shells = [
+          pkgs.bash
+          pkgs.nushell
+        ];
         localBinInPath = true;
         systemPackages = with pkgs; [
           vim
@@ -74,16 +77,12 @@ in
         ];
       };
 
-      users.defaultUserShell = pkgs.zsh;
-      programs.zsh = {
-        enable = true;
-        enableCompletion = true;
-        enableGlobalCompInit = false; # home-manager handles compinit with caching
-      };
+      users.defaultUserShell = pkgs.nushell;
 
       users.users.${owner.username} = {
         isNormalUser = true;
         description = owner.fullName;
+        shell = pkgs.bash;
         extraGroups = [
           "networkmanager"
           "wheel"

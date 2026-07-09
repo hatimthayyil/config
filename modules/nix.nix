@@ -19,7 +19,7 @@ in
           nix-index = {
             enable = true;
             enableBashIntegration = true;
-            enableZshIntegration = true;
+            enableNushellIntegration = true;
           };
           nix-index-database.comma.enable = true;
         };

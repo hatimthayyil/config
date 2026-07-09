@@ -14,12 +14,10 @@ in
           kitty = {
             enable = true;
             shellIntegration.enableBashIntegration = true;
-            shellIntegration.enableZshIntegration = true;
           };
           ghostty = {
             enable = true;
             enableBashIntegration = true;
-            enableZshIntegration = true;
             enableFishIntegration = true;
           };
         };

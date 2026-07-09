@@ -19,7 +19,7 @@ in
           fzf = {
             enable = true;
             enableBashIntegration = true;
-            enableZshIntegration = true;
+            enableNushellIntegration = true;
             tmux.enableShellIntegration = true; # needed for sesh
           };
           ripgrep = {
@@ -34,11 +34,11 @@ in
           skim = {
             enable = true;
             enableBashIntegration = true;
-            enableZshIntegration = true;
           };
 
           tmux = {
             enable = true;
+            shell = "${pkgs.nushell}/bin/nu";
             sensibleOnTop = true;
             mouse = true;
             keyMode = "vi";
@@ -151,7 +151,6 @@ in
           zoxide = {
             enable = true;
             enableBashIntegration = true;
-            enableZshIntegration = true;
             enableNushellIntegration = true;
           };
           sesh = {
@@ -160,25 +159,22 @@ in
           };
           zellij = {
             enable = true;
-            enableZshIntegration = false;
             settings.copy_command = "wl-copy";
           };
 
           lsd = {
             enable = true;
             enableBashIntegration = true;
-            enableZshIntegration = true;
           };
           yazi = {
             enable = true;
             enableBashIntegration = true;
-            enableZshIntegration = true;
+            enableNushellIntegration = true;
             shellWrapperName = "y";
           };
           broot = {
             enable = false;
             enableBashIntegration = true;
-            enableZshIntegration = true;
             enableNushellIntegration = true;
           };
         };
