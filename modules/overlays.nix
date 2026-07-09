@@ -40,7 +40,9 @@ let
 
   # FIXME: remove after throttled service unit fix lands in unstable
   throttled-fix-overlay = final: _prev: {
-    inherit (inputs.nixpkgs-unstable-small.legacyPackages.${final.stdenv.hostPlatform.system}) throttled;
+    inherit (inputs.nixpkgs-unstable-small.legacyPackages.${final.stdenv.hostPlatform.system})
+      throttled
+      ;
   };
 
   default =

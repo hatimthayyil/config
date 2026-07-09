@@ -187,7 +187,11 @@ in
 
           nix-search-tv = {
             enable = true;
-            settings.indexes = [ "nixpkgs" "home-manager" "nixos" ];
+            settings.indexes = [
+              "nixpkgs"
+              "home-manager"
+              "nixos"
+            ];
           };
         };
 
