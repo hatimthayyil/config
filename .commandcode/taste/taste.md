@@ -9,3 +9,6 @@
 - Commit changes in logical discrete units, never combining unrelated changes. Confidence: 0.75
 - Use brief, neutral commit messages without vendor hardware names. Confidence: 0.75
 
+# nix
+- Always consult the home-manager or nixpkgs source tree before adding or modifying program configurations, to understand existing options, integrations, and defaults. Confidence: 0.85
+
