@@ -14,6 +14,7 @@ in
           btop.enable = true;
           bat.enable = true;
           fastfetch.enable = true;
+          tealdeer.enable = true;
 
           fd.enable = true;
           fzf = {
