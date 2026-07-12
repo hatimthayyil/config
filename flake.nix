@@ -75,6 +75,11 @@
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    # Parallel evaluation and builds
+    nix-fast-build = {
+      url = "github:Mic92/nix-fast-build";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     # Nixpak - sandbox any app
     # nixpak = {
     #   url = "github:nixpak/nixpak";
@@ -149,9 +154,29 @@
 
   outputs =
     inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
-      imports = [ (inputs.import-tree ./modules) ];
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } (
+      { config, lib, ... }:
+      {
+        imports = [ (inputs.import-tree ./modules) ];
 
-      flake.templates = import ./templates;
-    };
+        perSystem =
+          { system, ... }:
+          let
+            nixosConfigs = config.flake.nixosConfigurations or { };
+            checksForThisSystem = lib.filterAttrs (
+              _name: nixosConfig: nixosConfig.pkgs.system == system
+            ) nixosConfigs;
+          in
+          {
+            packages.nix-fast-build = inputs.nix-fast-build.packages.${system}.default;
+
+            checks = lib.mapAttrs' (
+              name: nixosConfig:
+              lib.nameValuePair "nixos-${name}" nixosConfig.config.system.build.toplevel
+            ) checksForThisSystem;
+          };
+
+        flake.templates = import ./templates;
+      }
+    );
 }
