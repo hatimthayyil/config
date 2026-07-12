@@ -24,6 +24,16 @@ in
         registry = lib.mapAttrs (_: value: { flake = value; }) inputs;
         nixPath = lib.mapAttrsToList (key: value: "${key}=${value.to.path}") config.nix.registry;
 
+        distributedBuilds = true;
+        buildMachines = [
+          {
+            hostName = "eu.nixbuild.net";
+            system = "x86_64-linux";
+            maxJobs = 100;
+            supportedFeatures = [ "benchmark" "big-parallel" ];
+          }
+        ];
+
         settings = {
           connect-timeout = 5;
           log-lines = 25;

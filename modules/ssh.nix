@@ -33,11 +33,30 @@ in
             StrictHostKeyChecking = "no";
             UserKnownHostsFile = "/dev/null";
           };
+          "eu.nixbuild.net" = {
+            IdentityFile = "~/.ssh/id_ed25519";
+            PubkeyAcceptedKeyTypes = "ssh-ed25519";
+            ServerAliveInterval = 60;
+          };
         };
       };
 
       # Dedicated ssh-agent (replaces gpg-agent's SSH role).
       services.ssh-agent.enable = true;
+    };
+
+    programs.ssh = {
+      extraConfig = ''
+        Host eu.nixbuild.net
+          PubkeyAcceptedKeyTypes ssh-ed25519
+          ServerAliveInterval 60
+          IdentityFile /home/${owner.username}/.ssh/id_ed25519
+      '';
+
+      knownHosts.nixbuild = {
+        hostNames = [ "eu.nixbuild.net" ];
+        publicKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPIQCZc54poJ8vqawd8TraNryQeJnvH1eLpIDgbiqymM";
+      };
     };
   };
 }
