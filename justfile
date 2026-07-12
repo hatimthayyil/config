@@ -1,5 +1,5 @@
 build:
-    nh os build .
+    nh os build . -kK
 
 switch:
     nh os switch .
