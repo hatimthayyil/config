@@ -109,7 +109,7 @@ in
             pkgs.mr
             pkgs.hut
             # pkgs.commitlint
-            pkgs.commitizen
+            # pkgs.commitizen
             pkgs.git-machete
             pkgs.git-imerge
             pkgs.git-annex
