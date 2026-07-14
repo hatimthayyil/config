@@ -1,0 +1,103 @@
+# System closure diff
+<<< /nix/store/hh3z3zdsxw5690lbcbqqgncwydy5kav3-nixos-system-eagle-26.11.20260708.0bb7ec5
+>>> /nix/store/p6pm1g18ywabbf5sjlf6y070bvs1za32-nixos-system-eagle-26.11.20260711.e7a3ca8
+Version changes:
+[C.]  #01  attica                        5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #02  awscli2                       2.34.24, 2.34.24-fish-completions -> 2.35.11, 2.35.11-fish-completions
+[U*]  #03  baloo                         6.27.0 -> 6.28.0
+[U*]  #04  bluez-qt                      6.27.0 -> 6.28.0
+[C*]  #05  breeze-icons                  5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #06  cargo-nextest                 0.9.138, 0.9.138-fish-completions -> 0.9.140, 0.9.140-fish-completions
+[U.]  #07  deno                          2.8.3 -> 2.9.2
+[U.]  #08  discord                       1.0.144, 1.0.144-fish-completions -> 1.0.146, 1.0.146-fish-completions
+[U.]  #09  docker-buildx                 0.31.1 -> 0.35.0
+[C*]  #10  frameworkintegration          5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[U.]  #11  git-machete                   3.44.0, 3.44.0-fish-completions -> 3.44.1, 3.44.1-fish-completions
+[U.]  #12  gopls                         0.22.0 -> 0.23.0
+[U.]  #13  kanata                        1.11.0 -> 1.12.0
+[C.]  #14  karchive                      5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C*]  #15  kauth                         5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C.]  #16  kbookmarks                    5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #17  kcalendarcore                 6.27.0 -> 6.28.0
+[U*]  #18  kcmutils                      6.27.0 -> 6.28.0
+[C.]  #19  kcodecs                       5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #20  kcolorscheme                  6.27.0 -> 6.28.0
+[C.]  #21  kcompletion                   5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C*]  #22  kconfig                       5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C.]  #23  kconfigwidgets                5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #24  kcontacts                     6.27.0 -> 6.28.0
+[C*]  #25  kcoreaddons                   5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[C.]  #26  kcrash                        5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #27  kdav                          6.27.0 -> 6.28.0
+[C.]  #28  kdbusaddons                   5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #29  kdeclarative                  6.27.0 -> 6.28.0
+[U*]  #30  kded                          6.27.0 -> 6.28.0
+[U.]  #31  kdesu                         6.27.0 -> 6.28.0
+[C.]  #32  kdnssd                        5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C.]  #33  kdoctools                     5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U*]  #34  kfilemetadata                 6.27.0 -> 6.28.0
+[C.]  #35  kglobalaccel                  5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C*]  #36  kguiaddons                    5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #37  kholidays                     6.27.0 -> 6.28.0
+[C.]  #38  ki18n                         5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[C*]  #39  kiconthemes                   5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[U.]  #40  kidletime                     6.27.0 -> 6.28.0
+[U*]  #41  kimageformats                 6.27.0 -> 6.28.0
+[C*]  #42  kio                           5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #43  kirigami                      6.27.0 -> 6.28.0
+[U.]  #44  kitemmodels                   6.27.0 -> 6.28.0
+[C.]  #45  kitemviews                    5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C.]  #46  kjobwidgets                   5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C.]  #47  knewstuff                     5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[C.]  #48  knotifications                5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[U.]  #49  knotifyconfig                 6.27.0 -> 6.28.0
+[C*]  #50  kpackage                      5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #51  kparts                        6.27.0 -> 6.28.0
+[U.]  #52  kpty                          6.27.0 -> 6.28.0
+[U.]  #53  kquickcharts                  6.27.0 -> 6.28.0
+[U.]  #54  krunner                       6.27.0 -> 6.28.0
+[C*]  #55  kservice                      5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[U.]  #56  kstatusnotifieritem           6.27.0 -> 6.28.0
+[U.]  #57  ksvg                          6.27.0 -> 6.28.0
+[U*]  #58  ktexteditor                   6.27.0 -> 6.28.0
+[U.]  #59  ktexttemplate                 6.27.0 -> 6.28.0
+[C.]  #60  ktextwidgets                  5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[U.]  #61  kunitconversion               6.27.0 -> 6.28.0
+[U.]  #62  kuserfeedback                 6.27.0 -> 6.28.0
+[C*]  #63  kwallet                       5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C.]  #64  kwidgetsaddons                5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C.]  #65  kwindowsystem                 5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C.]  #66  kxmlgui                       5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[U.]  #67  libva-utils                   2.23.0, 2.23.0-fish-completions -> 2.24.0, 2.24.0-fish-completions
+[U.]  #68  mise                          2026.7.1, 2026.7.1-fish-completions -> 2026.7.4, 2026.7.4-fish-completions
+[U.]  #69  modemmanager-qt               6.27.0 -> 6.28.0
+[U.]  #70  networkmanager-qt             6.27.0 -> 6.28.0
+[U.]  #71  nh                            4.4.0, 4.4.0-fish-completions -> 4.4.1, 4.4.1-fish-completions
+[U.]  #72  nh-unwrapped                  4.4.0 -> 4.4.1
+[U.]  #73  nixos-system-eagle            26.11.20260708.0bb7ec5 -> 26.11.20260711.e7a3ca8
+[U*]  #74  nushell                       0.113.1, 0.113.1-fish-completions -> 0.114.0, 0.114.0-fish-completions
+[U.]  #75  oxygen-icons                  6.27.0 -> 6.28.0
+[U.]  #76  prison                        6.27.0 -> 6.28.0
+[U.]  #77  purpose                       6.27.0 -> 6.28.0
+[U.]  #78  python3.13-openusd            26.03 -> 26.05
+[U*]  #79  qqc2-desktop-style            6.27.0 -> 6.28.0
+[C*]  #80  solid                         5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[C.]  #81  sonnet                        5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[C.]  #82  source                        <none> x22 -> <none> x23
+[U.]  #83  sponsorblock                  6.1.6 -> 6.1.7
+[C.]  #84  syndication                   5.116.0, 6.27.0 -> 5.116.0, 6.28.0
+[C.]  #85  syntax-highlighting           5.116.0, 5.116.0-bin, 6.27.0 -> 5.116.0, 5.116.0-bin, 6.28.0
+[U.]  #86  threadweaver                  6.27.0 -> 6.28.0
+[U.]  #87  tombi                         1.1.7 -> 1.2.0
+[U.]  #88  ungoogled-chromium            150.0.7871.46, 150.0.7871.46-fish-completions, 150.0.7871.46-sandbox -> 150.0.7871.114, 150.0.7871.114-fish-completions, 150.0.7871.114-sandbox
+[U.]  #89  ungoogled-chromium-unwrapped  150.0.7871.46, 150.0.7871.46-sandbox -> 150.0.7871.114, 150.0.7871.114-sandbox
+[U.]  #90  usage                         3.5.3, 3.5.3-fish-completions -> 3.5.4, 3.5.4-fish-completions
+[U.]  #91  warp-terminal                 0.2026.06.24.09.19.stable_03, 0.2026.06.24.09.19.stable_03-fish-completions -> 0.2026.07.08.17.54.stable_02, 0.2026.07.08.17.54.stable_02-fish-completions
+[U.]  #92  webkitgtk                     2.52.4+abi=4.1, 2.52.4+abi=4.1-fish-completions -> 2.52.5+abi=4.1, 2.52.5+abi=4.1-fish-completions
+[U*]  #93  wireshark-cli                 4.6.6 -> 4.6.7
+[U.]  #94  yaml-language-server          1.23.0 -> 1.24.0
+[U.]  #95  zed-editor                    1.9.0 -> 1.10.0
+[U.]  #96  zed-editor-wrapped            1.9.0, 1.9.0-fish-completions -> 1.10.0, 1.10.0-fish-completions
+Added packages:
+[A.]  #1  queries-rust-injections.scm  <none>
+Closure size: 10051 -> 10053 (452 paths added, 450 paths removed, delta +2, disk usage +139.4MiB).
