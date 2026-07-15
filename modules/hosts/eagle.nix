@@ -49,6 +49,7 @@
         networking
         opensnitch
         ssh
+        openssh
         security-keys
 
         # Tools
