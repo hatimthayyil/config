@@ -1,0 +1,35 @@
+# System closure diff
+<<< /nix/store/9wi9km3c7r7sv93njc3japrqhpbg4kpp-nixos-system-eagle-26.11.20260711.e7a3ca8
+>>> /nix/store/pi15cm2zbk30srmnw8f5y5iy3rn32ar4-nixos-system-eagle-26.11.20260714.18b9261
+Version changes:
+[U*]  #01  fwupd                  2.1.5, 2.1.5-lib, 2.1.5-man -> 2.1.6, 2.1.6-lib, 2.1.6-man
+[U.]  #02  gh-dash                4.25.0, 4.25.0-fish-completions -> 4.25.2, 4.25.2-fish-completions
+[U.]  #03  gh-poi                 0.17.2 -> 0.18.1
+[U.]  #04  just                   1.55.1, 1.55.1-fish-completions, 1.55.1-man -> 1.56.0, 1.56.0-fish-completions, 1.56.0-man
+[U.]  #05  liblouis               3.33.0 -> 3.38.0
+[U.]  #06  libqalculate           5.11.0 -> 5.12.0
+[U.]  #07  minizip-ng             4.2.1 -> 4.2.2
+[U.]  #08  minizip-ng-compat      4.2.1 -> 4.2.2
+[U.]  #09  mise                   2026.7.4, 2026.7.4-fish-completions -> 2026.7.5, 2026.7.5-fish-completions
+[U.]  #10  nixos-system-eagle     26.11.20260711.e7a3ca8 -> 26.11.20260714.18b9261
+[U.]  #11  sesh                   2.26.2, 2.26.2-fish-completions -> 2.27.0, 2.27.0-fish-completions
+[U.]  #12  sioyek                 2.0.0-unstable-2026-06-13, 2.0.0-unstable-2026-06-13-fish-completions -> 2.0.0-unstable-2026-07-11, 2.0.0-unstable-2026-07-11-fish-completions
+[U.]  #13  skim                   5.0.0, 5.0.0-fish-completions, 5.0.0-man -> 5.1.0, 5.1.0-fish-completions, 5.1.0-man
+[C.]  #14  source                 <none> x24 -> <none> x23
+[U.]  #15  sponsorblock           6.1.6 -> 6.1.7
+[U.]  #16  statix                 0.5.8-unstable-2026-06-28, 0.5.8-unstable-2026-06-28-fish-completions -> 0.5.8-unstable-2026-07-10, 0.5.8-unstable-2026-07-10-fish-completions
+[U.]  #17  syncthing              2.1.1, 2.1.1-fish-completions -> 2.1.2, 2.1.2-fish-completions
+[U.]  #18  vpnc-scripts-unstable  2023-01-03 -> 2026-06-29
+[U.]  #19  wxwidgets              3.2.9 -> 3.2.11
+[U.]  #20  zotero                 9.0.5, 9.0.5-fish-completions -> 9.0.6, 9.0.6-fish-completions
+Added packages:
+[A.]  #1  queries-rust-injections.scm  <none>
+Removed packages:
+[R.]  #1  nix-flake-upgrade                    <none>
+[R.]  #2  unit-flake-upgrade.service           <none>
+[R.]  #3  unit-nixos-upgrade.service           <none>
+[R.]  #4  unit-nixos-upgrade.timer             <none>
+[R.]  #5  unit-script-flake-upgrade-pre-start  <none>
+[R.]  #6  unit-script-flake-upgrade-start      <none>
+[R.]  #7  unit-script-nixos-upgrade-start      <none>
+Closure size: 10055 -> 10048 (201 paths added, 208 paths removed, delta -7, disk usage +5.1MiB).
