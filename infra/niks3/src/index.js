@@ -15,6 +15,7 @@ export class Niks3Container extends Container {
     NIKS3_API_TOKEN: workerEnv.NIKS3_API_TOKEN,
     NIKS3_CACHE_URL: workerEnv.NIKS3_CACHE_URL,
     NIKS3_DB: workerEnv.NIKS3_DB,
+    NIKS3_OIDC_CONFIG_JSON: workerEnv.NIKS3_OIDC_CONFIG_JSON,
     NIKS3_S3_ACCESS_KEY: workerEnv.NIKS3_S3_ACCESS_KEY,
     NIKS3_S3_BUCKET: "niks3",
     NIKS3_S3_BUCKET_LOOKUP: "path",

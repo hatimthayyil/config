@@ -35,6 +35,9 @@ and test before upgrading.
    The first output is `NIKS3_SIGN_KEY`; retain its public-key form for Nix
    clients (`nix key convert-secret-to-public`). The random value is
    `NIKS3_API_TOKEN`.
+6. Store `NIKS3_OIDC_CONFIG_JSON` — the OIDC provider config that lets
+   GitHub Actions authenticate without a static token (see
+   [CI integration](#ci-integration) below).
 
 From the repository root, enter the devenv shell, set every declaration in
 [secretspec.toml](../../secretspec.toml), then sync and deploy:
@@ -63,6 +66,38 @@ nix.settings = {
 
 Point upload clients at the deployed Worker URL (`https://niks3.<account>
 .workers.dev` initially) and authenticate with `NIKS3_API_TOKEN`.
+
+## CI integration
+
+GitHub Actions authenticates via OIDC — no static token in the workflow.
+`NIKS3_OIDC_CONFIG_JSON` scopes this down to a specific repository:
+
+```json
+{
+  "providers": {
+    "github": {
+      "issuer": "https://token.actions.githubusercontent.com",
+      "audience": "https://niks3.<account>.workers.dev",
+      "bound_claims": { "repository": ["<owner>/<repo>"] }
+    }
+  }
+}
+```
+
+The workflow needs `permissions: id-token: write` and the
+[niks3-action](https://github.com/Mic92/niks3-action):
+
+```yaml
+permissions:
+  id-token: write
+steps:
+  - uses: actions/checkout@v4
+  - uses: cachix/install-nix-action@v27
+  - uses: Mic92/niks3-action@v1
+    with:
+      server-url: https://niks3.<account>.workers.dev
+  - run: nix build .#foo
+```
 
 ## Garbage collection
 

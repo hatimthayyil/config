@@ -10,4 +10,9 @@ printf '%s\n' "$NIKS3_SIGN_KEY" > "$sign_key_path"
 export NIKS3_SIGN_KEY_PATHS="$sign_key_path"
 unset NIKS3_SIGN_KEY
 
+oidc_config_path=/tmp/niks3-oidc-config.json
+printf '%s\n' "$NIKS3_OIDC_CONFIG_JSON" > "$oidc_config_path"
+export NIKS3_OIDC_CONFIG="$oidc_config_path"
+unset NIKS3_OIDC_CONFIG_JSON
+
 exec /usr/local/bin/niks3-server
