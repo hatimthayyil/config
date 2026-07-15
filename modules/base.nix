@@ -16,7 +16,6 @@ in
     }:
     {
       imports = [
-        inputs.nix-flake-upgrade.nixosModule."x86_64-linux"
         inputs.nix-flatpak.nixosModules.nix-flatpak
       ];
 
@@ -109,30 +108,6 @@ in
         packages = with pkgs; [
           kdePackages.kate
         ];
-      };
-
-      system.autoUpgradeFlake = {
-        enable = true;
-        dates = "03:15";
-        allowReboot = true;
-        flake-dir = "${config.users.users.${owner.username}.home}/code/config";
-        user = owner.username;
-        nix-flake-upgrade-flags = [
-          "--update-lock-file"
-          "--push"
-          "--os"
-          "--os-only-when-changed"
-        ];
-      };
-
-      # git (called by nix flake update) needs bash in PATH for hooks/subcommands
-      systemd.services.flake-upgrade.path = [ pkgs.bash ];
-
-      # Headless bot commits must not sign (service can't sign interactively).
-      systemd.services.flake-upgrade.environment = {
-        GIT_CONFIG_COUNT = "1";
-        GIT_CONFIG_KEY_0 = "commit.gpgsign";
-        GIT_CONFIG_VALUE_0 = "false";
       };
 
       # gpg-agent kept for pass (GPG) only; SSH uses a dedicated ssh-agent.

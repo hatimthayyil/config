@@ -65,11 +65,6 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Automatic upgradge of Nix
-    nix-flake-upgrade = {
-      url = "github:hatimthayyil/nix-flake-upgrade";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     # Flake based configuration of Treefmt
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
