@@ -1,0 +1,32 @@
+name = "niks3"
+main = "src/index.js"
+compatibility_date = "2026-07-13"
+workers_dev = true
+
+[observability]
+enabled = true
+
+[secrets]
+required = [
+  "NIKS3_API_TOKEN",
+  "NIKS3_CACHE_URL",
+  "NIKS3_DB",
+  "NIKS3_S3_ACCESS_KEY",
+  "NIKS3_S3_ENDPOINT",
+  "NIKS3_S3_SECRET_KEY",
+  "NIKS3_SIGN_KEY",
+]
+
+[[containers]]
+class_name = "Niks3Container"
+image = "./Dockerfile"
+instance_type = "basic"
+max_instances = 1
+
+[[durable_objects.bindings]]
+name = "NIKS3_CONTAINER"
+class_name = "Niks3Container"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Niks3Container"]

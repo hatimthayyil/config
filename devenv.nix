@@ -9,6 +9,15 @@
     pkgs.just
   ];
 
+  languages.javascript = {
+    enable = true;
+    directory = "./infra/niks3";
+    pnpm = {
+      enable = true;
+      install.enable = true;
+    };
+  };
+
   # languages.nix.enable = true;
 
   treefmt = {

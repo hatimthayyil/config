@@ -16,3 +16,7 @@ devenv.local.yaml
 *.local.*
 
 .codesearch.db
+
+# Node / Wrangler (infra/)
+node_modules/
+.wrangler/

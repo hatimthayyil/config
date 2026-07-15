@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+# devenv exposes node_modules/.bin via a PATH entry relative to the shell's
+# original directory, which breaks once we cd here. Prepend an absolute path
+# so the pnpm-pinned wrangler wins over any other wrangler on PATH.
+PATH="$PWD/node_modules/.bin:$PATH"
+export PATH
+
+command -v docker >/dev/null || {
+  printf '%s\n' 'Docker is required for Cloudflare Containers image builds.' >&2
+  exit 1
+}
+
+command -v wrangler >/dev/null || {
+  printf '%s\n' 'Wrangler is required; enter the devenv shell first.' >&2
+  exit 1
+}
+
+if [[ ! -d node_modules/@cloudflare/containers ]]; then
+  printf '%s\n' 'Installing the Worker dependency…' >&2
+  pnpm install
+fi
+
+CLOUDFLARE_ACCOUNT_ID="$(secretspec get CLOUDFLARE_ACCOUNT_ID --reason "select the Cloudflare account for wrangler deploy")"
+export CLOUDFLARE_ACCOUNT_ID
+
+wrangler deploy --config wrangler.toml "$@"
