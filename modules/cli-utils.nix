@@ -207,6 +207,7 @@ in
           pkgs.sd
           pkgs.scooter
           pkgs.kondo
+          pkgs.tuxedo
         ];
       };
     };
