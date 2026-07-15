@@ -7,13 +7,15 @@ on:
 jobs:
   nixos:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v27
         with:
           nix_path: nixpkgs=channel:nixos-unstable
-      - uses: cachix/cachix-action@v15
+      - uses: Mic92/niks3-action@v1
         with:
-          name: hatim
-          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+          server-url: https://niks3.thayyil.workers.dev
       - run: nix build .#nixosConfigurations.eagle.config.system.build.toplevel
