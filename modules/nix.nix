@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   ...
 }:
 let
@@ -34,6 +35,7 @@ in
           # Cache
           pkgs.cachix
           pkgs.attic-client
+          inputs.niks3.packages.${pkgs.system}.niks3
 
           # Dev
           pkgs.nixd

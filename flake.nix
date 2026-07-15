@@ -55,6 +55,11 @@
     #   url = "github:mic92/sops-nix";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+    # Niks3 CLI, tracking upstream main
+    niks3 = {
+      url = "github:Mic92/niks3";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Nix-index
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
@@ -171,8 +176,7 @@
             packages.nix-fast-build = inputs.nix-fast-build.packages.${system}.default;
 
             checks = lib.mapAttrs' (
-              name: nixosConfig:
-              lib.nameValuePair "nixos-${name}" nixosConfig.config.system.build.toplevel
+              name: nixosConfig: lib.nameValuePair "nixos-${name}" nixosConfig.config.system.build.toplevel
             ) checksForThisSystem;
           };
 
