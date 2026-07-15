@@ -51,10 +51,10 @@
     #   url = "github:nix-community/impermanence";
     # };
     # Secrets management.
-    # sops-nix = {
-    #   url = "github:mic92/sops-nix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Niks3 CLI, tracking upstream main
     niks3 = {
       url = "github:Mic92/niks3";

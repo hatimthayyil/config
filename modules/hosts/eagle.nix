@@ -12,6 +12,7 @@
         containers
         package-management
         guest-systems
+        secrets
 
         # Hardware
         hardware-laptop
