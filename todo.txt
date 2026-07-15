@@ -1,0 +1,5 @@
+2026-07-15 Add agenix or sops-nix for authenticating niks3 to do automatic local uploads of built store items +niks3
+2026-07-15 Fix nix-fast-build
+2026-07-15 Fix nixbuild.net distributed building
+2026-07-15 Reduce the container stayactive duration from 15 minutes
+2026-07-15 Fix lagging tmux
