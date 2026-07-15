@@ -39,7 +39,11 @@ in
 
           tmux = {
             enable = true;
-            shell = "${pkgs.nushell}/bin/nu";
+            # default-shell drives tmux's *internal* job execution (status-line
+            # #() commands, popups, plugin scripts) as well as new panes, so it
+            # must stay POSIX (nu -c can't even parse `2>&1`). Panes still land
+            # in nushell via `default-command` below.
+            shell = "${pkgs.bash}/bin/bash";
             sensibleOnTop = true;
             mouse = true;
             keyMode = "vi";
@@ -91,6 +95,10 @@ in
                   set -g @tokyo-night-tmux_show_path 1
                   set -g @tokyo-night-tmux_path_format 'relative'
                   set -g @tokyo-night-tmux_show_git 1
+                  # explicitly off: the "unset" state is NOT off (script only
+                  # skips on the literal string "0"), so left unset it fires
+                  # 3 gh api calls (pr list/status, issue list) every ~20s
+                  set -g @tokyo-night-tmux_show_wbg 0
                 '';
               }
               # continuum must be last: it appends to status-right; any plugin
@@ -107,6 +115,14 @@ in
             extraConfig = ''
               set -ag terminal-overrides ",xterm-256color:RGB"
               set -g extended-keys on
+
+              # default-shell (bash) stays POSIX for tmux internals; panes
+              # exec into nushell as the actual interactive shell
+              set -g default-command "exec ${pkgs.nushell}/bin/nu -l"
+
+              # tmux-sensible sets this to 5, which is too aggressive for a
+              # status line that shells out to git on every tick
+              set -g status-interval 15
 
               bind v split-window -h -c "#{pane_current_path}"
               bind h split-window -v -c "#{pane_current_path}"
