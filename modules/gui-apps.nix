@@ -32,6 +32,7 @@ in
           pkgs.senpai
           pkgs.discord
           pkgs.element-desktop
+          pkgs.zulip
           # pkgs.zoom-us
           pkgs.drawio
           pkgs.blender
