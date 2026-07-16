@@ -1,6 +1,11 @@
 name: "Setup Nix with niks3 cache"
 description: "Install Nix and configure it to use and push to niks3"
 
+inputs:
+  nixbuild_token:
+    description: "nixbuild.net auth token"
+    required: true
+
 runs:
   using: composite
   steps:
@@ -13,3 +18,6 @@ runs:
     - uses: Mic92/niks3-action@v1
       with:
         server-url: https://niks3.thayyil.workers.dev
+    - uses: nixbuild/nixbuild-action@v25
+      with:
+        nixbuild_token: ${{ inputs.nixbuild_token }}

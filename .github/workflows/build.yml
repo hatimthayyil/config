@@ -13,4 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-nix
+        with:
+          nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
       - run: nix build .#nixosConfigurations.eagle.config.system.build.toplevel

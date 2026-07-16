@@ -14,6 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup-nix
+        with:
+          nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
       - name: Update flake.lock
         run: nix flake update
       - name: Build NixOS configuration
