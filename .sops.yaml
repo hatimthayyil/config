@@ -1,0 +1,7 @@
+keys:
+  - &eagle age1szfzce6tu8qeuqhfg2tmzk6upcgcp85ha08vr8k3clvs89jz499qnfs6m9
+creation_rules:
+  - path_regex: hosts/.*/secrets\.yaml$
+    key_groups:
+      - age:
+          - *eagle

@@ -13,6 +13,7 @@
         package-management
         guest-systems
         secrets
+        niks3-auto-upload
 
         # Hardware
         hardware-laptop
