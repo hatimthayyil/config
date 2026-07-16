@@ -34,7 +34,7 @@ in
             UserKnownHostsFile = "/dev/null";
           };
           "eu.nixbuild.net" = {
-            IdentityFile = "~/.ssh/id_ed25519";
+            IdentityFile = "/etc/ssh/ssh_host_ed25519_key";
             PubkeyAcceptedKeyTypes = "ssh-ed25519";
             ServerAliveInterval = 60;
           };
@@ -50,7 +50,7 @@ in
         Host eu.nixbuild.net
           PubkeyAcceptedKeyTypes ssh-ed25519
           ServerAliveInterval 60
-          IdentityFile /home/${owner.username}/.ssh/id_ed25519
+          IdentityFile /etc/ssh/ssh_host_ed25519_key
       '';
 
       knownHosts.nixbuild = {
