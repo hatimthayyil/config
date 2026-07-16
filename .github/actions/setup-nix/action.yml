@@ -23,3 +23,11 @@ runs:
     - uses: nixbuild/nixbuild-action@v25
       with:
         nixbuild_token: ${{ inputs.nixbuild_token }}
+    # nixbuild-action only advertises x86_64/aarch64 builders, but the
+    # system closure also needs i686-linux builds, which nixbuild.net
+    # supports on the same host.
+    - shell: bash
+      run: |
+        conf="${NIX_CONFIG#include }"
+        builders_file="$(sed -n 's/^builders = @//p' "$conf")"
+        echo "nixbuild i686-linux - 200 1 big-parallel,benchmark,kvm,nixos-test" >> "$builders_file"
