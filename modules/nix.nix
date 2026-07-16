@@ -36,7 +36,7 @@ in
           pkgs.cachix
           pkgs.attic-client
           inputs.niks3.packages.${pkgs.system}.niks3
-          pkgs.nix-fast-build
+          inputs.nix-fast-build.packages.${pkgs.system}.default
 
           # Dev
           pkgs.nixd
