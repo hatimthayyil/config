@@ -23,6 +23,9 @@ runs:
     - uses: nixbuild/nixbuild-action@v25
       with:
         nixbuild_token: ${{ inputs.nixbuild_token }}
+        settings: |
+          substituters = https://cache.nixos.org/ https://cache.thayyil.net
+          trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= cache.thayyil.net:OCyxFK7dzZQPwvpWU0SPSqjH9cpxTfREy/dIJSLRClM=
     # nixbuild-action only advertises x86_64/aarch64 builders, but the
     # system closure also needs i686-linux builds, which nixbuild.net
     # supports on the same host.
