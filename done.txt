@@ -1,0 +1,3 @@
+x 2026-07-18 2026-07-15 Add agenix or sops-nix for authenticating niks3 to do automatic local uploads of built store items +niks3
+x 2026-07-18 2026-07-15 Fix nixbuild.net distributed building
+x 2026-07-18 2026-07-15 Fix lagging tmux
