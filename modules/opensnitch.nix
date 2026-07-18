@@ -94,7 +94,7 @@ in
           ungoogled-chromium = allowPkg "ungoogled-chromium-unwrapped";
           telegram-desktop = allowPkg "telegram-desktop";
           claude-desktop = allowPkg "claude-desktop";
-          claude-cli = allowRegex "claude-cli" "^${home}/\\.local/share/claude/versions/[^/]+/claude$";
+          claude-code = allowPkg "claude-code";
           nextcloud-client = allowPkg "nextcloud-client";
           zotero = allowPkg "zotero";
 
