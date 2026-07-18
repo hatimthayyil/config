@@ -35,17 +35,10 @@ in
         enableFishIntegration = true;
         settings = {
           add_newline = false; # no blank line before prompt
-          palette = "tokyo-night"; # match tmux theme
 
-          palettes.tokyo-night = {
-            blue = "#7aa2f7";
-            cyan = "#7dcfff";
-            green = "#9ece6a";
-            magenta = "#bb9af7";
-            red = "#f7768e";
-            yellow = "#e0af68";
-            orange = "#ff9e64";
-          };
+          # no fixed palette: named colors resolve through the terminal's
+          # ANSI table, so the prompt follows the active theme (and the
+          # light/dark toggle) instead of pinning one theme's hex values
 
           character = {
             success_symbol = "[❯](bold magenta)";
