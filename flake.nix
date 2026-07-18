@@ -153,6 +153,11 @@
       url = "git+file:///hatimthayyil/code/tmux-modus";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Modus themes for Claude Code (local until pushed to GitHub)
+    claude-code-modus = {
+      url = "git+file:///hatimthayyil/code/claude-code-modus";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # MacOS Ventura, and other Guest OSes
     # nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
   };
