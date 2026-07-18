@@ -14,6 +14,26 @@ in
           tmux set -g @tokyo-night-tmux_theme day
         fi
       '';
+      # flips the colors of every running kitty instance alongside the tmux
+      # theme. Goes via kitty's remote-control sockets (see listen_on in
+      # modules/terminals.nix) because tmux run-shell has no TTY, so the
+      # default TTY transport of `kitten @` cannot reach kitty from here.
+      # No-op when no kitty is running, e.g. under ghostty or SSH.
+      kittyThemeToggle = pkgs.writeShellScript "kitty-theme-toggle" ''
+        night="${pkgs.kitty-themes}/share/kitty-themes/themes/tokyo_night_night.conf"
+        day="${pkgs.kitty-themes}/share/kitty-themes/themes/tokyo_night_day.conf"
+        for sock in /tmp/kitty-sock-*; do
+          [ -S "$sock" ] || continue
+          current_bg="$(${pkgs.kitty}/bin/kitten @ --to "unix:$sock" get-colors 2>/dev/null \
+            | grep "^background " | tr -s ' ' | cut -d' ' -f2)"
+          case "$current_bg" in
+          "") continue ;; # stale socket left by a dead kitty
+          "#e1e2e7") target="$night" ;;
+          *) target="$day" ;;
+          esac
+          ${pkgs.kitty}/bin/kitten @ --to "unix:$sock" set-colors --all --configured "$target" 2>/dev/null || true
+        done
+      '';
     in
     {
       home-manager.users.${owner.username} = {
@@ -137,11 +157,13 @@ in
             bind BSpace switch-client -l
             bind S set-window-option synchronize-panes
 
-            # toggle tokyo-night-tmux between its dark (night) and light (day) variants
+            # toggle tokyo-night-tmux (and kitty, if that's the host terminal) between
+            # dark (night) and light (day) variants
             # overrides tmux's default clock-mode binding on this key, which is unused here
             bind t \
               run-shell ${tokyoNightToggle} \; \
-              run-shell "${pkgs.tmuxPlugins.tokyo-night-tmux}/share/tmux-plugins/tokyo-night-tmux/tokyo-night.tmux"
+              run-shell "${pkgs.tmuxPlugins.tokyo-night-tmux}/share/tmux-plugins/tokyo-night-tmux/tokyo-night.tmux" \; \
+              run-shell ${kittyThemeToggle}
 
             set -g detach-on-destroy off
             set -g set-clipboard on
