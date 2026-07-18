@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, inputs, ... }:
 let
   inherit (config) owner;
 in
@@ -6,12 +6,13 @@ in
   flake.modules.nixos.terminals =
     { pkgs, ... }:
     let
-      tokyoNightToggle = pkgs.writeShellScript "tokyo-night-toggle" ''
-        current="$(tmux show -gv @tokyo-night-tmux_theme)"
-        if [ "$current" = day ]; then
-          tmux set -g @tokyo-night-tmux_theme night
+      tmuxModus = inputs.tmux-modus.packages.${pkgs.stdenv.hostPlatform.system}.default;
+      modusToggle = pkgs.writeShellScript "modus-toggle" ''
+        current="$(tmux show -gv @modus_theme)"
+        if [ "$current" = operandi ]; then
+          tmux set -g @modus_theme vivendi
         else
-          tmux set -g @tokyo-night-tmux_theme day
+          tmux set -g @modus_theme operandi
         fi
       '';
       # flips the colors of every running kitty instance alongside the tmux
@@ -82,23 +83,9 @@ in
               '';
             }
             {
-              plugin = tokyo-night-tmux;
+              plugin = tmuxModus;
               extraConfig = ''
-                set -g @tokyo-night-tmux_theme 'night'
-                set -g @tokyo-night-tmux_transparent 0
-                set -g @tokyo-night-tmux_window_id_style 'digital'
-                set -g @tokyo-night-tmux_pane_id_style 'hsquare'
-                set -g @tokyo-night-tmux_zoom_id_style 'dsquare'
-                set -g @tokyo-night-tmux_show_datetime 1
-                set -g @tokyo-night-tmux_date_format 'DMY'
-                set -g @tokyo-night-tmux_time_format '24H'
-                set -g @tokyo-night-tmux_show_path 1
-                set -g @tokyo-night-tmux_path_format 'relative'
-                set -g @tokyo-night-tmux_show_git 1
-                # explicitly off: the "unset" state is NOT off (script only
-                # skips on the literal string "0"), so left unset it fires
-                # 3 gh api calls (pr list/status, issue list) every ~20s
-                set -g @tokyo-night-tmux_show_wbg 0
+                set -g @modus_theme 'vivendi'
               '';
             }
             # continuum must be last: it appends to status-right; any plugin
@@ -120,8 +107,7 @@ in
             # exec into nushell as the actual interactive shell
             set -g default-command "exec ${pkgs.nushell}/bin/nu -l"
 
-            # tmux-sensible sets this to 5, which is too aggressive for a
-            # status line that shells out to git on every tick
+            # tmux-sensible sets this to 5; 15 is plenty for a clock
             set -g status-interval 15
 
             bind v split-window -h -c "#{pane_current_path}"
@@ -157,12 +143,12 @@ in
             bind BSpace switch-client -l
             bind S set-window-option synchronize-panes
 
-            # toggle between dark and light: tokyo-night-tmux night/day for the
-            # status line, modus vivendi/operandi for kitty (if host terminal)
+            # toggle modus between vivendi (dark) and operandi (light) across
+            # the tmux status line and kitty (if that's the host terminal)
             # overrides tmux's default clock-mode binding on this key, which is unused here
             bind t \
-              run-shell ${tokyoNightToggle} \; \
-              run-shell "${pkgs.tmuxPlugins.tokyo-night-tmux}/share/tmux-plugins/tokyo-night-tmux/tokyo-night.tmux" \; \
+              run-shell ${modusToggle} \; \
+              run-shell "${tmuxModus}/share/tmux-plugins/modus/modus.tmux" \; \
               run-shell ${kittyThemeToggle}
 
             set -g detach-on-destroy off

@@ -646,6 +646,7 @@
         "nvf": "nvf",
         "pre-commit-hooks": "pre-commit-hooks",
         "sops-nix": "sops-nix",
+        "tmux-modus": "tmux-modus",
         "treefmt-nix": "treefmt-nix_3"
       }
     },
@@ -713,6 +714,26 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "tmux-modus": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1784401540,
+        "narHash": "sha256-mOD7lFAQ22qpi1RjSAKu2eXdShV7nXEs8PYwUWlP8tg=",
+        "ref": "refs/heads/main",
+        "rev": "dcbcb39e6549c1dd7be1b38dc1026e0f7c4b3f06",
+        "revCount": 2,
+        "type": "git",
+        "url": "file:///hatimthayyil/code/tmux-modus"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///hatimthayyil/code/tmux-modus"
       }
     },
     "treefmt-nix": {

@@ -148,6 +148,11 @@
       url = "github:MrOtherGuy/firefox-csshacks";
       flake = false;
     };
+    # Modus theme for tmux (local until pushed to GitHub)
+    tmux-modus = {
+      url = "git+file:///hatimthayyil/code/tmux-modus";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # MacOS Ventura, and other Guest OSes
     # nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
   };
