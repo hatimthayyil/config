@@ -3,7 +3,7 @@ let
   inherit (config) owner;
 in
 {
-  flake.modules.nixos.cli-utils =
+  flake.modules.nixos.terminals =
     { pkgs, ... }:
     let
       tokyoNightToggle = pkgs.writeShellScript "tokyo-night-toggle" ''
