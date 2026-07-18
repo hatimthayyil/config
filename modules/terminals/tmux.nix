@@ -20,15 +20,15 @@ in
       # default TTY transport of `kitten @` cannot reach kitty from here.
       # No-op when no kitty is running, e.g. under ghostty or SSH.
       kittyThemeToggle = pkgs.writeShellScript "kitty-theme-toggle" ''
-        night="${pkgs.kitty-themes}/share/kitty-themes/themes/tokyo_night_night.conf"
-        day="${pkgs.kitty-themes}/share/kitty-themes/themes/tokyo_night_day.conf"
+        night="${pkgs.kitty-themes}/share/kitty-themes/themes/Modus_Vivendi.conf"
+        day="${pkgs.kitty-themes}/share/kitty-themes/themes/Modus_Operandi.conf"
         for sock in /tmp/kitty-sock-*; do
           [ -S "$sock" ] || continue
           current_bg="$(${pkgs.kitty}/bin/kitten @ --to "unix:$sock" get-colors 2>/dev/null \
             | grep "^background " | tr -s ' ' | cut -d' ' -f2)"
           case "$current_bg" in
           "") continue ;; # stale socket left by a dead kitty
-          "#e1e2e7") target="$night" ;;
+          "#ffffff") target="$night" ;;
           *) target="$day" ;;
           esac
           ${pkgs.kitty}/bin/kitten @ --to "unix:$sock" set-colors --all --configured "$target" 2>/dev/null || true
@@ -157,8 +157,8 @@ in
             bind BSpace switch-client -l
             bind S set-window-option synchronize-panes
 
-            # toggle tokyo-night-tmux (and kitty, if that's the host terminal) between
-            # dark (night) and light (day) variants
+            # toggle between dark and light: tokyo-night-tmux night/day for the
+            # status line, modus vivendi/operandi for kitty (if host terminal)
             # overrides tmux's default clock-mode binding on this key, which is unused here
             bind t \
               run-shell ${tokyoNightToggle} \; \

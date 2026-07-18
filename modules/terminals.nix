@@ -14,7 +14,7 @@ in
           kitty = {
             enable = true;
             shellIntegration.enableBashIntegration = true;
-            themeFile = "tokyo_night_night";
+            themeFile = "Modus_Vivendi";
             settings = {
               # lets the tmux theme toggle (prefix + t) flip kitty's colors
               # in sync via `kitten @ set-colors`. The socket is required:
