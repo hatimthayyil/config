@@ -39,16 +39,17 @@ in
             "${inputs.claude-code-modus}/themes/modus-operandi.json";
         };
 
-        home.packages = [
-          llm-agents.agent-browser
-          llm-agents.beads
-          llm-agents.claude-code
-          llm-agents.codex
-          llm-agents.gemini-cli
-          llm-agents.opencode
-          llm-agents.openspec
-          llm-agents.pi
-          llm-agents.reasonix
+        home.packages = with llm-agents; [
+          agent-browser
+          beads
+          claude-code
+          codex
+          gemini-cli
+          kimi-code
+          opencode
+          openspec
+          pi
+          reasonix
         ];
       };
     };
