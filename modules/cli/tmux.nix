@@ -5,6 +5,16 @@ in
 {
   flake.modules.nixos.cli-utils =
     { pkgs, ... }:
+    let
+      tokyoNightToggle = pkgs.writeShellScript "tokyo-night-toggle" ''
+        current="$(tmux show -gv @tokyo-night-tmux_theme)"
+        if [ "$current" = day ]; then
+          tmux set -g @tokyo-night-tmux_theme night
+        else
+          tmux set -g @tokyo-night-tmux_theme day
+        fi
+      '';
+    in
     {
       home-manager.users.${owner.username} = {
         programs.tmux = {
@@ -126,6 +136,12 @@ in
             bind Space last-window
             bind BSpace switch-client -l
             bind S set-window-option synchronize-panes
+
+            # toggle tokyo-night-tmux between its dark (night) and light (day) variants
+            # overrides tmux's default clock-mode binding on this key, which is unused here
+            bind t \
+              run-shell ${tokyoNightToggle} \; \
+              run-shell "${pkgs.tmuxPlugins.tokyo-night-tmux}/share/tmux-plugins/tokyo-night-tmux/tokyo-night.tmux"
 
             set -g detach-on-destroy off
             set -g set-clipboard on
