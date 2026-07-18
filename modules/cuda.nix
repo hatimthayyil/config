@@ -50,6 +50,11 @@ in
       home-manager.users.${owner.username} = {
         home.packages = [
           toolkit
+          pkgs.mesa-demos
+          pkgs.vulkan-tools
+          pkgs.libva-utils
+          pkgs.clinfo
+          pkgs.lact
         ];
       };
     };

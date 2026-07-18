@@ -44,7 +44,7 @@
         browsers
         gui-apps
         multimedia
-        language-machine
+        ai
 
         # Networking and security
         networking

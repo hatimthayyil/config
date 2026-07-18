@@ -7,10 +7,12 @@ let
   inherit (config) owner;
 in
 {
-  flake.modules.nixos.language-machine =
+  flake.modules.nixos.ai =
     { pkgs, ... }:
+    let
+      llm-agents = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
+    in
     {
-      # NixOS: language model services
       services.ollama = {
         enable = false;
         package = pkgs.stable.ollama-cuda;
@@ -28,7 +30,6 @@ in
         package = pkgs.stable.qdrant;
       };
 
-      # HM: GPU tools and language model clients
       home-manager.users.${owner.username} = {
         # Claude Code custom themes, selected in-app via /theme
         home.file = {
@@ -39,12 +40,15 @@ in
         };
 
         home.packages = [
-          # GPU
-          pkgs.mesa-demos
-          pkgs.vulkan-tools
-          pkgs.libva-utils
-          pkgs.clinfo
-          pkgs.lact
+          llm-agents.agent-browser
+          llm-agents.beads
+          llm-agents.claude-code
+          llm-agents.codex
+          llm-agents.gemini-cli
+          llm-agents.opencode
+          llm-agents.openspec
+          llm-agents.pi
+          llm-agents.reasonix
         ];
       };
     };
