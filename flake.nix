@@ -122,6 +122,7 @@
       url = "github:nix-community/nix4vscode";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    llm-agents.url = "github:numtide/llm-agents.nix";
     # Claude Desktop (Linux port with FHS variant for MCP server support)
     claude-desktop = {
       url = "github:aaddrick/claude-desktop-debian";
