@@ -61,6 +61,8 @@ in
             };
           };
 
+          programs.git-worktree-switcher.enable = true;
+
           programs.difftastic = {
             enable = true;
             git.enable = true;
@@ -114,6 +116,7 @@ in
             pkgs.git-imerge
             pkgs.git-annex
             pkgs.git-absorb
+            pkgs.git-ignore
           ];
         };
     };
