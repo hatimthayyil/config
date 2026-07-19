@@ -15,10 +15,25 @@ runs:
     # Single-user Nix (no daemon): remote builds run in the step's own
     # environment, which nixbuild-action's SSH config and token require.
     - uses: nixbuild/nix-quick-install-action@v35
-      with:
-        nix_conf: |
-          substituters = https://cache.nixos.org https://nix-community.cachix.org https://helix.cachix.org https://cache.thalheim.io
-          trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs= helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs= cache.thalheim.io-1:R7msbosLEZKrxk/lKxf9BTjOOH7Ax3H0Qj0/6wiHOgc=
+    # The flake is the single source of truth for caches (modules/
+    # infrastructure/caches.nix); the runner, nixbuild.net, and eagle all
+    # consume the same list.
+    - id: caches
+      shell: bash
+      run: |
+        caches="$(nix eval --json .#lib.caches)"
+        substituters="$(jq -r '.substituters | join(" ")' <<< "$caches")"
+        keys="$(jq -r '."trusted-public-keys" | join(" ")' <<< "$caches")"
+        {
+          echo "substituters=$substituters"
+          echo "trusted-public-keys=$keys"
+        } >> "$GITHUB_OUTPUT"
+        {
+          echo 'NIX_CONFIG<<EOF'
+          echo "substituters = $substituters"
+          echo "trusted-public-keys = $keys"
+          echo 'EOF'
+        } >> "$GITHUB_ENV"
     - uses: Mic92/niks3-action@v1
       with:
         server-url: https://niks3.thayyil.workers.dev
@@ -28,8 +43,8 @@ runs:
       with:
         nixbuild_token: ${{ inputs.nixbuild_token }}
         settings: |
-          substituters = https://cache.nixos.org/ https://cache.thayyil.net https://nix-community.cachix.org https://helix.cachix.org https://cache.thalheim.io
-          trusted-public-keys = cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= cache.thayyil.net:OCyxFK7dzZQPwvpWU0SPSqjH9cpxTfREy/dIJSLRClM= nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs= helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs= cache.thalheim.io-1:R7msbosLEZKrxk/lKxf9BTjOOH7Ax3H0Qj0/6wiHOgc=
+          substituters = ${{ steps.caches.outputs.substituters }}
+          trusted-public-keys = ${{ steps.caches.outputs.trusted-public-keys }}
     # nixbuild-action only advertises x86_64/aarch64 builders, but the
     # system closure also needs i686-linux builds, which nixbuild.net
     # supports on the same host.
