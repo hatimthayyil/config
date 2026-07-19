@@ -58,6 +58,7 @@ in
                   decentraleyes
                   sidebery
                   unpaywall
+                  onetab
                 ];
                 settings."uBlock0@raymondhill.net".settings = {
                   selectedFilterLists = [
