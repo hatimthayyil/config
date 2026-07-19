@@ -40,16 +40,29 @@ in
         };
 
         home.packages = with llm-agents; [
-          agent-browser
-          beads
+          # Agents
           claude-code
           codex
           gemini-cli
           kimi-code
           opencode
-          openspec
           pi
           reasonix
+
+          agent-browser # headless browser automation
+          apm # agent package manager (Microsoft)
+          beads # issue tracker
+          codegraph # semantic code intelligence
+          ctx # coding session search
+          entire # link coding sessions to code changes
+          herdr # terminal workspace manager
+          jscpd # detect copy/paste duplication
+          lean-ctx
+          openspec
+          plannotator # browser based interactive planner
+          trellis # engineering framework
+          workmux # Git worktree + tmux
+          ralph-tui # Agent loop orchestrator
         ];
       };
     };
