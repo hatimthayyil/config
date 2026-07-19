@@ -854,15 +854,15 @@
       "locked": {
         "lastModified": 1784401540,
         "narHash": "sha256-mOD7lFAQ22qpi1RjSAKu2eXdShV7nXEs8PYwUWlP8tg=",
-        "ref": "refs/heads/main",
+        "owner": "hatimthayyil",
+        "repo": "tmux-modus",
         "rev": "dcbcb39e6549c1dd7be1b38dc1026e0f7c4b3f06",
-        "revCount": 2,
-        "type": "git",
-        "url": "file:///hatimthayyil/code/tmux-modus"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///hatimthayyil/code/tmux-modus"
+        "owner": "hatimthayyil",
+        "repo": "tmux-modus",
+        "type": "github"
       }
     },
     "treefmt-nix": {

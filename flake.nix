@@ -149,9 +149,9 @@
       url = "github:MrOtherGuy/firefox-csshacks";
       flake = false;
     };
-    # Modus theme for tmux (local until pushed to GitHub)
+    # Modus theme for tmux
     tmux-modus = {
-      url = "git+file:///hatimthayyil/code/tmux-modus";
+      url = "github:hatimthayyil/tmux-modus";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Modus themes for Claude Code (local until pushed to GitHub)
