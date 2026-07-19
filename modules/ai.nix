@@ -39,31 +39,36 @@ in
             "${inputs.claude-code-modus}/themes/modus-operandi.json";
         };
 
-        home.packages = with llm-agents; [
-          # Agents
-          claude-code
-          codex
-          gemini-cli
-          kimi-code
-          opencode
-          pi
-          reasonix
+        home.packages =
+          with llm-agents;
+          [
+            # Agents
+            claude-code
+            codex
+            gemini-cli
+            kimi-code
+            opencode
+            pi
+            reasonix
 
-          agent-browser # headless browser automation
-          apm # agent package manager (Microsoft)
-          beads # issue tracker
-          codegraph # semantic code intelligence
-          ctx # coding session search
-          entire # link coding sessions to code changes
-          herdr # terminal workspace manager
-          jscpd # detect copy/paste duplication
-          lean-ctx
-          openspec
-          plannotator # browser based interactive planner
-          trellis # engineering framework
-          workmux # Git worktree + tmux
-          ralph-tui # Agent loop orchestrator
-        ];
+            agent-browser # headless browser automation
+            apm # agent package manager (Microsoft)
+            beads # issue tracker
+            codegraph # semantic code intelligence
+            ctx # coding session search
+            entire # link coding sessions to code changes
+            herdr # terminal workspace manager
+            jscpd # detect copy/paste duplication
+            lean-ctx
+            openspec
+            plannotator # browser based interactive planner
+            trellis # engineering framework
+            workmux # Git worktree + tmux
+            ralph-tui # Agent loop orchestrator
+          ]
+          ++ [
+            pkgs.claude-desktop-fhs
+          ];
       };
     };
 }
