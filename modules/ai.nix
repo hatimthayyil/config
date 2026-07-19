@@ -31,14 +31,6 @@ in
       };
 
       home-manager.users.${owner.username} = {
-        # Claude Code custom themes, selected in-app via /theme
-        home.file = {
-          ".claude/themes/modus-vivendi.json".source =
-            "${inputs.claude-code-modus}/themes/modus-vivendi.json";
-          ".claude/themes/modus-operandi.json".source =
-            "${inputs.claude-code-modus}/themes/modus-operandi.json";
-        };
-
         home.packages =
           with llm-agents;
           [

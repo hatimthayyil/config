@@ -56,26 +56,6 @@
         "type": "github"
       }
     },
-    "claude-code-modus": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1784401541,
-        "narHash": "sha256-rDGguN3waX2J3ZahdJc4LcfTDaRUdZQZGje2mzi3tiw=",
-        "ref": "refs/heads/main",
-        "rev": "e7ebef24494ad4d12971325c39af77fcf9937d18",
-        "revCount": 2,
-        "type": "git",
-        "url": "file:///hatimthayyil/code/claude-code-modus"
-      },
-      "original": {
-        "type": "git",
-        "url": "file:///hatimthayyil/code/claude-code-modus"
-      }
-    },
     "claude-desktop": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -736,7 +716,6 @@
     "root": {
       "inputs": {
         "betterfox": "betterfox",
-        "claude-code-modus": "claude-code-modus",
         "claude-desktop": "claude-desktop",
         "disko": "disko",
         "emacs-overlay": "emacs-overlay",
