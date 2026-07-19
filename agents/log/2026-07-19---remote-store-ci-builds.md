@@ -29,18 +29,41 @@ builds of ~408 trivial drvs plus copy-back accounted for the rest.
   true`). Account-level nixbuild settings deliberately left at
   defaults — repo stays the source of truth.
 
-## False alarm during rollout
+## Rollout finding: ssh-ng substitution broken on nixbuild.net
 
-First remote-store run appeared to rebuild "cached" packages and was
-cancelled twice. Diagnosis via nixbuild HTTP API (`/builds`, tagged
-`GITHUB_RUN_ID`) + narinfo probes: the built packages (kimi-code,
-plannotator, claude-desktop bun/npm graphs) were introduced by
-commits never built by any pushing CI run — they existed in no cache
-(`bun-cache` narinfo 404s). nixbuild behaved correctly; env-delivered
-settings demonstrably reach ssh-ng builds (tags on build records,
-helix and unchanged config drvs reused, only 3 changed etc-drvs
-rebuilt). Build outputs are retained on nixbuild ~90 days, so
-cancelled work is reused.
+Remote-store runs rebuilt packages that were present in configured
+caches. Initially looked like new-package builds (kimi-code etc.
+were genuinely uncached), but successive experiments isolated a real
+nixbuild.net defect:
+
+- Env-level settings (nixbuild-action `settings:` via SSH `SetEnv`):
+  substituters NOT applied to ssh-ng-scheduled builds, although
+  `NIXBUILDNET_TAG_*` from the same SetEnv IS applied (build records
+  tagged). kimi-code (in cache.thayyil.net since 2026-07-18 21:12)
+  rebuilt — builds 10557157/10557159.
+- Account-level settings (all six caches added via
+  `api settings substituters --add`, verified with `--show`):
+  still not consulted. Decisive repro: fresh never-queried path
+  `agent-deck` (output on cache.numtide.com) via
+  `nix build --eval-store auto --store ssh-ng://eu.nixbuild.net
+  github:numtide/llm-agents.nix/<rev>#agent-deck` from eagle —
+  client immediately descended into dependency builds (10557288
+  source, 10557289 go-modules), i.e. the remote store answered the
+  output-path query without consulting any substituter.
+- Contrast: `ssh://` remote-builder flow substitutes inputs from the
+  same env-delivered caches correctly (old runs: only 36 paths ever
+  uploaded from the runner).
+
+Conclusion: in ssh-ng remote-store mode nixbuild answers path
+queries from its own store only; substituters are ignored at every
+settings level. Reported to support@nixbuild.net. nixbuild's own
+90-day store is the effective cache meanwhile: repeat builds are
+reused (run 3 rebuilt only changed drvs, drv sync was 8 paths), but
+first builds of cache-available paths cost CPU.
+
+Account settings synced from the flake via `just
+nixbuild-sync-caches` (harmless now, correct once support fixes
+substitution; env `settings:` block also kept).
 
 ## Verified
 
@@ -66,3 +89,10 @@ cancelled work is reused.
   only after eagle builds+auto-uploads them, or once phase 2 lands.
 - Consider `git remote set-url` — GitHub reports the repo moved to
   hatimthayyil/config (push still works via redirect).
+- Awaiting nixbuild support on ssh-ng substitution. If they decline
+  to fix: either accept first-build CPU cost on nixbuild (current
+  state), or revert build.yml to the local-store flow. Do NOT push
+  manual flake.lock bumps through build.yml until resolved (mass
+  rebuild risk); update-flake.yml still substitutes correctly.
+- `queriedPathTtlSeconds` (7 days, not user-settable) may delay any
+  support-side fix taking effect for already-queried paths.
