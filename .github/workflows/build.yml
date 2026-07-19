@@ -15,4 +15,15 @@ jobs:
       - uses: ./.github/actions/setup-nix
         with:
           nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
-      - run: nix build .#nixosConfigurations.eagle.config.system.build.toplevel
+          niks3-skip-push: true
+      # Remote-store build: evaluation runs on the runner, everything else
+      # happens inside nixbuild.net, so the system closure is never copied
+      # to the runner. --builders ""/--max-jobs 2 are the flags
+      # nixbuild-action documents for IFD and build-log issues.
+      - run: >
+          nix build .#nixosConfigurations.eagle.config.system.build.toplevel
+          --print-build-logs
+          --builders ""
+          --max-jobs 2
+          --eval-store auto
+          --store ssh-ng://eu.nixbuild.net

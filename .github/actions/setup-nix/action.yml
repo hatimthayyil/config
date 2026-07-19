@@ -5,6 +5,9 @@ inputs:
   nixbuild_token:
     description: "nixbuild.net auth token"
     required: true
+  niks3-skip-push:
+    description: "Configure the niks3 substituter only; do not push build outputs"
+    default: 'false'
 
 runs:
   using: composite
@@ -20,6 +23,7 @@ runs:
       with:
         server-url: https://niks3.thayyil.workers.dev
         drain-timeout: 1800
+        skip-push: ${{ inputs.niks3-skip-push }}
     - uses: nixbuild/nixbuild-action@v25
       with:
         nixbuild_token: ${{ inputs.nixbuild_token }}
