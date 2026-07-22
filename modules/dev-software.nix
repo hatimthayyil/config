@@ -53,7 +53,7 @@ in
             enable = true;
             package = pkgs.unstable.devenv;
             enableBashIntegration = true;
-            enableNushellIntegration = true;
+            enableNushellIntegration = false;
           };
 
           go.enable = true;
