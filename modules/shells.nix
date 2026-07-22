@@ -22,6 +22,10 @@ in
       # Nu — sesh alias uses def instead of shellAliases because nushell can't parse $(…) subshells
       programs.nushell = {
         enable = true;
+        shellAliases = {
+          la = "ls -la";
+          lla = "lsd -la";
+        };
         extraConfig = ''
           def s [] { sesh connect (sesh list --icons | fzf --ansi) }
         '';
