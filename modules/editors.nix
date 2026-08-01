@@ -303,6 +303,7 @@ in
                 "betterthantomorrow.calva"
                 "DioxusLabs.dioxus"
                 "myriad-dreamin.tinymist"
+                "rust-lang.rust-analyzer"
 
                 # Web Development
                 "dbaeumer.vscode-eslint"
