@@ -77,22 +77,28 @@ substitution; env `settings:` block also kept).
 
 ## Open items (phase 2: cache filling)
 
-- Teach the niks3 client a `--store ssh-ng://…` mode so update-flake
+- ~~Teach the niks3 client a `--store ssh-ng://…` mode so update-flake
   can do remote-store builds and still push to cache.thayyil.net:
   closure via `nix path-info --store`, NAR bytes via `nix store
   dump-path --store`, plus a streaming NAR parser to produce `.ls`
   listings (`DumpPathWithListing` currently walks the filesystem).
   Server/Postgres untouched — all uploads go through the pending-
   closure API, so no DB desync. Sources: /hatimthayyil/code/niks3
-  (codegraph-indexed), niks3-action.
-- With `skip-push`, new outputs from Build runs reach cache.thayyil.net
-  only after eagle builds+auto-uploads them, or once phase 2 lands.
+  (codegraph-indexed), niks3-action.~~
+  Dropped 2026-08-06: it would not fix the nightly failures, since NAR
+  bytes still cross the same SSH channel. Cache filling moved to eagle
+  instead — see `2026-08-06---ci-verify-only-cache-on-eagle.md`.
+- ~~With `skip-push`, new outputs from Build runs reach cache.thayyil.net
+  only after eagle builds+auto-uploads them, or once phase 2 lands.~~
+  Now the intended design, not a gap.
 - Consider `git remote set-url` — GitHub reports the repo moved to
   hatimthayyil/config (push still works via redirect).
 - Awaiting nixbuild support on ssh-ng substitution. If they decline
-  to fix: either accept first-build CPU cost on nixbuild (current
-  state), or revert build.yml to the local-store flow. Do NOT push
-  manual flake.lock bumps through build.yml until resolved (mass
-  rebuild risk); update-flake.yml still substitutes correctly.
+  to fix: accept first-build CPU cost on nixbuild (current state).
+  Reverting build.yml to the local-store flow is no longer an option —
+  that flow is what failed nightly.
+  Updated 2026-08-06: update-flake.yml is now remote-store too, so no
+  workflow substitutes correctly and every lock bump carries the
+  first-build CPU cost on nixbuild.
 - `queriedPathTtlSeconds` (7 days, not user-settable) may delay any
   support-side fix taking effect for already-queried paths.

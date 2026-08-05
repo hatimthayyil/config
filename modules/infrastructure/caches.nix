@@ -13,6 +13,8 @@
 
   config = {
     caches = {
+      # Never add ssh://eu.nixbuild.net: substituted paths skip the niks3
+      # post-build-hook, so cache.thayyil.net would stop being filled.
       substituters = [
         "https://cache.nixos.org"
         "https://nix-community.cachix.org"

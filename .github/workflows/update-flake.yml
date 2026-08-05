@@ -16,10 +16,18 @@ jobs:
       - uses: ./.github/actions/setup-nix
         with:
           nixbuild_token: ${{ secrets.NIXBUILD_TOKEN }}
+          niks3-skip-push: true
       - name: Update flake.lock
         run: nix flake update
+      # Verify only; eagle fills cache.thayyil.net when it switches.
       - name: Build NixOS configuration
-        run: nix build .#nixosConfigurations.eagle.config.system.build.toplevel
+        run: >
+          nix build .#nixosConfigurations.eagle.config.system.build.toplevel
+          --print-build-logs
+          --builders ""
+          --max-jobs 2
+          --eval-store auto
+          --store ssh-ng://eu.nixbuild.net
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update flake.lock"
