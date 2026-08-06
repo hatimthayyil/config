@@ -102,6 +102,7 @@ in
           extraConfig = ''
             set -ag terminal-overrides ",xterm-256color:RGB"
             set -g extended-keys on
+            set -g extended-keys-format csi-u
 
             # default-shell (bash) stays POSIX for tmux internals; panes
             # exec into nushell as the actual interactive shell
