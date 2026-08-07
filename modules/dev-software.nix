@@ -70,7 +70,7 @@ in
           pkgs.curl
           pkgs.curlie
           pkgs.shellcheck
-          pkgs.unstable.secretspec
+          # pkgs.unstable.secretspec # Included with devenv.
           pkgs.devbox
           pkgs.copier
           pkgs.mprocs
