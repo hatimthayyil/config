@@ -58,6 +58,7 @@
         tools-secrets
         tools-research
         nix
+        nixbuild
         writing
 
         # Study
