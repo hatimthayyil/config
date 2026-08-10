@@ -79,6 +79,8 @@
       efi.canTouchEfiVariables = true;
     };
 
+    services.niks3-auto-upload.serverUrl = "https://niks3.thayyil.workers.dev";
+
     networking.hostName = "eagle";
     networking.networkmanager.enable = true;
 
