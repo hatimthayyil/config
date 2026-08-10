@@ -96,8 +96,14 @@ fetches build inputs it only needs remotely.
 - Cache population is now gated on eagle's switch cadence, not CI's. A
   lock bump that eagle never switches to reaches cache.thayyil.net not
   at all.
-- The first switch after each lock bump is slower on eagle: it fetches
-  build inputs, pulls outputs from nixbuild, and uploads to R2.
+- ~~The first switch after each lock bump is slower on eagle: it fetches
+  build inputs, pulls outputs from nixbuild, and uploads to R2.~~
+  Fixed 2026-08-08: eagle now substitutes from nixbuild, so those
+  derivations are fetched rather than built and their inputs are never
+  realised locally. See `2026-08-08---nixbuild-substituter-eagle.md`,
+  which also supersedes the "Why eagle still gets nixbuild's cached
+  builds" section above — the post-build-hook no longer carries the
+  system closure.
 - nixbuild retention is explicitly undefined ("might be emptied at any
   time"). If it evicts between the CI run and a switch, eagle rebuilds.
 - `build.yml` and `update-flake.yml` now carry the same six build flags.
