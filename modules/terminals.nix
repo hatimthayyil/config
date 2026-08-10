@@ -7,7 +7,7 @@ let
 in
 {
   flake.modules.nixos.terminals =
-    { pkgs, ... }:
+    _:
     {
       home-manager.users.${owner.username} = {
         programs = {
@@ -33,7 +33,7 @@ in
         };
 
         home.packages = [
-          pkgs.unstable.warp-terminal
+          # pkgs.unstable.warp-terminal
         ];
       };
     };
