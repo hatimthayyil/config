@@ -49,7 +49,7 @@ in
             "nix-command"
             "flakes"
           ];
-          inherit (caches) substituters trusted-public-keys;
+          inherit (caches.public) substituters trusted-public-keys;
         };
 
         gc = {

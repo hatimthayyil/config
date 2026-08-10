@@ -1,26 +1,24 @@
 # caches.nix
 
-## Why ssh://eu.nixbuild.net is not a substituter
+## Why a registry rather than lists
 
-nixbuild.net is configured as a remote *builder* only
-(`modules/base.nix`, `nix.buildMachines`). It must stay that way.
+Each cache is one entry pairing a URL with the key that signs it. Before, the
+two lived in separate lists and nothing tied them together — `cache.numtide.com`
+sits next to a `niks3.numtide.com-1:` key, which is correct but unverifiable by
+reading either list alone.
 
-Nix treats remote builders and substituters differently, and
-`services.niks3-auto-upload` is a `nix.settings.post-build-hook`, which
-fires on builds and not on substitutions.
+Consumers call `select` with the names they want. `public` is the set every
+consumer shares, and is what `flake.lib.caches` exposes, so the CI runner
+(`.github/actions/setup-nix`) and `just nixbuild-sync-caches` are unaffected by
+anything a host chooses to add.
 
-- As a builder: eagle sends the derivation, nixbuild serves back a
-  result it already has without rerunning the build, and Nix fetches it
-  into the local store as a completed build. The post-build-hook fires,
-  and niks3 pushes the path to cache.thayyil.net.
-- As a substituter: Nix finds the path during the substitution phase and
-  downloads it directly. No build happens, the hook never fires, and the
-  path never reaches cache.thayyil.net.
+## Why nixbuild is in the registry but not in `public`
 
-nixbuild's own documentation recommends adding remote builders as
-substituters, to avoid fetching build inputs that are only needed
-remotely. That advice is correct in general and wrong here — taking it
-would silently stop cache.thayyil.net from being filled, with no error
-to notice. The wasted input bandwidth is the accepted cost.
+`public` reaches three consumers, and two of them must not have it:
 
-See `agents/log/2026-08-06---ci-verify-only-cache-on-eagle.md`.
+- the CI runner builds *into* nixbuild's store (`--store ssh-ng://`)
+- `just nixbuild-sync-caches` writes to nixbuild's own account settings, which
+  would make it substitute from itself
+
+Only a host should select it. `modules/nixbuild.nix` does that, and eagle picks
+up the group. See `agents/comments/modules/nixbuild.nix.md`.
