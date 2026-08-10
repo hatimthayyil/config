@@ -47,6 +47,24 @@ nixbuild-sync-caches:
     ssh api settings substituters --show
     ssh api settings trusted-public-keys --show
 
+# Reconcile ~/.vscode/extensions with the flake (modules/vscode.nix).
+# Extensions live outside the system closure, so a broken one cannot block a rebuild.
+vscode-sync:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    target="$HOME/.vscode/extensions"
+    link="${XDG_STATE_HOME:-$HOME/.local/state}/nix/vscode-extensions"
+    mkdir -p "$(dirname "$link")" "$target"
+    nix build --out-link "$link" .#vscode-extensions
+    store="$(readlink -f "$link")/share/vscode/extensions"
+    find "$target" -maxdepth 1 -type l -lname '/nix/store/*' -delete
+    for ext in "$store"/*; do
+        ln -sfn "$ext" "$target/$(basename "$ext")"
+    done
+    rm -f "$target/extensions.json" "$target/.init-default-profile-extensions"
+    code --list-extensions > /dev/null
+    echo "linked $(find "$store" -maxdepth 1 -mindepth 1 | wc -l) extensions"
+
 # Show packages that would be rebuilt for system configuration (with nix-community cache)
 forecast:
     nix-forecast -c ".#nixosConfigurations.eagle" -b https://cache.nixos.org -b https://nix-community.cachix.org -s | grep -v "\.service\|\.conf\|\.pub\|\.rules\|\.d\|\.sh\|\.pam\|\.json"

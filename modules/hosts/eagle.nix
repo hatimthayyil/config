@@ -38,6 +38,7 @@
         dev-electronics
         dev-mechanical
         editors
+        vscode
         version-control
 
         # Applications
