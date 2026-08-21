@@ -75,6 +75,10 @@ in
           pkgs.copier
           pkgs.mprocs
           pkgs.nix-playground
+
+          # Databases
+          pkgs.sqlite-interactive
+          pkgs.sqlitebrowser
           pkgs.dolt
 
           # Remote repo management
