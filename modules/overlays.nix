@@ -45,6 +45,8 @@ let
       ;
   };
 
+  local-packages = import ../pkgs/overlay.nix { inherit inputs; };
+
   default =
     final: prev:
     (stable-packages final prev)
@@ -55,7 +57,8 @@ let
     // (nix4vscode-overlay final prev)
     // (firefox-addons-overlay final prev)
     // (claude-desktop-overlay final prev)
-    // (throttled-fix-overlay final prev);
+    // (throttled-fix-overlay final prev)
+    // (local-packages final prev);
 in
 {
   flake.overlays = {
