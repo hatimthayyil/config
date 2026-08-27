@@ -92,6 +92,7 @@ in
           pkgs.clang
           pkgs.conda
           pkgs.unstable.cargo-nextest
+          pkgs.unstable.cargo-seek
           pkgs.unstable.cargo-workspaces
 
           # Misc
