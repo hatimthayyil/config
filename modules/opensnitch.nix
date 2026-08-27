@@ -86,7 +86,7 @@ in
 
           # ---------- Editors ----------
           emacs = allowPkg "emacs-git-pgtk";
-          zed-editor = allowRegex "zed-editor" "^${home}/\\.local/zed\\.dev/.*/zed-editor$";
+          zed-preview = allowPkg "zed-preview";
           zed-node-cache = allowRegex "zed-node-cache" "^${home}/\\.local/share/zed/node-cache/.*$";
           zed-extensions = allowRegex "zed-extensions" "^${home}/\\.local/share/zed/extensions/.*$";
 
