@@ -1,11 +1,25 @@
 {
   config,
+  inputs,
   ...
 }:
 let
   inherit (config) owner;
 in
 {
+  perSystem =
+    { system, ... }:
+    let
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [ config.flake.overlays.default ];
+      };
+    in
+    {
+      packages.zed-preview = pkgs.zed-preview;
+    };
+
   flake.modules.nixos.editors =
     { pkgs, ... }:
     {
@@ -257,7 +271,7 @@ in
 
           programs.zed-editor = {
             enable = true;
-            package = pkgs.unstable.zed-editor-fhs;
+            package = pkgs.zed-preview;
             extensions = [
               "codebook"
 
@@ -364,43 +378,6 @@ in
             pkgs.lyx
             pkgs.leo-editor
             pkgs.kibi
-
-            # FHS wrapper for the manually-installed Zed preview tarball at
-            # ~/.local/zed-preview.app — lets the prebuilt binary find ALSA,
-            # Vulkan, Wayland, etc. that aren't in the bundled lib/ dir.
-            (pkgs.buildFHSEnv {
-              name = "zd";
-              targetPkgs =
-                p: with p; [
-                  stdenv.cc.cc
-                  alsa-lib
-                  fontconfig
-                  freetype
-                  libgit2
-                  openssl
-                  sqlite
-                  zstd
-                  zlib
-                  curl
-                  dbus
-                  wayland
-                  libglvnd
-                  libxkbcommon
-                  vulkan-loader
-                  libxcb
-                  libx11
-                  libxext
-                  libxau
-                  libxdmcp
-                  libbsd
-                  # xkb keymap data files at /usr/share/X11/xkb — without this,
-                  # libxkbcommon segfaults when Wayland sends the keymap.
-                  xkeyboard-config
-                ];
-              runScript = pkgs.writeShellScript "zd-launcher" ''
-                exec "$HOME/.local/zed-preview.app/bin/zed" "$@"
-              '';
-            })
           ];
         };
     };
