@@ -19,6 +19,8 @@ jobs:
           niks3-skip-push: true
       - name: Update flake.lock
         run: nix flake update
+      - name: Update pinned package sources
+        run: nix run .#update-packages
       # Verify only; eagle fills cache.thayyil.net when it switches.
       - name: Build NixOS configuration
         run: >
@@ -30,4 +32,4 @@ jobs:
           --store ssh-ng://eu.nixbuild.net
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update flake.lock"
+          commit_message: "chore: update flake.lock and pinned packages"

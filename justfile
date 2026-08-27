@@ -9,6 +9,7 @@ clean:
 
 update:
     nix flake update
+    nix run .#update-packages
 
 upgrade:
     just update && just build && just switch
