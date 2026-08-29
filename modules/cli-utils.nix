@@ -48,7 +48,19 @@ in
           };
           zellij = {
             enable = true;
-            settings.copy_command = "wl-copy";
+            # plugins = with pkgs.zellijPlugins; [ cb ];
+            settings = {
+              copy_command = "wl-copy";
+              default_layout = "compact";
+              default_cwd = "/hatimthayyil/code";
+            };
+            extraConfig = ''
+              plugins {
+                  compact-bar location="zellij:compact-bar" {
+                    tooltip "F1"
+                  }
+              }
+            '';
           };
 
           lsd = {
