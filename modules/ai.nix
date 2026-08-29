@@ -37,11 +37,13 @@ in
             # Agents
             claude-code
             codex
+            dsh
             gemini-cli
             kimi-code
             opencode
             pi
             reasonix
+            zcode
 
             agent-browser # headless browser automation
             apm # agent package manager (Microsoft)
