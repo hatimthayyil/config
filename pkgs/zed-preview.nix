@@ -18,11 +18,11 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "zed-preview";
-  version = "1.20.0";
+  version = "1.20.1";
 
   src = fetchurl {
     url = "https://github.com/zed-industries/zed/releases/download/v${finalAttrs.version}-pre/zed-linux-x86_64.tar.gz";
-    hash = "sha256-iJVtNWKRGlHxPxqR03D/iZYiVBzehSFrqHRrTZrPQ6w=";
+    hash = "sha256-JWksRXeYvdweIwuR7I94V5ZPudfNJ9bB+g1G0LDHu7M=";
   };
 
   nativeBuildInputs = [
