@@ -1,41 +1,10 @@
-{ config, inputs, ... }:
+{ config, ... }:
 let
   inherit (config) owner;
 in
 {
   flake.modules.nixos.terminals =
     { pkgs, ... }:
-    let
-      tmuxModus = inputs.tmux-modus.packages.${pkgs.stdenv.hostPlatform.system}.default;
-      modusToggle = pkgs.writeShellScript "modus-toggle" ''
-        current="$(tmux show -gv @modus_theme)"
-        if [ "$current" = operandi ]; then
-          tmux set -g @modus_theme vivendi
-        else
-          tmux set -g @modus_theme operandi
-        fi
-      '';
-      # flips the colors of every running kitty instance alongside the tmux
-      # theme. Goes via kitty's remote-control sockets (see listen_on in
-      # modules/terminals.nix) because tmux run-shell has no TTY, so the
-      # default TTY transport of `kitten @` cannot reach kitty from here.
-      # No-op when no kitty is running, e.g. under ghostty or SSH.
-      kittyThemeToggle = pkgs.writeShellScript "kitty-theme-toggle" ''
-        night="${pkgs.kitty-themes}/share/kitty-themes/themes/Modus_Vivendi.conf"
-        day="${pkgs.kitty-themes}/share/kitty-themes/themes/Modus_Operandi.conf"
-        for sock in /tmp/kitty-sock-*; do
-          [ -S "$sock" ] || continue
-          current_bg="$(${pkgs.kitty}/bin/kitten @ --to "unix:$sock" get-colors 2>/dev/null \
-            | grep "^background " | tr -s ' ' | cut -d' ' -f2)"
-          case "$current_bg" in
-          "") continue ;; # stale socket left by a dead kitty
-          "#ffffff") target="$night" ;;
-          *) target="$day" ;;
-          esac
-          ${pkgs.kitty}/bin/kitten @ --to "unix:$sock" set-colors --all --configured "$target" 2>/dev/null || true
-        done
-      '';
-    in
     {
       home-manager.users.${owner.username} = {
         programs.tmux = {
@@ -80,12 +49,6 @@ in
               extraConfig = ''
                 set -g @resurrect-strategy-nvim 'session'
                 set -g @resurrect-capture-pane-contents 'on'
-              '';
-            }
-            {
-              plugin = tmuxModus;
-              extraConfig = ''
-                set -g @modus_theme 'vivendi'
               '';
             }
             # continuum must be last: it appends to status-right; any plugin
@@ -143,14 +106,6 @@ in
             bind Space last-window
             bind BSpace switch-client -l
             bind S set-window-option synchronize-panes
-
-            # toggle modus between vivendi (dark) and operandi (light) across
-            # the tmux status line and kitty (if that's the host terminal)
-            # overrides tmux's default clock-mode binding on this key, which is unused here
-            bind t \
-              run-shell ${modusToggle} \; \
-              run-shell "${tmuxModus}/share/tmux-plugins/modus/modus.tmux" \; \
-              run-shell ${kittyThemeToggle}
 
             set -g detach-on-destroy off
             set -g set-clipboard on
