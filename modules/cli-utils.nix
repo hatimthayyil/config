@@ -53,6 +53,8 @@ in
               copy_command = "wl-copy";
               default_layout = "compact";
               default_cwd = "/hatimthayyil/code";
+              theme_dark = "gruvbox-dark";
+              theme_light = "gruvbox-light";
             };
             extraConfig = ''
               plugins {
