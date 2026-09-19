@@ -25,6 +25,7 @@
         # Desktop environment
         desktop
         fonts
+        theming
 
         # Shell and terminal
         shells
