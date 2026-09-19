@@ -15,3 +15,6 @@ zoom = ["prefix+z", "alt+z"]
 auto_switch = true
 dark_name = "gruvbox"
 light_name = "gruvbox-light"
+
+[ui]
+status_indicators = "symbols"
