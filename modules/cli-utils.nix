@@ -65,7 +65,12 @@ in
             '';
           };
 
-          lsd = {
+          eza = {
+            enable = true;
+            enableBashIntegration = true;
+            icons = "auto";
+          };
+          vivid = {
             enable = true;
             enableBashIntegration = true;
           };

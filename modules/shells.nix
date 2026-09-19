@@ -24,7 +24,7 @@ in
         enable = true;
         shellAliases = {
           la = "ls -la";
-          lla = "lsd -la";
+          lla = "eza -la";
         };
         extraConfig = ''
           def s [] { sesh connect (sesh list --icons | fzf --ansi) }
