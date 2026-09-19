@@ -65,6 +65,11 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # System-wide theming framework
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Flake based configuration of Treefmt
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
@@ -148,11 +153,6 @@
     firefox-csshacks = {
       url = "github:MrOtherGuy/firefox-csshacks";
       flake = false;
-    };
-    # Modus theme for tmux
-    tmux-modus = {
-      url = "github:hatimthayyil/tmux-modus";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     # MacOS Ventura, and other Guest OSes
     # nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
