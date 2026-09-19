@@ -1,0 +1,9 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+space"
+
+[theme]
+auto_switch = true
+dark_name = "gruvbox"
+light_name = "gruvbox-light"

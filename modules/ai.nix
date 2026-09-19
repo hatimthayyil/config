@@ -30,39 +30,44 @@ in
         package = pkgs.stable.qdrant;
       };
 
-      home-manager.users.${owner.username} = {
-        home.packages =
-          with llm-agents;
-          [
-            # Agents
-            claude-code
-            codex
-            dsh
-            gemini-cli
-            kimi-code
-            opencode
-            pi
-            reasonix
-            zcode
+      home-manager.users.${owner.username} =
+        { config, ... }:
+        {
+          home.packages =
+            with llm-agents;
+            [
+              # Agents
+              claude-code
+              codex
+              dsh
+              gemini-cli
+              kimi-code
+              opencode
+              pi
+              reasonix
+              zcode
 
-            agent-browser # headless browser automation
-            apm # agent package manager (Microsoft)
-            beads # issue tracker
-            codegraph # semantic code intelligence
-            ctx # coding session search
-            entire # link coding sessions to code changes
-            herdr # terminal workspace manager
-            jscpd # detect copy/paste duplication
-            lean-ctx
-            openspec
-            plannotator # browser based interactive planner
-            trellis # engineering framework
-            workmux # Git worktree + tmux
-            ralph-tui # Agent loop orchestrator
-          ]
-          ++ [
-            pkgs.claude-desktop-fhs
-          ];
-      };
+              agent-browser # headless browser automation
+              apm # agent package manager (Microsoft)
+              beads # issue tracker
+              codegraph # semantic code intelligence
+              ctx # coding session search
+              entire # link coding sessions to code changes
+              herdr # terminal workspace manager
+              jscpd # detect copy/paste duplication
+              lean-ctx
+              openspec
+              plannotator # browser based interactive planner
+              trellis # engineering framework
+              workmux # Git worktree + tmux
+              ralph-tui # Agent loop orchestrator
+            ]
+            ++ [
+              pkgs.claude-desktop-fhs
+            ];
+
+          home.file.".config/herdr/config.toml".source =
+            config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.herdr-config.toml";
+        };
     };
 }
