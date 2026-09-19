@@ -8,6 +8,8 @@ focus_pane_down = ["prefix+j", "alt+down"]
 focus_pane_up = ["prefix+k", "alt+up"]
 focus_pane_right = ["prefix+l", "alt+right"]
 switch_tab = ["prefix+1..9", "alt+1..9"]
+switch_workspace = "ctrl+alt+1..9"
+zoom = ["prefix+z", "alt+z"]
 
 [theme]
 auto_switch = true
