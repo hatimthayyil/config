@@ -3,6 +3,12 @@ onboarding = false
 [keys]
 prefix = "ctrl+space"
 
+focus_pane_left = ["prefix+h", "alt+left"]
+focus_pane_down = ["prefix+j", "alt+down"]
+focus_pane_up = ["prefix+k", "alt+up"]
+focus_pane_right = ["prefix+l", "alt+right"]
+switch_tab = ["prefix+1..9", "alt+1..9"]
+
 [theme]
 auto_switch = true
 dark_name = "gruvbox"
