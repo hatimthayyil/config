@@ -68,6 +68,26 @@
         "type": "github"
       }
     },
+    "bend": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789861571,
+        "narHash": "sha256-ZmlYeGpfJ1nYqfi8S3WNYatGNAo961kSEybVVUjWu3Q=",
+        "owner": "bendlang",
+        "repo": "bend",
+        "rev": "0a211c95811920249cdc9d42969fe910f685e70d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "bendlang",
+        "repo": "bend",
+        "type": "github"
+      }
+    },
     "betterfox": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -881,6 +901,7 @@
     },
     "root": {
       "inputs": {
+        "bend": "bend",
         "betterfox": "betterfox",
         "claude-desktop": "claude-desktop",
         "disko": "disko",

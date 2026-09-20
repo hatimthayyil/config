@@ -128,6 +128,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     llm-agents.url = "github:numtide/llm-agents.nix";
+    # Bend: dependently typed, affine, CPU/GPU parallel language
+    bend = {
+      url = "github:bendlang/bend";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Claude Desktop (Linux port with FHS variant for MCP server support)
     claude-desktop = {
       url = "github:aaddrick/claude-desktop-debian";

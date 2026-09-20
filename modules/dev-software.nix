@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   ...
 }:
 let
@@ -91,6 +92,7 @@ in
           pkgs.steel
           pkgs.clang
           pkgs.conda
+          inputs.bend.packages.${pkgs.system}.default
           pkgs.unstable.cargo-nextest
           pkgs.unstable.cargo-seek
           pkgs.unstable.cargo-workspaces
