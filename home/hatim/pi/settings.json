@@ -1,0 +1,18 @@
+{
+  "defaultProvider": "deepseek",
+  "defaultModel": "deepseek-flash",
+  "defaultThinkingLevel": "high",
+  "theme": "light",
+  "enabledModels": [
+    "deepseek/deepseek-flash",
+    "zai/glm-5.3"
+  ],
+  "packages": [
+    "npm:pi-blackhole",
+    "npm:pi-autoresearch",
+    "npm:pi-zotero",
+    "npm:pi-reasonix",
+    "npm:context-mode",
+    "/home/hatim/code/config/home/hatim/pi"
+  ]
+}

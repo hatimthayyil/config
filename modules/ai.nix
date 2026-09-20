@@ -43,7 +43,6 @@ in
               gemini-cli
               kimi-code
               opencode
-              pi
               reasonix
               zcode
 

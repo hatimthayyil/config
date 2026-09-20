@@ -47,6 +47,7 @@
         gui-apps
         multimedia
         ai
+        pi
 
         # Networking and security
         networking
