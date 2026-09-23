@@ -123,6 +123,8 @@
     #   #url = "github:nix-community/nixvim";
     #   #inputs.nixpkgs.follows = "nixpkgs-unstable";
     # };
+    # Helix, tracking master
+    helix.url = "github:helix-editor/helix";
     nix4vscode = {
       url = "github:nix-community/nix4vscode";
       inputs.nixpkgs.follows = "nixpkgs";

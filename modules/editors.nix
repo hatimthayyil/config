@@ -344,8 +344,13 @@ in
           programs.helix = {
             enable = true;
             defaultEditor = true;
+            package = inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
             settings = {
-              theme = "tokyonight";
+              theme = {
+                dark = "gruvbox_dark_hard";
+                light = "gruvbox_light_hard";
+                fallback = "gruvbox_light_hard";
+              };
               editor = {
                 line-number = "relative";
                 cursorline = true;
