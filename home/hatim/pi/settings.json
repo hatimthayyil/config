@@ -19,7 +19,8 @@
       "source": "npm:pi-code",
       "extensions": [
         "-extensions/subagent/index.ts",
-        "-extensions/git-checkpoint.ts"
+        "-extensions/git-checkpoint.ts",
+        "-extensions/mcp/index.ts",
       ]
     },
     "npm:pi-rewind"
