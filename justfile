@@ -27,6 +27,32 @@ rollback gen="":
 generations:
     sudo nix-env --list-generations --profile /nix/var/nix/profiles/system
 
+# Explain a failed switch: list failed units (system + user) and their journal
+why:
+    #!/usr/bin/env bash
+    set -euo pipefail
+
+    found=0
+    for scope in system user; do
+        if [ "$scope" = user ]; then
+            units="$(systemctl --user --failed --no-legend --plain | awk '{print $1}')"
+            jctl=(journalctl --user -b -n 50 --no-pager)
+        else
+            units="$(systemctl --failed --no-legend --plain | awk '{print $1}')"
+            jctl=(journalctl -b -n 50 --no-pager)
+        fi
+
+        while read -r unit; do
+            [ -z "$unit" ] && continue
+            found=1
+            echo
+            echo "=== $scope: $unit ==="
+            "${jctl[@]}" -u "$unit"
+        done <<< "$units"
+    done
+
+    [ "$found" -eq 1 ] || echo "No failed units. Nothing to explain."
+
 emx:
     nh os switch . -- --override-input emx path:$HOME/code/emx && emx
 
