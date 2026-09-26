@@ -15,3 +15,6 @@
 
 ## Comments
 - No unnecessary comments. Rationale belongs in `agents/comments/<path-to-file>.md`.
+
+## Commits
+- End every commit with a `Co-Authored-By` trailer crediting the model that authored the change, e.g. `Co-Authored-By: DeepSeek V4.1 Flash <noreply@deepseek.com>`.
