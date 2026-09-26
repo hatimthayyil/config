@@ -98,6 +98,7 @@ in
             enable = true;
             enableBashIntegration = true;
             enableNushellIntegration = true;
+            settings.git.autoFetch = false;
           };
           programs.gitui.enable = true;
 
