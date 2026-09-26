@@ -13,7 +13,8 @@
 - Prefer established libraries over reimplementation. Check existing dependencies first.
 - For non-novel tasks, follow established patterns rather than inventing an approach.
 
-## Comments
+## Writing
+- Do not narrate history. Say what is; do not recount what changed or the decisions behind it.
 - No unnecessary comments. Rationale belongs in `agents/comments/<path-to-file>.md`.
 
 ## Commits
