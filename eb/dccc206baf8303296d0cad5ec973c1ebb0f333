@@ -1,0 +1,31 @@
+modules/ai.nix
+  s_e6ffaba8564309::t_c95563ca6bf64f 59
+  s_98eb6d87850dfe::t_7482f72f23d772 74-79
+  s_98eb6d87850dfe::t_578b18b074eaec 51,53,56-57,62,65
+agents/comments/modules/ai.nix.md
+  s_98eb6d87850dfe::t_de63c82af0b00c 1-33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ebdccc206baf8303296d0cad5ec973c1ebb0f333",
+  "prompts": {},
+  "sessions": {
+    "s_98eb6d87850dfe": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0dda4-76d1-7355-9162-2f378e927af2",
+        "model": "deepseek-flash"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    },
+    "s_e6ffaba8564309": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0dfaa-d901-748a-9ffd-ba3aac168044",
+        "model": "deepseek-flash"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
