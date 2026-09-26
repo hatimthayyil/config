@@ -14,7 +14,13 @@
     "npm:pi-reasonix",
     "npm:context-mode",
     "/home/hatim/code/config/home/hatim/pi",
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    {
+      "source": "npm:pi-code",
+      "extensions": [
+        "-extensions/subagent/index.ts"
+      ]
+    }
   ],
   "lastChangelogVersion": "0.85.1"
 }
