@@ -48,15 +48,21 @@ in
 
               agent-browser # headless browser automation
               apm # agent package manager (Microsoft)
+              ax # fetch, discover, extract web content
               beads # issue tracker
+              but # GitButler CLI: stacked and parallel branches
               codegraph # semantic code intelligence
               ctx # coding session search
-              entire # link coding sessions to code changes
+              git-ai # line-level AI attribution in Git Notes
+              gitbutler # GitButler GUI
               herdr # terminal workspace manager
+              hunk # diff with review
               jscpd # detect copy/paste duplication
               lean-ctx
+              mindwalk
               openspec
               plannotator # browser based interactive planner
+              tokscale
               trellis # engineering framework
               workmux # Git worktree + tmux
               ralph-tui # Agent loop orchestrator
@@ -64,6 +70,12 @@ in
             ++ [
               pkgs.claude-desktop-fhs
             ];
+
+          # See agents/comments/modules/ai.nix.md.
+          programs.git.settings.trace2 = {
+            eventTarget = "af_unix:stream:${config.home.homeDirectory}/.git-ai/internal/daemon/trace2.sock";
+            eventNesting = "0";
+          };
 
           home.file.".config/herdr/config.toml".source =
             config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.herdr-config.toml";
