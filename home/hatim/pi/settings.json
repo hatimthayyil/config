@@ -18,9 +18,11 @@
     {
       "source": "npm:pi-code",
       "extensions": [
-        "-extensions/subagent/index.ts"
+        "-extensions/subagent/index.ts",
+        "-extensions/git-checkpoint.ts"
       ]
-    }
+    },
+    "npm:pi-rewind"
   ],
   "lastChangelogVersion": "0.85.1"
 }
