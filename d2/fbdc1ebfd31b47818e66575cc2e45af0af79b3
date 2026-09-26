@@ -1,0 +1,14 @@
+home/hatim/pi/settings.json
+  h_3b956d4cad68d1 23,29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d2fbdc1ebfd31b47818e66575cc2e45af0af79b3",
+  "prompts": {},
+  "humans": {
+    "h_3b956d4cad68d1": {
+      "author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
