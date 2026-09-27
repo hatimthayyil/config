@@ -1,0 +1,134 @@
+{
+  "agentPushNotifEnabled": true,
+  "cleanupPeriodDays": 99999,
+  "effortLevel": "xhigh",
+  "enabledPlugins": {
+    "cloudflare@cloudflare": true,
+    "context-mode@context-mode": true,
+    "figma@claude-plugins-official": false,
+    "pyright-lsp@claude-plugins-official": false,
+    "rust-analyzer-lsp@claude-plugins-official": false,
+    "svelte@svelte": false,
+    "typescript-lsp@claude-plugins-official": false
+  },
+  "extraKnownMarketplaces": {
+    "deepgram-agent-skills": {
+      "source": {
+        "repo": "deepgram/skills",
+        "source": "github"
+      }
+    },
+    "svelte": {
+      "source": {
+        "repo": "sveltejs/ai-tools",
+        "source": "github"
+      }
+    },
+    "voltagent-subagents": {
+      "autoUpdate": true,
+      "source": {
+        "repo": "VoltAgent/awesome-claude-code-subagents",
+        "source": "github"
+      }
+    }
+  },
+  "feedbackDrafts": "off",
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status waiting",
+            "type": "command"
+          }
+        ],
+        "matcher": "permission_prompt|elicitation_dialog"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "/nix/store/g5fckna5pxk85v103kgk08y4jdfpany8-git-ai-1.7.5/bin/git-ai checkpoint claude --hook-input stdin",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "~/.claude-code-docs/claude-docs-helper.sh hook-check",
+            "type": "command"
+          }
+        ],
+        "matcher": "Read"
+      },
+      {
+        "hooks": [
+          {
+            "command": "/nix/store/g5fckna5pxk85v103kgk08y4jdfpany8-git-ai-1.7.5/bin/git-ai checkpoint claude --hook-input stdin",
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "bash '/home/hatim/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "^(startup|resume|clear|compact|fork)$"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status done",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "model": "opus",
+  "permissions": {
+    "allow": [
+      "Bash(git -C /home/hatim/middle-nation log --all --format=\"%H %s\")",
+      "mcp__acp__Bash",
+      "mcp__codegraph__*"
+    ],
+    "defaultMode": "auto"
+  },
+  "skipAutoPermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
+  "theme": "auto",
+  "tui": "fullscreen",
+  "verbose": true
+}

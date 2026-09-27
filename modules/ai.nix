@@ -37,7 +37,6 @@ in
             with llm-agents;
             [
               # Agents
-              claude-code
               codex
               dsh
               gemini-cli

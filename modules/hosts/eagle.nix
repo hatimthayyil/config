@@ -48,6 +48,7 @@
         multimedia
         ai
         pi
+        claude
 
         # Networking and security
         networking
