@@ -31,3 +31,20 @@ here.
 A socket path that does not exist yet is harmless: git drops trace2 events
 silently, with no warning and no exit-code change, so the config is valid before
 the daemon has ever started.
+
+
+## Hunk
+
+- `config.toml` is out-of-store: Hunk writes theme and view preferences back to
+  `$XDG_CONFIG_HOME/hunk/config.toml` with no fallback
+  (`packages/hunk/src/core/run/config.ts`).
+- `theme = "auto"` only picks GitHub light/dark. `astwys/hunk-adaptive-theme`
+  repeats Hunk's OSC 11 probe and registers `adaptive-theme` from the
+  `[extension.hunk-adaptive-theme]` tables; the table name must match the
+  directory name.
+- `transparent_background` is not a substitute: token colours stay GitHub's.
+- Pinned as a `flake = false` input, not `hunk extension install`: Hunk has no
+  restore from `installed/records.json`. The extension API is experimental, so
+  check the theme after bumping `llm-agents`; failure falls back to dark.
+- `recursive = true` is required: discovery skips symlinked directories
+  (`Dirent.isDirectory()`, `packages/hunk/src/extensions/discovery.ts`).

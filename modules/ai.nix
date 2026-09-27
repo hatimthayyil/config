@@ -78,6 +78,14 @@ in
 
           home.file.".config/herdr/config.toml".source =
             config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.herdr-config.toml";
+
+          home.file.".config/hunk/config.toml".source =
+            config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.hunk-config.toml";
+
+          home.file.".config/hunk/extensions/hunk-adaptive-theme" = {
+            source = inputs.hunk-adaptive-theme;
+            recursive = true;
+          };
         };
     };
 }

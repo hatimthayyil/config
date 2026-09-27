@@ -523,6 +523,22 @@
         "type": "github"
       }
     },
+    "hunk-adaptive-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1787044302,
+        "narHash": "sha256-J9R7+dxe0cDPY5eyPqwoeBSr91BjK1So7v4rjX5+sh4=",
+        "owner": "astwys",
+        "repo": "hunk-adaptive-theme",
+        "rev": "b67066ace93c280ff3ae372c33ae7bc43cbf80c9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "astwys",
+        "repo": "hunk-adaptive-theme",
+        "type": "github"
+      }
+    },
     "import-tree": {
       "locked": {
         "lastModified": 1763762820,
@@ -947,6 +963,7 @@
         "hardware": "hardware",
         "helix": "helix",
         "home-manager": "home-manager",
+        "hunk-adaptive-theme": "hunk-adaptive-theme",
         "import-tree": "import-tree_2",
         "llm-agents": "llm-agents",
         "niks3": "niks3",

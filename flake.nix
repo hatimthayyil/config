@@ -161,6 +161,10 @@
       url = "github:MrOtherGuy/firefox-csshacks";
       flake = false;
     };
+    hunk-adaptive-theme = {
+      url = "github:astwys/hunk-adaptive-theme";
+      flake = false;
+    };
     # MacOS Ventura, and other Guest OSes
     # nixtheplanet.url = "github:matthewcroughan/nixtheplanet";
   };
