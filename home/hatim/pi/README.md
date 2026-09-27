@@ -6,7 +6,6 @@ Local pi package and configuration.
 
 - `settings.json` — pi settings; `packages` is the install list.
 - `package.json` — declares this directory as a pi package.
-- `extensions/workmux-status.ts` — reports agent status to workmux.
 - `AGENTS.md`, `APPEND_SYSTEM.md` — global context.
 
 ## Wiring

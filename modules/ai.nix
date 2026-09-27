@@ -55,7 +55,6 @@ in
               git-ai # line-level AI attribution in Git Notes
               gitbutler # GitButler GUI
               herdr # terminal workspace manager
-              hunk # diff with review
               jscpd # detect copy/paste duplication
               lean-ctx
               mindwalk
@@ -63,7 +62,7 @@ in
               plannotator # browser based interactive planner
               tokscale
               trellis # engineering framework
-              workmux # Git worktree + tmux
+              tuicr # diff review
               ralph-tui # Agent loop orchestrator
             ]
             ++ [
@@ -79,13 +78,10 @@ in
           home.file.".config/herdr/config.toml".source =
             config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.herdr-config.toml";
 
-          home.file.".config/hunk/config.toml".source =
-            config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.hunk-config.toml";
+          home.file.".config/tuicr/config.toml".source =
+            config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.tuicr-config.toml";
 
-          home.file.".config/hunk/extensions/hunk-adaptive-theme" = {
-            source = inputs.hunk-adaptive-theme;
-            recursive = true;
-          };
+          programs.worktrunk.enable = true;
         };
     };
 }

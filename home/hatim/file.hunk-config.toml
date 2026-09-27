@@ -1,5 +1,0 @@
-theme = "adaptive-theme"
-
-[extension.hunk-adaptive-theme]
-light = { base = "gruvbox-light-hard" }
-dark = { base = "gruvbox-dark-hard" }

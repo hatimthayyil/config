@@ -1,0 +1,4 @@
+theme_dark = "gruvbox-dark"
+theme_light = "gruvbox-light"
+diff_view = "unified"
+wrap = true
