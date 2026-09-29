@@ -27,6 +27,7 @@
           description = "Push the activated system closure to the binary cache";
           after = [ "network-online.target" ];
           wants = [ "network-online.target" ];
+          path = [ config.nix.package ];
           serviceConfig = {
             Type = "oneshot";
             ExecStart = pkgs.writeShellScript "niks3-push-system" ''
