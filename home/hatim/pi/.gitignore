@@ -1,0 +1,11 @@
+*
+!.gitignore
+!AGENTS.md
+!APPEND_SYSTEM.md
+!README.md
+!package.json
+!settings.json
+!prompts/
+!prompts/.gitkeep
+!skills/
+!skills/.gitkeep

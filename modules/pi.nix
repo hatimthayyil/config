@@ -16,11 +16,6 @@ in
     {
       home-manager.users.${owner.username} =
         { config, ... }:
-        let
-          piLink = name: {
-            source = config.lib.file.mkOutOfStoreSymlink "${pi-hatim}/${name}";
-          };
-        in
         {
           programs.pi-coding-agent = {
             enable = true;
@@ -29,9 +24,9 @@ in
           };
 
           home.file = {
-            ".pi/agent/settings.json" = piLink "settings.json";
-            ".pi/agent/AGENTS.md" = piLink "AGENTS.md";
-            ".pi/agent/APPEND_SYSTEM.md" = piLink "APPEND_SYSTEM.md";
+            ".pi/agent" = {
+              source = config.lib.file.mkOutOfStoreSymlink pi-hatim;
+            };
           };
         };
     };

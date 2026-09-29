@@ -92,11 +92,10 @@ in
     { pkgs, ... }:
     {
       home-manager.users.${owner.username} =
-        { config, lib, ... }:
+        { config, ... }:
         {
-          home.file.".config/Code/User/settings.json".source = lib.mkForce (
-            config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.vscode-settings.json"
-          );
+          home.file.".config/Code/User".source =
+            config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/vscode";
 
           programs.vscode = {
             enable = true;

@@ -75,11 +75,12 @@ in
             eventNesting = "0";
           };
 
-          home.file.".config/herdr/config.toml".source =
-            config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.herdr-config.toml";
-
-          home.file.".config/tuicr/config.toml".source =
-            config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/file.tuicr-config.toml";
+          home.file = {
+            ".config/herdr".source =
+              config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/herdr";
+            ".config/tuicr".source =
+              config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/tuicr";
+          };
 
           programs.worktrunk.enable = true;
         };
