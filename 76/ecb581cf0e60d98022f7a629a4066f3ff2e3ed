@@ -1,0 +1,42 @@
+modules/claude.nix
+  s_e6a44385f58260::t_21a10e9a988d58 19-22
+home/hatim/claude/.gitignore
+  s_e6a44385f58260::t_5284b407c71fbf 1-4
+home/hatim/tuicr/.gitignore
+  s_e6a44385f58260::t_4d4ada677d0c04 1-3
+modules/ai.nix
+  s_e6a44385f58260::t_fa74815a3f0e16 78-83
+home/hatim/pi/.gitignore
+  s_e6a44385f58260::t_751942c7c5e812 1-11
+home/hatim/herdr/.gitignore
+  s_e6a44385f58260::t_4d4ada677d0c04 1-3
+modules/pi.nix
+  s_e6a44385f58260::t_a13c473ff22072 27-29
+home/hatim/vscode/mcp.json
+  s_e6a44385f58260::t_7715679b7c76a3 1-24
+home/hatim/vscode/keybindings.json
+  s_e6a44385f58260::t_fc9cd88fe73b60 1-7
+statix.toml
+  s_e6a44385f58260::t_f078217ab27723 3
+modules/vscode.nix
+  s_e6a44385f58260::t_e99677a2cf252d 97-98
+  s_e6a44385f58260::t_bf8bde8c63e2f3 95
+home/hatim/vscode/.gitignore
+  s_e6a44385f58260::t_48a64a69f5db62 1-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "76ecb581cf0e60d98022f7a629a4066f3ff2e3ed",
+  "prompts": {},
+  "sessions": {
+    "s_e6a44385f58260": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bbd7b2d6-0566-4d59-b7c4-0cb5f222a6ea",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
