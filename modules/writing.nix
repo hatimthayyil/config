@@ -31,8 +31,6 @@ in
           (aspellWithDicts (
             dicts: with dicts; [
               en
-              en-computers
-              en-science
             ]
           ))
           (hunspell.withDicts (d: [
@@ -51,7 +49,6 @@ in
             pkgs.aspellWithDicts (
               ds: with ds; [
                 en
-                en-computers
                 ar
                 ml
               ]
@@ -64,12 +61,6 @@ in
           "enchant/hunspell/en_US.dic".source = "${pkgs.hunspellDicts.en_US-large}/share/hunspell/en_US.dic";
           "enchant/hunspell/en_GB.aff".source = "${pkgs.hunspellDicts.en_GB-large}/share/hunspell/en_GB.aff";
           "enchant/hunspell/en_GB.dic".source = "${pkgs.hunspellDicts.en_GB-large}/share/hunspell/en_GB.dic";
-          "enchant/aspell/en-computers.rws".source =
-            "${pkgs.aspellDicts.en-computers}/lib/aspell/en-computers.rws";
-          "enchant/aspell/en_US-science.rws".source =
-            "${pkgs.aspellDicts.en-science}/lib/aspell/en_US-science.rws";
-          "enchant/aspell/en_GB-science.rws".source =
-            "${pkgs.aspellDicts.en-science}/lib/aspell/en_GB-science.rws";
         };
       };
     };
