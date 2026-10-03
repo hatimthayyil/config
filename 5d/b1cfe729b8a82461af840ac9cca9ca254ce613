@@ -1,0 +1,23 @@
+home/hatim/pi/settings.json
+  s_c0ee24b8270b4c::t_725e9179f675e3 28-29
+AGENTS.md
+  s_c0ee24b8270b4c::t_725e9179f675e3 3-4
+home/hatim/claude/settings.json
+  s_c0ee24b8270b4c::t_725e9179f675e3 3-9,11,15,18-19,21,26,29-30,32,35,38-39,41,46,49,51,53,57-85,87-89,92-94
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5db1cfe729b8a82461af840ac9cca9ca254ce613",
+  "prompts": {},
+  "sessions": {
+    "s_c0ee24b8270b4c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6239e265-f777-45ff-b9ab-4a064630b9aa",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
