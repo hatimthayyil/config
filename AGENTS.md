@@ -1,5 +1,7 @@
 # Project Instructions
 
+Provide your task to subagents. Spawn multiple agents when needed. Tasks that have serial dependance can be handed out to multiple agents one after the other. It is preferred to give one logical task to one agent.
+
 ## Nix Sourcetrees
 
 When adding or modifying home-manager or NixOS `programs.*` / `services.*` in this config:
