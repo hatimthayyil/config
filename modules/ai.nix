@@ -43,6 +43,8 @@ in
               kimi-code
               opencode
               reasonix
+              t3code
+              t3code-desktop
               zcode
 
               agent-browser # headless browser automation
