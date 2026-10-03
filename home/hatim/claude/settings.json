@@ -1,7 +1,59 @@
 {
-  "agentPushNotifEnabled": true,
   "cleanupPeriodDays": 99999,
-  "effortLevel": "xhigh",
+  "permissions": {
+    "allow": [
+      "Bash(git -C /home/hatim/middle-nation log --all --format=\"%H %s\")",
+      "mcp__acp__Bash",
+      "mcp__codegraph__*"
+    ],
+    "defaultMode": "auto"
+  },
+  "model": "opus",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/nix/store/g5fckna5pxk85v103kgk08y4jdfpany8-git-ai-1.7.5/bin/git-ai checkpoint claude --hook-input stdin"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude-code-docs/claude-docs-helper.sh hook-check"
+          }
+        ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/nix/store/g5fckna5pxk85v103kgk08y4jdfpany8-git-ai-1.7.5/bin/git-ai checkpoint claude --hook-input stdin"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/home/hatim/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
   "enabledPlugins": {
     "cloudflare@cloudflare": true,
     "context-mode@context-mode": true,
@@ -14,82 +66,30 @@
   "extraKnownMarketplaces": {
     "deepgram-agent-skills": {
       "source": {
-        "repo": "deepgram/skills",
-        "source": "github"
+        "source": "github",
+        "repo": "deepgram/skills"
       }
     },
     "svelte": {
       "source": {
-        "repo": "sveltejs/ai-tools",
-        "source": "github"
+        "source": "github",
+        "repo": "sveltejs/ai-tools"
       }
     },
     "voltagent-subagents": {
-      "autoUpdate": true,
       "source": {
-        "repo": "VoltAgent/awesome-claude-code-subagents",
-        "source": "github"
-      }
+        "source": "github",
+        "repo": "VoltAgent/awesome-claude-code-subagents"
+      },
+      "autoUpdate": true
     }
   },
   "feedbackDrafts": "off",
-  "hooks": {
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "/nix/store/g5fckna5pxk85v103kgk08y4jdfpany8-git-ai-1.7.5/bin/git-ai checkpoint claude --hook-input stdin",
-            "type": "command"
-          }
-        ],
-        "matcher": "*"
-      }
-    ],
-    "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "~/.claude-code-docs/claude-docs-helper.sh hook-check",
-            "type": "command"
-          }
-        ],
-        "matcher": "Read"
-      },
-      {
-        "hooks": [
-          {
-            "command": "/nix/store/g5fckna5pxk85v103kgk08y4jdfpany8-git-ai-1.7.5/bin/git-ai checkpoint claude --hook-input stdin",
-            "type": "command"
-          }
-        ],
-        "matcher": "*"
-      }
-    ],
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "command": "bash '/home/hatim/.claude/hooks/herdr-agent-state.sh' session",
-            "timeout": 10,
-            "type": "command"
-          }
-        ],
-        "matcher": "^(startup|resume|clear|compact|fork)$"
-      }
-    ]
-  },
-  "model": "opus",
-  "permissions": {
-    "allow": [
-      "Bash(git -C /home/hatim/middle-nation log --all --format=\"%H %s\")",
-      "mcp__acp__Bash",
-      "mcp__codegraph__*"
-    ],
-    "defaultMode": "auto"
-  },
-  "skipAutoPermissionPrompt": true,
+  "effortLevel": "xhigh",
+  "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
   "theme": "auto",
-  "tui": "fullscreen",
-  "verbose": true
+  "verbose": true,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true
 }
