@@ -114,7 +114,6 @@ in
             # pkgs.commitizen
             pkgs.git-machete
             pkgs.git-imerge
-            pkgs.git-annex
             pkgs.git-absorb
             pkgs.git-ignore
           ];
