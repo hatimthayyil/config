@@ -1,5 +1,4 @@
-*
-!.gitignore
-!.skill-lock.json
-!skills/
-!skills/**
+/*
+!/.gitignore
+!/.skill-lock.json
+!/skills/

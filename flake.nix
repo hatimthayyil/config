@@ -130,6 +130,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     llm-agents.url = "github:numtide/llm-agents.nix";
+    # Pinned agent skills
+    agents-nix = {
+      url = "github:sudosubin/agents.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Bend: dependently typed, affine, CPU/GPU parallel language
     bend = {
       url = "github:bendlang/bend";

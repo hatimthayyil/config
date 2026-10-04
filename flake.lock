@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "agents-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791108859,
+        "narHash": "sha256-gmmFr4vB3O55GRgwSaAhUxdDvrok5uiS8Hd74nKKB+E=",
+        "owner": "sudosubin",
+        "repo": "agents.nix",
+        "rev": "e61f972722d117e2c0699d539b52e978fe0ff55d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sudosubin",
+        "repo": "agents.nix",
+        "type": "github"
+      }
+    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -936,6 +956,7 @@
     },
     "root": {
       "inputs": {
+        "agents-nix": "agents-nix",
         "bend": "bend",
         "betterfox": "betterfox",
         "claude-desktop": "claude-desktop",

@@ -120,3 +120,26 @@ claude-plugins:
         | "undeclared plugin: \(.id)"' <<< "$(claude plugin list --json)"
     jq -r --slurpfile s "$settings" '($s[0].extraKnownMarketplaces + ($s[0].enabledPlugins | with_entries(.key |= split("@")[1]))) as $d
         | .[] | select(.name | in($d) | not) | "undeclared marketplace: \(.name)"' <<< "$(claude plugin marketplace list --json)"
+
+# Print agent-skills manifest entries for skills installed with `npx skills add -g`.
+skills-promote:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    lock=home/hatim/agents/.skill-lock.json
+    entries="$(jq -c '[.skills | to_entries[] | select(.value.sourceType == "github")
+        | (.value.source | ascii_downcase | split("/")) as [$owner, $repo]
+        | {name: .key, $owner, $repo, path: .value.skillPath,
+           skill: (.value.skillPath | split("/") | if length > 1 then .[-2] | ascii_downcase else $repo end)}]' "$lock")"
+    if [[ $entries == "[]" ]]; then
+        echo "nothing to promote in $lock"
+        exit 0
+    fi
+    system="$(nix eval --raw --impure --expr builtins.currentSystem)"
+    versions="$(ENTRIES="$entries" nix eval --json --impure --inputs-from . "agents-nix#agent-skills.$system.github" \
+        --apply "g: map (e: (g.\${e.owner}.\${e.repo}.\${e.skill} or { version = null; }).version) (builtins.fromJSON (builtins.getEnv \"ENTRIES\"))")"
+    jq -r --argjson v "$versions" 'def q: if test("^[A-Za-z_][A-Za-z0-9_-]*$") then . else @json end;
+        to_entries[] | .value as $e | $v[.key] as $ver
+        | if $ver == null then "missing: \($e.name) (\($e.owner)/\($e.repo) \($e.path))"
+          else "\($e.name | q) = github.\($e.owner | q).\($e.repo | q).\($e.skill | q);" end' <<< "$entries"
+    jq -r --argjson v "$versions" 'to_entries[] | select($v[.key] != null) | "\(.value.name): agents.nix pins \($v[.key])"' <<< "$entries" >&2
+    echo "Add the lines above to the manifest in modules/agent-skills.nix, then run: npx skills remove -g <name>..." >&2

@@ -38,6 +38,8 @@ let
 
   claude-desktop-overlay = inputs.claude-desktop.overlays.default;
 
+  agents-nix-overlay = inputs.agents-nix.overlays.default;
+
   # FIXME: remove after throttled service unit fix lands in unstable
   throttled-fix-overlay = final: _prev: {
     inherit (inputs.nixpkgs-unstable-small.legacyPackages.${final.stdenv.hostPlatform.system})
@@ -57,6 +59,7 @@ let
     // (nix4vscode-overlay final prev)
     // (firefox-addons-overlay final prev)
     // (claude-desktop-overlay final prev)
+    // (agents-nix-overlay final prev)
     // (throttled-fix-overlay final prev)
     // (local-packages final prev);
 in
