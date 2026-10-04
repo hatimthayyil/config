@@ -36,10 +36,10 @@ in
               init.defaultBranch = "main";
               pull.rebase = false;
 
-              # SSH commit signing (touch-to-sign).
+              # SSH signing (touch-to-sign); commits are unsigned unless requested with -S.
               gpg.format = "ssh";
               gpg.ssh.allowedSignersFile = "~/.ssh/allowed_signers";
-              commit.gpgSign = true;
+              commit.gpgSign = false;
               tag.gpgSign = true;
             };
 
