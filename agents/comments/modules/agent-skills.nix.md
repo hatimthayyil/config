@@ -13,7 +13,7 @@ Claude Code writes claude.ai-synced skills to `<user skills dir>/synced/<bucket>
 - `skills/.gitignore` excludes it from git. pi honours `.gitignore` inside skill roots, so pi also ignores it.
 - Gemini CLI only scans `*/SKILL.md` (depth 1): not visible.
 - opencode scans `~/.claude/skills/**/SKILL.md`: it already saw these before the merge.
-- Codex scans recursively and ignores `.gitignore`: it sees the synced skills (docx, pdf, pptx, xlsx, skill-creator, ...). Disable per skill via `[[skills.config]]` in `~/.codex/config.toml` if needed.
+- Codex scans recursively and ignores `.gitignore`: it sees the synced skills (docx, pdf, pptx, xlsx, skill-creator, ...). Disabled by name in the untracked `home/hatim/codex/config.toml`; see `modules/codex.nix.md`.
 
 ## Third-party skills
 

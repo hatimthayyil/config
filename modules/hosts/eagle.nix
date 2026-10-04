@@ -49,6 +49,7 @@
         ai
         pi
         claude
+        codex
         agent-skills
 
         # Networking and security

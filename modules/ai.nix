@@ -37,7 +37,6 @@ in
             with llm-agents;
             [
               # Agents
-              codex
               dsh
               gemini-cli
               kimi-code
