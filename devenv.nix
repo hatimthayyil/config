@@ -28,7 +28,10 @@
   };
 
   git-hooks.hooks = {
-    shellcheck.enable = true;
+    shellcheck = {
+      enable = true;
+      excludes = [ "^home/hatim/agents/skills/" ];
+    };
     deadnix.enable = true;
     statix.enable = true;
   };

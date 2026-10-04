@@ -49,6 +49,7 @@
         ai
         pi
         claude
+        agent-skills
 
         # Networking and security
         networking
