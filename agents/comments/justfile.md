@@ -29,3 +29,25 @@ issues #350, #388, #437, #438, #500 and #643 cover the standalone
 the NixOS-module path worked around here is unfixed. A proper fix would have
 `nh` print the journal of the units `switch-to-configuration` reported as
 failed, gated behind a flag.
+
+## `claude-plugins`
+
+`settings.json` (`enabledPlugins`, `extraKnownMarketplaces`) is the declared
+intent; Claude Code registers declared marketplaces but never installs a plugin
+just because it is enabled, so the recipe installs what is missing. `install`
+enables a plugin, so declared-`false` ones are disabled right after; both write
+back the same value already in `settings.json`.
+
+Undeclared plugins and marketplaces are only reported. Project/local-scope
+installs live in each project's settings and are ignored, but a marketplace they
+need is global, so it shows up as undeclared. Marketplaces named by an
+`enabledPlugins` key count as declared, which covers the built-in
+`claude-plugins-official`.
+
+Third-party marketplaces omit `autoUpdate`, keeping the default (manual); run
+`claude plugin marketplace update` to refresh them. `<name>@synced` plugins come
+from the claude.ai account and are left alone.
+
+On a config that has never started interactively, `claude-plugins-official` is
+not yet registered and installs from it fail; start `claude` once, or run
+`claude plugin marketplace add anthropics/claude-plugins-official`, then rerun.

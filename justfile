@@ -95,3 +95,28 @@ vscode-sync:
 # Show packages that would be rebuilt for system configuration (with nix-community cache)
 forecast:
     nix-forecast -c ".#nixosConfigurations.eagle" -b https://cache.nixos.org -b https://nix-community.cachix.org -s | grep -v "\.service\|\.conf\|\.pub\|\.rules\|\.d\|\.sh\|\.pam\|\.json"
+
+# Install Claude plugins declared in settings.json; report undeclared ones
+claude-plugins:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    settings=home/hatim/claude/settings.json
+    known="$(claude plugin marketplace list --json)"
+    jq -r --argjson known "$known" '.extraKnownMarketplaces | to_entries[]
+        | select(.key as $k | $known | map(.name) | index($k) | not)
+        | .value.source | .repo // .url // .path' "$settings" |
+    while read -r src; do
+        claude plugin marketplace add "$src"
+    done
+    installed="$(claude plugin list --json | jq '[.[] | select(.scope == "user") | .id]')"
+    jq -r --argjson installed "$installed" '.enabledPlugins | to_entries[]
+        | select(.key as $k | $installed | index($k) | not)
+        | "\(.key)\t\(.value)"' "$settings" |
+    while IFS=$'\t' read -r id enabled; do
+        claude plugin install -s user "$id"
+        [ "$enabled" = true ] || claude plugin disable -s user "$id"
+    done
+    jq -r --slurpfile s "$settings" '.[] | select(.scope == "user" and (.id | in($s[0].enabledPlugins) | not))
+        | "undeclared plugin: \(.id)"' <<< "$(claude plugin list --json)"
+    jq -r --slurpfile s "$settings" '($s[0].extraKnownMarketplaces + ($s[0].enabledPlugins | with_entries(.key |= split("@")[1]))) as $d
+        | .[] | select(.name | in($d) | not) | "undeclared marketplace: \(.name)"' <<< "$(claude plugin marketplace list --json)"
