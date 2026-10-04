@@ -1,0 +1,35 @@
+agents/comments/modules/agent-skills.nix.md
+  s_7a40b76a175b62::t_980188c1eb743c 16
+modules/hosts/eagle.nix
+  s_7a40b76a175b62::t_b69891e5edd86c 52
+home/hatim/codex/.gitignore
+  s_7a40b76a175b62::t_89622b4473b391 1-5
+agents/comments/modules/codex.nix.md
+  s_7a40b76a175b62::t_9d87d4a474fc7e 12
+  s_7a40b76a175b62::t_72bdcfc0cb1573 7
+  s_7a40b76a175b62::t_ae17b4a4b88389 1-6,8-11,13-20
+modules/codex.nix
+  s_7a40b76a175b62::t_b69891e5edd86c 1-26
+home/hatim/codex/AGENTS.md
+  s_7a40b76a175b62::t_fab54fdce80fc9 1-10
+home/hatim/codex/herdr-agent-state.sh
+  s_7a40b76a175b62::t_35115c29662343 1-98
+home/hatim/codex/hooks.json
+  s_7a40b76a175b62::t_7a46247efa2608 1-15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "14c991620f0ec62b416d58b47ffd82b59a6f9034",
+  "prompts": {},
+  "sessions": {
+    "s_7a40b76a175b62": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "61867c25-e0cd-40c5-9e42-b0c661f5c0b4",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
