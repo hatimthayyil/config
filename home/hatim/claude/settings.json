@@ -56,7 +56,6 @@
   },
   "enabledPlugins": {
     "cloudflare@cloudflare": true,
-    "context-mode@context-mode": true,
     "figma@claude-plugins-official": false,
     "pyright-lsp@claude-plugins-official": false,
     "rust-analyzer-lsp@claude-plugins-official": false,
@@ -64,12 +63,6 @@
     "typescript-lsp@claude-plugins-official": false
   },
   "extraKnownMarketplaces": {
-    "deepgram-agent-skills": {
-      "source": {
-        "source": "github",
-        "repo": "deepgram/skills"
-      }
-    },
     "svelte": {
       "source": {
         "source": "github",
