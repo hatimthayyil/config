@@ -1,0 +1,24 @@
+agents/comments/justfile.md
+  s_7a40b76a175b62::t_f89bbefafe26be 32-53
+justfile
+  s_7a40b76a175b62::t_7851a6773f915f 99
+  s_7a40b76a175b62::t_7491c4e5b6347b 98,100-122
+home/hatim/claude/settings.json
+  s_7a40b76a175b62::t_48c29290cb2efa 64-69,80
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e388e8c2c68daf734ebed430b4f1b8b741701262",
+  "prompts": {},
+  "sessions": {
+    "s_7a40b76a175b62": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "61867c25-e0cd-40c5-9e42-b0c661f5c0b4",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
