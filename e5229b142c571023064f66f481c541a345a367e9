@@ -1,0 +1,19 @@
+modules/version-control.nix
+  s_9587d2888ed84f::t_f688338414267a 39,42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e5229b142c571023064f66f481c541a345a367e9",
+  "prompts": {},
+  "sessions": {
+    "s_9587d2888ed84f": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a105e5-6ad5-7cc1-ba9b-a3188edeb0ba",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
