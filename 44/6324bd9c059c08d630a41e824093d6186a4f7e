@@ -1,12 +1,14 @@
-home/hatim/codex/AGENTS.md
-  s_14c3c349476fa1::t_500671c5a80481 11-55
+home/hatim/claude/CLAUDE.md
+  s_14c3c349476fa1::t_2d3cff7bb24815 18-62
 home/hatim/pi/AGENTS.md
   s_14c3c349476fa1::t_500671c5a80481 22-66
+home/hatim/codex/AGENTS.md
+  s_14c3c349476fa1::t_500671c5a80481 11-55
 ---
 {
   "schema_version": "authorship/3.0.0",
   "git_ai_version": "1.7.5",
-  "base_commit_sha": "cfdfdf9d0a112b6ed85b291314422b44f753b34f",
+  "base_commit_sha": "446324bd9c059c08d630a41e824093d6186a4f7e",
   "prompts": {},
   "sessions": {
     "s_14c3c349476fa1": {
