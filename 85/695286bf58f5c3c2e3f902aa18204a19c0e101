@@ -1,0 +1,1332 @@
+home/hatim/claude/.gitignore
+  s_7a40b76a175b62::t_57c120595ea5e5 5
+modules/agent-skills.nix
+  s_7a40b76a175b62::t_70f3b86f850247 1-14
+home/hatim/agents/.gitignore
+  s_7a40b76a175b62::t_57c120595ea5e5 1-5
+agents/comments/modules/agent-skills.nix.md
+  s_7a40b76a175b62::t_70f3b86f850247 1-20
+home/hatim/agents/skills/.gitignore
+  s_7a40b76a175b62::t_57c120595ea5e5 1-3
+devenv.nix
+  s_7a40b76a175b62::t_c773ec8f66f273 31-34
+home/hatim/agents/.skill-lock.json
+  s_7a40b76a175b62::t_cb01a9226934b2 222
+  s_7a40b76a175b62::t_9f1203bc8802a7 1-221
+modules/hosts/eagle.nix
+  s_7a40b76a175b62::t_70f3b86f850247 52
+home/hatim/agents/skills/ask-matt/PHASE-BOUNDARIES.md
+  s_7a40b76a175b62::t_41a6df4a511018 1-55
+home/hatim/agents/skills/ask-matt/SKILL.md
+  s_7a40b76a175b62::t_ab9d9c48338280 1-95
+home/hatim/agents/skills/ask-matt/agents/openai.yaml
+  s_7a40b76a175b62::t_7014facc2e22e9 1-5
+home/hatim/agents/skills/code-review/SKILL.md
+  s_7a40b76a175b62::t_ed3a1104ea24e7 1-87
+home/hatim/agents/skills/code-review/agents/openai.yaml
+  s_7a40b76a175b62::t_c34a728fadec3f 1-3
+home/hatim/agents/skills/codebase-design/DEEPENING.md
+  s_7a40b76a175b62::t_4eed1ff6a20573 1-37
+home/hatim/agents/skills/codebase-design/DESIGN-IT-TWICE.md
+  s_7a40b76a175b62::t_95df914557c354 1-44
+home/hatim/agents/skills/codebase-design/SKILL.md
+  s_7a40b76a175b62::t_f8893f27f14757 1-114
+home/hatim/agents/skills/codebase-design/agents/openai.yaml
+  s_7a40b76a175b62::t_e5488c24ce3a55 1-3
+home/hatim/agents/skills/diagnosing-bugs/SKILL.md
+  s_7a40b76a175b62::t_8632f80c3fe1b0 1-138
+home/hatim/agents/skills/diagnosing-bugs/agents/openai.yaml
+  s_7a40b76a175b62::t_d7f9cf25473a58 1-3
+home/hatim/agents/skills/diagnosing-bugs/scripts/hitl-loop.template.sh
+  s_7a40b76a175b62::t_3058ae3fdd5e84 1-44
+home/hatim/agents/skills/domain-modeling/ADR-FORMAT.md
+  s_7a40b76a175b62::t_193579bec607ad 1-47
+home/hatim/agents/skills/domain-modeling/GLOSSARY-FORMAT.md
+  s_7a40b76a175b62::t_676547ea7499f4 1-60
+home/hatim/agents/skills/domain-modeling/SKILL.md
+  s_7a40b76a175b62::t_5f7b92a8c4fd6d 1-74
+home/hatim/agents/skills/domain-modeling/agents/openai.yaml
+  s_7a40b76a175b62::t_6cb90edee92409 1-3
+home/hatim/agents/skills/find-skills/SKILL.md
+  s_7a40b76a175b62::t_8cfdf8111979c6 1-141
+home/hatim/agents/skills/grill-me/SKILL.md
+  s_7a40b76a175b62::t_834844e53df504 1-7
+home/hatim/agents/skills/grill-me/agents/openai.yaml
+  s_7a40b76a175b62::t_0e2d4ed6634765 1-5
+home/hatim/agents/skills/grill-with-docs/SKILL.md
+  s_7a40b76a175b62::t_50d3fc1f62bfde 1-7
+home/hatim/agents/skills/grill-with-docs/agents/openai.yaml
+  s_7a40b76a175b62::t_b06461bd9a9baf 1-5
+home/hatim/agents/skills/grilling/SKILL.md
+  s_7a40b76a175b62::t_cc060e265d4fad 1-28
+home/hatim/agents/skills/grilling/agents/openai.yaml
+  s_7a40b76a175b62::t_0c0fa442b72591 1-3
+home/hatim/agents/skills/handoff/SKILL.md
+  s_7a40b76a175b62::t_879c608cd5978f 1-16
+home/hatim/agents/skills/handoff/agents/openai.yaml
+  s_7a40b76a175b62::t_f07e4ce421cfdf 1-5
+home/hatim/agents/skills/implement/SKILL.md
+  s_7a40b76a175b62::t_6c2f82bc4e33ca 1-15
+home/hatim/agents/skills/implement/agents/openai.yaml
+  s_7a40b76a175b62::t_cdd6b8845f317f 1-5
+home/hatim/agents/skills/improve-codebase-architecture/HTML-REPORT.md
+  s_7a40b76a175b62::t_277ca884bfdc07 1-123
+home/hatim/agents/skills/improve-codebase-architecture/SKILL.md
+  s_7a40b76a175b62::t_014e581ed6bba1 1-71
+home/hatim/agents/skills/improve-codebase-architecture/agents/openai.yaml
+  s_7a40b76a175b62::t_6ec40c692135fc 1-5
+home/hatim/agents/skills/prototype/LOGIC.md
+  s_7a40b76a175b62::t_8eb48e4f7a70c4 1-67
+home/hatim/agents/skills/prototype/SKILL.md
+  s_7a40b76a175b62::t_0e12a47ec34b95 1-26
+home/hatim/agents/skills/prototype/UI.md
+  s_7a40b76a175b62::t_3afdce3aa13191 1-112
+home/hatim/agents/skills/prototype/agents/openai.yaml
+  s_7a40b76a175b62::t_a30396741233c5 1-3
+home/hatim/agents/skills/research/SKILL.md
+  s_7a40b76a175b62::t_75827208081b7b 1-12
+home/hatim/agents/skills/research/agents/openai.yaml
+  s_7a40b76a175b62::t_03e9bd9f66dbbc 1-3
+home/hatim/agents/skills/rust-skills/AGENTS.md
+  s_7a40b76a175b62::t_707ff88d701014 1
+home/hatim/agents/skills/rust-skills/CLAUDE.md
+  s_7a40b76a175b62::t_93d6b6071cf8b4 1
+home/hatim/agents/skills/rust-skills/LICENSE
+  s_7a40b76a175b62::t_49d835c8b0c013 1-21
+home/hatim/agents/skills/rust-skills/README.md
+  s_7a40b76a175b62::t_e87aec181bc7d3 1-117
+home/hatim/agents/skills/rust-skills/SKILL.md
+  s_7a40b76a175b62::t_be0caac57c1af3 1-405
+home/hatim/agents/skills/rust-skills/install.sh
+  s_7a40b76a175b62::t_61c93ddd14a5bc 1-13
+home/hatim/agents/skills/rust-skills/rules/anti-clone-excessive.md
+  s_7a40b76a175b62::t_18ae990d0610eb 1-124
+home/hatim/agents/skills/rust-skills/rules/anti-collect-intermediate.md
+  s_7a40b76a175b62::t_00acbf8d5156f6 1-131
+home/hatim/agents/skills/rust-skills/rules/anti-empty-catch.md
+  s_7a40b76a175b62::t_2fd00b9f50f73e 1-132
+home/hatim/agents/skills/rust-skills/rules/anti-expect-lazy.md
+  s_7a40b76a175b62::t_72c419af101047 1-95
+home/hatim/agents/skills/rust-skills/rules/anti-format-hot-path.md
+  s_7a40b76a175b62::t_6acdbd15df87f9 1-141
+home/hatim/agents/skills/rust-skills/rules/anti-index-over-iter.md
+  s_7a40b76a175b62::t_5757bc2c155d14 1-125
+home/hatim/agents/skills/rust-skills/rules/anti-lock-across-await.md
+  s_7a40b76a175b62::t_61efc065884fd5 1-127
+home/hatim/agents/skills/rust-skills/rules/anti-over-abstraction.md
+  s_7a40b76a175b62::t_da166e81142462 1-120
+home/hatim/agents/skills/rust-skills/rules/anti-panic-expected.md
+  s_7a40b76a175b62::t_1e17d28d9b082b 1-131
+home/hatim/agents/skills/rust-skills/rules/anti-premature-optimize.md
+  s_7a40b76a175b62::t_b138e8315cab21 1-156
+home/hatim/agents/skills/rust-skills/rules/anti-string-for-str.md
+  s_7a40b76a175b62::t_b7d47eac48ba70 1-122
+home/hatim/agents/skills/rust-skills/rules/anti-stringly-typed.md
+  s_7a40b76a175b62::t_a479863d2dfa5c 1-167
+home/hatim/agents/skills/rust-skills/rules/anti-type-erasure.md
+  s_7a40b76a175b62::t_5a222ac78a3b17 1-134
+home/hatim/agents/skills/rust-skills/rules/anti-unwrap-abuse.md
+  s_7a40b76a175b62::t_854b687feb262a 1-143
+home/hatim/agents/skills/rust-skills/rules/anti-vec-for-slice.md
+  s_7a40b76a175b62::t_9caa7f144a73ec 1-121
+home/hatim/agents/skills/rust-skills/rules/api-builder-must-use.md
+  s_7a40b76a175b62::t_dee7c4e49302bc 1-143
+home/hatim/agents/skills/rust-skills/rules/api-builder-pattern.md
+  s_7a40b76a175b62::t_e5f32656e23ad5 1-187
+home/hatim/agents/skills/rust-skills/rules/api-common-traits.md
+  s_7a40b76a175b62::t_d8ca7f2f1d6bc8 1-165
+home/hatim/agents/skills/rust-skills/rules/api-default-impl.md
+  s_7a40b76a175b62::t_a7516bc868b6ab 1-177
+home/hatim/agents/skills/rust-skills/rules/api-extension-trait.md
+  s_7a40b76a175b62::t_8468a465ba462d 1-163
+home/hatim/agents/skills/rust-skills/rules/api-from-not-into.md
+  s_7a40b76a175b62::t_7346a57c5d8116 1-146
+home/hatim/agents/skills/rust-skills/rules/api-impl-asref.md
+  s_7a40b76a175b62::t_ae0fc696b79061 1-142
+home/hatim/agents/skills/rust-skills/rules/api-impl-into.md
+  s_7a40b76a175b62::t_3f5c7366745747 1-160
+home/hatim/agents/skills/rust-skills/rules/api-must-use.md
+  s_7a40b76a175b62::t_4806217ab76a35 1-125
+home/hatim/agents/skills/rust-skills/rules/api-newtype-safety.md
+  s_7a40b76a175b62::t_a343ff66600efa 1-162
+home/hatim/agents/skills/rust-skills/rules/api-non-exhaustive.md
+  s_7a40b76a175b62::t_945043283c1b34 1-177
+home/hatim/agents/skills/rust-skills/rules/api-parse-dont-validate.md
+  s_7a40b76a175b62::t_4dbccf9a66a535 1-184
+home/hatim/agents/skills/rust-skills/rules/api-sealed-trait.md
+  s_7a40b76a175b62::t_27cae44a7a17b5 1-168
+home/hatim/agents/skills/rust-skills/rules/api-serde-optional.md
+  s_7a40b76a175b62::t_4ed76b4625a7f3 1-182
+home/hatim/agents/skills/rust-skills/rules/api-typestate.md
+  s_7a40b76a175b62::t_736638410fcc1d 1-199
+home/hatim/agents/skills/rust-skills/rules/async-bounded-channel.md
+  s_7a40b76a175b62::t_17ceeb26a7840c 1-175
+home/hatim/agents/skills/rust-skills/rules/async-broadcast-pubsub.md
+  s_7a40b76a175b62::t_d57a2af752c73f 1-185
+home/hatim/agents/skills/rust-skills/rules/async-cancellation-token.md
+  s_7a40b76a175b62::t_f8e1817dff2370 1-203
+home/hatim/agents/skills/rust-skills/rules/async-clone-before-await.md
+  s_7a40b76a175b62::t_a452552cdb2c5c 1-171
+home/hatim/agents/skills/rust-skills/rules/async-join-parallel.md
+  s_7a40b76a175b62::t_41b0c2431643b8 1-158
+home/hatim/agents/skills/rust-skills/rules/async-joinset-structured.md
+  s_7a40b76a175b62::t_83dd640a9c6f53 1-195
+home/hatim/agents/skills/rust-skills/rules/async-mpsc-queue.md
+  s_7a40b76a175b62::t_ddac161ace2d44 1-171
+home/hatim/agents/skills/rust-skills/rules/async-no-lock-await.md
+  s_7a40b76a175b62::t_a236b0f17c1d29 1-156
+home/hatim/agents/skills/rust-skills/rules/async-oneshot-response.md
+  s_7a40b76a175b62::t_1254c1185884c0 1-191
+home/hatim/agents/skills/rust-skills/rules/async-select-racing.md
+  s_7a40b76a175b62::t_64cd36bd107150 1-198
+home/hatim/agents/skills/rust-skills/rules/async-spawn-blocking.md
+  s_7a40b76a175b62::t_99048336bd6d8b 1-154
+home/hatim/agents/skills/rust-skills/rules/async-tokio-fs.md
+  s_7a40b76a175b62::t_20f15198cd7f2f 1-167
+home/hatim/agents/skills/rust-skills/rules/async-tokio-runtime.md
+  s_7a40b76a175b62::t_26f1bff144996d 1-169
+home/hatim/agents/skills/rust-skills/rules/async-try-join.md
+  s_7a40b76a175b62::t_06ecb0ddbea3f1 1-172
+home/hatim/agents/skills/rust-skills/rules/async-watch-latest.md
+  s_7a40b76a175b62::t_88c87b86417931 1-189
+home/hatim/agents/skills/rust-skills/rules/doc-all-public.md
+  s_7a40b76a175b62::t_5d1a4da205da03 1-113
+home/hatim/agents/skills/rust-skills/rules/doc-cargo-metadata.md
+  s_7a40b76a175b62::t_d0b0f8faaced99 1-147
+home/hatim/agents/skills/rust-skills/rules/doc-errors-section.md
+  s_7a40b76a175b62::t_d5608377604e0b 1-122
+home/hatim/agents/skills/rust-skills/rules/doc-examples-section.md
+  s_7a40b76a175b62::t_b3e1371301e630 1-161
+home/hatim/agents/skills/rust-skills/rules/doc-hidden-setup.md
+  s_7a40b76a175b62::t_d98fef8998e6e9 1-149
+home/hatim/agents/skills/rust-skills/rules/doc-intra-links.md
+  s_7a40b76a175b62::t_e1741e8f6698e4 1-138
+home/hatim/agents/skills/rust-skills/rules/doc-link-types.md
+  s_7a40b76a175b62::t_7081f31f79f9ad 1-169
+home/hatim/agents/skills/rust-skills/rules/doc-module-inner.md
+  s_7a40b76a175b62::t_845f3ca0ce27a8 1-116
+home/hatim/agents/skills/rust-skills/rules/doc-panics-section.md
+  s_7a40b76a175b62::t_a9e0a84e79c969 1-128
+home/hatim/agents/skills/rust-skills/rules/doc-question-mark.md
+  s_7a40b76a175b62::t_6fcaf243ba77eb 1-136
+home/hatim/agents/skills/rust-skills/rules/doc-safety-section.md
+  s_7a40b76a175b62::t_a7b61535596c6a 1-131
+home/hatim/agents/skills/rust-skills/rules/err-anyhow-app.md
+  s_7a40b76a175b62::t_72b56a2fe02eb4 1-179
+home/hatim/agents/skills/rust-skills/rules/err-context-chain.md
+  s_7a40b76a175b62::t_06eee5d22b6fa6 1-144
+home/hatim/agents/skills/rust-skills/rules/err-custom-type.md
+  s_7a40b76a175b62::t_6883182836875b 1-152
+home/hatim/agents/skills/rust-skills/rules/err-doc-errors.md
+  s_7a40b76a175b62::t_4530ff794914c5 1-145
+home/hatim/agents/skills/rust-skills/rules/err-expect-bugs-only.md
+  s_7a40b76a175b62::t_0b38869f9528f0 1-133
+home/hatim/agents/skills/rust-skills/rules/err-from-impl.md
+  s_7a40b76a175b62::t_ee326a28868373 1-152
+home/hatim/agents/skills/rust-skills/rules/err-lowercase-msg.md
+  s_7a40b76a175b62::t_2856e3fb533e3d 1-124
+home/hatim/agents/skills/rust-skills/rules/err-no-unwrap-prod.md
+  s_7a40b76a175b62::t_db2913bab630b5 1-115
+home/hatim/agents/skills/rust-skills/rules/err-question-mark.md
+  s_7a40b76a175b62::t_bd4775844f59c4 1-151
+home/hatim/agents/skills/rust-skills/rules/err-result-over-panic.md
+  s_7a40b76a175b62::t_62314cf1558aa7 1-130
+home/hatim/agents/skills/rust-skills/rules/err-source-chain.md
+  s_7a40b76a175b62::t_184cae00c82294 1-155
+home/hatim/agents/skills/rust-skills/rules/err-thiserror-lib.md
+  s_7a40b76a175b62::t_e6caae1c2df604 1-171
+home/hatim/agents/skills/rust-skills/rules/lint-cargo-metadata.md
+  s_7a40b76a175b62::t_207cfe2a0a06ee 1-138
+home/hatim/agents/skills/rust-skills/rules/lint-deny-correctness.md
+  s_7a40b76a175b62::t_85b1da0025b926 1-107
+home/hatim/agents/skills/rust-skills/rules/lint-missing-docs.md
+  s_7a40b76a175b62::t_c99f3411a83219 1-154
+home/hatim/agents/skills/rust-skills/rules/lint-pedantic-selective.md
+  s_7a40b76a175b62::t_73fe6be14f1c04 1-118
+home/hatim/agents/skills/rust-skills/rules/lint-rustfmt-check.md
+  s_7a40b76a175b62::t_45a72350e1c79c 1-157
+home/hatim/agents/skills/rust-skills/rules/lint-unsafe-doc.md
+  s_7a40b76a175b62::t_9e1d973438aa6c 1-133
+home/hatim/agents/skills/rust-skills/rules/lint-warn-complexity.md
+  s_7a40b76a175b62::t_70b17ff01267b1 1-131
+home/hatim/agents/skills/rust-skills/rules/lint-warn-perf.md
+  s_7a40b76a175b62::t_e5df4a6ab46f89 1-136
+home/hatim/agents/skills/rust-skills/rules/lint-warn-style.md
+  s_7a40b76a175b62::t_93aaa89c4ef623 1-135
+home/hatim/agents/skills/rust-skills/rules/lint-warn-suspicious.md
+  s_7a40b76a175b62::t_ad1240052fb6e0 1-122
+home/hatim/agents/skills/rust-skills/rules/lint-workspace-lints.md
+  s_7a40b76a175b62::t_fecdb60f4aca83 1-172
+home/hatim/agents/skills/rust-skills/rules/mem-arena-allocator.md
+  s_7a40b76a175b62::t_d407306c56dac3 1-168
+home/hatim/agents/skills/rust-skills/rules/mem-arrayvec.md
+  s_7a40b76a175b62::t_96ae7903354504 1-142
+home/hatim/agents/skills/rust-skills/rules/mem-assert-type-size.md
+  s_7a40b76a175b62::t_12e4baa1858533 1-168
+home/hatim/agents/skills/rust-skills/rules/mem-avoid-format.md
+  s_7a40b76a175b62::t_da006029dbfd95 1-147
+home/hatim/agents/skills/rust-skills/rules/mem-box-large-variant.md
+  s_7a40b76a175b62::t_4a7c7e32abb666 1-158
+home/hatim/agents/skills/rust-skills/rules/mem-boxed-slice.md
+  s_7a40b76a175b62::t_3998c9f8a19263 1-139
+home/hatim/agents/skills/rust-skills/rules/mem-clone-from.md
+  s_7a40b76a175b62::t_b3fca58c22d1f3 1-147
+home/hatim/agents/skills/rust-skills/rules/mem-compact-string.md
+  s_7a40b76a175b62::t_cb12c34b005a1e 1-149
+home/hatim/agents/skills/rust-skills/rules/mem-reuse-collections.md
+  s_7a40b76a175b62::t_8f32933d675e93 1-174
+home/hatim/agents/skills/rust-skills/rules/mem-smaller-integers.md
+  s_7a40b76a175b62::t_13347943ba6bba 1-159
+home/hatim/agents/skills/rust-skills/rules/mem-smallvec.md
+  s_7a40b76a175b62::t_e675b38f8c6e2f 1-138
+home/hatim/agents/skills/rust-skills/rules/mem-thinvec.md
+  s_7a40b76a175b62::t_998fc9b86e2fb9 1-142
+home/hatim/agents/skills/rust-skills/rules/mem-with-capacity.md
+  s_7a40b76a175b62::t_a9bfea0ee1e41d 1-156
+home/hatim/agents/skills/rust-skills/rules/mem-write-over-format.md
+  s_7a40b76a175b62::t_7345a5e5f02b46 1-172
+home/hatim/agents/skills/rust-skills/rules/mem-zero-copy.md
+  s_7a40b76a175b62::t_fd7c5c328d30d9 1-164
+home/hatim/agents/skills/rust-skills/rules/name-acronym-word.md
+  s_7a40b76a175b62::t_f6d38f7b06e54b 1-99
+home/hatim/agents/skills/rust-skills/rules/name-as-free.md
+  s_7a40b76a175b62::t_8f7fd03a8a3110 1-104
+home/hatim/agents/skills/rust-skills/rules/name-consts-screaming.md
+  s_7a40b76a175b62::t_a77c3c2baaaed6 1-94
+home/hatim/agents/skills/rust-skills/rules/name-crate-no-rs.md
+  s_7a40b76a175b62::t_04623fd648c8f7 1-78
+home/hatim/agents/skills/rust-skills/rules/name-funcs-snake.md
+  s_7a40b76a175b62::t_e029ef559a7b9a 1-76
+home/hatim/agents/skills/rust-skills/rules/name-into-ownership.md
+  s_7a40b76a175b62::t_7c0a86a13629fc 1-123
+home/hatim/agents/skills/rust-skills/rules/name-is-has-bool.md
+  s_7a40b76a175b62::t_c07f80c24843c2 1-127
+home/hatim/agents/skills/rust-skills/rules/name-iter-convention.md
+  s_7a40b76a175b62::t_f17977966ab56d 1-129
+home/hatim/agents/skills/rust-skills/rules/name-iter-method.md
+  s_7a40b76a175b62::t_7c852bfe8c27c7 1-131
+home/hatim/agents/skills/rust-skills/rules/name-iter-type-match.md
+  s_7a40b76a175b62::t_bcd3b86fa3f817 1-142
+home/hatim/agents/skills/rust-skills/rules/name-lifetime-short.md
+  s_7a40b76a175b62::t_52afd4b3736df3 1-86
+home/hatim/agents/skills/rust-skills/rules/name-no-get-prefix.md
+  s_7a40b76a175b62::t_54bcae97240e3a 1-154
+home/hatim/agents/skills/rust-skills/rules/name-to-expensive.md
+  s_7a40b76a175b62::t_efd7915e3404ae 1-118
+home/hatim/agents/skills/rust-skills/rules/name-type-param-single.md
+  s_7a40b76a175b62::t_ea663a07e1a8d4 1-92
+home/hatim/agents/skills/rust-skills/rules/name-types-camel.md
+  s_7a40b76a175b62::t_30075169d89b75 1-65
+home/hatim/agents/skills/rust-skills/rules/name-variants-camel.md
+  s_7a40b76a175b62::t_c5fdc7a6d7ee09 1-101
+home/hatim/agents/skills/rust-skills/rules/opt-bounds-check.md
+  s_7a40b76a175b62::t_88a83dd29f7f2d 1-161
+home/hatim/agents/skills/rust-skills/rules/opt-cache-friendly.md
+  s_7a40b76a175b62::t_aa6f0ce083e1cf 1-187
+home/hatim/agents/skills/rust-skills/rules/opt-codegen-units.md
+  s_7a40b76a175b62::t_17e6896414ef24 1-142
+home/hatim/agents/skills/rust-skills/rules/opt-cold-unlikely.md
+  s_7a40b76a175b62::t_f53e5fadf78f58 1-152
+home/hatim/agents/skills/rust-skills/rules/opt-inline-always-rare.md
+  s_7a40b76a175b62::t_fbf09f63f94b80 1-141
+home/hatim/agents/skills/rust-skills/rules/opt-inline-never-cold.md
+  s_7a40b76a175b62::t_2a32c5cc17e317 1-181
+home/hatim/agents/skills/rust-skills/rules/opt-inline-small.md
+  s_7a40b76a175b62::t_8e9b12f76387e7 1-160
+home/hatim/agents/skills/rust-skills/rules/opt-likely-hint.md
+  s_7a40b76a175b62::t_40274edbc1bffe 1-171
+home/hatim/agents/skills/rust-skills/rules/opt-lto-release.md
+  s_7a40b76a175b62::t_fb2502cb2387fc 1-130
+home/hatim/agents/skills/rust-skills/rules/opt-pgo-profile.md
+  s_7a40b76a175b62::t_f0357dcef5cfe8 1-167
+home/hatim/agents/skills/rust-skills/rules/opt-simd-portable.md
+  s_7a40b76a175b62::t_c90ac7ee3f67e9 1-144
+home/hatim/agents/skills/rust-skills/rules/opt-target-cpu.md
+  s_7a40b76a175b62::t_2c2a7cd0770a32 1-154
+home/hatim/agents/skills/rust-skills/rules/own-arc-shared.md
+  s_7a40b76a175b62::t_af4fe7711f7d53 1-141
+home/hatim/agents/skills/rust-skills/rules/own-borrow-over-clone.md
+  s_7a40b76a175b62::t_1e309d8abf3409 1-95
+home/hatim/agents/skills/rust-skills/rules/own-clone-explicit.md
+  s_7a40b76a175b62::t_bd5ab360962e2b 1-135
+home/hatim/agents/skills/rust-skills/rules/own-copy-small.md
+  s_7a40b76a175b62::t_170fe52c90b162 1-124
+home/hatim/agents/skills/rust-skills/rules/own-cow-conditional.md
+  s_7a40b76a175b62::t_19a7016d14e479 1-135
+home/hatim/agents/skills/rust-skills/rules/own-lifetime-elision.md
+  s_7a40b76a175b62::t_6e3d4ba449dbf2 1-134
+home/hatim/agents/skills/rust-skills/rules/own-move-large.md
+  s_7a40b76a175b62::t_f1d09dddbe5786 1-134
+home/hatim/agents/skills/rust-skills/rules/own-mutex-interior.md
+  s_7a40b76a175b62::t_ed54524af2d074 1-105
+home/hatim/agents/skills/rust-skills/rules/own-rc-single-thread.md
+  s_7a40b76a175b62::t_347aa9aeab03e5 1-65
+home/hatim/agents/skills/rust-skills/rules/own-refcell-interior.md
+  s_7a40b76a175b62::t_6a7f936ce6c58c 1-97
+home/hatim/agents/skills/rust-skills/rules/own-rwlock-readers.md
+  s_7a40b76a175b62::t_31fd3cddee2faf 1-122
+home/hatim/agents/skills/rust-skills/rules/own-slice-over-vec.md
+  s_7a40b76a175b62::t_ae17ed83907cdc 1-119
+home/hatim/agents/skills/rust-skills/rules/perf-black-box-bench.md
+  s_7a40b76a175b62::t_236266efc05844 1-153
+home/hatim/agents/skills/rust-skills/rules/perf-chain-avoid.md
+  s_7a40b76a175b62::t_f5d190e0936abd 1-136
+home/hatim/agents/skills/rust-skills/rules/perf-collect-into.md
+  s_7a40b76a175b62::t_f335c32d41ca83 1-133
+home/hatim/agents/skills/rust-skills/rules/perf-collect-once.md
+  s_7a40b76a175b62::t_8963f3cc5b7ac2 1-120
+home/hatim/agents/skills/rust-skills/rules/perf-drain-reuse.md
+  s_7a40b76a175b62::t_a31b137fef2129 1-137
+home/hatim/agents/skills/rust-skills/rules/perf-entry-api.md
+  s_7a40b76a175b62::t_c49dc48040ca14 1-134
+home/hatim/agents/skills/rust-skills/rules/perf-extend-batch.md
+  s_7a40b76a175b62::t_108908dd82b93f 1-150
+home/hatim/agents/skills/rust-skills/rules/perf-iter-lazy.md
+  s_7a40b76a175b62::t_4d9f63c99985d7 1-123
+home/hatim/agents/skills/rust-skills/rules/perf-iter-over-index.md
+  s_7a40b76a175b62::t_54b3eb0c117049 1-113
+home/hatim/agents/skills/rust-skills/rules/perf-profile-first.md
+  s_7a40b76a175b62::t_289c4617b99d9d 1-175
+home/hatim/agents/skills/rust-skills/rules/perf-release-profile.md
+  s_7a40b76a175b62::t_a9a8545f6438d7 1-149
+home/hatim/agents/skills/rust-skills/rules/proj-bin-dir.md
+  s_7a40b76a175b62::t_e29f3dbe23ba14 1-142
+home/hatim/agents/skills/rust-skills/rules/proj-flat-small.md
+  s_7a40b76a175b62::t_a35e10acf283b2 1-133
+home/hatim/agents/skills/rust-skills/rules/proj-lib-main-split.md
+  s_7a40b76a175b62::t_6baf535f7beed2 1-148
+home/hatim/agents/skills/rust-skills/rules/proj-mod-by-feature.md
+  s_7a40b76a175b62::t_6cc82c62226b12 1-130
+home/hatim/agents/skills/rust-skills/rules/proj-mod-rs-dir.md
+  s_7a40b76a175b62::t_354615b803d1b6 1-120
+home/hatim/agents/skills/rust-skills/rules/proj-prelude-module.md
+  s_7a40b76a175b62::t_7c18fa7bba4209 1-155
+home/hatim/agents/skills/rust-skills/rules/proj-pub-crate-internal.md
+  s_7a40b76a175b62::t_477535752cf675 1-139
+home/hatim/agents/skills/rust-skills/rules/proj-pub-super-parent.md
+  s_7a40b76a175b62::t_69e8964aac6db4 1-135
+home/hatim/agents/skills/rust-skills/rules/proj-pub-use-reexport.md
+  s_7a40b76a175b62::t_f962cf47c7312a 1-162
+home/hatim/agents/skills/rust-skills/rules/proj-workspace-deps.md
+  s_7a40b76a175b62::t_9def045ad1bd58 1-186
+home/hatim/agents/skills/rust-skills/rules/proj-workspace-large.md
+  s_7a40b76a175b62::t_4c6b414b68aafa 1-162
+home/hatim/agents/skills/rust-skills/rules/test-arrange-act-assert.md
+  s_7a40b76a175b62::t_231f03f77168b7 1-160
+home/hatim/agents/skills/rust-skills/rules/test-cfg-test-module.md
+  s_7a40b76a175b62::t_5bb894f2256f49 1-151
+home/hatim/agents/skills/rust-skills/rules/test-criterion-bench.md
+  s_7a40b76a175b62::t_cde611bfc04644 1-171
+home/hatim/agents/skills/rust-skills/rules/test-descriptive-names.md
+  s_7a40b76a175b62::t_b7ea7d31e3c444 1-142
+home/hatim/agents/skills/rust-skills/rules/test-doctest-examples.md
+  s_7a40b76a175b62::t_8aeeab953de03e 1-168
+home/hatim/agents/skills/rust-skills/rules/test-fixture-raii.md
+  s_7a40b76a175b62::t_cb127b87e739d9 1-151
+home/hatim/agents/skills/rust-skills/rules/test-integration-dir.md
+  s_7a40b76a175b62::t_14a9fce7c06799 1-144
+home/hatim/agents/skills/rust-skills/rules/test-mock-traits.md
+  s_7a40b76a175b62::t_1277b4849c04c8 1-189
+home/hatim/agents/skills/rust-skills/rules/test-mockall-mocking.md
+  s_7a40b76a175b62::t_e825590a407019 1-226
+home/hatim/agents/skills/rust-skills/rules/test-proptest-properties.md
+  s_7a40b76a175b62::t_b40889e502728c 1-161
+home/hatim/agents/skills/rust-skills/rules/test-should-panic.md
+  s_7a40b76a175b62::t_95013f05703845 1-130
+home/hatim/agents/skills/rust-skills/rules/test-tokio-async.md
+  s_7a40b76a175b62::t_b8d961c6a6337a 1-154
+home/hatim/agents/skills/rust-skills/rules/test-use-super.md
+  s_7a40b76a175b62::t_bdda6a5f46eab8 1-127
+home/hatim/agents/skills/rust-skills/rules/type-enum-states.md
+  s_7a40b76a175b62::t_e6ab36f352bf62 1-154
+home/hatim/agents/skills/rust-skills/rules/type-generic-bounds.md
+  s_7a40b76a175b62::t_454216e737759b 1-142
+home/hatim/agents/skills/rust-skills/rules/type-never-diverge.md
+  s_7a40b76a175b62::t_0e9edccfb780d4 1-146
+home/hatim/agents/skills/rust-skills/rules/type-newtype-ids.md
+  s_7a40b76a175b62::t_6587b822045492 1-160
+home/hatim/agents/skills/rust-skills/rules/type-newtype-validated.md
+  s_7a40b76a175b62::t_0852c3185678da 1-159
+home/hatim/agents/skills/rust-skills/rules/type-no-stringly.md
+  s_7a40b76a175b62::t_2c3bc9acbc8a23 1-144
+home/hatim/agents/skills/rust-skills/rules/type-option-nullable.md
+  s_7a40b76a175b62::t_3021d606410e57 1-137
+home/hatim/agents/skills/rust-skills/rules/type-phantom-marker.md
+  s_7a40b76a175b62::t_03e81353fc21f3 1-188
+home/hatim/agents/skills/rust-skills/rules/type-repr-transparent.md
+  s_7a40b76a175b62::t_6128522f13791a 1-143
+home/hatim/agents/skills/rust-skills/rules/type-result-fallible.md
+  s_7a40b76a175b62::t_36439aa2a91d29 1-131
+home/hatim/agents/skills/setup-matt-pocock-skills/SKILL.md
+  s_7a40b76a175b62::t_2e1fb42d7b4293 1-116
+home/hatim/agents/skills/setup-matt-pocock-skills/agents/openai.yaml
+  s_7a40b76a175b62::t_f5d287f0d43033 1-5
+home/hatim/agents/skills/setup-matt-pocock-skills/domain.md
+  s_7a40b76a175b62::t_88bffd15e3c776 1-51
+home/hatim/agents/skills/setup-matt-pocock-skills/issue-tracker-github.md
+  s_7a40b76a175b62::t_36eb3cf2cf8b5d 1-45
+home/hatim/agents/skills/setup-matt-pocock-skills/issue-tracker-gitlab.md
+  s_7a40b76a175b62::t_f8826001ab4969 1-46
+home/hatim/agents/skills/setup-matt-pocock-skills/issue-tracker-local.md
+  s_7a40b76a175b62::t_9fd4f2714d4fd1 1-30
+home/hatim/agents/skills/setup-matt-pocock-skills/triage-labels.md
+  s_7a40b76a175b62::t_d33d372e6ded76 1-15
+home/hatim/agents/skills/stop-slop/CHANGELOG.md
+  s_7a40b76a175b62::t_d6c8aa6ed2f2e0 1-24
+home/hatim/agents/skills/stop-slop/LICENSE
+  s_7a40b76a175b62::t_5862dcf6321ded 1-21
+home/hatim/agents/skills/stop-slop/README.md
+  s_7a40b76a175b62::t_bbea6ae144587f 1-62
+home/hatim/agents/skills/stop-slop/SKILL.md
+  s_7a40b76a175b62::t_bde2b5b0636a80 1-68
+home/hatim/agents/skills/stop-slop/references/examples.md
+  s_7a40b76a175b62::t_fd81551a46c012 1-59
+home/hatim/agents/skills/stop-slop/references/phrases.md
+  s_7a40b76a175b62::t_6723d93bd05f20 1-128
+home/hatim/agents/skills/stop-slop/references/structures.md
+  s_7a40b76a175b62::t_0ca6f2834b4134 1-134
+home/hatim/agents/skills/tdd/SKILL.md
+  s_7a40b76a175b62::t_f88c8a126ff8f1 1-38
+home/hatim/agents/skills/tdd/agents/openai.yaml
+  s_7a40b76a175b62::t_62bd386aee70e6 1-3
+home/hatim/agents/skills/tdd/mocking.md
+  s_7a40b76a175b62::t_15962a86c06511 1-59
+home/hatim/agents/skills/tdd/tests.md
+  s_7a40b76a175b62::t_f734868ef46cf3 1-77
+home/hatim/agents/skills/teach/GLOSSARY-FORMAT.md
+  s_7a40b76a175b62::t_3ee57f4efa6b79 1-35
+home/hatim/agents/skills/teach/LEARNING-RECORD-FORMAT.md
+  s_7a40b76a175b62::t_6f03f65f8a6a11 1-46
+home/hatim/agents/skills/teach/MISSION-FORMAT.md
+  s_7a40b76a175b62::t_c9288bbc027c93 1-31
+home/hatim/agents/skills/teach/RESOURCES-FORMAT.md
+  s_7a40b76a175b62::t_cc52fabb9f86e4 1-32
+home/hatim/agents/skills/teach/SKILL.md
+  s_7a40b76a175b62::t_468801a9bbfec5 1-140
+home/hatim/agents/skills/teach/agents/openai.yaml
+  s_7a40b76a175b62::t_a3b07429a823b4 1-5
+home/hatim/agents/skills/to-spec/SKILL.md
+  s_7a40b76a175b62::t_2bf6645a4b9fa6 1-75
+home/hatim/agents/skills/to-spec/agents/openai.yaml
+  s_7a40b76a175b62::t_0a229f0cf27692 1-5
+home/hatim/agents/skills/to-tickets/SKILL.md
+  s_7a40b76a175b62::t_d3614bfd8e3b3d 1-105
+home/hatim/agents/skills/to-tickets/agents/openai.yaml
+  s_7a40b76a175b62::t_05623eade35a8d 1-5
+home/hatim/agents/skills/triage/AGENT-BRIEF.md
+  s_7a40b76a175b62::t_2e2706e7ffa898 1-207
+home/hatim/agents/skills/triage/OUT-OF-SCOPE.md
+  s_7a40b76a175b62::t_2643fcd1aa67af 1-105
+home/hatim/agents/skills/triage/SKILL.md
+  s_7a40b76a175b62::t_9d8f36bfd446e8 1-112
+home/hatim/agents/skills/triage/agents/openai.yaml
+  s_7a40b76a175b62::t_9583dfd74002ea 1-5
+home/hatim/agents/skills/wayfinder/SKILL.md
+  s_7a40b76a175b62::t_92164a3763ba2e 1-128
+home/hatim/agents/skills/wayfinder/agents/openai.yaml
+  s_7a40b76a175b62::t_8ef2e1a97ca6b3 1-5
+home/hatim/claude/skills
+  s_7a40b76a175b62::t_85c4c2f0ffa23d 1
+home/hatim/agents/skills/agents-sdk/SKILL.md
+  s_7a40b76a175b62::t_8cbe7b81ad1eaa 1-221
+home/hatim/agents/skills/agents-sdk/references/browse-the-web.md
+  s_7a40b76a175b62::t_50307bf490b40f 1-63
+home/hatim/agents/skills/agents-sdk/references/callable.md
+  s_7a40b76a175b62::t_fbb483ca5419db 1-92
+home/hatim/agents/skills/agents-sdk/references/client-sdk.md
+  s_7a40b76a175b62::t_6c48ee11dce212 1-110
+home/hatim/agents/skills/agents-sdk/references/codemode.md
+  s_7a40b76a175b62::t_f63c08f6a66c72 1-110
+home/hatim/agents/skills/agents-sdk/references/configuration.md
+  s_7a40b76a175b62::t_d8ddb2c011a9bd 1-72
+home/hatim/agents/skills/agents-sdk/references/durable-execution.md
+  s_7a40b76a175b62::t_d93bda1b957302 1-51
+home/hatim/agents/skills/agents-sdk/references/email.md
+  s_7a40b76a175b62::t_19feb651e40736 1-146
+home/hatim/agents/skills/agents-sdk/references/human-in-the-loop.md
+  s_7a40b76a175b62::t_71f9790293e563 1-67
+home/hatim/agents/skills/agents-sdk/references/mcp.md
+  s_7a40b76a175b62::t_f907c2cc556378 1-188
+home/hatim/agents/skills/agents-sdk/references/observability.md
+  s_7a40b76a175b62::t_156ad8d8c338d0 1-44
+home/hatim/agents/skills/agents-sdk/references/queue-retries.md
+  s_7a40b76a175b62::t_b05154197ce046 1-79
+home/hatim/agents/skills/agents-sdk/references/routing.md
+  s_7a40b76a175b62::t_301a359b847ba7 1-75
+home/hatim/agents/skills/agents-sdk/references/server-driven-messages.md
+  s_7a40b76a175b62::t_806483e1302171 1-63
+home/hatim/agents/skills/agents-sdk/references/state-scheduling.md
+  s_7a40b76a175b62::t_d0f63bd64ebf9a 1-171
+home/hatim/agents/skills/agents-sdk/references/streaming-chat.md
+  s_7a40b76a175b62::t_b55224c9e46aa0 1-198
+home/hatim/agents/skills/agents-sdk/references/think.md
+  s_7a40b76a175b62::t_8cf01301f64df2 1-112
+home/hatim/agents/skills/agents-sdk/references/voice.md
+  s_7a40b76a175b62::t_3c3e3676f32685 1-68
+home/hatim/agents/skills/agents-sdk/references/webhooks-push.md
+  s_7a40b76a175b62::t_7709669e5bf6f0 1-86
+home/hatim/agents/skills/agents-sdk/references/workflows.md
+  s_7a40b76a175b62::t_3101e872461a6b 1-132
+home/hatim/agents/skills/bd-to-br-migration/SELF-TEST.md
+  s_7a40b76a175b62::t_d94f355254edd6 1-131
+home/hatim/agents/skills/bd-to-br-migration/SKILL.md
+  s_7a40b76a175b62::t_b820b6ba0a02c9 1-332
+home/hatim/agents/skills/bd-to-br-migration/references/BULK.md
+  s_7a40b76a175b62::t_f4060cb606814c 1-235
+home/hatim/agents/skills/bd-to-br-migration/references/PITFALLS.md
+  s_7a40b76a175b62::t_8ce499963b2e7d 1-257
+home/hatim/agents/skills/bd-to-br-migration/references/TRANSFORMS.md
+  s_7a40b76a175b62::t_d09dc290ab75e9 1-314
+home/hatim/agents/skills/bd-to-br-migration/scripts/find-bd-refs.sh
+  s_7a40b76a175b62::t_bd3e20485e4498 1-75
+home/hatim/agents/skills/bd-to-br-migration/scripts/verify-migration.sh
+  s_7a40b76a175b62::t_4f9c76a3300389 1-123
+home/hatim/agents/skills/bd-to-br-migration/subagents/batch-migrator.md
+  s_7a40b76a175b62::t_4cfbb19d4cef44 1-79
+home/hatim/agents/skills/cloudflare-email-service/SKILL.md
+  s_7a40b76a175b62::t_f0cd8add788e8d 1-103
+home/hatim/agents/skills/cloudflare-email-service/references/cli-and-mcp.md
+  s_7a40b76a175b62::t_ccb2a721dc8b5b 1-125
+home/hatim/agents/skills/cloudflare-email-service/references/deliverability.md
+  s_7a40b76a175b62::t_01a39978dd79f0 1-285
+home/hatim/agents/skills/cloudflare-email-service/references/rest-api.md
+  s_7a40b76a175b62::t_80fb8805755012 1-184
+home/hatim/agents/skills/cloudflare-email-service/references/routing.md
+  s_7a40b76a175b62::t_3d677802449db3 1-199
+home/hatim/agents/skills/cloudflare-email-service/references/sending.md
+  s_7a40b76a175b62::t_d76de5a818271d 1-252
+home/hatim/agents/skills/cloudflare-one-migrations/SKILL.md
+  s_7a40b76a175b62::t_df8854bbaa2d4d 1-110
+home/hatim/agents/skills/cloudflare-one/SKILL.md
+  s_7a40b76a175b62::t_07722ecc2363a5 1-176
+home/hatim/agents/skills/cloudflare/SKILL.md
+  s_7a40b76a175b62::t_def3ad0c11d5e0 1-248
+home/hatim/agents/skills/cloudflare/references/agents-sdk/README.md
+  s_7a40b76a175b62::t_099a50b984a9c7 1-89
+home/hatim/agents/skills/cloudflare/references/agents-sdk/api.md
+  s_7a40b76a175b62::t_7d607ce61b2638 1-190
+home/hatim/agents/skills/cloudflare/references/agents-sdk/configuration.md
+  s_7a40b76a175b62::t_6f27346ccaf789 1-182
+home/hatim/agents/skills/cloudflare/references/agents-sdk/gotchas.md
+  s_7a40b76a175b62::t_8be0e28447fa13 1-158
+home/hatim/agents/skills/cloudflare/references/agents-sdk/patterns.md
+  s_7a40b76a175b62::t_6abdbbfe25ba05 1-192
+home/hatim/agents/skills/cloudflare/references/ai-gateway/README.md
+  s_7a40b76a175b62::t_a31c5a29a86e14 1-175
+home/hatim/agents/skills/cloudflare/references/ai-gateway/configuration.md
+  s_7a40b76a175b62::t_f842c4e6c7ff6e 1-111
+home/hatim/agents/skills/cloudflare/references/ai-gateway/dynamic-routing.md
+  s_7a40b76a175b62::t_1ddb7de39b8b07 1-82
+home/hatim/agents/skills/cloudflare/references/ai-gateway/features.md
+  s_7a40b76a175b62::t_cb9b59106a7e53 1-96
+home/hatim/agents/skills/cloudflare/references/ai-gateway/sdk-integration.md
+  s_7a40b76a175b62::t_f7e40efb250fc5 1-114
+home/hatim/agents/skills/cloudflare/references/ai-gateway/troubleshooting.md
+  s_7a40b76a175b62::t_49c961853ef6b9 1-88
+home/hatim/agents/skills/cloudflare/references/ai-search/README.md
+  s_7a40b76a175b62::t_46886e4aa1dfa5 1-138
+home/hatim/agents/skills/cloudflare/references/ai-search/api.md
+  s_7a40b76a175b62::t_226f2f021d0089 1-87
+home/hatim/agents/skills/cloudflare/references/ai-search/configuration.md
+  s_7a40b76a175b62::t_4df20d8434541d 1-88
+home/hatim/agents/skills/cloudflare/references/ai-search/gotchas.md
+  s_7a40b76a175b62::t_3ee6011a4baed0 1-81
+home/hatim/agents/skills/cloudflare/references/ai-search/patterns.md
+  s_7a40b76a175b62::t_ceabdcd714bb6c 1-85
+home/hatim/agents/skills/cloudflare/references/analytics-engine/README.md
+  s_7a40b76a175b62::t_8f154be4c02140 1-94
+home/hatim/agents/skills/cloudflare/references/analytics-engine/api.md
+  s_7a40b76a175b62::t_01136609d33770 1-112
+home/hatim/agents/skills/cloudflare/references/analytics-engine/configuration.md
+  s_7a40b76a175b62::t_f02da24ad498d9 1-112
+home/hatim/agents/skills/cloudflare/references/analytics-engine/gotchas.md
+  s_7a40b76a175b62::t_1365129c211805 1-85
+home/hatim/agents/skills/cloudflare/references/analytics-engine/patterns.md
+  s_7a40b76a175b62::t_89477a7c4b0bf1 1-83
+home/hatim/agents/skills/cloudflare/references/api-shield/README.md
+  s_7a40b76a175b62::t_1d7d0fae9ea36a 1-44
+home/hatim/agents/skills/cloudflare/references/api-shield/api.md
+  s_7a40b76a175b62::t_1fc2ea33e1df6d 1-141
+home/hatim/agents/skills/cloudflare/references/api-shield/configuration.md
+  s_7a40b76a175b62::t_75f4856417f0d9 1-192
+home/hatim/agents/skills/cloudflare/references/api-shield/gotchas.md
+  s_7a40b76a175b62::t_b1af5f3f776ac4 1-125
+home/hatim/agents/skills/cloudflare/references/api-shield/patterns.md
+  s_7a40b76a175b62::t_84e6d1bfa4bb5f 1-180
+home/hatim/agents/skills/cloudflare/references/api/README.md
+  s_7a40b76a175b62::t_de6805cd63d0b2 1-66
+home/hatim/agents/skills/cloudflare/references/api/api.md
+  s_7a40b76a175b62::t_4ecb7cdce4e4be 1-204
+home/hatim/agents/skills/cloudflare/references/api/configuration.md
+  s_7a40b76a175b62::t_57d03fb145a69c 1-160
+home/hatim/agents/skills/cloudflare/references/api/gotchas.md
+  s_7a40b76a175b62::t_e07c62d77ab217 1-225
+home/hatim/agents/skills/cloudflare/references/api/patterns.md
+  s_7a40b76a175b62::t_e95ed41614449b 1-204
+home/hatim/agents/skills/cloudflare/references/argo-smart-routing/README.md
+  s_7a40b76a175b62::t_9751b118afec4c 1-90
+home/hatim/agents/skills/cloudflare/references/argo-smart-routing/api.md
+  s_7a40b76a175b62::t_0b1b4e92b83eb2 1-240
+home/hatim/agents/skills/cloudflare/references/argo-smart-routing/configuration.md
+  s_7a40b76a175b62::t_890afa034b227d 1-197
+home/hatim/agents/skills/cloudflare/references/argo-smart-routing/gotchas.md
+  s_7a40b76a175b62::t_387757b9cb9668 1-111
+home/hatim/agents/skills/cloudflare/references/argo-smart-routing/patterns.md
+  s_7a40b76a175b62::t_f4993e96ef96ef 1-104
+home/hatim/agents/skills/cloudflare/references/artifacts/README.md
+  s_7a40b76a175b62::t_71fa47699ac715 1-79
+home/hatim/agents/skills/cloudflare/references/artifacts/api.md
+  s_7a40b76a175b62::t_63c0d105b8a172 1-128
+home/hatim/agents/skills/cloudflare/references/artifacts/configuration.md
+  s_7a40b76a175b62::t_9e5cb5c76a6409 1-92
+home/hatim/agents/skills/cloudflare/references/bindings/README.md
+  s_7a40b76a175b62::t_37706574c7d82b 1-122
+home/hatim/agents/skills/cloudflare/references/bindings/api.md
+  s_7a40b76a175b62::t_54cc255050fe81 1-203
+home/hatim/agents/skills/cloudflare/references/bindings/configuration.md
+  s_7a40b76a175b62::t_9fb44ae9bbc9eb 1-188
+home/hatim/agents/skills/cloudflare/references/bindings/gotchas.md
+  s_7a40b76a175b62::t_959e252a6df4a6 1-208
+home/hatim/agents/skills/cloudflare/references/bindings/patterns.md
+  s_7a40b76a175b62::t_304b5a8d92af8a 1-200
+home/hatim/agents/skills/cloudflare/references/bot-management/README.md
+  s_7a40b76a175b62::t_72ff543af464c0 1-94
+home/hatim/agents/skills/cloudflare/references/bot-management/api.md
+  s_7a40b76a175b62::t_9a9e3f9cd464d4 1-169
+home/hatim/agents/skills/cloudflare/references/bot-management/configuration.md
+  s_7a40b76a175b62::t_4d84218d057137 1-163
+home/hatim/agents/skills/cloudflare/references/bot-management/gotchas.md
+  s_7a40b76a175b62::t_28bd780ef05846 1-114
+home/hatim/agents/skills/cloudflare/references/bot-management/patterns.md
+  s_7a40b76a175b62::t_1d53c90a888c3b 1-182
+home/hatim/agents/skills/cloudflare/references/browser-rendering/README.md
+  s_7a40b76a175b62::t_1c726d5fc47983 1-78
+home/hatim/agents/skills/cloudflare/references/browser-rendering/api.md
+  s_7a40b76a175b62::t_099269c427bfc6 1-108
+home/hatim/agents/skills/cloudflare/references/browser-rendering/configuration.md
+  s_7a40b76a175b62::t_c613aba4558721 1-78
+home/hatim/agents/skills/cloudflare/references/browser-rendering/gotchas.md
+  s_7a40b76a175b62::t_5fecde52c206c1 1-88
+home/hatim/agents/skills/cloudflare/references/browser-rendering/patterns.md
+  s_7a40b76a175b62::t_c78391c77cc5b2 1-91
+home/hatim/agents/skills/cloudflare/references/c3/README.md
+  s_7a40b76a175b62::t_89a31fb3b31d10 1-111
+home/hatim/agents/skills/cloudflare/references/c3/api.md
+  s_7a40b76a175b62::t_ac3421c683dfa9 1-71
+home/hatim/agents/skills/cloudflare/references/c3/configuration.md
+  s_7a40b76a175b62::t_a4aee2db557f3e 1-81
+home/hatim/agents/skills/cloudflare/references/c3/gotchas.md
+  s_7a40b76a175b62::t_9865ce7acacaaa 1-92
+home/hatim/agents/skills/cloudflare/references/c3/patterns.md
+  s_7a40b76a175b62::t_351ee4f2274553 1-82
+home/hatim/agents/skills/cloudflare/references/cache-reserve/README.md
+  s_7a40b76a175b62::t_757343275d2ff0 1-147
+home/hatim/agents/skills/cloudflare/references/cache-reserve/api.md
+  s_7a40b76a175b62::t_f0277c6172aeeb 1-194
+home/hatim/agents/skills/cloudflare/references/cache-reserve/configuration.md
+  s_7a40b76a175b62::t_a82cc512d0efe3 1-169
+home/hatim/agents/skills/cloudflare/references/cache-reserve/gotchas.md
+  s_7a40b76a175b62::t_389d3d64cbb4c5 1-132
+home/hatim/agents/skills/cloudflare/references/cache-reserve/patterns.md
+  s_7a40b76a175b62::t_6a4c250995fa84 1-197
+home/hatim/agents/skills/cloudflare/references/containers/README.md
+  s_7a40b76a175b62::t_33203c7fc0a3c1 1-85
+home/hatim/agents/skills/cloudflare/references/containers/api.md
+  s_7a40b76a175b62::t_fb85c2883ed862 1-187
+home/hatim/agents/skills/cloudflare/references/containers/configuration.md
+  s_7a40b76a175b62::t_98d9ebc6ac44a9 1-188
+home/hatim/agents/skills/cloudflare/references/containers/gotchas.md
+  s_7a40b76a175b62::t_6ff7c6ebdd04bd 1-178
+home/hatim/agents/skills/cloudflare/references/containers/patterns.md
+  s_7a40b76a175b62::t_858590267e1198 1-202
+home/hatim/agents/skills/cloudflare/references/cron-triggers/README.md
+  s_7a40b76a175b62::t_c61e958251ab92 1-99
+home/hatim/agents/skills/cloudflare/references/cron-triggers/api.md
+  s_7a40b76a175b62::t_b5ecadd11581ff 1-196
+home/hatim/agents/skills/cloudflare/references/cron-triggers/configuration.md
+  s_7a40b76a175b62::t_cdad8bc0e4c740 1-180
+home/hatim/agents/skills/cloudflare/references/cron-triggers/gotchas.md
+  s_7a40b76a175b62::t_577ac8c003fa62 1-199
+home/hatim/agents/skills/cloudflare/references/cron-triggers/patterns.md
+  s_7a40b76a175b62::t_f4ab22db981ec3 1-190
+home/hatim/agents/skills/cloudflare/references/d1/README.md
+  s_7a40b76a175b62::t_cf0611c170d97d 1-133
+home/hatim/agents/skills/cloudflare/references/d1/api.md
+  s_7a40b76a175b62::t_4f2b7320fcbf3e 1-196
+home/hatim/agents/skills/cloudflare/references/d1/configuration.md
+  s_7a40b76a175b62::t_19dc783fa090dc 1-191
+home/hatim/agents/skills/cloudflare/references/d1/gotchas.md
+  s_7a40b76a175b62::t_bd137be9674b19 1-98
+home/hatim/agents/skills/cloudflare/references/d1/patterns.md
+  s_7a40b76a175b62::t_84117bcdbf8988 1-189
+home/hatim/agents/skills/cloudflare/references/ddos/README.md
+  s_7a40b76a175b62::t_4f193a657e9793 1-41
+home/hatim/agents/skills/cloudflare/references/ddos/api.md
+  s_7a40b76a175b62::t_12684e660aa3f8 1-164
+home/hatim/agents/skills/cloudflare/references/ddos/configuration.md
+  s_7a40b76a175b62::t_e0259655250850 1-93
+home/hatim/agents/skills/cloudflare/references/ddos/gotchas.md
+  s_7a40b76a175b62::t_1e94ae99c11de1 1-107
+home/hatim/agents/skills/cloudflare/references/ddos/patterns.md
+  s_7a40b76a175b62::t_c145e2c3dc513b 1-174
+home/hatim/agents/skills/cloudflare/references/do-storage/README.md
+  s_7a40b76a175b62::t_266ac215ecf2c7 1-75
+home/hatim/agents/skills/cloudflare/references/do-storage/api.md
+  s_7a40b76a175b62::t_581ba19f8bce42 1-102
+home/hatim/agents/skills/cloudflare/references/do-storage/configuration.md
+  s_7a40b76a175b62::t_bca3821e42c348 1-112
+home/hatim/agents/skills/cloudflare/references/do-storage/gotchas.md
+  s_7a40b76a175b62::t_10e130184ee4d2 1-150
+home/hatim/agents/skills/cloudflare/references/do-storage/patterns.md
+  s_7a40b76a175b62::t_a3950dd85266c2 1-194
+home/hatim/agents/skills/cloudflare/references/do-storage/testing.md
+  s_7a40b76a175b62::t_579ca473bec1bd 1-183
+home/hatim/agents/skills/cloudflare/references/durable-objects/README.md
+  s_7a40b76a175b62::t_a55585d0803a8c 1-185
+home/hatim/agents/skills/cloudflare/references/durable-objects/api.md
+  s_7a40b76a175b62::t_5fcde02795dc6d 1-187
+home/hatim/agents/skills/cloudflare/references/durable-objects/configuration.md
+  s_7a40b76a175b62::t_56b6224ba20e78 1-160
+home/hatim/agents/skills/cloudflare/references/durable-objects/gotchas.md
+  s_7a40b76a175b62::t_3c03779d557f03 1-197
+home/hatim/agents/skills/cloudflare/references/durable-objects/patterns.md
+  s_7a40b76a175b62::t_16178500b34ea1 1-201
+home/hatim/agents/skills/cloudflare/references/email-routing/README.md
+  s_7a40b76a175b62::t_7fece9b6091028 1-89
+home/hatim/agents/skills/cloudflare/references/email-routing/api.md
+  s_7a40b76a175b62::t_3bf5ebab34e514 1-195
+home/hatim/agents/skills/cloudflare/references/email-routing/configuration.md
+  s_7a40b76a175b62::t_37a2e17109a4d1 1-186
+home/hatim/agents/skills/cloudflare/references/email-routing/gotchas.md
+  s_7a40b76a175b62::t_03a7ebc6c88601 1-196
+home/hatim/agents/skills/cloudflare/references/email-routing/patterns.md
+  s_7a40b76a175b62::t_837dde7a523848 1-229
+home/hatim/agents/skills/cloudflare/references/email-workers/README.md
+  s_7a40b76a175b62::t_e3f1fb42a3204c 1-151
+home/hatim/agents/skills/cloudflare/references/email-workers/api.md
+  s_7a40b76a175b62::t_4a6abb29593d2b 1-237
+home/hatim/agents/skills/cloudflare/references/email-workers/configuration.md
+  s_7a40b76a175b62::t_ad75f4bb0e22e2 1-112
+home/hatim/agents/skills/cloudflare/references/email-workers/gotchas.md
+  s_7a40b76a175b62::t_ce3e19f31c5ee2 1-125
+home/hatim/agents/skills/cloudflare/references/email-workers/patterns.md
+  s_7a40b76a175b62::t_cb105da8cf68d8 1-102
+home/hatim/agents/skills/cloudflare/references/flagship/README.md
+  s_7a40b76a175b62::t_6983200e657cf8 1-59
+home/hatim/agents/skills/cloudflare/references/flagship/api.md
+  s_7a40b76a175b62::t_a491d2c0de1f66 1-390
+home/hatim/agents/skills/cloudflare/references/flagship/configuration.md
+  s_7a40b76a175b62::t_51e005079754ea 1-202
+home/hatim/agents/skills/cloudflare/references/flagship/gotchas.md
+  s_7a40b76a175b62::t_5a214bcccf5b24 1-178
+home/hatim/agents/skills/cloudflare/references/flagship/patterns.md
+  s_7a40b76a175b62::t_75cc58e538e9b7 1-469
+home/hatim/agents/skills/cloudflare/references/graphql-api/README.md
+  s_7a40b76a175b62::t_b1f0ab979e5d34 1-147
+home/hatim/agents/skills/cloudflare/references/graphql-api/api.md
+  s_7a40b76a175b62::t_534a7355229d09 1-175
+home/hatim/agents/skills/cloudflare/references/graphql-api/configuration.md
+  s_7a40b76a175b62::t_b87fde58dea758 1-118
+home/hatim/agents/skills/cloudflare/references/graphql-api/gotchas.md
+  s_7a40b76a175b62::t_542abd2ef14853 1-110
+home/hatim/agents/skills/cloudflare/references/graphql-api/patterns.md
+  s_7a40b76a175b62::t_9bd39b5210f647 1-225
+home/hatim/agents/skills/cloudflare/references/hyperdrive/README.md
+  s_7a40b76a175b62::t_5eebd072101c80 1-82
+home/hatim/agents/skills/cloudflare/references/hyperdrive/api.md
+  s_7a40b76a175b62::t_4b2d3925b45410 1-143
+home/hatim/agents/skills/cloudflare/references/hyperdrive/configuration.md
+  s_7a40b76a175b62::t_959c9ec0f347c4 1-159
+home/hatim/agents/skills/cloudflare/references/hyperdrive/gotchas.md
+  s_7a40b76a175b62::t_238cfd51c3a2b9 1-77
+home/hatim/agents/skills/cloudflare/references/hyperdrive/patterns.md
+  s_7a40b76a175b62::t_179abeb7aef5a7 1-190
+home/hatim/agents/skills/cloudflare/references/images/README.md
+  s_7a40b76a175b62::t_34912defc43fcd 1-61
+home/hatim/agents/skills/cloudflare/references/images/api.md
+  s_7a40b76a175b62::t_962ce187c8391c 1-96
+home/hatim/agents/skills/cloudflare/references/images/configuration.md
+  s_7a40b76a175b62::t_f93bc1be6b29f1 1-211
+home/hatim/agents/skills/cloudflare/references/images/gotchas.md
+  s_7a40b76a175b62::t_21e987b9a1bd2b 1-99
+home/hatim/agents/skills/cloudflare/references/images/patterns.md
+  s_7a40b76a175b62::t_3edfcc8cfff1a5 1-115
+home/hatim/agents/skills/cloudflare/references/kv/README.md
+  s_7a40b76a175b62::t_40319fc6a2439b 1-89
+home/hatim/agents/skills/cloudflare/references/kv/api.md
+  s_7a40b76a175b62::t_ec69a531412713 1-160
+home/hatim/agents/skills/cloudflare/references/kv/configuration.md
+  s_7a40b76a175b62::t_2d8ee2ff9d4f50 1-144
+home/hatim/agents/skills/cloudflare/references/kv/gotchas.md
+  s_7a40b76a175b62::t_154fdd9f008d05 1-131
+home/hatim/agents/skills/cloudflare/references/kv/patterns.md
+  s_7a40b76a175b62::t_bd4d34e67aa690 1-196
+home/hatim/agents/skills/cloudflare/references/miniflare/README.md
+  s_7a40b76a175b62::t_b33309b41388e8 1-105
+home/hatim/agents/skills/cloudflare/references/miniflare/api.md
+  s_7a40b76a175b62::t_9ea7ba7f40becb 1-187
+home/hatim/agents/skills/cloudflare/references/miniflare/configuration.md
+  s_7a40b76a175b62::t_f45445dbbc8c1c 1-173
+home/hatim/agents/skills/cloudflare/references/miniflare/gotchas.md
+  s_7a40b76a175b62::t_64015a18c30969 1-160
+home/hatim/agents/skills/cloudflare/references/miniflare/patterns.md
+  s_7a40b76a175b62::t_8bf0f4a1bbe9df 1-181
+home/hatim/agents/skills/cloudflare/references/network-interconnect/README.md
+  s_7a40b76a175b62::t_e22640bde7c64e 1-99
+home/hatim/agents/skills/cloudflare/references/network-interconnect/api.md
+  s_7a40b76a175b62::t_b7d54c1a9b1647 1-199
+home/hatim/agents/skills/cloudflare/references/network-interconnect/configuration.md
+  s_7a40b76a175b62::t_66cf5b74bddf52 1-114
+home/hatim/agents/skills/cloudflare/references/network-interconnect/gotchas.md
+  s_7a40b76a175b62::t_497b893893aff1 1-165
+home/hatim/agents/skills/cloudflare/references/network-interconnect/patterns.md
+  s_7a40b76a175b62::t_df3074af3ceb62 1-166
+home/hatim/agents/skills/cloudflare/references/observability/README.md
+  s_7a40b76a175b62::t_254e88e6ab8baa 1-88
+home/hatim/agents/skills/cloudflare/references/observability/api.md
+  s_7a40b76a175b62::t_e306d3b97950d0 1-164
+home/hatim/agents/skills/cloudflare/references/observability/configuration.md
+  s_7a40b76a175b62::t_c85e4dc8514eb2 1-169
+home/hatim/agents/skills/cloudflare/references/observability/gotchas.md
+  s_7a40b76a175b62::t_0a90081a383a5e 1-115
+home/hatim/agents/skills/cloudflare/references/observability/patterns.md
+  s_7a40b76a175b62::t_0406d97c6a5f93 1-105
+home/hatim/agents/skills/cloudflare/references/pages-functions/README.md
+  s_7a40b76a175b62::t_021b874148b123 1-98
+home/hatim/agents/skills/cloudflare/references/pages-functions/api.md
+  s_7a40b76a175b62::t_1c34aed0b08c8f 1-143
+home/hatim/agents/skills/cloudflare/references/pages-functions/configuration.md
+  s_7a40b76a175b62::t_9b3ccda9332265 1-122
+home/hatim/agents/skills/cloudflare/references/pages-functions/gotchas.md
+  s_7a40b76a175b62::t_17def16db1bfae 1-94
+home/hatim/agents/skills/cloudflare/references/pages-functions/patterns.md
+  s_7a40b76a175b62::t_fe072cbd1a16e9 1-137
+home/hatim/agents/skills/cloudflare/references/pages/README.md
+  s_7a40b76a175b62::t_745a7e82f3a3b3 1-88
+home/hatim/agents/skills/cloudflare/references/pages/api.md
+  s_7a40b76a175b62::t_fc31fe4f92aa38 1-204
+home/hatim/agents/skills/cloudflare/references/pages/configuration.md
+  s_7a40b76a175b62::t_1d39eec254b03f 1-201
+home/hatim/agents/skills/cloudflare/references/pages/gotchas.md
+  s_7a40b76a175b62::t_013f3f010c3d64 1-203
+home/hatim/agents/skills/cloudflare/references/pages/patterns.md
+  s_7a40b76a175b62::t_dc20021ee55fd7 1-204
+home/hatim/agents/skills/cloudflare/references/pipelines/README.md
+  s_7a40b76a175b62::t_657dd3bbf47ffd 1-90
+home/hatim/agents/skills/cloudflare/references/pipelines/api.md
+  s_7a40b76a175b62::t_73b3f4ca491749 1-124
+home/hatim/agents/skills/cloudflare/references/pipelines/configuration.md
+  s_7a40b76a175b62::t_3f12073c1d1c27 1-155
+home/hatim/agents/skills/cloudflare/references/pipelines/gotchas.md
+  s_7a40b76a175b62::t_21d820ce4dcfd5 1-58
+home/hatim/agents/skills/cloudflare/references/pipelines/patterns.md
+  s_7a40b76a175b62::t_edcb39392aa47e 1-130
+home/hatim/agents/skills/cloudflare/references/pulumi/README.md
+  s_7a40b76a175b62::t_10794812abb0a8 1-100
+home/hatim/agents/skills/cloudflare/references/pulumi/api.md
+  s_7a40b76a175b62::t_d7c3bc928c865d 1-200
+home/hatim/agents/skills/cloudflare/references/pulumi/configuration.md
+  s_7a40b76a175b62::t_f80269321ac8df 1-198
+home/hatim/agents/skills/cloudflare/references/pulumi/gotchas.md
+  s_7a40b76a175b62::t_2e351eef6e96c6 1-181
+home/hatim/agents/skills/cloudflare/references/pulumi/patterns.md
+  s_7a40b76a175b62::t_945a4f81e22208 1-191
+home/hatim/agents/skills/cloudflare/references/queues/README.md
+  s_7a40b76a175b62::t_8c1f1a87ba317c 1-96
+home/hatim/agents/skills/cloudflare/references/queues/api.md
+  s_7a40b76a175b62::t_82d0584754163f 1-206
+home/hatim/agents/skills/cloudflare/references/queues/configuration.md
+  s_7a40b76a175b62::t_e618afc8e7b91d 1-144
+home/hatim/agents/skills/cloudflare/references/queues/gotchas.md
+  s_7a40b76a175b62::t_12d1e0cfe9b5e3 1-206
+home/hatim/agents/skills/cloudflare/references/queues/patterns.md
+  s_7a40b76a175b62::t_03a421d25abacf 1-220
+home/hatim/agents/skills/cloudflare/references/r2-data-catalog/README.md
+  s_7a40b76a175b62::t_2789417cc11a27 1-75
+home/hatim/agents/skills/cloudflare/references/r2-data-catalog/api.md
+  s_7a40b76a175b62::t_4429f148643ff3 1-122
+home/hatim/agents/skills/cloudflare/references/r2-data-catalog/configuration.md
+  s_7a40b76a175b62::t_0092f65a7b38d1 1-98
+home/hatim/agents/skills/cloudflare/references/r2-data-catalog/gotchas.md
+  s_7a40b76a175b62::t_f6c7f47b91727b 1-55
+home/hatim/agents/skills/cloudflare/references/r2-data-catalog/patterns.md
+  s_7a40b76a175b62::t_a102a25e06db8a 1-122
+home/hatim/agents/skills/cloudflare/references/r2-sql/README.md
+  s_7a40b76a175b62::t_7646ffb9aa88d4 1-64
+home/hatim/agents/skills/cloudflare/references/r2-sql/api.md
+  s_7a40b76a175b62::t_f930194376d609 1-121
+home/hatim/agents/skills/cloudflare/references/r2-sql/configuration.md
+  s_7a40b76a175b62::t_f003017b722ee4 1-50
+home/hatim/agents/skills/cloudflare/references/r2-sql/gotchas.md
+  s_7a40b76a175b62::t_1e3e63d0161800 1-39
+home/hatim/agents/skills/cloudflare/references/r2-sql/patterns.md
+  s_7a40b76a175b62::t_0f798219f14531 1-118
+home/hatim/agents/skills/cloudflare/references/r2/README.md
+  s_7a40b76a175b62::t_3b612bdd15df01 1-95
+home/hatim/agents/skills/cloudflare/references/r2/api.md
+  s_7a40b76a175b62::t_ef4a1e934cb286 1-200
+home/hatim/agents/skills/cloudflare/references/r2/configuration.md
+  s_7a40b76a175b62::t_2983344c883a44 1-165
+home/hatim/agents/skills/cloudflare/references/r2/gotchas.md
+  s_7a40b76a175b62::t_c7a47373cfffb1 1-190
+home/hatim/agents/skills/cloudflare/references/r2/patterns.md
+  s_7a40b76a175b62::t_e2ee0f3ea78f21 1-193
+home/hatim/agents/skills/cloudflare/references/realtime-sfu/README.md
+  s_7a40b76a175b62::t_b6a2a847cb2b0d 1-65
+home/hatim/agents/skills/cloudflare/references/realtime-sfu/api.md
+  s_7a40b76a175b62::t_7e9432df7a8916 1-158
+home/hatim/agents/skills/cloudflare/references/realtime-sfu/configuration.md
+  s_7a40b76a175b62::t_13097a24a8ca2a 1-137
+home/hatim/agents/skills/cloudflare/references/realtime-sfu/gotchas.md
+  s_7a40b76a175b62::t_8bfb5384855e0c 1-133
+home/hatim/agents/skills/cloudflare/references/realtime-sfu/patterns.md
+  s_7a40b76a175b62::t_ab765e7749b791 1-174
+home/hatim/agents/skills/cloudflare/references/realtimekit/README.md
+  s_7a40b76a175b62::t_f3f4463cc01917 1-113
+home/hatim/agents/skills/cloudflare/references/realtimekit/api.md
+  s_7a40b76a175b62::t_c51f0c86fc6fca 1-212
+home/hatim/agents/skills/cloudflare/references/realtimekit/configuration.md
+  s_7a40b76a175b62::t_f79e1a6c7e0d40 1-203
+home/hatim/agents/skills/cloudflare/references/realtimekit/gotchas.md
+  s_7a40b76a175b62::t_d602a48d8e1c0d 1-169
+home/hatim/agents/skills/cloudflare/references/realtimekit/patterns.md
+  s_7a40b76a175b62::t_e8a8b319d16ea9 1-223
+home/hatim/agents/skills/cloudflare/references/sandbox/README.md
+  s_7a40b76a175b62::t_c1fcbb838c3455 1-96
+home/hatim/agents/skills/cloudflare/references/sandbox/api.md
+  s_7a40b76a175b62::t_5813ea6557bbd5 1-198
+home/hatim/agents/skills/cloudflare/references/sandbox/configuration.md
+  s_7a40b76a175b62::t_9070d38a8056ba 1-143
+home/hatim/agents/skills/cloudflare/references/sandbox/gotchas.md
+  s_7a40b76a175b62::t_c3151d8301773b 1-194
+home/hatim/agents/skills/cloudflare/references/sandbox/patterns.md
+  s_7a40b76a175b62::t_5a7f15c7d5b953 1-201
+home/hatim/agents/skills/cloudflare/references/secrets-store/README.md
+  s_7a40b76a175b62::t_dc9cf89fb62403 1-74
+home/hatim/agents/skills/cloudflare/references/secrets-store/api.md
+  s_7a40b76a175b62::t_f1e07e503c8ccd 1-200
+home/hatim/agents/skills/cloudflare/references/secrets-store/configuration.md
+  s_7a40b76a175b62::t_077b67d9a0a1e7 1-185
+home/hatim/agents/skills/cloudflare/references/secrets-store/gotchas.md
+  s_7a40b76a175b62::t_fee1a5e284a2d8 1-97
+home/hatim/agents/skills/cloudflare/references/secrets-store/patterns.md
+  s_7a40b76a175b62::t_f24c2e761bb8b7 1-207
+home/hatim/agents/skills/cloudflare/references/smart-placement/README.md
+  s_7a40b76a175b62::t_a4e0d96457188a 1-138
+home/hatim/agents/skills/cloudflare/references/smart-placement/api.md
+  s_7a40b76a175b62::t_ccf17461c81d0f 1-183
+home/hatim/agents/skills/cloudflare/references/smart-placement/configuration.md
+  s_7a40b76a175b62::t_aee4bfadc444be 1-196
+home/hatim/agents/skills/cloudflare/references/smart-placement/gotchas.md
+  s_7a40b76a175b62::t_0a9f15c8d88a8c 1-174
+home/hatim/agents/skills/cloudflare/references/smart-placement/patterns.md
+  s_7a40b76a175b62::t_bb509e551fe79c 1-183
+home/hatim/agents/skills/cloudflare/references/snippets/README.md
+  s_7a40b76a175b62::t_9bf1ce2b3ff87d 1-68
+home/hatim/agents/skills/cloudflare/references/snippets/api.md
+  s_7a40b76a175b62::t_fdeb97bc97ac42 1-198
+home/hatim/agents/skills/cloudflare/references/snippets/configuration.md
+  s_7a40b76a175b62::t_04d9cce4d3f048 1-227
+home/hatim/agents/skills/cloudflare/references/snippets/gotchas.md
+  s_7a40b76a175b62::t_1f04baa8ca9b11 1-86
+home/hatim/agents/skills/cloudflare/references/snippets/patterns.md
+  s_7a40b76a175b62::t_df5a959843ed95 1-135
+home/hatim/agents/skills/cloudflare/references/spectrum/README.md
+  s_7a40b76a175b62::t_8fb3635916af05 1-52
+home/hatim/agents/skills/cloudflare/references/spectrum/api.md
+  s_7a40b76a175b62::t_2740a58f3d90ad 1-181
+home/hatim/agents/skills/cloudflare/references/spectrum/configuration.md
+  s_7a40b76a175b62::t_e42517c99a84ff 1-194
+home/hatim/agents/skills/cloudflare/references/spectrum/gotchas.md
+  s_7a40b76a175b62::t_4be11635fd870b 1-145
+home/hatim/agents/skills/cloudflare/references/spectrum/patterns.md
+  s_7a40b76a175b62::t_283254b306f37d 1-196
+home/hatim/agents/skills/cloudflare/references/static-assets/README.md
+  s_7a40b76a175b62::t_93a9a8e6ee957d 1-65
+home/hatim/agents/skills/cloudflare/references/static-assets/api.md
+  s_7a40b76a175b62::t_4e6834f41cd333 1-199
+home/hatim/agents/skills/cloudflare/references/static-assets/configuration.md
+  s_7a40b76a175b62::t_254fb2131b3e17 1-186
+home/hatim/agents/skills/cloudflare/references/static-assets/gotchas.md
+  s_7a40b76a175b62::t_3dcb1944bc6467 1-162
+home/hatim/agents/skills/cloudflare/references/static-assets/patterns.md
+  s_7a40b76a175b62::t_c8a4b432503b82 1-189
+home/hatim/agents/skills/cloudflare/references/stream/README.md
+  s_7a40b76a175b62::t_f649c22176a172 1-114
+home/hatim/agents/skills/cloudflare/references/stream/api-live.md
+  s_7a40b76a175b62::t_cfc88726657083 1-195
+home/hatim/agents/skills/cloudflare/references/stream/api.md
+  s_7a40b76a175b62::t_7c995efd27fe4f 1-199
+home/hatim/agents/skills/cloudflare/references/stream/configuration.md
+  s_7a40b76a175b62::t_e3fe0848c8bc61 1-141
+home/hatim/agents/skills/cloudflare/references/stream/gotchas.md
+  s_7a40b76a175b62::t_f8d889d697d77a 1-130
+home/hatim/agents/skills/cloudflare/references/stream/patterns.md
+  s_7a40b76a175b62::t_24eedc2a1c9d16 1-184
+home/hatim/agents/skills/cloudflare/references/tail-workers/README.md
+  s_7a40b76a175b62::t_7c7d7280798c58 1-89
+home/hatim/agents/skills/cloudflare/references/tail-workers/api.md
+  s_7a40b76a175b62::t_faa13235a55a80 1-200
+home/hatim/agents/skills/cloudflare/references/tail-workers/configuration.md
+  s_7a40b76a175b62::t_e849925045cf49 1-176
+home/hatim/agents/skills/cloudflare/references/tail-workers/gotchas.md
+  s_7a40b76a175b62::t_4fd02338ff2e7f 1-192
+home/hatim/agents/skills/cloudflare/references/tail-workers/patterns.md
+  s_7a40b76a175b62::t_48fa1f0c188234 1-180
+home/hatim/agents/skills/cloudflare/references/terraform/README.md
+  s_7a40b76a175b62::t_5a4489467d2fe0 1-102
+home/hatim/agents/skills/cloudflare/references/terraform/api.md
+  s_7a40b76a175b62::t_387409e7559540 1-178
+home/hatim/agents/skills/cloudflare/references/terraform/configuration.md
+  s_7a40b76a175b62::t_d13a973f9261ec 1-197
+home/hatim/agents/skills/cloudflare/references/terraform/gotchas.md
+  s_7a40b76a175b62::t_7600967d3e2a86 1-150
+home/hatim/agents/skills/cloudflare/references/terraform/patterns.md
+  s_7a40b76a175b62::t_503f78e2691284 1-174
+home/hatim/agents/skills/cloudflare/references/tunnel/README.md
+  s_7a40b76a175b62::t_f5a8c4bb19393e 1-129
+home/hatim/agents/skills/cloudflare/references/tunnel/api.md
+  s_7a40b76a175b62::t_e4d34d06dcf8de 1-193
+home/hatim/agents/skills/cloudflare/references/tunnel/configuration.md
+  s_7a40b76a175b62::t_89c22ecef23366 1-157
+home/hatim/agents/skills/cloudflare/references/tunnel/gotchas.md
+  s_7a40b76a175b62::t_f4533978e49d89 1-147
+home/hatim/agents/skills/cloudflare/references/tunnel/networking.md
+  s_7a40b76a175b62::t_ce4923c3f5cc5d 1-168
+home/hatim/agents/skills/cloudflare/references/tunnel/patterns.md
+  s_7a40b76a175b62::t_ad0115116c4659 1-192
+home/hatim/agents/skills/cloudflare/references/turn/README.md
+  s_7a40b76a175b62::t_35868271fb026e 1-82
+home/hatim/agents/skills/cloudflare/references/turn/api.md
+  s_7a40b76a175b62::t_775b630990e9d7 1-239
+home/hatim/agents/skills/cloudflare/references/turn/configuration.md
+  s_7a40b76a175b62::t_9bb9926349f2b8 1-179
+home/hatim/agents/skills/cloudflare/references/turn/gotchas.md
+  s_7a40b76a175b62::t_fe2289a5769a64 1-231
+home/hatim/agents/skills/cloudflare/references/turn/patterns.md
+  s_7a40b76a175b62::t_e489ab34d9bfd2 1-213
+home/hatim/agents/skills/cloudflare/references/turnstile/README.md
+  s_7a40b76a175b62::t_ae0ddf55f4b530 1-99
+home/hatim/agents/skills/cloudflare/references/turnstile/api.md
+  s_7a40b76a175b62::t_3d832c1c34c6e4 1-240
+home/hatim/agents/skills/cloudflare/references/turnstile/configuration.md
+  s_7a40b76a175b62::t_2d39eb08980ddc 1-222
+home/hatim/agents/skills/cloudflare/references/turnstile/gotchas.md
+  s_7a40b76a175b62::t_44076e76dca1fa 1-218
+home/hatim/agents/skills/cloudflare/references/turnstile/patterns.md
+  s_7a40b76a175b62::t_481d1837292099 1-193
+home/hatim/agents/skills/cloudflare/references/vectorize/README.md
+  s_7a40b76a175b62::t_fed14f44924055 1-133
+home/hatim/agents/skills/cloudflare/references/vectorize/api.md
+  s_7a40b76a175b62::t_e2b392f992ee61 1-88
+home/hatim/agents/skills/cloudflare/references/vectorize/configuration.md
+  s_7a40b76a175b62::t_06e21c463ceac9 1-88
+home/hatim/agents/skills/cloudflare/references/vectorize/gotchas.md
+  s_7a40b76a175b62::t_aa20e7c1a0a2d9 1-76
+home/hatim/agents/skills/cloudflare/references/vectorize/patterns.md
+  s_7a40b76a175b62::t_92182e2f8bb24a 1-90
+home/hatim/agents/skills/cloudflare/references/waf/README.md
+  s_7a40b76a175b62::t_a05a3ae2e437f0 1-113
+home/hatim/agents/skills/cloudflare/references/waf/api.md
+  s_7a40b76a175b62::t_3b760221709659 1-202
+home/hatim/agents/skills/cloudflare/references/waf/configuration.md
+  s_7a40b76a175b62::t_6637d48ab9e458 1-203
+home/hatim/agents/skills/cloudflare/references/waf/gotchas.md
+  s_7a40b76a175b62::t_ec343345d2d135 1-204
+home/hatim/agents/skills/cloudflare/references/waf/patterns.md
+  s_7a40b76a175b62::t_c75f2e083377fa 1-197
+home/hatim/agents/skills/cloudflare/references/web-analytics/README.md
+  s_7a40b76a175b62::t_7f52e297228d6c 1-141
+home/hatim/agents/skills/cloudflare/references/web-analytics/configuration.md
+  s_7a40b76a175b62::t_16a6a9fa70c41e 1-76
+home/hatim/agents/skills/cloudflare/references/web-analytics/gotchas.md
+  s_7a40b76a175b62::t_0b2893d33c8e81 1-82
+home/hatim/agents/skills/cloudflare/references/web-analytics/integration.md
+  s_7a40b76a175b62::t_58a15714ffb399 1-60
+home/hatim/agents/skills/cloudflare/references/web-analytics/patterns.md
+  s_7a40b76a175b62::t_75d3b5b8458994 1-91
+home/hatim/agents/skills/cloudflare/references/workerd/README.md
+  s_7a40b76a175b62::t_1254e11afbc09c 1-78
+home/hatim/agents/skills/cloudflare/references/workerd/api.md
+  s_7a40b76a175b62::t_ac3994dc95a653 1-185
+home/hatim/agents/skills/cloudflare/references/workerd/configuration.md
+  s_7a40b76a175b62::t_7174bf93e99f7d 1-183
+home/hatim/agents/skills/cloudflare/references/workerd/gotchas.md
+  s_7a40b76a175b62::t_68c89bb34bf544 1-139
+home/hatim/agents/skills/cloudflare/references/workerd/patterns.md
+  s_7a40b76a175b62::t_f7c438021fb39b 1-192
+home/hatim/agents/skills/cloudflare/references/workers-ai/README.md
+  s_7a40b76a175b62::t_b6dffd834654ce 1-197
+home/hatim/agents/skills/cloudflare/references/workers-ai/api.md
+  s_7a40b76a175b62::t_6da433d9074ca5 1-112
+home/hatim/agents/skills/cloudflare/references/workers-ai/configuration.md
+  s_7a40b76a175b62::t_a560bed7e78157 1-97
+home/hatim/agents/skills/cloudflare/references/workers-ai/gotchas.md
+  s_7a40b76a175b62::t_e8f66353533b6c 1-114
+home/hatim/agents/skills/cloudflare/references/workers-ai/patterns.md
+  s_7a40b76a175b62::t_9abd0db6f9b984 1-120
+home/hatim/agents/skills/cloudflare/references/workers-for-platforms/README.md
+  s_7a40b76a175b62::t_0779a0162551a2 1-89
+home/hatim/agents/skills/cloudflare/references/workers-for-platforms/api.md
+  s_7a40b76a175b62::t_b39d4882accf23 1-196
+home/hatim/agents/skills/cloudflare/references/workers-for-platforms/configuration.md
+  s_7a40b76a175b62::t_3bb0394fad3329 1-167
+home/hatim/agents/skills/cloudflare/references/workers-for-platforms/gotchas.md
+  s_7a40b76a175b62::t_bb22b452436c06 1-134
+home/hatim/agents/skills/cloudflare/references/workers-for-platforms/patterns.md
+  s_7a40b76a175b62::t_2b9874438d59c5 1-188
+home/hatim/agents/skills/cloudflare/references/workers-playground/README.md
+  s_7a40b76a175b62::t_baa54ed92f7544 1-127
+home/hatim/agents/skills/cloudflare/references/workers-playground/api.md
+  s_7a40b76a175b62::t_d1ee16089dad36 1-101
+home/hatim/agents/skills/cloudflare/references/workers-playground/configuration.md
+  s_7a40b76a175b62::t_de01451f12cd97 1-163
+home/hatim/agents/skills/cloudflare/references/workers-playground/gotchas.md
+  s_7a40b76a175b62::t_e6463ca02432d5 1-88
+home/hatim/agents/skills/cloudflare/references/workers-playground/patterns.md
+  s_7a40b76a175b62::t_76868d1f4350f0 1-132
+home/hatim/agents/skills/cloudflare/references/workers-vpc/README.md
+  s_7a40b76a175b62::t_65bed9d5b99317 1-127
+home/hatim/agents/skills/cloudflare/references/workers-vpc/api.md
+  s_7a40b76a175b62::t_bc4c9de52cda10 1-202
+home/hatim/agents/skills/cloudflare/references/workers-vpc/configuration.md
+  s_7a40b76a175b62::t_9f21ba98162a50 1-147
+home/hatim/agents/skills/cloudflare/references/workers-vpc/gotchas.md
+  s_7a40b76a175b62::t_d13124eddbd3a9 1-167
+home/hatim/agents/skills/cloudflare/references/workers-vpc/patterns.md
+  s_7a40b76a175b62::t_d5f9116d3e1343 1-209
+home/hatim/agents/skills/cloudflare/references/workers/README.md
+  s_7a40b76a175b62::t_767601a12c6a08 1-108
+home/hatim/agents/skills/cloudflare/references/workers/api.md
+  s_7a40b76a175b62::t_80d39a5018dcb9 1-195
+home/hatim/agents/skills/cloudflare/references/workers/configuration.md
+  s_7a40b76a175b62::t_244f34cc975e27 1-185
+home/hatim/agents/skills/cloudflare/references/workers/frameworks.md
+  s_7a40b76a175b62::t_27cb1d4d45ad69 1-197
+home/hatim/agents/skills/cloudflare/references/workers/gotchas.md
+  s_7a40b76a175b62::t_d955a407b05962 1-137
+home/hatim/agents/skills/cloudflare/references/workers/patterns.md
+  s_7a40b76a175b62::t_50d5a9d06307e2 1-198
+home/hatim/agents/skills/cloudflare/references/workflows/README.md
+  s_7a40b76a175b62::t_9972848d82113e 1-77
+home/hatim/agents/skills/cloudflare/references/workflows/api.md
+  s_7a40b76a175b62::t_37b17e5dfe5183 1-218
+home/hatim/agents/skills/cloudflare/references/workflows/configuration.md
+  s_7a40b76a175b62::t_526ecaf9d3fe54 1-152
+home/hatim/agents/skills/cloudflare/references/workflows/gotchas.md
+  s_7a40b76a175b62::t_0b82b9cda096e0 1-90
+home/hatim/agents/skills/cloudflare/references/workflows/patterns.md
+  s_7a40b76a175b62::t_f6222a864a3d49 1-175
+home/hatim/agents/skills/cloudflare/references/wrangler/README.md
+  s_7a40b76a175b62::t_62794d81a0a394 1-135
+home/hatim/agents/skills/cloudflare/references/wrangler/api.md
+  s_7a40b76a175b62::t_534674da8845e5 1-188
+home/hatim/agents/skills/cloudflare/references/wrangler/configuration.md
+  s_7a40b76a175b62::t_117d5e273b1e85 1-197
+home/hatim/agents/skills/cloudflare/references/wrangler/gotchas.md
+  s_7a40b76a175b62::t_eee5a534eb5bd6 1-197
+home/hatim/agents/skills/cloudflare/references/wrangler/patterns.md
+  s_7a40b76a175b62::t_c0c095872ccd33 1-209
+home/hatim/agents/skills/cloudflare/references/zaraz/IMPLEMENTATION_SUMMARY.md
+  s_7a40b76a175b62::t_8d6b3155c93772 1-121
+home/hatim/agents/skills/cloudflare/references/zaraz/README.md
+  s_7a40b76a175b62::t_c760c4ca9fa285 1-111
+home/hatim/agents/skills/cloudflare/references/zaraz/api.md
+  s_7a40b76a175b62::t_a7dda93039b374 1-112
+home/hatim/agents/skills/cloudflare/references/zaraz/configuration.md
+  s_7a40b76a175b62::t_ad2447e7ab7d67 1-90
+home/hatim/agents/skills/cloudflare/references/zaraz/gotchas.md
+  s_7a40b76a175b62::t_24f2a09beb7aeb 1-81
+home/hatim/agents/skills/cloudflare/references/zaraz/patterns.md
+  s_7a40b76a175b62::t_81234896e3eb1e 1-74
+home/hatim/agents/skills/conversation-compiler/SKILL.md
+  s_7a40b76a175b62::t_f99fb507067945 1-137
+home/hatim/agents/skills/conversation-compiler/scripts/VCC.py
+  s_7a40b76a175b62::t_9c17d7799eb293 1-1077
+home/hatim/agents/skills/coordinator/SKILL.md
+  s_7a40b76a175b62::t_06854dc5ba932a 1-235
+home/hatim/agents/skills/durable-objects/SKILL.md
+  s_7a40b76a175b62::t_93cf8c620ff0f2 1-186
+home/hatim/agents/skills/durable-objects/references/rules.md
+  s_7a40b76a175b62::t_e116c61f171286 1-295
+home/hatim/agents/skills/durable-objects/references/testing.md
+  s_7a40b76a175b62::t_10bdd45f407814 1-264
+home/hatim/agents/skills/durable-objects/references/workers.md
+  s_7a40b76a175b62::t_ce57df68a3fae6 1-346
+home/hatim/agents/skills/merge/SKILL.md
+  s_7a40b76a175b62::t_e06c1244a61037 1-69
+home/hatim/agents/skills/open-pr/SKILL.md
+  s_7a40b76a175b62::t_996618ab63a309 1-62
+home/hatim/agents/skills/readchat/SKILL.md
+  s_7a40b76a175b62::t_8174f55bd483ab 1-6
+home/hatim/agents/skills/rebase/SKILL.md
+  s_7a40b76a175b62::t_e0ce2395d48250 1-44
+home/hatim/agents/skills/recall/SKILL.md
+  s_7a40b76a175b62::t_468c4cf3e737fa 1-6
+home/hatim/agents/skills/sandbox-sdk/SKILL.md
+  s_7a40b76a175b62::t_32b932d11a7791 1-177
+home/hatim/agents/skills/sandbox-sdk/references/api-quick-ref.md
+  s_7a40b76a175b62::t_bda4ca95484f08 1-113
+home/hatim/agents/skills/sandbox-sdk/references/examples.md
+  s_7a40b76a175b62::t_3e23562ea6f1e7 1-49
+home/hatim/agents/skills/searchchat/SKILL.md
+  s_7a40b76a175b62::t_57dd0f59987cdf 1-6
+home/hatim/agents/skills/turnstile-spin/README.md
+  s_7a40b76a175b62::t_fc93267ee77864 1-50
+home/hatim/agents/skills/turnstile-spin/SKILL.md
+  s_7a40b76a175b62::t_b2d4dcf3091d52 1-192
+home/hatim/agents/skills/turnstile-spin/references/astro.md
+  s_7a40b76a175b62::t_69c3d3d2257134 1-105
+home/hatim/agents/skills/turnstile-spin/references/hugo.md
+  s_7a40b76a175b62::t_be5243c240cd26 1-95
+home/hatim/agents/skills/turnstile-spin/references/nextjs-app.md
+  s_7a40b76a175b62::t_1b53d3462735f9 1-138
+home/hatim/agents/skills/turnstile-spin/references/nextjs-pages.md
+  s_7a40b76a175b62::t_c4235263d272b4 1-63
+home/hatim/agents/skills/turnstile-spin/references/sveltekit.md
+  s_7a40b76a175b62::t_bde953e9fb3520 1-96
+home/hatim/agents/skills/turnstile-spin/references/vanilla-html.md
+  s_7a40b76a175b62::t_bc56acaa8139bf 1-107
+home/hatim/agents/skills/turnstile-spin/scripts/auth-probe.sh
+  s_7a40b76a175b62::t_86c8d8b088d22c 1-73
+home/hatim/agents/skills/turnstile-spin/scripts/fetch-secret.sh
+  s_7a40b76a175b62::t_7db913bd18360a 1-67
+home/hatim/agents/skills/turnstile-spin/scripts/persist-skill.sh
+  s_7a40b76a175b62::t_b18e59c1b5f18d 1-53
+home/hatim/agents/skills/turnstile-spin/scripts/validate.sh
+  s_7a40b76a175b62::t_25a94a05a31b10 1-99
+home/hatim/agents/skills/turnstile-spin/scripts/widget-create.sh
+  s_7a40b76a175b62::t_7e767cfec44053 1-57
+home/hatim/agents/skills/turnstile-spin/tests/validation.md
+  s_7a40b76a175b62::t_2e01c8d8354549 1-61
+home/hatim/agents/skills/web-perf/SKILL.md
+  s_7a40b76a175b62::t_48991fcc076a2e 1-201
+home/hatim/agents/skills/workers-best-practices/SKILL.md
+  s_7a40b76a175b62::t_f1c71b70c53555 1-127
+home/hatim/agents/skills/workers-best-practices/references/review.md
+  s_7a40b76a175b62::t_171a76d8586996 1-174
+home/hatim/agents/skills/workers-best-practices/references/rules.md
+  s_7a40b76a175b62::t_c151e2a9113485 1-463
+home/hatim/agents/skills/workmux/SKILL.md
+  s_7a40b76a175b62::t_c1bdde4cf4c753 1-249
+home/hatim/agents/skills/worktree/SKILL.md
+  s_7a40b76a175b62::t_7d0ff003f882f0 1-99
+home/hatim/agents/skills/wrangler/SKILL.md
+  s_7a40b76a175b62::t_fbf168dec6ce5b 1-922
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "85695286bf58f5c3c2e3f902aa18204a19c0e101",
+  "prompts": {},
+  "sessions": {
+    "s_7a40b76a175b62": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "61867c25-e0cd-40c5-9e42-b0c661f5c0b4",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
