@@ -19,8 +19,8 @@ in
           };
           nix-index = {
             enable = true;
-            enableBashIntegration = true;
-            enableNushellIntegration = true;
+            enableBashIntegration = false;
+            enableNushellIntegration = false;
           };
           nix-index-database.comma.enable = true;
         };
