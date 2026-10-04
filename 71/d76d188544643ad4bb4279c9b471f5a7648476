@@ -1,0 +1,20 @@
+modules/nix.nix
+  s_6803768736858d::t_bc1724881eea08 22
+  s_6803768736858d::t_0bb46a2e0f755b 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "71d76d188544643ad4bb4279c9b471f5a7648476",
+  "prompts": {},
+  "sessions": {
+    "s_6803768736858d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a105df-ba1a-78e1-80a1-86659fd499b0",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
