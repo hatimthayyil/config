@@ -2,7 +2,6 @@
   "cleanupPeriodDays": 99999,
   "permissions": {
     "allow": [
-      "Bash(git -C /home/hatim/middle-nation log --all --format=\"%H %s\")",
       "mcp__acp__Bash",
       "mcp__codegraph__*"
     ],
