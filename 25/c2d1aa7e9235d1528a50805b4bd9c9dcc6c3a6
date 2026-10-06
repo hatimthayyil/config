@@ -1,0 +1,29 @@
+home/hatim/claude/settings.json
+  s_14c3c349476fa1::t_2d3cff7bb24815 89-90
+home/hatim/pi/settings.json
+  s_4b389ecd6c8005::t_a5d69ecacdf843 27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "25c2d1aa7e9235d1528a50805b4bd9c9dcc6c3a6",
+  "prompts": {},
+  "sessions": {
+    "s_14c3c349476fa1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a10858-eaf6-73e2-afc2-c40678130335",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    },
+    "s_4b389ecd6c8005": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a1123d-9ddb-72b0-8fdf-869494b4ef4c",
+        "model": "glm-5.3"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
