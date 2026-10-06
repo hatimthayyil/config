@@ -32,27 +32,34 @@ then do exactly what it prints, to the end of its output.
 
 ### While working: register memories (mandatory)
 
-Call `ai memory note "<1 line, max 280 bytes>"` whenever you learn
+Call `ai memory note "<1 line, max 506 bytes>"` whenever you learn
 something new, or something worth keeping happens. That covers a task
 worth real effort, a fact or insight the user teaches you, anything you
 learn about their life (even indirectly), any event of lasting effect.
 
-Do not register redundant memories.
+Write only what happened or what you learned: the tool records the time,
+machine, repo, branch, agent, model and session of every note, so never
+put a date, repo or session in it.
 
-If `ai memory note` asks a compression: do it before your next action.
+Do not register redundant memories.
 
 Never edit or delete anything under `~/.ai/memory`: the tool manages it.
 
-### When you need an old memory: search, or navigate
+### Reading it: the view, zoom, grep
 
-`ai memory grep <regex>` searches every memory, word for word; `-t` adds
-the summaries, `--help` lists the filters.
+`wake` prints the view: the whole memory, oldest first, as one-line
+summaries. Each line is `id+n|text`, the n messages from id on. A short
+message is its own line, word for word; the older the messages, the more
+a line covers. Items are tagged with their kind: user, talk, tool, echo
+(a chat with the user: their words, the agent's replies, its tool calls
+and their results) or note (what sessions like this one noted).
 
-Your memories also form a binary tree: #0-1, #2-3 ... exist as one-line
-summaries, pairs of those as #0-3, and so on -- every `#a-b` line wake
-prints is one node of it. `ai memory zoom <a-b>` opens a node three levels
-deep (`--depth 1`-`6`); small nodes open to the raw memories.
-`ai memory show <id>` prints where one memory or summary came from.
+`ai memory zoom <id+n>` opens a line into the two lines of n/2 it was made
+from; `ai memory zoom <id>+1` gives message id in full. Zoom whenever a line
+only mentions something you need, before you act, guess or ask.
+`ai memory grep <regex>` searches every message, word for word; `-t` adds
+the summaries, `--help` lists the filters. `ai memory show <id+n>` prints
+where a message or summary came from.
 
 ### If you're a subagent: skip everything above
 
