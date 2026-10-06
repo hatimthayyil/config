@@ -1,0 +1,34 @@
+AGENTS.md
+  s_14c3c349476fa1::t_2d3cff7bb24815 14-51
+  s_e92e1906c4a85e::t_667455314d67a3 52-65
+home/hatim/claude/CLAUDE.md
+  s_e92e1906c4a85e::t_2c6191669ee24b 35,40-42,44,48-62
+home/hatim/codex/AGENTS.md
+  s_e92e1906c4a85e::t_a6359db9602d08 28,33-35,37,41-55
+home/hatim/pi/AGENTS.md
+  s_e92e1906c4a85e::t_da071ffa507539 39,44-46,48,52-66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5e87a4eab38b2dc5ea39100678255dbf8ae59da2",
+  "prompts": {},
+  "sessions": {
+    "s_14c3c349476fa1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a10858-eaf6-73e2-afc2-c40678130335",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    },
+    "s_e92e1906c4a85e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "68ea7ddf-87da-485b-ac5c-470a64b74e92",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
