@@ -1,0 +1,25 @@
+AGENTS.md
+  s_32552ebd17482d::t_aa54026d4e2c22 31
+home/hatim/claude/CLAUDE.md
+  s_32552ebd17482d::t_57f828318ff326 35
+home/hatim/codex/AGENTS.md
+  s_32552ebd17482d::t_62ca46c0aeb89e 28
+home/hatim/pi/AGENTS.md
+  s_32552ebd17482d::t_a22861a1a14491 39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "99093840fdb6714934765abe3c8fc45b3f4032b0",
+  "prompts": {},
+  "sessions": {
+    "s_32552ebd17482d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a87491ed-08a1-4f25-a17f-a6bc58caa31a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
