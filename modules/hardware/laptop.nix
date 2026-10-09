@@ -29,7 +29,7 @@ _: {
         extraArgs = [
           "-g"
           "--avoid"
-          "^(X|plasma.*|kitty|kwin)$"
+          "^(X|plasma.*|konsole|kwin)$"
           "--prefer"
           "^(firefox|electron|libreoffice|gimp)$"
         ];
