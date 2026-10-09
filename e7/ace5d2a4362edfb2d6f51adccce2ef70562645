@@ -1,0 +1,23 @@
+flake.nix
+  s_f06c50a007d2f9::t_ea2b6577cebd6d 18-19
+modules/overlays.nix
+  s_f06c50a007d2f9::t_ea2b6577cebd6d 43-49,63
+flake.lock
+  s_f06c50a007d2f9::t_98b90c4ae2fe18 862-877,1041
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e7ace5d2a4362edfb2d6f51adccce2ef70562645",
+  "prompts": {},
+  "sessions": {
+    "s_f06c50a007d2f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "533e25d5-ffb9-4188-aaee-0997ba2389a3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
