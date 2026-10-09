@@ -1,0 +1,25 @@
+modules/base.nix
+  s_eff0b2ef230cce::t_89901b3cd90b62 66
+modules/study-math.nix
+  s_eff0b2ef230cce::t_89901b3cd90b62 18
+modules/science.nix
+  s_eff0b2ef230cce::t_89901b3cd90b62 14,16
+modules/study-linguistics.nix
+  s_eff0b2ef230cce::t_89901b3cd90b62 14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "483e38bf92d1459b7ee4b029179eda57c5f9f7cc",
+  "prompts": {},
+  "sessions": {
+    "s_eff0b2ef230cce": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c0dab806-0792-4f85-b661-870bce269a3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
