@@ -19,7 +19,7 @@ in
       gruvbox-kde.konsole.enable = true;
 
       home.packages = [
-        # pkgs.unstable.warp-terminal
+        # pkgs.warp-terminal
       ];
     };
   };

@@ -14,7 +14,6 @@
     # ========== Pinned versions available as pkgs.stable etc
     #
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
 
@@ -27,9 +26,7 @@
       url = "github:nix-community/home-manager/master";
       # url = "github:nix-community/home-manager/release-25.11";
 
-      # To be kept up to date with nixpkgs
-      # inputs.nixpkgs.follows = "nixpkgs";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     #
@@ -79,17 +76,17 @@
     # Flake based configuration of Treefmt
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     # Pre-commit
     pre-commit-hooks = {
       url = "github:cachix/git-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     # Parallel evaluation and builds
     nix-fast-build = {
       url = "github:Mic92/nix-fast-build";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     # Nixpak - sandbox any app
     # nixpak = {
@@ -132,7 +129,7 @@
     #   url = "github:nix-community/nixvim/nixos-24.11";
     #   inputs.nixpkgs.follows = "nixpkgs-stable";
     #   #url = "github:nix-community/nixvim";
-    #   #inputs.nixpkgs.follows = "nixpkgs-unstable";
+    #   #inputs.nixpkgs.follows = "nixpkgs";
     # };
     # Helix, tracking master
     helix.url = "github:helix-editor/helix";
@@ -161,7 +158,7 @@
     #   url = "github:0xc000022070/zen-browser-flake";
     #   # IMPORTANT: we're using "libgbm" and is only available in unstable so
     #   # ensure to have it up to date or simply don't specify the nixpkgs input
-    #   inputs.nixpkgs.follows = "nixpkgs-unstable";
+    #   inputs.nixpkgs.follows = "nixpkgs";
     # };
     # Firefox Add-ons
     nix-firefox-addons = {

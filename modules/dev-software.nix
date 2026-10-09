@@ -47,12 +47,12 @@ in
 
           mise = {
             enable = true;
-            package = pkgs.unstable.mise;
+            package = pkgs.mise;
           };
 
           devenv = {
             enable = true;
-            package = pkgs.unstable.devenv;
+            package = pkgs.devenv;
             enableBashIntegration = true;
             enableNushellIntegration = false;
           };
@@ -71,7 +71,7 @@ in
           pkgs.curl
           pkgs.curlie
           pkgs.shellcheck
-          # pkgs.unstable.secretspec # Included with devenv.
+          # pkgs.secretspec # Included with devenv.
           pkgs.devbox
           pkgs.copier
           pkgs.mprocs
@@ -93,9 +93,9 @@ in
           pkgs.clang
           pkgs.conda
           inputs.bend.packages.${pkgs.system}.default
-          pkgs.unstable.cargo-nextest
-          pkgs.unstable.cargo-seek
-          pkgs.unstable.cargo-workspaces
+          pkgs.cargo-nextest
+          pkgs.cargo-seek
+          pkgs.cargo-workspaces
 
           # Misc
           pkgs.exercism

@@ -79,7 +79,7 @@ in
         config.allowUnfree = true;
         overlays = [ config.flake.overlays.default ];
       };
-      editor = pkgs.unstable.vscode;
+      editor = pkgs.vscode;
     in
     {
       packages.vscode-extensions = pkgs.buildEnv {
@@ -99,7 +99,7 @@ in
 
           programs.vscode = {
             enable = true;
-            package = pkgs.unstable.vscode;
+            package = pkgs.vscode;
           };
         };
     };
