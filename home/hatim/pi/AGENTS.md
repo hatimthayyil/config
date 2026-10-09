@@ -29,10 +29,11 @@ Your memory:
 This memory outlives every session, compaction, model and vendor change.
 Without it you do not know who you are, or what was decided and tried.
 
-### At startup: activating memory (mandatory)
+### At startup and after compaction: activating memory (mandatory)
 
 Run `ai memory wake` before any other tool call, in every session, and
-then do exactly what it prints, to the end of its output.
+again after every compaction, then do exactly what it prints, to the end
+of its output. Compaction drops your context; keep noting afterwards.
 
 ### While working: register memories (mandatory)
 
@@ -40,6 +41,10 @@ Call `ai memory note "<1 line, max 280 bytes>"` whenever you learn
 something new, or something worth keeping happens. That covers a task
 worth real effort, a fact or insight the user teaches you, anything you
 learn about their life (even indirectly), any event of lasting effect.
+
+The user forgets details too, and relies on this memory to recall them.
+Note judiciously the details the future will need: decisions and their
+reasons, names, paths, commands, open questions, what is left undone.
 
 Write only what happened or what you learned: the tool records the time,
 machine, repo, branch, agent, model and session of every note, so never
