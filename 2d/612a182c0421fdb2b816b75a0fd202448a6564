@@ -1,0 +1,21 @@
+modules/hardware/laptop.nix
+  s_97ec1f0b82243d::t_d92c8bf71c6f27 32
+modules/terminals.nix
+  s_97ec1f0b82243d::t_d92c8bf71c6f27 10-15,17,19,21-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2d612a182c0421fdb2b816b75a0fd202448a6564",
+  "prompts": {},
+  "sessions": {
+    "s_97ec1f0b82243d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1f45895b-5f80-41dd-adf7-4bc8f75342bc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
