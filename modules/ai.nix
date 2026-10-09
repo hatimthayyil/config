@@ -13,22 +13,12 @@ in
       llm-agents = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
     in
     {
-      services.ollama = {
-        enable = false;
-        package = pkgs.stable.ollama-cuda;
-      };
-
       services.open-webui = {
         enable = false;
         port = 11500;
       };
 
       services.n8n.enable = false;
-
-      services.qdrant = {
-        enable = false;
-        package = pkgs.stable.qdrant;
-      };
 
       home-manager.users.${owner.username} =
         { config, ... }:

@@ -11,9 +11,9 @@ in
     {
       home-manager.users.${owner.username} = {
         home.packages = [
-          pkgs.stable.stellarium
+          pkgs.stellarium
           pkgs.stable.celestia
-          pkgs.stable.gpredict
+          pkgs.gpredict
         ];
       };
     };

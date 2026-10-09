@@ -15,7 +15,7 @@ in
           pkgs.octave
           # pkgs.coq
           # pkgs.lean4
-          pkgs.stable.sage
+          pkgs.sage
         ];
       };
     };

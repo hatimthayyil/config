@@ -11,7 +11,7 @@ in
     {
       home-manager.users.${owner.username} = {
         home.packages = [
-          pkgs.stable.praat
+          pkgs.praat
         ];
       };
     };

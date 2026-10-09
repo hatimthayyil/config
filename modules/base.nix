@@ -63,7 +63,7 @@ in
           vim
           wget
           git
-          stable.nvtopPackages.full
+          nvtopPackages.full
         ];
       };
 
