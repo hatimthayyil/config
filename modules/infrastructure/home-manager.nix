@@ -21,6 +21,7 @@
           inputs.nvf.homeManagerModules.default
           inputs.betterfox.modules.homeManager.betterfox
           inputs.plasma-manager.homeModules.plasma-manager
+          inputs.gruvbox-kde.homeModules.default
           (
             { osConfig, ... }:
             {

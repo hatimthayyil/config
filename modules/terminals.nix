@@ -1,6 +1,5 @@
 {
   config,
-  inputs,
   ...
 }:
 let
@@ -9,7 +8,7 @@ in
 {
   flake.modules.nixos.terminals = {
     home-manager.users.${owner.username} =
-      { pkgs, lib, ... }:
+      { pkgs, ... }:
       {
         programs = {
           kitty = {
@@ -21,26 +20,9 @@ in
             enableBashIntegration = true;
             enableFishIntegration = true;
           };
-          konsole = {
-            enable = true;
-            defaultProfile = "Gruvbox Light";
-            profiles =
-              lib.mapAttrs
-                (_: colorScheme: {
-                  inherit colorScheme;
-                  font.name = "Hack";
-                })
-                {
-                  "Gruvbox Light" = "GruvboxLightHard";
-                  "Gruvbox Dark" = "GruvboxDarkHard";
-                };
-            extraConfig.LightDarkTheme = {
-              SyncProfileWithSystemTheme = true;
-              LightThemeProfile = "Gruvbox Light";
-              DarkThemeProfile = "Gruvbox Dark";
-            };
-          };
         };
+
+        gruvbox-kde.konsole.enable = true;
 
         xdg.configFile =
           let
@@ -53,7 +35,6 @@ in
           };
 
         home.packages = [
-          inputs.gruvbox-kde.packages.${pkgs.stdenv.hostPlatform.system}.konsole
           # pkgs.unstable.warp-terminal
         ];
       };

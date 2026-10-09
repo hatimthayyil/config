@@ -28,14 +28,9 @@ in
           vivid.enable = true; # generates LS_COLORS for eza, see modules/cli-utils.nix
         };
 
-        home.packages = [
-          inputs.gruvbox-kde.packages.${pkgs.stdenv.hostPlatform.system}.color-schemes
-          pkgs.gruvbox-plus-icons
-        ];
-
-        programs.plasma.workspace = {
-          colorScheme = "GruvboxLightHard";
-          iconTheme = "Gruvbox-Plus-Dark";
+        gruvbox-kde = {
+          contrast = "hard";
+          plasma.enable = false;
         };
       };
     };
