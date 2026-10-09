@@ -15,6 +15,8 @@
     #
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
+    # Last nixpkgs where zotero builds (10.0.2); NixOS/nixpkgs#568692
+    nixpkgs-zotero.url = "github:NixOS/nixpkgs/7a0f122f5090cf4c2ade2a13a0e229d4e19ba71f";
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
 
     #

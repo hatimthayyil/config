@@ -40,6 +40,13 @@ let
       ;
   };
 
+  # FIXME: remove after NixOS/nixpkgs#568692 is fixed
+  zotero-fix-overlay = final: _prev: {
+    inherit (inputs.nixpkgs-zotero.legacyPackages.${final.stdenv.hostPlatform.system})
+      zotero
+      ;
+  };
+
   local-packages = import ../pkgs/overlay.nix { inherit inputs; };
 
   default =
@@ -53,6 +60,7 @@ let
     // (claude-desktop-overlay final prev)
     // (agents-nix-overlay final prev)
     // (throttled-fix-overlay final prev)
+    // (zotero-fix-overlay final prev)
     // (local-packages final prev);
 in
 {
