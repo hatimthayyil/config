@@ -1,0 +1,25 @@
+.github/workflows/update-flake.yml
+  s_eff0b2ef230cce::t_6f645b1c866d56 5-9,11-22,30,32-33,35-46,50-65,67-71,75,80-89,91-94
+.github/scripts/update-mode.sh
+  s_eff0b2ef230cce::t_af0545469a1b53 1-32
+.github/scripts/update-issue.sh
+  s_eff0b2ef230cce::t_6f645b1c866d56 68
+  s_eff0b2ef230cce::t_af0545469a1b53 1-20,31-67,69-91
+  s_eff0b2ef230cce::t_92147b40da41f8 21-30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e8913a93c4d217182e58a8584b9b82ac1d1eea6b",
+  "prompts": {},
+  "sessions": {
+    "s_eff0b2ef230cce": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c0dab806-0792-4f85-b661-870bce269a3a",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
