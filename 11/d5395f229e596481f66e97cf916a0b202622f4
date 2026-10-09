@@ -1,0 +1,20 @@
+modules/infrastructure/caches.nix
+  s_f06c50a007d2f9::t_265995db94da4e 81
+  s_f06c50a007d2f9::t_633705685a4fe7 55-58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "11d5395f229e596481f66e97cf916a0b202622f4",
+  "prompts": {},
+  "sessions": {
+    "s_f06c50a007d2f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "533e25d5-ffb9-4188-aaee-0997ba2389a3",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
