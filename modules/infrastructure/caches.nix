@@ -52,6 +52,10 @@ in
           url = "https://cache.numtide.com";
           key = "niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g=";
         };
+        nixos-cuda = {
+          url = "https://cache.nixos-cuda.org";
+          key = "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=";
+        };
         # Selected by the nixbuild group, never by `public`: the CI runner
         # builds into this store and the account must not substitute from itself.
         # Explicit priority: ssh stores serve no nix-cache-info, so they default
@@ -74,6 +78,7 @@ in
         "thayyil"
         "thalheim"
         "numtide"
+        "nixos-cuda"
       ];
     };
 
