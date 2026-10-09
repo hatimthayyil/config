@@ -1,0 +1,33 @@
+modules/terminals.nix
+  s_97ec1f0b82243d::t_f433fe6b2b5b00 24-26,37-42,56
+  s_97ec1f0b82243d::t_f3b503e14be116 3
+  s_97ec1f0b82243d::t_74c0cf80e8e710 10-11,13,60
+  s_97ec1f0b82243d::t_93a1c959c21a51 12,27-36
+flake.nix
+  s_97ec1f0b82243d::t_08b3b3e3fe9758 68-73,120-122
+  s_97ec1f0b82243d::t_5aa31c79804ba0 123-124
+modules/infrastructure/home-manager.nix
+  s_97ec1f0b82243d::t_f433fe6b2b5b00 23
+modules/theming.nix
+  s_97ec1f0b82243d::t_f433fe6b2b5b00 23-39
+modules/desktop.nix
+  s_97ec1f0b82243d::t_f433fe6b2b5b00 86
+flake.lock
+  s_97ec1f0b82243d::t_5305b53bf680d1 487-523,971-993,1026,1043
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "295ef88a3236c3116ef627bd41ca3bdcc6fbb581",
+  "prompts": {},
+  "sessions": {
+    "s_97ec1f0b82243d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1f45895b-5f80-41dd-adf7-4bc8f75342bc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
