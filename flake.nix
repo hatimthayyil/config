@@ -65,6 +65,12 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # KDE Plasma configuration through Home Manager
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
     # System-wide theming framework
     stylix = {
       url = "github:nix-community/stylix";
@@ -109,6 +115,11 @@
     # EmX Emacs distribution
     emx = {
       url = "github:hatimthayyil/emx";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # Gruvbox colour schemes for KDE Plasma and Konsole
+    gruvbox-kde = {
+      url = "git+file:///hatimthayyil/code/gruvbox-kde";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Nix based Neovim

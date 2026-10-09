@@ -20,11 +20,23 @@ in
         autoEnable = false;
       };
 
-      home-manager.users.${owner.username}.stylix.targets = {
-        tmux.enable = true;
-        bat.enable = true;
-        fzf.enable = true;
-        vivid.enable = true; # generates LS_COLORS for eza, see modules/cli-utils.nix
+      home-manager.users.${owner.username} = {
+        stylix.targets = {
+          tmux.enable = true;
+          bat.enable = true;
+          fzf.enable = true;
+          vivid.enable = true; # generates LS_COLORS for eza, see modules/cli-utils.nix
+        };
+
+        home.packages = [
+          inputs.gruvbox-kde.packages.${pkgs.stdenv.hostPlatform.system}.color-schemes
+          pkgs.gruvbox-plus-icons
+        ];
+
+        programs.plasma.workspace = {
+          colorScheme = "GruvboxLightHard";
+          iconTheme = "Gruvbox-Plus-Dark";
+        };
       };
     };
 }

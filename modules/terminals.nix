@@ -1,15 +1,16 @@
 {
   config,
+  inputs,
   ...
 }:
 let
   inherit (config) owner;
 in
 {
-  flake.modules.nixos.terminals =
-    { pkgs, ... }:
-    {
-      home-manager.users.${owner.username} = {
+  flake.modules.nixos.terminals = {
+    home-manager.users.${owner.username} =
+      { pkgs, lib, ... }:
+      {
         programs = {
           kitty = {
             enable = true;
@@ -19,6 +20,25 @@ in
             enable = true;
             enableBashIntegration = true;
             enableFishIntegration = true;
+          };
+          konsole = {
+            enable = true;
+            defaultProfile = "Gruvbox Light";
+            profiles =
+              lib.mapAttrs
+                (_: colorScheme: {
+                  inherit colorScheme;
+                  font.name = "Hack";
+                })
+                {
+                  "Gruvbox Light" = "GruvboxLightHard";
+                  "Gruvbox Dark" = "GruvboxDarkHard";
+                };
+            extraConfig.LightDarkTheme = {
+              SyncProfileWithSystemTheme = true;
+              LightThemeProfile = "Gruvbox Light";
+              DarkThemeProfile = "Gruvbox Dark";
+            };
           };
         };
 
@@ -33,8 +53,9 @@ in
           };
 
         home.packages = [
+          inputs.gruvbox-kde.packages.${pkgs.stdenv.hostPlatform.system}.konsole
           # pkgs.unstable.warp-terminal
         ];
       };
-    };
+  };
 }

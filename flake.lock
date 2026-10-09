@@ -484,6 +484,43 @@
         "type": "gitlab"
       }
     },
+    "gruvbox-kde": {
+      "inputs": {
+        "gruvbox-plus-kde": "gruvbox-plus-kde",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791565911,
+        "narHash": "sha256-iILBV0Rb75/XoLk7nyqSq0wRoAMLn7VAtF5JR0hAnJY=",
+        "ref": "refs/heads/main",
+        "rev": "2b5e557645008cf4d01c53429204df3a88e5b3b2",
+        "revCount": 3,
+        "type": "git",
+        "url": "file:///hatimthayyil/code/gruvbox-kde"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///hatimthayyil/code/gruvbox-kde"
+      }
+    },
+    "gruvbox-plus-kde": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1763582294,
+        "narHash": "sha256-WKJX6ozVPqQ1RB30dPtuDkQLsHUq66TDZFsWqEI7lII=",
+        "owner": "SylEleuth",
+        "repo": "gruvbox-plus-kde",
+        "rev": "883452c4252ac3f2a3c3fb2fd3c7f48ae2eaecbb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SylEleuth",
+        "repo": "gruvbox-plus-kde",
+        "type": "github"
+      }
+    },
     "hardware": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -931,6 +968,29 @@
         "type": "github"
       }
     },
+    "plasma-manager": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1785762349,
+        "narHash": "sha256-jZhZkzAwc7f3exzcTDJWP2WCAchCv0iNC3UF/QsahdQ=",
+        "owner": "nix-community",
+        "repo": "plasma-manager",
+        "rev": "a19a2a029fa180911bd89c554dca1616e10f4c1d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "plasma-manager",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -963,6 +1023,7 @@
         "emx": "emx",
         "firefox-csshacks": "firefox-csshacks",
         "flake-parts": "flake-parts_3",
+        "gruvbox-kde": "gruvbox-kde",
         "hardware": "hardware",
         "helix": "helix",
         "home-manager": "home-manager",
@@ -979,6 +1040,7 @@
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixpkgs-unstable-small": "nixpkgs-unstable-small",
         "nvf": "nvf",
+        "plasma-manager": "plasma-manager",
         "pre-commit-hooks": "pre-commit-hooks",
         "sops-nix": "sops-nix",
         "stylix": "stylix",

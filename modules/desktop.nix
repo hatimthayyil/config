@@ -83,6 +83,7 @@ in
 
       # HM: wayland clipboard
       home-manager.users.${owner.username} = {
+        programs.plasma.enable = true;
         home.packages = [ pkgs.wl-clipboard ];
       };
     };
