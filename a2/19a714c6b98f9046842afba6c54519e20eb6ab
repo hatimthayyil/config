@@ -1,0 +1,26 @@
+modules/infrastructure/home-manager.nix
+  s_97ec1f0b82243d::t_2a689a3e6bfe50 24
+modules/terminals.nix
+  s_97ec1f0b82243d::t_2a689a3e6bfe50 11,25
+  s_97ec1f0b82243d::t_d5ba0d918d1a0d 26
+modules/theming.nix
+  s_97ec1f0b82243d::t_2a689a3e6bfe50 31-33
+flake.lock
+  s_97ec1f0b82243d::t_f5036a866d2cf6 495-496,498-499
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a219a714c6b98f9046842afba6c54519e20eb6ab",
+  "prompts": {},
+  "sessions": {
+    "s_97ec1f0b82243d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1f45895b-5f80-41dd-adf7-4bc8f75342bc",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
