@@ -1,6 +1,7 @@
 ## Environment
 - NixOS. Flake config: `/hatimthayyil/code/config`.
-- Python: use `uv`.
+- Project environments: devenv (`devenv.nix`, `devenv.yaml`, `.envrc` with `use devenv`). Declare toolchains in `languages.*`, tools in `packages`, hooks in `git-hooks`, formatters in `treefmt`, secrets with secretspec.
+- Python: use `uv`, within devenv.
 
 ## Engineering
 - DRY and SOLID. Keep components modular, with concerns separated.
