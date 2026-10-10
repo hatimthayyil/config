@@ -49,12 +49,14 @@ jobs:
           niks3-skip-push: true
       - name: Update all inputs and pinned packages
         if: steps.gate.outputs.mode == 'full'
+        shell: bash
         run: |
-          nix flake update
-          nix run .#update-packages
+          { nix flake update && nix run .#update-packages; } 2>&1 |
+            tee -a "$RUNNER_TEMP/build.log"
       - name: Update llm-agents
         if: steps.gate.outputs.mode == 'llm-agents'
-        run: nix flake update llm-agents
+        shell: bash
+        run: nix flake update llm-agents 2>&1 | tee -a "$RUNNER_TEMP/build.log"
       - id: diff
         if: steps.gate.outputs.mode != 'none'
         run: |
@@ -77,9 +79,9 @@ jobs:
           --max-jobs 2
           --eval-store auto
           --store ssh-ng://eu.nixbuild.net
-          2>&1 | tee "$RUNNER_TEMP/build.log"
+          2>&1 | tee -a "$RUNNER_TEMP/build.log"
       - name: Report failure
-        if: failure() && steps.build.outcome == 'failure'
+        if: failure() && contains(fromJSON('["full", "llm-agents"]'), steps.gate.outputs.mode)
         run: >
           .github/scripts/update-issue.sh report
           "${{ steps.gate.outputs.mode }}"

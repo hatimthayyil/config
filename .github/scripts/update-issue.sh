@@ -34,6 +34,7 @@ failed_drvs() {
 report() {
   local mode=$1 log=$2 rev=$3 body number name pname
   body=$(mktemp)
+  [[ -f $log ]] || : >"$log"
   {
     echo "Run: $RUN_URL"
     echo "nixpkgs: $rev"
