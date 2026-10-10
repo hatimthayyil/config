@@ -118,7 +118,7 @@
     };
     # Gruvbox colour schemes for KDE Plasma and Konsole
     gruvbox-kde = {
-      url = "git+file:///hatimthayyil/code/gruvbox-kde";
+      url = "github:hatimthayyil/gruvbox-kde";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # Nix based Neovim

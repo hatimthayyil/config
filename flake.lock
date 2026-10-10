@@ -494,15 +494,15 @@
       "locked": {
         "lastModified": 1791568368,
         "narHash": "sha256-QZVdy4WNEmKPrmdIBpdAhhUS3ULmkRk/Q2B6YaiCMaU=",
-        "ref": "refs/heads/main",
+        "owner": "hatimthayyil",
+        "repo": "gruvbox-kde",
         "rev": "85d64bd3bebd703a7e031f40fecdb8309f404d77",
-        "revCount": 4,
-        "type": "git",
-        "url": "file:///hatimthayyil/code/gruvbox-kde"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///hatimthayyil/code/gruvbox-kde"
+        "owner": "hatimthayyil",
+        "repo": "gruvbox-kde",
+        "type": "github"
       }
     },
     "gruvbox-plus-kde": {
