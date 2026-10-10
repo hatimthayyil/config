@@ -47,6 +47,16 @@ let
       ;
   };
 
+  # FIXME: remove after nixpkgs filen-desktop stops resolving rclone via Electron's resourcesPath
+  filen-desktop-fix-overlay = _final: prev: {
+    filen-desktop = prev.filen-desktop.overrideAttrs (old: {
+      postPatch = old.postPatch + ''
+        substituteInPlace src/lib/rclone/binary.ts \
+          --replace-fail 'process.resourcesPath, "app.asar.unpacked"' "\"$out/share/filen-desktop/resources/app.asar.unpacked\""
+      '';
+    });
+  };
+
   local-packages = import ../pkgs/overlay.nix { inherit inputs; };
 
   default =
@@ -61,6 +71,7 @@ let
     // (agents-nix-overlay final prev)
     // (throttled-fix-overlay final prev)
     // (zotero-fix-overlay final prev)
+    // (filen-desktop-fix-overlay final prev)
     // (local-packages final prev);
 in
 {
