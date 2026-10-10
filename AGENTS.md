@@ -1,70 +1,51 @@
-# Project Instructions
+# AGENTS.md
 
-Provide your task to subagents. Spawn multiple agents when needed. Tasks that have serial dependance can be handed out to multiple agents one after the other. It is preferred to give one logical task to one agent.
+NixOS and home-manager configuration for host `eagle`.
 
-## Nix Sourcetrees
+## Commands
+- `just build`: build the NixOS configuration, including home-manager.
+- `just switch`: apply it.
+- `just clean`: clean the Nix store.
+- `nix fmt`: format with nixfmt-tree.
+- `nix build .#nixosConfigurations.eagle.config.system.build.toplevel`: build without switching.
+- `nix eval .#nixosConfigurations.eagle.config.<path>`: inspect a config value.
 
-When adding or modifying home-manager or NixOS `programs.*` / `services.*` in this config:
+## Architecture: dendritic pattern
+Every `.nix` file under `modules/` is a flake-parts module, auto-imported by `import-tree`; files prefixed `_` are excluded. Each module contributes to `flake.modules.nixos.<group>`, and `modules/hosts/eagle.nix` selects the groups. One file may set both NixOS and home-manager config.
 
-- ALWAYS check the home-manager source tree at `/hatimthayyil/code/nix.home-manager/` to see what options are available.
+```nix
+{ config, ... }:
+let
+  inherit (config) owner;
+in
+{
+  flake.modules.nixos.<group> = { pkgs, ... }: {
+    home-manager.users.${owner.username} = {
+    };
+  };
+}
+```
 
-  For example: `ls /hatimthayyil/code/nix.home-manager/modules/programs/<name>.nix` or using `grep`.
+- `modules/infrastructure/`: flake-parts, configurations, home-manager wiring, meta.
+- `modules/hosts/`: per-host group selection.
+- `modules/hardware/`: hardware modules.
+- `modules/*.nix`: one feature per file.
+- `home/hatim/`: mutable agent and app directories, linked out of store.
 
-- ALWAYS check the Nixpkgs source tree at `/hatimthayyil/code/nixpkgs/` for package availability, module options, and program definitions.
+To add a feature: create `modules/<feature>.nix`, add its group to `modules/hosts/eagle.nix`, `git add` it (flakes see only tracked files), then build.
 
-## Memory
+Global agent instructions are composed from `modules/agent-instructions/*.md` into `~/.config/agents/`; the agent directories link there.
 
-Your memory:
-- The tool is `ai memory`
-- Your memories are in `~/.ai/memory`
+## Option sources
+Before adding or changing `programs.*` or `services.*`, check the options in the local source trees:
+- home-manager: `/hatimthayyil/code/nix.home-manager/`
+- Nixpkgs: `/hatimthayyil/code/nixpkgs/`
 
-This memory outlives every session, compaction, model and vendor change.
-Without it you do not know who you are, or what was decided and tried.
+## Style
+- nixfmt-tree formatting.
+- Nested attribute blocks, not flat `programs.foo.bar = ...;`.
+- Declarative over imperative.
+- Shell scripts follow shellcheck.
 
-### At startup and after compaction: activating memory (mandatory)
-
-Run `ai memory wake` before any other tool call, in every session, and
-again after every compaction, then do exactly what it prints, to the end
-of its output. Compaction drops your context; keep noting afterwards.
-
-### While working: register memories (mandatory)
-
-Call `ai memory note "<1 line, max 280 bytes>"` whenever you learn
-something new, or something worth keeping happens. That covers a task
-worth real effort, a fact or insight the user teaches you, anything you
-learn about their life (even indirectly), any event of lasting effect.
-
-The user forgets details too, and relies on this memory to recall them.
-Note judiciously the details the future will need: decisions and their
-reasons, names, paths, commands, open questions, what is left undone.
-
-Write only what happened or what you learned: the tool records the time,
-machine, repo, branch, agent, model and session of every note, so never
-put a date, repo or session in it.
-
-Do not register redundant memories.
-
-Never edit or delete anything under `~/.ai/memory`: the tool manages it.
-
-### Reading it: the view, zoom, grep
-
-`wake` prints the view: the whole memory, oldest first, as one-line
-summaries. Each line is `id+n|text`, the n messages from id on. A short
-message is its own line, word for word; the older the messages, the more
-a line covers. Items are tagged with their kind: user, talk, tool, echo
-(a chat with the user: their words, the agent's replies, its tool calls
-and their results) or note (what sessions like this one noted).
-
-`ai memory zoom <id+n>` opens a line into the two lines of n/2 it was made
-from; `ai memory zoom <id>+1` gives message id in full. Zoom whenever a line
-only mentions something you need, before you act, guess or ask.
-`ai memory grep <regex>` searches every message, word for word; `-t` adds
-the summaries, `--help` lists the filters. `ai memory show <id+n>` prints
-where a message or summary came from.
-
-### If you're a subagent: skip everything above
-
-Parallel sessions on this machine are all you, and may all write memories.
-A subagent is not: it must never run `ai memory`, because it cannot judge what
-is already known, and its notes would arrive duplicated and incorrectly.
-When you spawn one, write: `You are a subagent. Don't run ai memory.`
+## Delegation
+Give each logical task to one subagent. Hand serially dependent tasks to agents in turn.

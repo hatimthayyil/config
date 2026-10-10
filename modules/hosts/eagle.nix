@@ -51,6 +51,7 @@
         claude
         codex
         agent-skills
+        agent-instructions
 
         # Networking and security
         networking
