@@ -1,0 +1,20 @@
+modules/overlays.nix
+  s_59ccf703a19759::t_fec9c98db486e9 50-59
+  s_59ccf703a19759::t_991ca6f7ba8aaa 74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c36197f91e672ad084bff082347f9507b5ec88bb",
+  "prompts": {},
+  "sessions": {
+    "s_59ccf703a19759": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "43deed95-6579-4c03-83fa-7273ccd6be09",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
