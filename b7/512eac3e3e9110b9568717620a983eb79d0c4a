@@ -1,0 +1,14 @@
+modules/agent-instructions/core.md
+  h_3b956d4cad68d1 3-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b7512eac3e3e9110b9568717620a983eb79d0c4a",
+  "prompts": {},
+  "humans": {
+    "h_3b956d4cad68d1": {
+      "author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
