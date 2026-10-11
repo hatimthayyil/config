@@ -17,7 +17,7 @@ in
 
       hardware.nvidia = {
         modesetting.enable = true;
-        powerManagement.enable = false;
+        powerManagement.enable = true;
         powerManagement.finegrained = false;
         open = false;
         nvidiaSettings = true;
@@ -51,6 +51,9 @@ in
         alsa.support32Bit = true;
         pulse.enable = true;
       };
+
+      # Thunderbolt device authorisation
+      services.hardware.bolt.enable = true;
 
       # Touchpad
       services.libinput = {
