@@ -1,8 +1,25 @@
 # update-flake.yml
 
+Runs hourly. The updates and their triggers are the flake output
+`ci.updates` (`modules/infrastructure/ci.nix`); the workflow names no
+inputs. Each update runs in turn and builds only when its trigger's
+locked revision moved:
+
+- `all` updates every input and pinned package, triggered by nixpkgs.
+  nixos-unstable advances only after Hydra builds it, so the build
+  fetches nixpkgs from cache.nixos.org and pre-builds the rest: local
+  packages, overlays, unfree and non-nixpkgs inputs. Other inputs ride
+  along when nixpkgs moves.
+- `fast` updates llm-agents alone, so a broken package in `all` does not
+  hold it back.
+
+Each update has its own failure issue. A failure is keyed by trigger
+revision and repository commit; a scheduled run skips a key it already
+reported, so a breakage gets one comment, not one per hour.
+`workflow_dispatch` always builds.
 ## Why the build is verify-only
 
-The job updates `flake.lock`, verifies the eagle closure builds, and
+The job updates the lock, verifies the eagle closure builds, and
 commits only if it does. It no longer fills cache.thayyil.net.
 
 The build uses the same remote-store flags as `build.yml`, so the

@@ -8,7 +8,7 @@ sits next to a `niks3.numtide.com-1:` key, which is correct but unverifiable by
 reading either list alone.
 
 Consumers call `select` with the names they want. `public` is the set every
-consumer shares, and is what `flake.lib.caches` exposes, so the CI runner
+consumer shares, and is what the `caches` flake output exposes, so the CI runner
 (`.github/actions/setup-nix`) and `just nixbuild-sync-caches` are unaffected by
 anything a host chooses to add.
 

@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
-# Usage: update-issue.sh report <mode> <build-log> <nixpkgs-rev>
-#        update-issue.sh close <mode>
-#        update-issue.sh last-rev <mode>
+# Usage: update-issue.sh seen <key>
+#        update-issue.sh report <key> <build-log>
+#        update-issue.sh close
+# Reads ISSUE_TITLE and RUN_URL from the environment.
 set -euo pipefail
-
-title() {
-  case $1 in
-    full) echo "Flake update failed" ;;
-    llm-agents) echo "llm-agents update failed" ;;
-    *) echo "unknown mode: $1" >&2; exit 1 ;;
-  esac
-}
 
 find_issue() {
   gh issue list --state open --limit 100 --json number,title |
-    jq -r --arg title "$(title "$1")" 'first(.[] | select(.title == $title) | .number) // empty'
+    jq -r --arg title "$ISSUE_TITLE" 'first(.[] | select(.title == $title) | .number) // empty'
 }
 
+seen() {
+  local number
+  number=$(find_issue)
+  [[ -n $number ]] || return 1
+  gh issue view "$number" --json body,comments |
+    jq -e --arg key "Key: \`$1\`" '[.body, .comments[].body] | any(contains($key))' >/dev/null
+}
 failed_drvs() {
   awk -v q="'" '
     drv != "" { if (!/dependenc/) print drv; drv = "" }
@@ -32,18 +32,18 @@ failed_drvs() {
 }
 
 report() {
-  local mode=$1 log=$2 rev=$3 body number name pname
+  local key=$1 log=$2 body number name
+  seen "$key" && return 0
   body=$(mktemp)
   [[ -f $log ]] || : >"$log"
   {
     echo "Run: $RUN_URL"
-    echo "nixpkgs: $rev"
+    echo "Key: \`$key\`"
     echo
     echo "Failed derivations:"
     while read -r name; do
       [[ -n $name ]] || continue
-      pname=$(sed -E 's/-[^a-zA-Z].*$//' <<<"$name")
-      echo "- \`$name\` ([Hydra](https://hydra.nixos.org/job/nixpkgs/trunk/$pname.x86_64-linux))"
+      echo "- \`$name\`"
     done < <(failed_drvs "$log")
     echo
     echo "<details><summary>Log tail</summary>"
@@ -56,37 +56,25 @@ report() {
     echo "Re-run with workflow_dispatch after fixing."
   } >"$body"
 
-  number=$(find_issue "$mode")
+  number=$(find_issue)
   if [[ -n $number ]]; then
     gh issue comment "$number" --body-file "$body"
   else
-    gh issue create --title "$(title "$mode")" --body-file "$body"
+    gh issue create --title "$ISSUE_TITLE" --body-file "$body"
   fi
 }
 
 close() {
-  local modes=("$1") mode number
-  if [[ $1 == full ]]; then modes+=(llm-agents); fi
-  for mode in "${modes[@]}"; do
-    number=$(find_issue "$mode")
-    if [[ -n $number ]]; then
-      gh issue close "$number" --comment "Fixed by $RUN_URL"
-    fi
-  done
-}
-
-last_rev() {
   local number
-  number=$(find_issue "$1")
-  [[ -n $number ]] || return 0
-  gh issue view "$number" --json body,comments --jq '.body, .comments[].body' |
-    sed -nE 's/^nixpkgs: ([0-9a-f]+)$/\1/p' |
-    tail -n 1
+  number=$(find_issue)
+  if [[ -n $number ]]; then
+    gh issue close "$number" --comment "Fixed by $RUN_URL"
+  fi
 }
 
 case $1 in
-  report) report "$2" "$3" "$4" ;;
-  close) close "$2" ;;
-  last-rev) last_rev "$2" ;;
+  seen) seen "$2" ;;
+  report) report "$2" "$3" ;;
+  close) close ;;
   *) echo "unknown command: $1" >&2; exit 1 ;;
 esac

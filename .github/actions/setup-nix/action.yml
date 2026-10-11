@@ -21,7 +21,7 @@ runs:
     - id: caches
       shell: bash
       run: |
-        caches="$(nix eval --json .#lib.caches)"
+        caches="$(nix eval --json .#caches)"
         substituters="$(jq -r '.substituters | join(" ")' <<< "$caches")"
         keys="$(jq -r '."trusted-public-keys" | join(" ")' <<< "$caches")"
         {

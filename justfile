@@ -62,7 +62,7 @@ nixbuild-sync-caches:
     #!/usr/bin/env bash
     set -euo pipefail
     ssh() { sudo ssh -i /etc/ssh/ssh_host_ed25519_key -o IdentitiesOnly=yes hatim@eu.nixbuild.net "$@"; }
-    caches="$(nix eval --json .#lib.caches)"
+    caches="$(nix eval --json .#caches)"
     current_subs="$(ssh api settings substituters --show | jq -r '.substituters[]')"
     for s in $(jq -r '.substituters[]' <<< "$caches"); do
         grep -qxF "$s" <<< "$current_subs" || ssh api settings substituters --add "$s" > /dev/null

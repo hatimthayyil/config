@@ -82,8 +82,6 @@ in
       ];
     };
 
-    # Exposed as a flake output so CI reads the same list:
-    # nix eval --json .#lib.caches
-    flake.lib.caches = config.caches.public;
+    flake.caches = config.caches.public;
   };
 }
