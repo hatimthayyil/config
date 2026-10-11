@@ -21,7 +21,6 @@ in
             enable = true;
             enableBashIntegration = true;
             enableNushellIntegration = true;
-            tmux.enableShellIntegration = true; # needed for sesh
           };
           ripgrep = {
             enable = true;
@@ -41,10 +40,6 @@ in
             enable = true;
             enableBashIntegration = true;
             enableNushellIntegration = true;
-          };
-          sesh = {
-            enable = true;
-            enableAlias = false; # default alias uses $(…) which is invalid nushell syntax
           };
           zellij = {
             enable = true;

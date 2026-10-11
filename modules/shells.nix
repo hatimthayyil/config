@@ -9,26 +9,20 @@ in
   flake.modules.nixos.shells = _: {
     home-manager.users.${owner.username} = {
       # Bash
-      programs.bash = {
-        enable = true;
-        shellAliases.s = "sesh connect $(sesh list --icons | fzf --ansi)"; # fuzzy-pick and connect to a tmux session; defined per-shell because sesh's builtin alias uses $(…) which breaks nushell
-      };
+      programs.bash.enable = true;
 
       programs.fish = {
         enable = true;
         # TODO Add plugins, see https://github.com/jorgebucaran/awsm.fish
       };
 
-      # Nu — sesh alias uses def instead of shellAliases because nushell can't parse $(…) subshells
+      # Nu
       programs.nushell = {
         enable = true;
         shellAliases = {
           la = "ls -la";
           lla = "eza -la";
         };
-        extraConfig = ''
-          def s [] { sesh connect (sesh list --icons | fzf --ansi) }
-        '';
       };
 
       # Prompt — cross-shell
