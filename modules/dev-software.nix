@@ -70,6 +70,7 @@ in
           pkgs.just
           pkgs.curl
           pkgs.curlie
+          pkgs.openssl
           pkgs.shellcheck
           # pkgs.secretspec # Included with devenv.
           pkgs.devbox
@@ -93,9 +94,7 @@ in
           pkgs.clang
           pkgs.conda
           inputs.bend.packages.${pkgs.system}.default
-          pkgs.cargo-nextest
           pkgs.cargo-seek
-          pkgs.cargo-workspaces
 
           # Misc
           pkgs.exercism
@@ -103,27 +102,6 @@ in
 
           # Docker
           pkgs.oxker
-
-          # Desktop App Dev
-          pkgs.pkg-config
-          pkgs.fontconfig
-          pkgs.gobject-introspection
-          pkgs.libxcb
-          pkgs.libxkbcommon
-          pkgs.at-spi2-atk
-          pkgs.atkmm
-          pkgs.cairo
-          pkgs.glib
-          pkgs.gtk3
-          pkgs.harfbuzz
-          pkgs.librsvg
-          pkgs.libsoup_3
-          pkgs.pango
-          pkgs.webkitgtk_4_1
-          pkgs.openssl
-          pkgs.dbus
-          pkgs.zlib
-          pkgs.zstd
         ];
       };
     };

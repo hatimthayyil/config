@@ -202,8 +202,6 @@
               name: nixosConfig: lib.nameValuePair "nixos-${name}" nixosConfig.config.system.build.toplevel
             ) checksForThisSystem;
           };
-
-        flake.templates = import ./templates;
       }
     );
 }
