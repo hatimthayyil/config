@@ -16,6 +16,7 @@ in
           pkgs.mediainfo
           pkgs.yt-dlp
           pkgs.ffmpeg
+          pkgs.digikam
         ];
       };
     };
