@@ -10,6 +10,17 @@
           }
         ]
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ai memory hook",
+            "timeout": 5
+          }
+        ]
+      }
     ]
   }
 }
