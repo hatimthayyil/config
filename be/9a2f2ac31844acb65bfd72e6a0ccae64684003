@@ -1,0 +1,19 @@
+modules/shells.nix
+  s_a9eba872b94e43::t_94d7ac1aab8ba1 12,19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "be9a2f2ac31844acb65bfd72e6a0ccae64684003",
+  "prompts": {},
+  "sessions": {
+    "s_a9eba872b94e43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e793cdca-2232-4d6c-8c06-ffee202f2545",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
