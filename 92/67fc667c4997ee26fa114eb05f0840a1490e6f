@@ -1,0 +1,39 @@
+justfile
+  s_a9eba872b94e43::t_858d550c9d5372 65
+.github/workflows/update-flake.yml
+  s_a9eba872b94e43::t_371a9f41e4aa52 17-28,30,36-44,53,55-60,62-63,69,80,83,85,87-91
+  s_a9eba872b94e43::t_e3373fb69af87d 49,84,86
+.github/actions/setup-nix/action.yml
+  s_a9eba872b94e43::t_858d550c9d5372 24
+.github/scripts/update-issue.sh
+  s_a9eba872b94e43::t_8b4559510cf4d1 2-3,13-19,36,41,76-77
+  s_a9eba872b94e43::t_707ebf17811c0f 4-5,10,59,63,69-72,78
+  s_a9eba872b94e43::t_3de1289fac5226 35,46
+agents/comments/modules/infrastructure/caches.nix.md
+  s_a9eba872b94e43::t_858d550c9d5372 11
+modules/infrastructure/caches.nix
+  s_a9eba872b94e43::t_858d550c9d5372 85
+agents/comments/.github/workflows/update-flake.yml.md
+  s_a9eba872b94e43::t_d8231e7d3d4553 3-6,8-19
+  s_a9eba872b94e43::t_ed7c785f62046b 7,22
+.github/scripts/update.sh
+  s_a9eba872b94e43::t_7f919e1e1bf730 1-30
+modules/infrastructure/ci.nix
+  s_a9eba872b94e43::t_1749fd02753a1c 1-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "9267fc667c4997ee26fa114eb05f0840a1490e6f",
+  "prompts": {},
+  "sessions": {
+    "s_a9eba872b94e43": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e793cdca-2232-4d6c-8c06-ffee202f2545",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
