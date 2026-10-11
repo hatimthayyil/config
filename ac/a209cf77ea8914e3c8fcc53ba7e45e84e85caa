@@ -1,0 +1,20 @@
+home/hatim/agents/skills/deslop/SKILL.md
+  s_92cef82b5d96b9::t_e6b56304fa56a9 10
+  s_92cef82b5d96b9::t_014cad56c85087 1-9,11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "aca209cf77ea8914e3c8fcc53ba7e45e84e85caa",
+  "prompts": {},
+  "sessions": {
+    "s_92cef82b5d96b9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f6ff770d-ab56-4ee9-bb99-100d4494e3cf",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Hatim Thayyil <hatim@thayyil.net>"
+    }
+  }
+}
