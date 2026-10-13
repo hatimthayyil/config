@@ -35,18 +35,21 @@ Never edit or delete anything under `~/.ai/memory`: the tool manages it.
 ### Reading it: the view, zoom, grep
 
 `wake` prints the view: the whole memory, oldest first, as one-line
-summaries. Each line is `id+n|dates|text`: the n messages from id on, and
-the UTC days they span. A short message is its own line, word for word;
-the older the messages, the more a line covers. `--time` adds the time of
-day; `-o repo,agent,...` adds where and by whom a line was noted.
+summaries under UTC date headers (`2026-10-11`). A line is `id|text` for
+message id, or `id+n|text` for the n messages from id on; one that runs
+past its header's day shows its last day, `256+8|..10-12|text`. A short
+message is its own line, word for word; the older the messages, the more
+a line covers. `--time` adds the time of day; `-o repo,agent,...` adds
+where and by whom a line was noted. A long view comes in parts: run the
+`ai memory wake <id>` each part ends with until it says you are awake.
 
 `ai memory zoom <id+n>` opens a line two levels down: the four lines of
 n/4 it was made from, or its messages when n is 2 or 4; `ai memory zoom
-<id>+1` gives message id in full. Zoom whenever a line only mentions
+<id>` gives message id in full. Zoom whenever a line only mentions
 something you need, before you act, guess or ask.
 
 `ai memory grep <regex>` searches every message, word for word; `-t` adds
-the summaries, `--help` lists the filters. `ai memory show <id+n>` prints
+the summaries, `--help` lists the filters. `ai memory show <id>` prints
 where a message or summary came from.
 
 ### If you're a subagent: skip everything above
