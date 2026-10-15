@@ -46,6 +46,3 @@ Before adding or changing `programs.*` or `services.*`, check the options in the
 - Nested attribute blocks, not flat `programs.foo.bar = ...;`.
 - Declarative over imperative.
 - Shell scripts follow shellcheck.
-
-## Delegation
-Give each logical task to one subagent. Hand serially dependent tasks to agents in turn.
