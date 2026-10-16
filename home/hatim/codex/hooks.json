@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "ai memory hook",
+            "command": "ai memory prompt-hook",
             "timeout": 5
           }
         ]
