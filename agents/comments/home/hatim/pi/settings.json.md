@@ -19,4 +19,9 @@ the repository (`refs/pi-checkpoints/*`) and travel with it, while pi-code's sha
 leaving checkpoints unrestorable after a directory move. pi-rewind also carries the diff preview,
 redo stack, and `Esc Esc` shortcut.
 
-Both filters are leaves: no pi-code extension imports either file.
+`memory.ts` — pi-code registers a second `memory` tool and `/memory` command over its own store at
+`~/.pi/agent/memory/<project-slug>/`, while `ai memory` keeps `~/.ai/memory` and is what the global
+instructions and the Claude hook call. Only `ai memory` is kept: two stores with different
+contracts split what an agent remembers.
+
+These filters are leaves: no pi-code extension imports any of them.

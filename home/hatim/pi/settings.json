@@ -8,7 +8,6 @@
     "zai/glm-5.3"
   ],
   "packages": [
-    "npm:pi-blackhole",
     "npm:pi-autoresearch",
     "npm:pi-zotero",
     "npm:pi-reasonix",
@@ -19,10 +18,12 @@
       "extensions": [
         "-extensions/subagent/index.ts",
         "-extensions/git-checkpoint.ts",
+        "-extensions/memory.ts",
         "-extensions/mcp/index.ts"
       ]
     },
     "npm:pi-rewind"
   ],
-  "lastChangelogVersion": "1.0.2"
+  "lastChangelogVersion": "1.1.0",
+  "hideThinkingBlock": true
 }

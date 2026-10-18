@@ -17,12 +17,7 @@ Claude Code writes claude.ai-synced skills to `<user skills dir>/synced/<bucket>
 
 ## Pinned third-party skills
 
-`manifest` maps skill name -> store path. Sources: `agents-nix` (github:sudosubin/agents.nix, `pkgs.agent-skills.github.<owner>.<repo>.<skill>` via the overlay) unless its pin is older than wanted.
-
-- `rust-skills`: https://github.com/curtisault/rust-skills (179 rules) is not in agents.nix. `leonardomso/rust-skills` is a different project (265 rules), so it is not a substitute. Hand-pinned with `fetchFromGitHub`.
-
-- `bd-to-br-migration` (dicklesworthstone/beads_rust) was an unmodified upstream copy, so it is pinned too.
-- `conversation-compiler`, `readchat`, `recall`, `searchchat` are not in agents.nix; they stay tracked.
+`manifest` maps skill name -> store path, all from `agents-nix` (github:sudosubin/agents.nix, `pkgs.agent-skills.github.<owner>.<repo>.<skill>` via the overlay).
 
 ### Activation (`agent-skills-sync.sh`)
 
