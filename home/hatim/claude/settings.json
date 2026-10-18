@@ -68,10 +68,15 @@
     ]
   },
   "enabledPlugins": {
-    "cloudflare@cloudflare": true,
+    "cloudflare@cloudflare": false,
+    "cowork-plugin-management@synced": false,
+    "figma@claude-plugins-official": false,
+    "frontend-design@claude-plugins-official": false,
+    "nx@nx-claude-plugins": false,
     "pyright-lsp@claude-plugins-official": false,
     "rust-analyzer-lsp@claude-plugins-official": false,
     "svelte@svelte": false,
+    "superpowers@claude-plugins-official": false,
     "typescript-lsp@claude-plugins-official": false
   },
   "extraKnownMarketplaces": {
@@ -96,9 +101,15 @@
   },
   "feedbackDrafts": "off",
   "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "xhigh"
+    }
+  },
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
-  "theme": "auto",
+  "theme": "light",
+  "editorMode": "vim",
   "verbose": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true
