@@ -19,6 +19,7 @@ in
         xdg.configFile =
           lib.genAttrs
             [
+              "agents/AGENTS.md"
               "agents/claude.md"
               "agents/codex.md"
               "agents/pi.md"
