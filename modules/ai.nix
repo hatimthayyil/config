@@ -23,42 +23,38 @@ in
       home-manager.users.${owner.username} =
         { config, ... }:
         {
-          home.packages =
-            with llm-agents;
-            [
-              # Agents
-              dsh
-              gemini-cli
-              kimi-code
-              opencode
-              reasonix
-              t3code
-              t3code-desktop
-              zcode
+          home.packages = with llm-agents; [
+            # Agents
+            dsh
+            gemini-cli
+            kimi-code
+            opencode
+            reasonix
+            t3code
+            t3code-desktop
+            zcode
 
-              agent-browser # headless browser automation
-              apm # agent package manager (Microsoft)
-              ax # fetch, discover, extract web content
-              beads # issue tracker
-              but # GitButler CLI: stacked and parallel branches
-              codegraph # semantic code intelligence
-              ctx # coding session search
-              git-ai # line-level AI attribution in Git Notes
-              gitbutler # GitButler GUI
-              herdr # terminal workspace manager
-              jscpd # detect copy/paste duplication
-              lean-ctx
-              mindwalk
-              openspec
-              plannotator # browser based interactive planner
-              tokscale
-              trellis # engineering framework
-              tuicr # diff review
-              ralph-tui # Agent loop orchestrator
-            ]
-            ++ [
-              pkgs.claude-desktop-fhs
-            ];
+            agent-browser # headless browser automation
+            apm # agent package manager (Microsoft)
+            ax # fetch, discover, extract web content
+            beads # issue tracker
+            but # GitButler CLI: stacked and parallel branches
+            claude-desktop
+            codegraph # semantic code intelligence
+            ctx # coding session search
+            git-ai # line-level AI attribution in Git Notes
+            gitbutler # GitButler GUI
+            herdr # terminal workspace manager
+            jscpd # detect copy/paste duplication
+            lean-ctx
+            mindwalk
+            openspec
+            plannotator # browser based interactive planner
+            tokscale
+            trellis # engineering framework
+            tuicr # diff review
+            ralph-tui # Agent loop orchestrator
+          ];
 
           # See agents/comments/modules/ai.nix.md.
           programs.git.settings.trace2 = {

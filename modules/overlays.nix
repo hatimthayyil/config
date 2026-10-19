@@ -29,8 +29,6 @@ let
 
   firefox-addons-overlay = inputs.nix-firefox-addons.overlays.default;
 
-  claude-desktop-overlay = inputs.claude-desktop.overlays.default;
-
   agents-nix-overlay = inputs.agents-nix.overlays.default;
 
   # FIXME: remove after throttled service unit fix lands in unstable
@@ -67,7 +65,6 @@ let
     // (emacs-overlay-packages final prev)
     // (nix4vscode-overlay final prev)
     // (firefox-addons-overlay final prev)
-    // (claude-desktop-overlay final prev)
     // (agents-nix-overlay final prev)
     // (throttled-fix-overlay final prev)
     // (zotero-fix-overlay final prev)
