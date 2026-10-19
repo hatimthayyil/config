@@ -1,0 +1,1 @@
+/home/hatim/.config/agents/AGENTS.md
