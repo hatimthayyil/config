@@ -20,6 +20,8 @@
 ## Delegation
 - Keep the main conversation free for the user to discuss, decide and review.
 - Hand implementation and research to forks, which inherit the conversation and return their results (Claude Code: Agent type `fork`, `/subtask`).
+- One fork per task, in parallel when the tasks are independent. Forks reuse the cached conversation, so several small forks cost less than one large fork.
+- Brief a fork with agreed work only.
 - Give parallel forks their own worktrees.
 - Start a fresh subagent only for an investigation that needs none of the conversation's context.
 
