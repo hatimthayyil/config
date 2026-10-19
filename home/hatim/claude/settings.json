@@ -112,5 +112,8 @@
   "editorMode": "vim",
   "verbose": true,
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "worktree": {
+    "baseRef": "head"
+  }
 }
