@@ -26,8 +26,8 @@ in
         settings = {
           connect-timeout = 5;
           log-lines = 25;
-          min-free = 128000000;
-          max-free = 1000000000;
+          min-free = 10 * 1024 * 1024 * 1024;
+          max-free = 30 * 1024 * 1024 * 1024;
           trusted-users = [ "@wheel" ];
           auto-optimise-store = true;
           warn-dirty = false;
