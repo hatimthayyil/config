@@ -52,9 +52,12 @@ something you need, before you act, guess or ask.
 the summaries, `--help` lists the filters. `ai memory show <id>` prints
 where a message or summary came from.
 
-### If you're a subagent: skip everything above
+### Forks and subagents
 
-Parallel sessions on this machine are all you, and may all write memories.
-A subagent is not: it must never run `ai memory`, because it cannot judge what
-is already known, and its notes would arrive duplicated and incorrectly.
-When you spawn one, write: `You are a subagent. Don't run ai memory.`
+A fork inherits your conversation, so it is you: it skips `wake` and
+notes as you would. It ends its report with the notes it registered, and
+you do not register them again.
+
+A fresh subagent is not you: it must never run `ai memory`, because it
+cannot judge what is already known, and its notes would arrive duplicated
+and incorrectly. When you spawn one, write: `You are a subagent. Don't run ai memory.`
