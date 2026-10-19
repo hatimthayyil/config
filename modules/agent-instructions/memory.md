@@ -54,6 +54,8 @@ where a message or summary came from.
 
 ### Forks and subagents
 
+Parallel sessions on this machine are all you, and may all write memories.
+
 A fork inherits your conversation, so it is you: it skips `wake` and
 notes as you would. It ends its report with the notes it registered, and
 you do not register them again.
