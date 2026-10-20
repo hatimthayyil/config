@@ -13,6 +13,9 @@ Run `ai memory wake` before any other tool call, in every session, and
 again after every compaction, then do exactly what it prints, to the end
 of its output. Compaction drops your context; keep noting afterwards.
 
+If your context begins with your memory view (`# Memory`, from `ai view`
+or `/ai`), you are already awake: skip the wake.
+
 ### While working: register memories (mandatory)
 
 Call `ai memory note "<1 line, max 280 bytes>"` whenever you learn
