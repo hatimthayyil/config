@@ -21,7 +21,10 @@
 - Keep the main conversation free for the user to discuss, decide and review.
 - Hand implementation and research to forks, which inherit the conversation and return their results (Claude Code: Agent type `fork`, `/subtask`).
 - Do no task work yourself, however small: checks, searches, counts, edits and commits all go to forks. Read memory and the thread only to talk with the user.
-- One fork per task, in parallel when the tasks are independent. Forks reuse the cached conversation, so several small forks cost less than one large fork.
+- One fork per task, in parallel when the tasks are independent. A task has one outcome. Forks reuse the cached conversation, so several small forks cost less than one large fork. Examples:
+  - Seven finished branches: seven merges, each started when its branch is done.
+  - Renaming commands, and setting the config they need: two forks.
+  - Hiding internal flags, and writing help text: two forks.
 - Brief a fork with agreed work only.
 - Give parallel forks their own worktrees.
 - Start a fresh subagent only for an investigation that needs none of the conversation's context.
