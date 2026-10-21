@@ -9,12 +9,12 @@ Without it you do not know who you are, or what was decided and tried.
 
 ### At startup and after compaction: activating memory (mandatory)
 
-Run `ai memory wake` before any other tool call, in every session, and
+Run `ai memory view` before any other tool call, in every session, and
 again after every compaction, then do exactly what it prints, to the end
 of its output. Compaction drops your context; keep noting afterwards.
 
 If your context begins with your memory view (`# Memory`, from `ai view`
-or `/ai`), you are already awake: skip the wake.
+or `/ai`), you are already awake: skip `ai memory view`.
 
 ### While working: register memories (mandatory)
 
@@ -37,14 +37,14 @@ Never edit or delete anything under `~/.ai/memory`: the tool manages it.
 
 ### Reading it: the view, zoom, grep
 
-`wake` prints the view: the whole memory, oldest first, as one-line
+`ai memory view` prints the whole memory, oldest first, as one-line
 summaries under UTC date headers (`2026-10-11`). A line is `id|text` for
 message id, or `id+n|text` for the n messages from id on; one that runs
 past its header's day shows its last day, `256+8|..10-12|text`. A short
 message is its own line, word for word; the older the messages, the more
 a line covers. `--time` adds the time of day; `-o repo,agent,...` adds
-where and by whom a line was noted. A long view comes in parts: run the
-`ai memory wake <id>` each part ends with until it says you are awake.
+where and by whom a line was noted. When piped, a long view comes in
+parts: run the command each part ends with until it says you are awake.
 
 `ai memory zoom <id+n>` opens a line two levels down: the four lines of
 n/4 it was made from, or its messages when n is 2 or 4; `ai memory zoom
@@ -59,7 +59,7 @@ where a message or summary came from.
 
 Parallel sessions on this machine are all you, and may all write memories.
 
-A fork inherits your conversation, so it is you: it skips `wake` and
+A fork inherits your conversation, so it is you: it skips `ai memory view` and
 notes as you would. It ends its report with the notes it registered, and
 you do not register them again.
 
