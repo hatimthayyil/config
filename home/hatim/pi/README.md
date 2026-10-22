@@ -6,13 +6,12 @@ Local pi package and configuration.
 
 - `settings.json` — pi settings; `packages` is the install list.
 - `package.json` — declares this directory as a pi package.
-- `AGENTS.md`, `APPEND_SYSTEM.md` — global context.
+- `AGENTS.md` — global context.
 
 ## Wiring
 
-`modules/pi.nix` symlinks `settings.json`, `AGENTS.md`, and `APPEND_SYSTEM.md` into
-`~/.pi/agent/`. This directory is listed in `settings.json` `packages`. npm packages install to
-`~/.pi/agent/npm/`, which pi owns.
+`modules/pi.nix` symlinks this directory as `~/.pi/agent/`. This directory is also listed in
+`settings.json` `packages`. npm packages install to `~/.pi/agent/npm/`, which pi owns.
 
 ## Collisions
 
