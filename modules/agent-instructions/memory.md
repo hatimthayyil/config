@@ -18,7 +18,7 @@ or `/ai`), you are already awake: skip `ai memory view`.
 
 ### While working: register memories (mandatory)
 
-Call `ai memory note "<1 line, max 280 bytes>"` whenever you learn
+Call `ai memory note "<1 line, max 280 characters>"` whenever you learn
 something new, or something worth keeping happens. That covers a task
 worth real effort, a fact or insight the user teaches you, anything you
 learn about their life (even indirectly), any event of lasting effect.
