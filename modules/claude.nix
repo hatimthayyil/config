@@ -26,7 +26,11 @@ in
         { config, ... }:
         {
           home = {
-            packages = [ llm-agents.claude-code ];
+            packages = [
+              llm-agents.claude-code
+              pkgs.clauth
+            ];
+            sessionVariables.CLAUTH_NO_UPDATE = "1";
             file.".claude".source =
               config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/claude";
           };
