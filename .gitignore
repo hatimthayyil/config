@@ -20,3 +20,5 @@ devenv.local.yaml
 # Node / Wrangler (infra/)
 node_modules/
 .wrangler/
+/ai.local.toml
+/.ai/local/
