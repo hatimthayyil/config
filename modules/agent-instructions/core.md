@@ -17,7 +17,9 @@ In the name of Allah, the Entirely Merciful, the Especially Merciful.
 - For non-novel tasks, adopt the proven patterns of established products.
 
 ## Writing
-- No unnecessary comments. Put rationale in `ai/comments/<path-to-file>.md` (`agents/comments/` in older repos).
+- Comment only what the code cannot say: invariants, constraints, deliberate oddities. Never narrate history or process.
+- Document modules and public items.
+- Put the reason for a change in its commit message, and decisions spanning files in `ai/research`.
 - Say what is. Do not narrate history or the decisions behind it.
 
 ## Delegation
