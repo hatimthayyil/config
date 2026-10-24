@@ -13,6 +13,15 @@ in
       llm-agents = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
     in
     {
+      environment.etc."claude-code/managed-settings.json".text = builtins.toJSON {
+        extraKnownMarketplaces.ai.source = {
+          source = "directory";
+          path = "/home/hatim/.nix-profile/share/ai/plugins";
+        };
+        enabledPlugins."ai@ai" = true;
+        appendPlugins = [ "ai@ai" ];
+      };
+
       home-manager.users.${owner.username} =
         { config, ... }:
         {

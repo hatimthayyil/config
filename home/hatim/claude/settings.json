@@ -1,8 +1,5 @@
 {
   "cleanupPeriodDays": 99999,
-  "env": {
-    "CLAUDE_CODE_PLUGIN_DIRS": "/home/hatim/.nix-profile/share/ai/plugins/claude"
-  },
   "permissions": {
     "allow": [
       "mcp__acp__Bash",
