@@ -1,3 +1,6 @@
+بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+In the name of Allah, the Entirely Merciful, the Especially Merciful.
+
 ## Environment
 - NixOS. Flake config: `/hatimthayyil/code/config`.
 - Project environments: devenv (`devenv.nix`, `devenv.yaml`).
