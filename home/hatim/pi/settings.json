@@ -24,6 +24,9 @@
     },
     "npm:pi-rewind"
   ],
+  "extensions": [
+    "/home/hatim/.nix-profile/share/ai/plugins/pi"
+  ],
   "lastChangelogVersion": "1.3.0",
   "hideThinkingBlock": true
 }
