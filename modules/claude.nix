@@ -30,7 +30,10 @@ in
               llm-agents.claude-code
               pkgs.clauth
             ];
-            sessionVariables.CLAUTH_NO_UPDATE = "1";
+            sessionVariables = {
+              CLAUTH_NO_UPDATE = "1";
+              CLAUDE_CODE_AUTO_CONNECT_IDE = "false";
+            };
             file.".claude".source =
               config.lib.file.mkOutOfStoreSymlink "/home/hatim/code/config/home/hatim/claude";
           };

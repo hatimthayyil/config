@@ -8,6 +8,11 @@
     "defaultMode": "auto"
   },
   "model": "opus",
+  "syncClaudeAiSkills": false,
+  "skillOverrides": {
+    "claude-in-chrome": "off"
+  },
+  "disableClaudeAiConnectors": true,
   "hooks": {
     "PostToolUse": [
       {
@@ -104,6 +109,7 @@
     }
   },
   "tui": "fullscreen",
+  "autoMemoryEnabled": false,
   "skipWorkflowUsageWarning": true,
   "theme": "light",
   "editorMode": "vim",
