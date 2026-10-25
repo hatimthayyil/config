@@ -38,7 +38,6 @@ in
             apm # agent package manager (Microsoft)
             ax # fetch, discover, extract web content
             beads # issue tracker
-            but # GitButler CLI: stacked and parallel branches
             claude-desktop
             codegraph # semantic code intelligence
             ctx # coding session search
