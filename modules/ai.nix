@@ -39,7 +39,6 @@ in
             ax # fetch, discover, extract web content
             beads # issue tracker
             claude-desktop
-            codegraph # semantic code intelligence
             ctx # coding session search
             git-ai # line-level AI attribution in Git Notes
             gitbutler # GitButler GUI

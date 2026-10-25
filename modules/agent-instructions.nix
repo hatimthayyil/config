@@ -17,7 +17,6 @@ in
         gitbutlerPoliciesVersion = "0.22.3";
         parts = [
           ./agent-instructions/core.md
-          ./agent-instructions/codegraph.md
           ./agent-instructions/memory.md
         ]
         ++ lib.optionals gitbutler.enable [

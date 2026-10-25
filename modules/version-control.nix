@@ -28,7 +28,6 @@ in
               "*.drv"
               "result"
               ".direnv"
-              ".codegraph"
             ];
 
             settings = {

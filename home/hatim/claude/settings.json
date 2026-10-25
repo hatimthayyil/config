@@ -4,8 +4,7 @@
   "env": {},
   "permissions": {
     "allow": [
-      "mcp__acp__Bash",
-      "mcp__codegraph__*"
+      "mcp__acp__Bash"
     ],
     "defaultMode": "auto"
   },
