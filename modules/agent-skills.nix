@@ -18,6 +18,9 @@ in
         manifest = {
           find-skills = github.vercel-labs.skills.find-skills;
           stop-slop = github.hardikpandya.stop-slop.stop-slop;
+        }
+        // lib.optionalAttrs config.programs.gitbutler.enable {
+          but = config.programs.gitbutler.skill;
         };
 
         sync = pkgs.writeShellApplication {
