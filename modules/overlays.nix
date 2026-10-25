@@ -27,7 +27,7 @@ let
 
   nix4vscode-overlay = inputs.nix4vscode.overlays.forVscode;
 
-  firefox-addons-overlay = inputs.nix-firefox-addons.overlays.default;
+  firefox-addons-overlay = inputs.firefox-addons.overlays.default;
 
   agents-nix-overlay = inputs.agents-nix.overlays.default;
 

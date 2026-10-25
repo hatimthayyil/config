@@ -49,11 +49,11 @@ in
 
               extensions = {
                 force = true;
-                packages = with pkgs.firefoxAddons; [
+                packages = with pkgs.firefox-addons; [
                   ublock-origin
                   clearurls
                   sponsorblock
-                  bitwarden-password-manager
+                  bitwarden
                   darkreader
                   decentraleyes
                   sidebery
@@ -121,11 +121,11 @@ in
 
               extensions = {
                 force = true;
-                packages = with pkgs.firefoxAddons; [
+                packages = with pkgs.firefox-addons; [
                   ublock-origin
                   clearurls
                   sponsorblock
-                  bitwarden-password-manager
+                  bitwarden
                   darkreader
                   decentraleyes
                   sidebery

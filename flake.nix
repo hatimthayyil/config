@@ -158,8 +158,8 @@
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
     # Firefox Add-ons
-    nix-firefox-addons = {
-      url = "github:osipog/nix-firefox-addons";
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     betterfox = {
