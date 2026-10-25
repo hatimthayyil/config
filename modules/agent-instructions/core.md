@@ -21,6 +21,7 @@ In the name of Allah, the Entirely Merciful, the Especially Merciful.
 - Document modules and public items.
 - Put the reason for a change in its commit message, and decisions spanning files in `ai/research`.
 - Say what is. Do not narrate history or the decisions behind it.
+- The reasons the user gives you are for you to understand and act on; keep them out of the code, docs and instructions you write unless asked.
 
 ## Delegation
 - Keep the main conversation free for the user to discuss, decide and review.
