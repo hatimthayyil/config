@@ -31,7 +31,7 @@ In the name of Allah, the Entirely Merciful, the Especially Merciful.
   - Renaming commands, and setting the config they need: two forks.
   - Hiding internal flags, and writing help text: two forks.
 - Brief a fork with agreed work only.
-- Give parallel forks their own worktrees.
+- Give parallel forks their own worktrees, in repos without GitButler. In GitButler repos, forks run in the main checkout, each on its own branch.
 - Start a fresh subagent only for an investigation that needs none of the conversation's context.
 
 ## Commits
