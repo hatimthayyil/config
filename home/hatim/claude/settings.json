@@ -1,5 +1,6 @@
 {
   "cleanupPeriodDays": 99999,
+  "env": {},
   "permissions": {
     "allow": [
       "mcp__acp__Bash",
@@ -69,6 +70,9 @@
       }
     ]
   },
+  "worktree": {
+    "baseRef": "head"
+  },
   "enabledPlugins": {
     "cloudflare@cloudflare": false,
     "cowork-plugin-management@synced": false,
@@ -115,8 +119,5 @@
   "editorMode": "vim",
   "verbose": true,
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
-  "worktree": {
-    "baseRef": "head"
-  }
+  "skipAutoPermissionPrompt": true
 }
