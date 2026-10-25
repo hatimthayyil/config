@@ -5,15 +5,21 @@ in
 {
   flake.modules.nixos.agent-instructions = {
     home-manager.users.${owner.username} =
-      { lib, ... }:
+      { lib, pkgs, ... }:
       let
-        instructions =
-          lib.concatMapStringsSep "\n" (part: builtins.readFile ./agent-instructions/${part}.md)
-            [
-              "core"
-              "codegraph"
-              "memory"
-            ];
+        parts = [
+          ./agent-instructions/core.md
+          ./agent-instructions/codegraph.md
+          ./agent-instructions/memory.md
+        ];
+        instructions = pkgs.runCommand "agent-instructions.md" { } ''
+          sep=
+          for part in ${lib.escapeShellArgs (map (part: "${part}") parts)}; do
+            printf '%s' "$sep" >> $out
+            cat "$part" >> $out
+            sep=$'\n'
+          done
+        '';
       in
       {
         xdg.configFile =
@@ -25,7 +31,7 @@ in
               "agents/pi.md"
             ]
             (_: {
-              text = instructions;
+              source = instructions;
             });
       };
   };
