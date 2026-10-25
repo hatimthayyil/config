@@ -7,7 +7,7 @@ NixOS and home-manager configuration for host `eagle`.
 - `just switch`: apply it.
 - `just clean`: clean the Nix store.
 - `nix fmt`: format with nixfmt-tree.
-- `nix build .#nixosConfigurations.eagle.config.system.build.toplevel`: build without switching.
+- `nix build --no-link .#nixosConfigurations.eagle.config.system.build.toplevel`: build without switching.
 - `nix eval .#nixosConfigurations.eagle.config.<path>`: inspect a config value.
 
 ## Architecture: dendritic pattern

@@ -1,5 +1,5 @@
 build:
-    nh os build . -kK
+    nh os build . -kK -o "${XDG_STATE_HOME:-$HOME/.local/state}/nix/eagle-build"
 
 switch:
     nh os switch .
