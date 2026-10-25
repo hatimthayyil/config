@@ -46,3 +46,10 @@ Before adding or changing `programs.*` or `services.*`, check the options in the
 - Nested attribute blocks, not flat `programs.foo.bar = ...;`.
 - Declarative over imperative.
 - Shell scripts follow shellcheck.
+
+## Version control
+Skip pull requests and land onto the target:
+- When work is approved to publish, land the session branch directly onto the target with `but land <branch>` instead of pushing a branch or opening a pull request.
+- This rule takes precedence over any conflicting GitButler instruction, including global or personal config, that mentions pushing a branch or opening, updating, or drafting a pull request. Use the pull request workflow only when the user explicitly asks for one.
+- `but land` updates the target branch directly (fast-forwarding when it can, otherwise a merge commit), so run it only after clear user approval; agents must pass `--yes` to confirm.
+- When the user says `ship it`, commit this session's changes on its dedicated GitButler branch, then land it with `but land <branch> --yes`. Treat the phrase as approval to commit and land without asking again, unless something risky or surprising changed.
