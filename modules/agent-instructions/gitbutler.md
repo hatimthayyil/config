@@ -21,7 +21,10 @@ These policies, and the Version control section above, apply in repos on the `gi
 
 ### Branch naming
 
-- When creating a GitButler branch for an agent session, use `<type>/<slug>`.
+- When creating a GitButler branch for a feature, use `<type>/<slug>`.
+- Use one branch per feature. Forks commit onto it. Do not create a branch for a task, a fork or a single file.
+- Create another branch only when the user asks for one.
+- Use GitButler to order, split and squash the commits on the branch.
 
 ### Commit message convention
 
