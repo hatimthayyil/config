@@ -4,24 +4,35 @@ let
 in
 {
   flake.modules.nixos.terminals =
-    { pkgs, ... }:
     {
-      home-manager.users.${owner.username} = {
-        programs.tmux = {
+      config,
+      lib,
+      pkgs,
+      ...
+    }:
+    {
+      options.features.tmux.full.enable =
+        lib.mkEnableOption "the full tmux setup (prefix, bindings, plugins)";
+
+      config.home-manager.users.${owner.username}.programs.tmux = lib.mkMerge [
+        {
           enable = true;
+          mouse = true;
+          escapeTime = 10;
+          terminal = "tmux-256color";
+          extraConfig = ''set -ag terminal-overrides ",xterm-256color:RGB"'';
+        }
+        (lib.mkIf config.features.tmux.full.enable {
           # default-shell drives tmux's *internal* job execution (status-line
           # #() commands, popups, plugin scripts) as well as new panes, so it
           # must stay POSIX (nu -c can't even parse `2>&1`). Panes still land
           # in nushell via `default-command` below.
           shell = "${pkgs.bash}/bin/bash";
           sensibleOnTop = true;
-          mouse = true;
           keyMode = "vi";
           customPaneNavigationAndResize = false;
           baseIndex = 1;
-          escapeTime = 10;
           historyLimit = 50000;
-          terminal = "tmux-256color";
           disableConfirmationPrompt = true;
           prefix = "C-Space";
           clock24 = true;
@@ -63,7 +74,6 @@ in
             }
           ];
           extraConfig = ''
-            set -ag terminal-overrides ",xterm-256color:RGB"
             set -g extended-keys on
             set -g extended-keys-format csi-u
 
@@ -114,7 +124,7 @@ in
             set -g renumber-windows on
             set -g status-position top
           '';
-        };
-      };
+        })
+      ];
     };
 }
