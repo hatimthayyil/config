@@ -373,6 +373,23 @@ in
                   other-lines = "disable";
                 };
               };
+              keys.normal.space = {
+                # The paste goes onto a freshly opened line. Clipboard text ending
+                # in a newline pastes as whole lines above it and leaves it empty;
+                # text without one fills it. extend_line_below takes in that
+                # empty line, and sed drops it before quoting.
+                q = [
+                  "open_above"
+                  "normal_mode"
+                  "paste_clipboard_before"
+                  "extend_line_below"
+                  ":pipe sed '\${/^$/d;};s/^/> /'"
+                ];
+                ">" = [
+                  "extend_to_line_bounds"
+                  ":pipe sed 's/^/> /'"
+                ];
+              };
             };
           };
 
