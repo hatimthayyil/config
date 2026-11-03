@@ -86,7 +86,13 @@ in
 
       # HM: wayland clipboard
       home-manager.users.${owner.username} = {
-        programs.plasma.enable = true;
+        programs.plasma = {
+          enable = true;
+          input.keyboard = {
+            repeatDelay = 200;
+            repeatRate = 50;
+          };
+        };
         home.packages = [ pkgs.wl-clipboard ];
       };
     };
