@@ -13,13 +13,17 @@ in
       llm-agents = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
     in
     {
-      environment.etc."claude-code/managed-settings.json".text = builtins.toJSON {
-        extraKnownMarketplaces.ai.source = {
-          source = "directory";
-          path = "/home/hatim/.nix-profile/share/ai/plugins";
+      environment.etc."claude-code/managed-settings.json" = {
+        # A copy, not a symlink: Claude Code also watches a symlinked settings file's target directory, here /nix/store.
+        mode = "0444";
+        text = builtins.toJSON {
+          extraKnownMarketplaces.ai.source = {
+            source = "directory";
+            path = "/home/hatim/.nix-profile/share/ai/plugins";
+          };
+          enabledPlugins."ai@ai" = true;
+          appendPlugins = [ "ai@ai" ];
         };
-        enabledPlugins."ai@ai" = true;
-        appendPlugins = [ "ai@ai" ];
       };
 
       home-manager.users.${owner.username} =
