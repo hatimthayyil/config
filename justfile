@@ -1,8 +1,38 @@
 build:
     nh os build . -kK -o "${XDG_STATE_HOME:-$HOME/.local/state}/nix/eagle-build"
 
-switch:
-    nh os switch .
+# Follow flake.lock. --update none keeps the running input pins; --update emx,helix updates those inputs and keeps the rest
+[arg("update", long="update", short="u")]
+switch update="":
+    #!/usr/bin/env bash
+    set -euo pipefail
+    update={{ quote(update) }}
+    if [[ -z $update ]]; then
+        exec nh os switch .
+    fi
+    names=()
+    if [[ $update != none ]]; then
+        IFS=, read -ra names <<< "$update"
+    fi
+    jq '
+        ($ARGS.positional - (.nodes.root.inputs | keys)) as $unknown
+        | if $unknown == [] then empty
+          else "unknown inputs: \($unknown | join(", "))\n" | halt_error end
+    ' flake.lock --args "${names[@]}"
+    # The pins come from nix.registry in modules/base.nix, which registers every input.
+    overrides="$(jq -r '
+        .flakes[] | select(.from.id != "self" and (.from.id | IN($ARGS.positional[]) | not)) | .to as $t
+        | ($t.path | capture("^(?<p>/nix/store/[^/]+)(/(?<d>.*))?$")) as $m
+        | "--override-input", .from.id,
+          ("path:\($m.p)?lastModified=\($t.lastModified)&narHash=\($t.narHash)"
+           + (if $t.rev then "&rev=\($t.rev)" else "" end)
+           + (if $m.d then "&dir=\($m.d)" else "" end))
+    ' /etc/nix/registry.json --args "${names[@]}")"
+    mapfile -t pins <<< "$overrides"
+    if (( ${#names[@]} > 0 )); then
+        nix flake update "${names[@]}"
+    fi
+    nh os switch . -- "${pins[@]}"
 
 clean:
     nh clean all

@@ -5,6 +5,8 @@ NixOS and home-manager configuration for host `eagle`.
 ## Commands
 - `just build`: build the NixOS configuration, including home-manager.
 - `just switch`: apply it.
+- `just switch --update none`: apply it with the running system's input pins, ignoring `flake.lock`.
+- `just switch --update <inputs>`: update the comma-separated inputs in `flake.lock`, then apply it with the running pins of every other input.
 - `just clean`: clean the Nix store.
 - `nix fmt`: format with nixfmt-tree.
 - `nix build --no-link .#nixosConfigurations.eagle.config.system.build.toplevel`: build without switching.
