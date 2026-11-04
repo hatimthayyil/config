@@ -114,7 +114,7 @@
     # EmX Emacs distribution
     emx = {
       url = "github:hatimthayyil/emx";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
     };
     # Gruvbox colour schemes for KDE Plasma and Konsole
     gruvbox-kde = {

@@ -26,6 +26,8 @@ in
       home-manager.users.${owner.username} =
         { config, ... }:
         {
+          imports = [ inputs.emx.homeModules.default ];
+
           programs.info.enable = true;
           programs.emacs = {
             enable = false;
@@ -35,12 +37,13 @@ in
             ];
           };
 
-          programs.emacs-emx = {
+          programs.emx = {
             enable = true;
-            package = pkgs.emacs;
-            defaultEditor = false;
-            treesitGrammars = [ "all" ];
-            localPath = "${config.home.homeDirectory}/code/emx";
+            src = "${config.home.homeDirectory}/code/emx";
+          };
+
+          services.emacs = {
+            enable = true;
           };
 
           programs.obsidian = {
