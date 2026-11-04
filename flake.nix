@@ -106,11 +106,6 @@
     # };
     # Flatpak
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    # Emacs
-    emacs-overlay = {
-      url = "github:nix-community/emacs-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     # EmX Emacs distribution
     emx = {
       url = "github:hatimthayyil/emx";

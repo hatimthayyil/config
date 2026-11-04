@@ -21,10 +21,6 @@ let
   #   };
   # };
 
-  emacs-overlay-packages = final: prev: {
-    emacs-overlay = inputs.emacs-overlay.overlay final prev;
-  };
-
   nix4vscode-overlay = inputs.nix4vscode.overlays.forVscode;
 
   firefox-addons-overlay = inputs.firefox-addons.overlays.default;
@@ -62,7 +58,6 @@ let
     (stable-packages final prev)
     // (unstable-small-packages final prev)
     # // (master-packages final prev)
-    // (emacs-overlay-packages final prev)
     // (nix4vscode-overlay final prev)
     // (firefox-addons-overlay final prev)
     // (agents-nix-overlay final prev)
