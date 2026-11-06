@@ -25,6 +25,20 @@ in
         };
       };
 
+      # Nu completions
+      programs.carapace = {
+        enable = true;
+        enableBashIntegration = false;
+        enableFishIntegration = false;
+        enableNushellIntegration = true;
+      };
+
+      # Carapace's fish bridge sources $__fish_data_dir/config.fish, which fish 4
+      # embeds in its binary, so without this the bridge has no completion path.
+      xdg.configFile."carapace/bridge/fish/config.fish".text = ''
+        set -g fish_complete_path (string split : $XDG_DATA_DIRS)/fish/vendor_completions.d
+      '';
+
       # Prompt — cross-shell
       programs.starship = {
         enable = true;

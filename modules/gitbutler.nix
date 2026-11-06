@@ -54,6 +54,12 @@ in
             `but agent setup --print` from {option}`package`, without the setup markers.
           '';
         };
+
+        completions = lib.mkOption {
+          type = lib.types.package;
+          readOnly = true;
+          description = "Bash and fish completions for `but`, as printed by `but completions` from {option}`package`.";
+        };
       };
 
       config = lib.mkMerge [
@@ -73,11 +79,32 @@ in
                   grep -qxF "$end" policy.md
                   grep -vxF -e "$start" -e "$end" policy.md > $out
                 '';
+
+            completions = pkgs.runCommand "gitbutler-completions" { nativeBuildInputs = [ cfg.package ]; } ''
+              export HOME=$TMPDIR
+              mkdir -p $out/share/bash-completion/completions $out/share/fish/vendor_completions.d
+              but completions bash > $out/share/bash-completion/completions/but
+              but completions fish > $out/share/fish/vendor_completions.d/but.fish
+            '';
           };
         }
 
         (lib.mkIf cfg.enable {
-          home.packages = [ cfg.package ];
+          home.packages = [
+            cfg.package
+            cfg.completions
+          ];
+
+          # Replaces Carapace's built-in `but` completer, which lags the CLI.
+          xdg.configFile."carapace/specs/but.yaml" = lib.mkIf config.programs.carapace.enable {
+            text = ''
+              name: but
+              description: GitButler CLI
+              parsing: disabled
+              completion:
+                positionalany: ["$carapace.bridge.Fish([but])"]
+            '';
+          };
 
           home.activation.gitbutlerSettings = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
             settings=${lib.escapeShellArg settingsPath}
