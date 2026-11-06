@@ -1,5 +1,6 @@
 {
   "cleanupPeriodDays": 99999,
+  "syncClaudeAiSkills": false,
   "env": {},
   "permissions": {
     "allow": [
@@ -8,12 +9,10 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "opus",
-  "syncClaudeAiSkills": false,
+  "disableClaudeAiConnectors": true,
   "skillOverrides": {
     "claude-in-chrome": "off"
   },
-  "disableClaudeAiConnectors": true,
   "hooks": {
     "PostToolUse": [
       {
@@ -110,6 +109,9 @@
   "modelSettings": {
     "claude-opus-5-5": {
       "effortLevel": "xhigh"
+    },
+    "claude-haiku-5-5": {
+      "effortLevel": "high"
     }
   },
   "tui": "fullscreen",
