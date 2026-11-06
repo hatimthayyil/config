@@ -18,3 +18,6 @@ light_name = "gruvbox-light"
 
 [ui]
 status_indicators = "symbols"
+
+[terminal]
+default_shell = "nu"
