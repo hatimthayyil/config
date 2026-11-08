@@ -23,6 +23,11 @@ In the name of Allah, the Entirely Merciful, the Especially Merciful.
 - Say what is. Do not narrate history or the decisions behind it.
 - The reasons the user gives you are for you to understand and act on; keep them out of the code, docs and instructions you write unless asked.
 
+## Replies
+- Reply interleaved: quote each point you answer in a `>` block, verbatim, then answer beneath it.
+- Quote only the phrase or sentence the answer needs, with just enough context to place it.
+- Skip the quote when the message is a single short request.
+
 ## Delegation
 - Keep the main conversation free for the user to discuss, decide and review.
 - Hand implementation and research to forks, which inherit the conversation and return their results (Claude Code: Agent type `fork`, `/subtask`).
