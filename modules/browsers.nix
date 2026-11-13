@@ -44,6 +44,22 @@ in
             enable = true;
             configPath = ".mozilla/firefox";
 
+            betterfox = {
+              enable = true;
+              profiles.default.settings = {
+                fastfox.enable = true;
+                smoothfox.smooth-scrolling.enable = true;
+                peskyfox = {
+                  enable = true;
+                  mozilla-ui.enable = false;
+                };
+                securefox = {
+                  enable = true;
+                  tracking-protection."browser.download.start_downloads_in_tmp_dir".value = false;
+                };
+              };
+            };
+
             profiles.default = {
               isDefault = true;
 
@@ -59,6 +75,7 @@ in
                   sidebery
                   unpaywall
                   onetab
+                  auto-tab-discard
                 ];
                 settings."uBlock0@raymondhill.net".settings = {
                   selectedFilterLists = [
@@ -91,17 +108,8 @@ in
                 "browser.tabs.discarding.enabled" = true;
                 "browser.tabs.discarding.priority" = 2;
                 "browser.tabs.min_inactive_duration_before_unload" = 600000;
-
-                fastfox.enable = true;
-                smoothfox.enable = true;
-                peskyfox = {
-                  enable = true;
-                  mozilla-ui.enable = false;
-                };
-                securefox = {
-                  enable = true;
-                  tracking-protection."browser.download.start_downloads_in_tmp_dir".value = false;
-                };
+                "browser.sessionstore.interval" = 60000;
+                "media.autoplay.default" = 5;
               };
 
               userChrome = ''
