@@ -47,6 +47,7 @@
         gui-apps
         multimedia
         ai
+        ai-tools
         pi
         claude
         codex

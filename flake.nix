@@ -135,6 +135,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     llm-agents.url = "github:numtide/llm-agents.nix";
+    # ai-tools: services.ai-tools Home Manager module
+    ai-tools = {
+      url = "github:hatimthayyil/ai-tools/v0.18.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # Pinned agent skills
     agents-nix = {
       url = "github:sudosubin/agents.nix";

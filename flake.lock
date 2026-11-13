@@ -20,6 +20,27 @@
         "type": "github"
       }
     },
+    "ai-tools": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794896427,
+        "narHash": "sha256-zDfb/ImGwory5sJJomlzWfyljW6BA4IglrMFp6AmFF0=",
+        "owner": "hatimthayyil",
+        "repo": "ai-tools",
+        "rev": "d0947939bba3e34ed74c272dcf7a769570c3e0fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hatimthayyil",
+        "ref": "v0.18.1",
+        "repo": "ai-tools",
+        "type": "github"
+      }
+    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -978,6 +999,7 @@
     "root": {
       "inputs": {
         "agents-nix": "agents-nix",
+        "ai-tools": "ai-tools",
         "bend": "bend",
         "betterfox": "betterfox",
         "disko": "disko",
