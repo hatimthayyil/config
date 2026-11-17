@@ -42,4 +42,10 @@ In the name of Allah, the Entirely Merciful, the Especially Merciful.
 - Start a fresh subagent only for an investigation that needs none of the conversation's context.
 
 ## Commits
-- End every commit with a `Co-Authored-By` trailer naming the model that wrote the change.
+End each commit with trailers saying who did what. Name an agent as `<tool> (<model>)`, such as `Claude Code (Claude Opus 5.5)`, and the user by their git `user.name` and `user.email`.
+- `Generated-by: <agent>`: an agent wrote the whole diff.
+- `Assisted-by: <agent>`: an agent wrote part of the diff, or helped without writing it; the body says what it did.
+- `Assisted-by: <agent> [review]`: an agent reviewed the change.
+- `Directed-by: <user>`: the user directed the agent.
+- `Reviewed-by: <user>`: the user reviewed the change; add it only when they say so.
+- Write keys in sentence case, as shown. Never add `Co-authored-by` or `Signed-off-by` for an agent.
