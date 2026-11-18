@@ -14,7 +14,7 @@ in
       let
         gitbutler = config.programs.gitbutler;
         # gitbutler.md is copied from this version's wizard text (policy.rs).
-        gitbutlerPoliciesVersion = "0.22.3";
+        gitbutlerPoliciesVersion = "0.23.4";
         parts = [
           ./agent-instructions/core.md
           ./agent-instructions/memory.md
