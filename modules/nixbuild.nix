@@ -15,6 +15,9 @@ in
             "benchmark"
             "big-parallel"
           ];
+          # A remote build uploads every input nixbuild can't substitute, which
+          # costs small builds far more than it saves, so they stay local.
+          mandatoryFeatures = [ "big-parallel" ];
         }
       ];
 
