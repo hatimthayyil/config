@@ -187,7 +187,7 @@
           let
             nixosConfigs = config.flake.nixosConfigurations or { };
             checksForThisSystem = lib.filterAttrs (
-              _name: nixosConfig: nixosConfig.pkgs.system == system
+              _name: nixosConfig: nixosConfig.pkgs.stdenv.hostPlatform.system == system
             ) nixosConfigs;
           in
           {

@@ -70,8 +70,8 @@ in
           # Cache
           pkgs.cachix
           pkgs.attic-client
-          inputs.niks3.packages.${pkgs.system}.niks3
-          inputs.nix-fast-build.packages.${pkgs.system}.default
+          inputs.niks3.packages.${pkgs.stdenv.hostPlatform.system}.niks3
+          inputs.nix-fast-build.packages.${pkgs.stdenv.hostPlatform.system}.default
 
           # Dev
           pkgs.nixd

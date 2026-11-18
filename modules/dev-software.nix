@@ -93,7 +93,7 @@ in
           pkgs.steel
           pkgs.clang
           pkgs.conda
-          inputs.bend.packages.${pkgs.system}.default
+          inputs.bend.packages.${pkgs.stdenv.hostPlatform.system}.default
           pkgs.cargo-seek
 
           # Misc
