@@ -43,6 +43,8 @@ in
             git-ai # line-level AI attribution in Git Notes
             gitbutler # GitButler GUI
             herdr # terminal workspace manager
+            herdr-app # herdr desktop app
+            herdr-core # terminals the desktop app runs; provides hc
             jscpd # detect copy/paste duplication
             lean-ctx
             mindwalk
