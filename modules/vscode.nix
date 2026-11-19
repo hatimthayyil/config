@@ -68,6 +68,7 @@ let
     "gruntfuggly.todo-tree"
     "mechatroner.rainbow-csv"
     "tomoki1207.pdf"
+    "kristijanhusak.org-lsp"
   ];
 in
 {
@@ -102,6 +103,40 @@ in
             enable = true;
             package = pkgs.vscode;
           };
+
+          # Shared by every editor running org-lsp; mirrors emx's modules/organisation.el.
+          xdg.configFile."org-lsp/config.toml".source =
+            (pkgs.formats.toml { }).generate "org-lsp-config.toml"
+              {
+                org_agenda_files = [ "~/Documents/org" ];
+                org_todo_keywords = [
+                  [
+                    "TODO(t)"
+                    "NEXT(n)"
+                    "|"
+                    "DONE(d)"
+                  ]
+                  [
+                    "WAITING(w@/!)"
+                    "HOLD(h@/!)"
+                    "|"
+                    "INACTIVE(i)"
+                    "CANCELLED(c@/!)"
+                    "PHONE"
+                    "MEETING"
+                  ]
+                ];
+                org_refile_targets = [
+                  {
+                    files = "agenda";
+                    maxlevel = 2;
+                  }
+                  {
+                    files = "current";
+                    maxlevel = 2;
+                  }
+                ];
+              };
         };
     };
 }
