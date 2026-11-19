@@ -19,6 +19,7 @@ in
       # Nu
       programs.nushell = {
         enable = true;
+        loadSessionVariables = true;
         shellAliases = {
           la = "ls -la";
           lla = "eza -la";
