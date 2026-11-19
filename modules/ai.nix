@@ -25,6 +25,8 @@ in
         {
           home.packages = with llm-agents; [
             # Agents
+            antigravity-cli # Google Antigravity CLI (agy)
+            antigravity-hub # Google Antigravity desktop app
             dsh
             gemini-cli
             kimi-code
