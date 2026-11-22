@@ -37,6 +37,7 @@ in
 
           services.emacs = {
             enable = true;
+            defaultEditor = true;
           };
 
           programs.obsidian = {
@@ -339,7 +340,6 @@ in
           programs.neovim.enable = false;
           programs.helix = {
             enable = true;
-            defaultEditor = true;
             package = inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default;
             settings = {
               theme = {
