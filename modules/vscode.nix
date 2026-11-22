@@ -84,7 +84,8 @@ in
     {
       packages.vscode-extensions = pkgs.buildEnv {
         name = "vscode-extensions";
-        paths = pkgs.nix4vscode.forVscodeVersion editor.version extensions;
+        # nixpkgs may version VS Code as X.Y; nix4vscode's engine matching needs X.Y.Z.
+        paths = pkgs.nix4vscode.forVscodeVersion (pkgs.lib.versions.pad 3 editor.version) extensions;
       };
     };
 
