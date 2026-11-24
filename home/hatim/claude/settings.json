@@ -71,6 +71,7 @@
       }
     ]
   },
+  "autoCompactEnabled": false,
   "worktree": {
     "baseRef": "head"
   },
